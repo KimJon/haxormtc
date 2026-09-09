@@ -1,16 +1,47 @@
-# React + Vite
+# Haxor MTC - Business Technology, AI Automation & Enterprise Software
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Enterprise web application and digital presence platform for **Haxor MTC** ([haxormtc.com](https://haxormtc.com)).
 
-Currently, two official plugins are available:
+## Features
+- **40 Digital Business Kits**: Turnkey operational solutions across 14 industry sectors (Hotels, Restaurants, Clinics, Retail, Schools, Law, etc.).
+- **Pay As You Grow (Modular Rollout)**: Flexible phased milestone delivery (Digital Presence &rarr; Sales & Bookings &rarr; Operations & PMS &rarr; Growth & SEO).
+- **Interactive Quote Calculator**: Dynamic bundle estimator with automatic 10% multi-module savings and 1-click WhatsApp quote generator.
+- **Dedicated Solution Hubs**:
+  - Google Family Link School & Parental Safety Integration (`/services/google-family-link`)
+  - Dedicated Service & Software landing pages (`/services/*`, `/software/*`)
+- **Multi-Currency Engine**: Geo-aware currency switcher supporting KES, USD, and EUR.
+- **Enterprise SEO & Apache Infrastructure**: Pre-rendered semantic HTML shell, 301 canonical redirects, and gzip compression.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- **Framework**: React 19 + React Router v7
+- **Bundler**: Vite v8
+- **Styling**: Tailwind CSS v3
+- **Icons**: Lucide React (100% vector, zero emojis)
+- **Quality**: Oxlint + Tailwind
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Install Dependencies
+```bash
+npm install
+```
 
-## Expanding the Oxlint configuration
+### 2. Start Development Server
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### 3. Production Build
+```bash
+npm run build
+```
+
+### 4. Build & Package for cPanel Deployment
+```bash
+node package-cpanel.cjs
+```
+This script generates:
+- `haxormtc-cpanel-upload.zip`
+- `haxormtc-cpanel-upload.tar.gz`
+
+Both packages are POSIX-compliant, contain Apache `.htaccess` rewrite rules, and extract directly into `public_html`.
