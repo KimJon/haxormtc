@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-white antialiased overflow-x-hidden;
+    background-color: #FFFFFF;
+    color: rgb(55, 54, 86);
+    font-family: 'Figtree', sans-serif;
+    font-weight: 400;
+    width: 100%;
+    max-width: 100vw;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  /* Prevent text and element blowout on small mobile screens */
+  p, span, a, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  img, svg, video, canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Recoleta', 'Fraunces', Arial, sans-serif;
+    font-weight: 500;
+    color: rgb(55, 54, 86);
+  }
+}
+
+/* User Defined Typography Specification */
+.font-recoleta {
+  font-family: 'Recoleta', 'Fraunces', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(55, 54, 86);
+}
+
+.hero-recoleta {
+  font-family: 'Recoleta', 'Fraunces', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(55, 54, 86);
+  font-size: 64px;
+  line-height: 70px;
+}
+
+@media (max-width: 480px) {
+  .hero-recoleta {
+    font-size: 32px !important;
+    line-height: 38px !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-recoleta {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+
+.body-figtree {
+  font-family: 'Figtree', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(55, 54, 86);
+  font-size: 18px;
+  line-height: 27px;
+}
+
+/* Crisp, high-end white card styling */
+.clean-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+}
+
+.clean-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.clean-card-hover:hover {
+  border-color: #00CDFA;
+  box-shadow: 0 12px 30px -4px rgba(0, 205, 250, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+  transform: translateY(-2px);
+}
+
+/* Subtle minimal grid */
+.bg-grid-light {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
