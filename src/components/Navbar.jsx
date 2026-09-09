@@ -36,7 +36,7 @@ export default function Navbar() {
           <BrandLogo />
 
           {/* Clean, Conversion-Focused Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 text-sm font-semibold text-[#373656] font-sans">
+          <nav className="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-800 font-sans">
             <Link 
               to="/services" 
               className={`transition-colors py-1 ${
@@ -68,17 +68,7 @@ export default function Navbar() {
                   : 'hover:text-brand-cyanDeep'
               }`}
             >
-              Solutions
-            </Link>
-            <Link 
-              to="/services#pricing" 
-              className={`transition-colors py-1 ${
-                location.hash === '#pricing'
-                  ? 'text-brand-cyanDeep font-extrabold border-b-2 border-brand-cyanDeep'
-                  : 'hover:text-brand-cyanDeep'
-              }`}
-            >
-              Pricing
+              Software
             </Link>
             <Link 
               to="/calculator" 
@@ -89,19 +79,19 @@ export default function Navbar() {
               }`}
             >
               <span>Calculator</span>
-              <span className="px-1.5 py-0.5 text-[10px] font-bold bg-brand-coral/10 text-brand-coral rounded">
-                10% Off
+              <span className="px-1.5 py-0.5 text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 rounded">
+                Quote
               </span>
             </Link>
             <Link 
-              to="/why-us" 
+              to="/portfolio" 
               className={`transition-colors py-1 ${
-                location.pathname === '/why-us'
+                location.pathname === '/portfolio'
                   ? 'text-brand-cyanDeep font-extrabold border-b-2 border-brand-cyanDeep'
                   : 'hover:text-brand-cyanDeep'
               }`}
             >
-              Why Haxor
+              Case Studies
             </Link>
             <Link 
               to="/contact" 
@@ -154,7 +144,7 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-slate-200 bg-white px-6 py-6 space-y-4 shadow-xl">
-          <nav className="flex flex-col space-y-2 text-base font-semibold text-[#373656]">
+          <nav className="flex flex-col space-y-2 text-base font-semibold text-slate-800">
             <Link
               to="/services"
               onClick={() => setMobileMenuOpen(false)}
@@ -187,18 +177,7 @@ export default function Navbar() {
                   : 'hover:text-brand-cyanDeep hover:bg-slate-50'
               }`}
             >
-              Solutions
-            </Link>
-            <Link
-              to="/services#pricing"
-              onClick={() => setMobileMenuOpen(false)}
-              className={`py-2 px-3 rounded-xl transition ${
-                location.hash === '#pricing'
-                  ? 'bg-cyan-50 text-brand-cyanDeep font-extrabold'
-                  : 'hover:text-brand-cyanDeep hover:bg-slate-50'
-              }`}
-            >
-              Pricing
+              Software
             </Link>
             <Link
               to="/calculator"
@@ -210,18 +189,18 @@ export default function Navbar() {
               }`}
             >
               <span>Calculator</span>
-              <span className="text-xs bg-brand-coral/10 text-brand-coral font-bold px-2 py-0.5 rounded">10% Off</span>
+              <span className="text-xs bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded border border-emerald-200">Quote</span>
             </Link>
             <Link
-              to="/why-us"
+              to="/portfolio"
               onClick={() => setMobileMenuOpen(false)}
               className={`py-2 px-3 rounded-xl transition ${
-                location.pathname === '/why-us'
+                location.pathname === '/portfolio'
                   ? 'bg-cyan-50 text-brand-cyanDeep font-extrabold'
                   : 'hover:text-brand-cyanDeep hover:bg-slate-50'
               }`}
             >
-              Why Haxor
+              Case Studies &amp; Clients
             </Link>
             <Link
               to="/contact"

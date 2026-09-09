@@ -100,7 +100,7 @@ const ICON_MAP = {
 export default function BusinessKitsShowcase({ 
   limit = null, 
   title = "Turnkey Digital Business Kits for 40+ Industries",
-  subtitle = "Complete, production-ready operational stacks engineered for businesses across all 47 counties and international markets. Search your sector below.",
+  subtitle = "Production-ready operational stacks serving all 47 counties and international clients. Select your sector or search below.",
   showSearch = true,
   fullPage = false
 }) {

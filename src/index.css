@@ -49,42 +49,18 @@
 
 /* User Defined Typography Specification */
 .font-recoleta {
-  font-family: 'Recoleta', 'Fraunces', Arial, sans-serif;
+  font-family: 'Recoleta', 'Fraunces', Georgia, serif;
   font-style: normal;
-  font-weight: 500;
-  color: rgb(55, 54, 86);
 }
 
 .hero-recoleta {
-  font-family: 'Recoleta', 'Fraunces', Arial, sans-serif;
+  font-family: 'Recoleta', 'Fraunces', Georgia, serif;
   font-style: normal;
-  font-weight: 500;
-  color: rgb(55, 54, 86);
-  font-size: 64px;
-  line-height: 70px;
-}
-
-@media (max-width: 480px) {
-  .hero-recoleta {
-    font-size: 32px !important;
-    line-height: 38px !important;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  .hero-recoleta {
-    font-size: 40px;
-    line-height: 46px;
-  }
 }
 
 .body-figtree {
   font-family: 'Figtree', sans-serif;
   font-style: normal;
-  font-weight: 400;
-  color: rgb(55, 54, 86);
-  font-size: 18px;
-  line-height: 27px;
 }
 
 /* Crisp, high-end white card styling */

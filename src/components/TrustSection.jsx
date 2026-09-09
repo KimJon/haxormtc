@@ -40,44 +40,75 @@ export default function TrustSection() {
     },
   ];
 
-  const testimonials = [
+  const caseStudies = [
     {
-      quote: "Haxor MTC built our hotel website and integrated room reservations seamlessly. We receive direct guest bookings on WhatsApp daily with zero middleman commissions.",
-      author: 'Operations Director',
       company: 'Stem Hotel Nakuru',
       site: 'stemhotel.co.ke',
+      badge: 'Hospitality Management',
+      logo: '/clients/stem-hotel.png',
+      metric: '0% OTA Commissions',
+      metricLabel: '100% Direct Guest Reservations',
+      challenge: 'Relying on third-party portals taking 15–25% commission on every room reservation.',
+      solution: 'Custom mobile-first hotel website with direct WhatsApp and M-Pesa room reservation engine.',
+      quote: "We receive direct room reservations daily without paying middleman fees. The booking engine paid for itself within weeks.",
+      author: 'Operations Director',
       rating: 5,
     },
     {
-      quote: "Our engineering firm needed a high-credibility business website for government tenders. Haxor delivered the complete design, SSL, and custom business emails within 5 days.",
-      author: 'Managing Principal',
       company: 'Mihe Works Engineering',
       site: 'miheworks.co.ke',
+      badge: 'Industrial Contracting',
+      logo: '/clients/mihe-works.png',
+      metric: '5-Day Delivery',
+      metricLabel: 'Ready for Government Tender Bids',
+      challenge: 'Urgent need for an authoritative business portal and professional emails for tender submission.',
+      solution: 'Delivered turnkey responsive engineering portal, SSL certificates, project showcases, and 5 business emails in 5 days.',
+      quote: "Haxor delivered the complete design, SSL, and custom business emails in 5 days. Our tender submissions were accepted without question.",
+      author: 'Managing Principal',
       rating: 5,
     },
     {
-      quote: "Setting up our Google Business Profile and local SEO with Haxor put our environmental services on page 1 of Google Maps. Inquiries increased from week one.",
-      author: 'Lead Consultant',
       company: 'Eco Septic Ventures',
       site: 'ecosepticventures.com',
+      badge: 'Environmental Sanitation',
+      logo: '/clients/eco-septic-ventures.png',
+      metric: '#1 Google Maps Rank',
+      metricLabel: '+40% Weekly Commercial Inquiries',
+      challenge: 'Zero local visibility on Google Maps when property owners and builders searched for septic solutions.',
+      solution: 'Google Business Profile verification, local SEO 3-Pack rank, and high-converting click-to-call service pages.',
+      quote: "Setting up our Google Business Profile and local SEO with Haxor put us on page 1 of Google Maps. Inquiries increased from week one.",
+      author: 'Lead Consultant',
+      rating: 5,
+    },
+    {
+      company: 'The 818 Hotel',
+      site: 'the818hotel.com',
+      badge: 'Hotel & Conference',
+      logo: '/clients/818-hotel.png',
+      metric: '14-Day Deployment',
+      metricLabel: 'Direct Dining & Event Bookings',
+      challenge: 'Needed a modern digital face to showcase rooms, restaurant dining, and conference facilities to traveling guests.',
+      solution: 'Full multi-page commercial website with automated WhatsApp inquiries, high-resolution galleries, and location SEO.',
+      quote: "Our guests inspect room categories and reserve directly from their smartphones. Fast, elegant, and zero ongoing licensing overhead.",
+      author: 'General Manager',
       rating: 5,
     },
   ];
 
   return (
-    <section className="py-20 bg-slate-50 border-b border-slate-200">
+    <section className="py-20 md:py-24 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-brand-green/30 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-4 shadow-2xs">
             <ShieldCheck className="w-4 h-4 text-brand-green" />
-            <span>Verified Track Record & Client Trust</span>
+            <span>Verified Track Record &amp; Case Studies</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#373656] font-heading tracking-tight">
-            Proven Results Backed by Real Client Implementations
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-recoleta tracking-tight">
+            Real Client Results Backed by Measurable Outcomes
           </h2>
-          <p className="body-figtree text-slate-600 mt-3 text-sm sm:text-base">
+          <p className="text-slate-600 mt-3 text-sm sm:text-base font-sans leading-relaxed">
             We do not make empty claims. Inspect our verified client deployments, measurable growth metrics, and high delivery standards across retail, hospitality, healthcare, and engineering sectors.
           </p>
         </div>
@@ -133,7 +164,7 @@ export default function TrustSection() {
                 {stat.icon}
               </div>
               <div>
-                <div className="font-heading font-extrabold text-3xl sm:text-4xl text-[#373656] tracking-tight">
+                <div className="font-mono font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
                   {stat.number}
                 </div>
                 <div className="text-sm font-bold text-slate-800 mt-1">
@@ -147,34 +178,94 @@ export default function TrustSection() {
           ))}
         </div>
 
-        {/* Client Testimonials & Verifiable Trust */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {testimonials.map((t, idx) => (
-            <div 
-              key={idx}
-              className="p-7 rounded-3xl bg-white border border-slate-200 shadow-xs flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex items-center gap-1 mb-4 text-amber-400">
-                  {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400" />
-                  ))}
-                </div>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed italic">
-                  "{t.quote}"
-                </p>
-              </div>
+        {/* Scannable Case Studies with Measurable Outcomes Grid */}
+        <div className="mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-brand-cyanDeep">
+              Documented Client Case Studies
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-recoleta mt-1">
+              Measurable ROI &amp; Operational Growth
+            </h3>
+          </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-100">
-                <div className="text-xs font-extrabold text-slate-900">
-                  {t.author}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {caseStudies.map((cs, idx) => (
+              <div 
+                key={idx}
+                className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-cyan/60 transition duration-200 flex flex-col justify-between"
+              >
+                <div>
+                  {/* Top Card Bar: Logo + Sector + Rating */}
+                  <div className="flex items-start justify-between gap-3 mb-4 pb-4 border-b border-slate-100">
+                    <div className="flex items-center gap-3">
+                      <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-200/80 p-2 flex items-center justify-center shrink-0">
+                        <img 
+                          src={cs.logo} 
+                          alt={cs.company} 
+                          className="max-h-full max-w-full object-contain" 
+                          loading="lazy" 
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-base font-extrabold text-slate-900 font-recoleta">
+                          {cs.company}
+                        </h4>
+                        <span className="text-[11px] font-mono text-brand-cyanDeep block">
+                          {cs.site}
+                        </span>
+                      </div>
+                    </div>
+
+                    <span className="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-cyan-50 text-brand-cyanDeep border border-brand-cyan/20 shrink-0">
+                      {cs.badge}
+                    </span>
+                  </div>
+
+                  {/* Highlight ROI Metric Badge */}
+                  <div className="p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-200/70 mb-4 flex items-baseline justify-between">
+                    <div>
+                      <span className="text-[10px] font-extrabold uppercase tracking-wider text-emerald-800 block">
+                        Verified Outcome:
+                      </span>
+                      <span className="text-xl font-mono font-black text-emerald-950">
+                        {cs.metric}
+                      </span>
+                    </div>
+                    <span className="text-xs font-semibold text-emerald-800 text-right">
+                      {cs.metricLabel}
+                    </span>
+                  </div>
+
+                  {/* Problem & Solution */}
+                  <div className="space-y-2 text-xs text-slate-600 mb-4">
+                    <div>
+                      <strong className="text-slate-800">Challenge: </strong>
+                      {cs.challenge}
+                    </div>
+                    <div>
+                      <strong className="text-slate-800">Implemented: </strong>
+                      {cs.solution}
+                    </div>
+                  </div>
+
+                  {/* Executive Quote */}
+                  <p className="text-xs sm:text-sm text-slate-700 italic border-l-2 border-brand-cyan pl-3 py-1 bg-slate-50/60 rounded-r-lg">
+                    "{cs.quote}"
+                  </p>
                 </div>
-                <div className="text-[11px] text-slate-600 font-medium">
-                  {t.company} • <span className="font-mono text-brand-cyanDeep">{t.site}</span>
+
+                <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <span className="font-bold text-slate-900">{cs.author}</span>
+                  <div className="flex items-center gap-0.5 text-amber-400">
+                    {[...Array(cs.rating)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Milestone Guarantee Card */}

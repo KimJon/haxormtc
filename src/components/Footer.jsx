@@ -58,7 +58,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/services/social-media" className="hover:text-white transition">
-                  Social Media Video Management (Ksh 4k)
+                  Social Media Video Management (Ksh 4,500/mo)
                 </Link>
               </li>
               <li>
@@ -151,13 +151,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/portfolio" className="hover:text-white transition text-brand-cyan">
+                  Case Studies &amp; Clients
+                </Link>
+              </li>
+              <li>
                 <Link to="/why-us" className="hover:text-white transition">
                   Why Choose Haxor
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-white transition">
-                  Contact & Support
+                  Contact &amp; Support
                 </Link>
               </li>
             </ul>

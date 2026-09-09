@@ -29,23 +29,17 @@ import {
   BookOpen, 
   ShieldCheck,
   Zap,
-  ExternalLink,
   Monitor,
   Calculator,
-  Clock,
-  Award,
-  Layers,
-  Building2
+  Clock
 } from 'lucide-react';
-import { CONTACT_INFO, createWhatsAppUrl, DEVELOPMENT_PROCESS } from '../data/servicesData';
+import { createWhatsAppUrl, DEVELOPMENT_PROCESS } from '../data/servicesData';
 import { useCurrency } from '../context/CurrencyContext';
-import BrandLogo from '../components/BrandLogo';
-import CurrencySelector from '../components/CurrencySelector';
 import TrustSection from '../components/TrustSection';
 import BusinessKitsShowcase from '../components/BusinessKitsShowcase';
 
 export default function Home() {
-  const { formatPrice, currency, isAfrica } = useCurrency();
+  const { formatPrice } = useCurrency();
   const demoWhatsAppUrl = createWhatsAppUrl(
     "Hello Haxor MTC, I would like to schedule a 15-minute technical demo and consultation for my business software and ERP requirements."
   );
@@ -57,33 +51,33 @@ export default function Home() {
 
       <main className="flex-grow">
         
-        {/* Human-Centric Hero Section */}
-        <section className="relative pt-12 pb-14 md:pt-16 md:pb-22 bg-gradient-to-b from-slate-50 via-white to-white border-b border-slate-200">
+        {/* High-Impact Hero Section */}
+        <section className="relative pt-12 pb-12 md:pt-16 md:pb-16 bg-gradient-to-b from-slate-50 via-white to-white border-b border-slate-200">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             
             {/* Category Eyebrow */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-cyan-50 border border-brand-cyan/30 text-xs font-bold text-slate-800 shadow-xs">
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-cyan-50 border border-brand-cyan/30 text-xs font-bold text-slate-800 shadow-2xs">
               <span className="w-2 h-2 rounded-full bg-brand-cyanDeep" />
-              <span>Technology Consulting &amp; AI Automation</span>
+              <span>Odoo &amp; Zoho Implementation</span>
               <span className="text-slate-300">•</span>
-              <span className="text-brand-cyanDeep font-extrabold">Odoo &amp; Zoho Partners</span>
+              <span className="text-brand-cyanDeep font-extrabold">Commission-Free Booking &amp; Cloud POS</span>
             </div>
 
-            {/* Benefit-Driven Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.14] max-w-4xl mx-auto font-sans">
-              Scale Your Business With <span className="text-brand-cyanDeep">Custom Software</span>, AI Automation &amp; Enterprise ERP.
+            {/* Single Crystal-Clear Headline */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12] max-w-4xl mx-auto font-recoleta">
+              Launch a Commission-Free Booking &amp; POS System for Your Business — <span className="text-brand-cyanDeep">In 90 Days.</span>
             </h1>
 
-            {/* Outcome-Led Subhead */}
-            <p className="text-base sm:text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
-              We engineer custom web platforms, automate daily operations, and implement certified <strong>Odoo &amp; Zoho ERP</strong> systems across all 47 counties and worldwide. Zero agency bloat. Full IP ownership.
+            {/* Crisp Outcome-Led Subhead */}
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-sans leading-relaxed">
+              Custom Odoo &amp; Zoho ERP + native booking and POS systems. 100% source code ownership, zero upfront risk, and phased milestone delivery serving all 47 counties and international clients.
             </p>
 
-            {/* Dual High-Contrast Action CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
+            {/* Dual Clear-Contrast CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
               <a
                 href="#calculator"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-extrabold text-white bg-slate-900 hover:bg-slate-800 shadow-md flex items-center justify-center gap-2.5 transition-all transform hover:-translate-y-0.5 group cursor-pointer"
+                className="w-full sm:w-auto px-8 py-4 rounded-2xl text-sm font-black text-white bg-slate-900 hover:bg-slate-800 shadow-md flex items-center justify-center gap-2.5 transition-all transform hover:-translate-y-0.5 group cursor-pointer border border-slate-900"
               >
                 <Calculator className="w-4 h-4 text-brand-cyan group-hover:rotate-12 transition-transform" />
                 <span>Get Instant Quote</span>
@@ -94,73 +88,60 @@ export default function Home() {
                 href={demoWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-bold text-white bg-brand-green hover:bg-[#20ba5a] shadow-glow-whatsapp flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5"
+                className="w-full sm:w-auto px-7 py-4 rounded-2xl text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border-2 border-slate-300 hover:border-slate-400 shadow-2xs flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5"
               >
-                <MessageSquare className="w-4 h-4 fill-white shrink-0" />
-                <span>Book a 15-Min Demo</span>
+                <MessageSquare className="w-4 h-4 text-brand-green fill-brand-green/20 shrink-0" />
+                <span>See a 10-Min Demo</span>
               </a>
             </div>
 
             {/* One-Line Trust Bar */}
-            <div className="pt-2">
+            <div className="pt-1">
               <div className="inline-flex flex-wrap items-center justify-center gap-3 px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs text-xs font-semibold text-slate-700">
                 <span className="flex items-center gap-1.5 text-slate-900">
                   <ShieldCheck className="w-4 h-4 text-brand-cyanDeep shrink-0" />
-                  <strong>30/40/30 Milestone Schedule</strong>
+                  <strong>100% Source Code &amp; IP Ownership</strong>
                 </span>
                 <span className="text-slate-300 hidden sm:inline">•</span>
                 <span className="flex items-center gap-1.5 text-slate-900">
                   <Clock className="w-4 h-4 text-brand-green shrink-0" />
-                  <strong>12 Months Dedicated Support</strong>
+                  <strong>Zero-Risk 30/40/30 Milestones</strong>
                 </span>
                 <span className="text-slate-300 hidden sm:inline">•</span>
                 <span className="flex items-center gap-1.5 text-slate-900">
                   <CheckCircle2 className="w-4 h-4 text-brand-purple shrink-0" />
-                  <strong>100% Source Code &amp; IP Ownership</strong>
+                  <strong>12-Month Dedicated SLA</strong>
                 </span>
               </div>
             </div>
 
-            {/* Proof & Partner Grid Above The Fold */}
-            <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto text-left">
-              <div className="p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-purple-50 text-brand-purple flex items-center justify-center font-bold text-sm shrink-0">
-                  <Award className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-xs font-bold text-slate-900 block">Odoo Certified</span>
-                  <span className="text-[11px] text-slate-500">ERP Partner</span>
-                </div>
-              </div>
-
-              <div className="p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-sm shrink-0">
-                  <Zap className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-xs font-bold text-slate-900 block">Zoho Consulting</span>
-                  <span className="text-[11px] text-slate-500">CRM &amp; Books</span>
-                </div>
-              </div>
-
-              <div className="p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-cyan-50 text-brand-cyanDeep flex items-center justify-center font-bold text-sm shrink-0">
-                  <Layers className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-xs font-bold text-slate-900 block">40 Industry Kits</span>
-                  <span className="text-[11px] text-slate-500">Turnkey Stacks</span>
-                </div>
-              </div>
-
-              <div className="p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-sm shrink-0">
-                  <Building2 className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-xs font-bold text-slate-900 block">0% Commission</span>
-                  <span className="text-[11px] text-slate-500">Direct Bookings &amp; POS</span>
-                </div>
+            {/* Above-The-Fold Verified Client Logo Strip */}
+            <div className="pt-6 border-t border-slate-100">
+              <span className="text-[11px] font-bold uppercase tracking-widest text-slate-400 block mb-4">
+                Trusted by Established Businesses Across Kenya &amp; Regional Markets
+              </span>
+              <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 items-center justify-center max-w-4xl mx-auto">
+                {[
+                  { src: '/clients/stem-hotel.png', alt: 'Stem Hotel', name: 'Stem Hotel' },
+                  { src: '/clients/818-hotel.png', alt: '818 Hotel', name: '818 Hotel' },
+                  { src: '/clients/eco-septic-ventures.png', alt: 'Eco Septic Ventures', name: 'Eco Septic' },
+                  { src: '/clients/mihe-works.png', alt: 'Mihe Works Engineering', name: 'Mihe Works' },
+                  { src: '/clients/ngiro-organic-treasures.png', alt: 'Ngiro Organic Treasures', name: 'Ngiro Organics' },
+                  { src: '/clients/elitteride.png', alt: 'ElitteRide', name: 'ElitteRide' },
+                ].map((client) => (
+                  <div
+                    key={client.name}
+                    className="h-14 p-2 rounded-xl bg-slate-50/80 border border-slate-200/60 flex items-center justify-center grayscale hover:grayscale-0 opacity-75 hover:opacity-100 transition duration-200"
+                    title={client.name}
+                  >
+                    <img
+                      src={client.src}
+                      alt={client.alt}
+                      className="max-h-10 max-w-[100px] object-contain"
+                      loading="eager"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -175,7 +156,7 @@ export default function Home() {
           limit={6} 
           showSearch={true}
           title="Turnkey Digital Business Kits for 40+ Industries"
-          subtitle="Search your trade or sector below to explore the complete 4-pillar digital stack (Presence, Sales, Operations, Growth) engineered for businesses across all 47 counties and international markets."
+          subtitle="Select your sector or search below to explore the 4-pillar digital stack (Presence, Sales, Operations, Growth) serving all 47 counties and international clients."
         />
 
         {/* HUB 1: Digital Marketing & Web Presence */}
@@ -187,11 +168,11 @@ export default function Home() {
                 <span className="text-xs font-extrabold uppercase tracking-wider text-brand-cyanDeep bg-cyan-50 px-3 py-1 rounded-full border border-brand-cyan/20">
                   Growth & Web Hub
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
-                  Digital Marketing & Web Packages
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-recoleta tracking-tight mt-3">
+                  Digital Marketing &amp; Web Packages
                 </h2>
-                <p className="text-slate-600 text-sm sm:text-base mt-1">
-                  Each service has a dedicated landing page with complete deliverables, transparent rates, and direct WhatsApp booking.
+                <p className="text-slate-600 text-sm sm:text-base mt-1 font-sans leading-relaxed">
+                  Transparent packages engineered for growing businesses with verified deliverables and direct WhatsApp booking.
                 </p>
               </div>
 
@@ -506,11 +487,11 @@ export default function Home() {
                 <span className="text-xs font-extrabold uppercase tracking-wider text-brand-coral bg-coral-50 px-3 py-1 rounded-full border border-brand-coral/20">
                   Enterprise Platforms
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
-                  Software Solutions & Management Systems
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-recoleta tracking-tight mt-3">
+                  Software Solutions &amp; Management Systems
                 </h2>
-                <p className="text-slate-600 text-sm sm:text-base mt-1">
-                  Robust, M-Pesa STK push enabled, and eTIMS ready software systems built for real operations in Kenya.
+                <p className="text-slate-600 text-sm sm:text-base mt-1 font-sans leading-relaxed">
+                  Production-grade cloud POS, hotel PMS, and clinic EMR software with M-Pesa STK push and eTIMS compliance.
                 </p>
               </div>
 
