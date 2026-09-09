@@ -9,6 +9,7 @@ import {
   Lock
 } from 'lucide-react';
 import { useCurrency } from '../context/CurrencyContext';
+import PaymentMethods from './PaymentMethods';
 
 export default function TrustSection() {
   const { isAfrica } = useCurrency();
@@ -275,10 +276,10 @@ export default function TrustSection() {
               <Lock className="w-3.5 h-3.5" />
               <span>Zero-Risk Milestone Billing</span>
             </div>
-            <h3 className="text-2xl font-extrabold text-[#373656] font-heading">
+            <h3 className="text-2xl font-extrabold text-slate-900 font-recoleta">
               Our 30% → 40% → 30% Milestone Guarantee
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
               We never demand full upfront payments. You pay 30% upon discovery and project kickoff, 40% only after approving the interactive design prototype, and the final 30% only when your system is tested and ready to launch live.
             </p>
           </div>
@@ -299,6 +300,11 @@ export default function TrustSection() {
               <span className="text-[10px] font-bold text-slate-600 uppercase">Live Launch</span>
             </div>
           </div>
+        </div>
+
+        {/* Multi-Currency & Payment Methods */}
+        <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-2xs">
+          <PaymentMethods variant="light" />
         </div>
 
       </div>
