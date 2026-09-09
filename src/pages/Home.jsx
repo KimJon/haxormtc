@@ -30,7 +30,12 @@ import {
   ShieldCheck,
   Zap,
   ExternalLink,
-  Monitor
+  Monitor,
+  Calculator,
+  Clock,
+  Award,
+  Layers,
+  Building2
 } from 'lucide-react';
 import { CONTACT_INFO, createWhatsAppUrl, DEVELOPMENT_PROCESS } from '../data/servicesData';
 import { useCurrency } from '../context/CurrencyContext';
@@ -41,8 +46,8 @@ import BusinessKitsShowcase from '../components/BusinessKitsShowcase';
 
 export default function Home() {
   const { formatPrice, currency, isAfrica } = useCurrency();
-  const defaultWhatsAppUrl = createWhatsAppUrl(
-    "Hello Haxor MTC, I am on haxormtc.com and would like to speak with a specialist."
+  const demoWhatsAppUrl = createWhatsAppUrl(
+    "Hello Haxor MTC, I would like to schedule a 15-minute technical demo and consultation for my business software and ERP requirements."
   );
 
   return (
@@ -53,60 +58,110 @@ export default function Home() {
       <main className="flex-grow">
         
         {/* Human-Centric Hero Section */}
-        <section className="relative pt-12 pb-12 md:pt-16 md:pb-20 bg-gradient-to-b from-slate-50 via-white to-white border-b border-slate-200">
+        <section className="relative pt-12 pb-14 md:pt-16 md:pb-22 bg-gradient-to-b from-slate-50 via-white to-white border-b border-slate-200">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             
+            {/* Category Eyebrow */}
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-cyan-50 border border-brand-cyan/30 text-xs font-bold text-slate-800 shadow-xs">
               <span className="w-2 h-2 rounded-full bg-brand-cyanDeep" />
-              <span>Technology Partner, AI Automation & Software Engineering</span>
+              <span>Technology Consulting &amp; AI Automation</span>
               <span className="text-slate-300">•</span>
-              <span className="text-brand-cyanDeep font-extrabold">Milestone Delivery</span>
+              <span className="text-brand-cyanDeep font-extrabold">Odoo &amp; Zoho Partners</span>
             </div>
 
-            <h1 className="hero-recoleta tracking-tight">
-              We Build Scalable Software, Deploy AI Automation & Deliver Enterprise Technology Consulting.
+            {/* Benefit-Driven Headline */}
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.14] max-w-4xl mx-auto font-sans">
+              Scale Your Business With <span className="text-brand-cyanDeep">Custom Software</span>, AI Automation &amp; Enterprise ERP.
             </h1>
 
-            <p className="body-figtree max-w-2xl mx-auto leading-relaxed text-slate-600">
-              From bespoke software development, AI workflow automation, and certified Odoo/Zoho ERP implementations, to high-converting websites and industry management systems.
+            {/* Outcome-Led Subhead */}
+            <p className="text-base sm:text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
+              We engineer custom web platforms, automate daily operations, and implement certified <strong>Odoo &amp; Zoho ERP</strong> systems across all 47 counties and worldwide. Zero agency bloat. Full IP ownership.
             </p>
 
-            {/* Main Action Buttons */}
+            {/* Dual High-Contrast Action CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
               <a
-                href={defaultWhatsAppUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-brand-green hover:bg-[#20ba5a] shadow-glow-whatsapp flex items-center justify-center gap-2 transition transform hover:-translate-y-0.5"
+                href="#calculator"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-extrabold text-white bg-slate-900 hover:bg-slate-800 shadow-md flex items-center justify-center gap-2.5 transition-all transform hover:-translate-y-0.5 group cursor-pointer"
               >
-                <MessageSquare className="w-4 h-4 fill-white shrink-0" />
-                <span>WhatsApp</span>
+                <Calculator className="w-4 h-4 text-brand-cyan group-hover:rotate-12 transition-transform" />
+                <span>Get Instant Quote</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
               <a
-                href="#services"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-sm font-bold text-slate-800 hover:text-slate-900 bg-white hover:bg-slate-100 border border-slate-300 shadow-xs flex items-center justify-center gap-2 transition"
+                href={demoWhatsAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-bold text-white bg-brand-green hover:bg-[#20ba5a] shadow-glow-whatsapp flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5"
               >
-                <span>Explore Solutions & Pricing</span>
-                <ArrowRight className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4 fill-white shrink-0" />
+                <span>Book a 15-Min Demo</span>
               </a>
             </div>
 
-            {/* Proof points */}
-            <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs font-semibold text-slate-600">
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-brand-green" />
-                Enterprise-Grade & Regional Delivery
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-brand-cyanDeep" />
-                100% Transparent Milestone Pricing
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-brand-cyanDeep" />
-                Odoo & Zoho Certified • AI Native
-              </span>
+            {/* One-Line Trust Bar */}
+            <div className="pt-2">
+              <div className="inline-flex flex-wrap items-center justify-center gap-3 px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs text-xs font-semibold text-slate-700">
+                <span className="flex items-center gap-1.5 text-slate-900">
+                  <ShieldCheck className="w-4 h-4 text-brand-cyanDeep shrink-0" />
+                  <strong>30/40/30 Milestone Schedule</strong>
+                </span>
+                <span className="text-slate-300 hidden sm:inline">•</span>
+                <span className="flex items-center gap-1.5 text-slate-900">
+                  <Clock className="w-4 h-4 text-brand-green shrink-0" />
+                  <strong>12 Months Dedicated Support</strong>
+                </span>
+                <span className="text-slate-300 hidden sm:inline">•</span>
+                <span className="flex items-center gap-1.5 text-slate-900">
+                  <CheckCircle2 className="w-4 h-4 text-brand-purple shrink-0" />
+                  <strong>100% Source Code &amp; IP Ownership</strong>
+                </span>
+              </div>
+            </div>
+
+            {/* Proof & Partner Grid Above The Fold */}
+            <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto text-left">
+              <div className="p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-purple-50 text-brand-purple flex items-center justify-center font-bold text-sm shrink-0">
+                  <Award className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-slate-900 block">Odoo Certified</span>
+                  <span className="text-[11px] text-slate-500">ERP Partner</span>
+                </div>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-sm shrink-0">
+                  <Zap className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-slate-900 block">Zoho Consulting</span>
+                  <span className="text-[11px] text-slate-500">CRM &amp; Books</span>
+                </div>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-cyan-50 text-brand-cyanDeep flex items-center justify-center font-bold text-sm shrink-0">
+                  <Layers className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-slate-900 block">40 Industry Kits</span>
+                  <span className="text-[11px] text-slate-500">Turnkey Stacks</span>
+                </div>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-sm shrink-0">
+                  <Building2 className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-slate-900 block">0% Commission</span>
+                  <span className="text-[11px] text-slate-500">Direct Bookings &amp; POS</span>
+                </div>
+              </div>
             </div>
 
           </div>
