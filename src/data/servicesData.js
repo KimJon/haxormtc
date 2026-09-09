@@ -26,6 +26,88 @@ export const CATEGORIES = [
   { id: "consulting", label: "Advisory & Training" },
 ];
 
+/**
+ * 4 PRICING LEVELS ARCHITECTURE
+ * Entry-level low fixed price to build trust, followed by implementation & recurring revenue.
+ */
+export const PRICING_LEVELS = [
+  {
+    id: "starter",
+    level: "Starter",
+    badge: "Low Entry Fixed Price",
+    color: "cyan",
+    purpose: "Small businesses testing Haxor or setting up basic digital presence",
+    priceRangeKES: "Ksh 500 – Ksh 7,000",
+    billing: "One-Time Low Fixed Price",
+    idealFor: "Salons, barbershops, local retail, tutors, auto garages, single-location trades",
+    deliverables: [
+      "Verified Google Business Profile & Google Maps 3-Pack rank",
+      "WhatsApp Business catalog & automated greeting routing",
+      "Single-page responsive web presence (Free domain & 1-year hosting)",
+      "M-Pesa STK push or direct Paybill/Till number integration",
+    ],
+    recurringOption: "Optional Social Media Videos @ Ksh 4,500/mo",
+    ctaText: "Start with Essentials",
+  },
+  {
+    id: "growth",
+    level: "Growth",
+    badge: "Most Popular",
+    color: "emerald",
+    purpose: "Businesses actively acquiring clients, improving reach, and generating inquiries",
+    priceRangeKES: "Ksh 15,000 – Ksh 25,000",
+    billing: "Milestone SOW + Monthly Retainer",
+    idealFor: "Clinics, busy restaurants, boutiques, hardware stores & professional practices",
+    deliverables: [
+      "Full 5-page responsive website with custom domain & 5 custom emails",
+      "WhatsApp Commerce Bot & automated catalog ordering",
+      "Local SEO dominance & Google Search indexing",
+      "Social media video management (20–30 videos/mo @ Ksh 4,500/mo)",
+      "Customer review automation & Google 5-star booster",
+    ],
+    recurringOption: "Monthly Ad Management & Social Posting",
+    ctaText: "Select Growth Package",
+  },
+  {
+    id: "professional",
+    level: "Professional",
+    badge: "Established Operations",
+    color: "purple",
+    purpose: "Established businesses requiring dedicated software and daily operational automation",
+    priceRangeKES: "Ksh 45,000 – Ksh 65,000",
+    billing: "30/40/30 Milestone Delivery",
+    idealFor: "Hotels, multi-branch supermarkets, private hospitals, schools & logistics fleets",
+    deliverables: [
+      "Dedicated software suite (HaxPos POS, HaxOne PMS, HMS or Courier App)",
+      "Real-time inventory tracking, cashier shift audits & eTIMS readiness",
+      "Direct 0% commission online booking or ordering engine",
+      "Customer CRM database with automated SMS/WhatsApp alerts",
+      "12 months dedicated technical support SLA & staff onboarding",
+    ],
+    recurringOption: "Cloud Server Hosting & SLA Support",
+    ctaText: "Deploy Professional Stack",
+  },
+  {
+    id: "enterprise",
+    level: "Enterprise",
+    badge: "Custom Architecture",
+    color: "amber",
+    purpose: "Complex organizations needing customized ERP, multi-tenant databases, and deep integrations",
+    priceRangeKES: "Custom Quote",
+    billing: "Enterprise Milestone SOW",
+    idealFor: "Manufacturing plants, distribution chains, large institutions & SACCOs",
+    deliverables: [
+      "Certified Odoo or Zoho Enterprise ERP implementation & migration",
+      "Custom software engineering, API microservices & legacy database sync",
+      "Multi-company, multi-currency & supply chain accounting automation",
+      "Role-based access control, security auditing & dedicated VPC hosting",
+      "100% full source code and IP ownership handover with on-site training",
+    ],
+    recurringOption: "Quarterly IT Strategy & SLA Retainer",
+    ctaText: "Request Enterprise Consultation",
+  },
+];
+
 export const SERVICES = [
   {
     id: "technology-consulting",
@@ -116,7 +198,7 @@ export const SERVICES = [
     category: "marketing",
     name: "Social Media Growth & Video Management",
     tagline: "Dominate Facebook, TikTok & Instagram with high-converting short-form video content.",
-    price: "4,000",
+    price: "4,500",
     billing: "/ month",
     badge: "Most Popular",
     highlight: true,
@@ -130,7 +212,7 @@ export const SERVICES = [
       "Bio optimization + Click-to-WhatsApp link routing setup",
       "Monthly performance breakdown & audience growth metrics",
     ],
-    whatsappText: "Hello Haxor MTC, I am interested in your Social Media Posting package (20-30 videos/mo for Ksh. 4,000). Please share how we get started!",
+    whatsappText: "Hello Haxor MTC, I am interested in your Social Media Posting package (20-30 videos/mo for Ksh. 4,500). Please share how we get started!",
   },
   {
     id: "website-development",
@@ -722,7 +804,7 @@ export const CALCULATOR_ITEMS = [
   { id: "calc-meta-basic", name: "Meta Ads Placement (FB & IG Monthly Basic)", price: 4200, category: "Marketing" },
   { id: "calc-meta-growth", name: "Meta Ads Placement (FB & IG Monthly Growth)", price: 7500, category: "Marketing" },
   { id: "calc-google-ads", name: "Google Search Ads Management (Monthly Basic)", price: 2500, category: "Marketing" },
-  { id: "calc-social", name: "Social Media Video Posting (20-30 videos/mo)", price: 4000, category: "Marketing" },
+  { id: "calc-social", name: "Social Media Video Posting (20-30 videos/mo)", price: 4500, category: "Marketing" },
   { id: "calc-ict", name: "ICT Infrastructure Consulting Session", price: 3000, category: "Advisory" },
   { id: "calc-literacy", name: "Digital Literacy Training (10 Structured Sessions)", price: 7500, category: "Training" },
   { id: "calc-va-part", name: "Dedicated Virtual Assistant (20 hrs/week Retainer)", price: 25000, category: "Operations" },

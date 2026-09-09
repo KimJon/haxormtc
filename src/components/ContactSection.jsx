@@ -218,7 +218,7 @@ export default function ContactSection() {
                     className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition shadow-xs"
                   >
                     <option value="Website Development (Ksh 7,000 with Free Domain & Hosting)">Website Development (Ksh 7,000 + Free Domain/Hosting)</option>
-                    <option value="Social Media Posting (20-30 videos/mo - Ksh 4,000)">Social Media Posting (20-30 videos/mo - Ksh 4,000)</option>
+                    <option value="Social Media Posting (20-30 videos/mo - Ksh 4,500)">Social Media Posting (20-30 videos/mo - Ksh 4,500)</option>
                     <option value="HaxPos Universal Point of Sale Demo">HaxPos Universal POS (Cafes, Retail, Hardware, Spirits)</option>
                     <option value="ElitteGo On-Demand Delivery Platform">ElitteGo On-Demand Delivery Platform</option>
                     <option value="HaxOne Hospitality Suite (Hotels, Lodges, PMS)">HaxOne Hospitality Suite (Hotels, Lodges, PMS)</option>

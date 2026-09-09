@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { MessageSquare, Mail, Menu, X, ArrowRight, Sparkles } from 'lucide-react';
 import { CONTACT_INFO, createWhatsAppUrl } from '../data/servicesData';
@@ -7,15 +7,30 @@ import CurrencySelector from './CurrencySelector';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const defaultWhatsAppUrl = createWhatsAppUrl(
     "Hello Haxor MTC, I am visiting haxormtc.com and would like to inquire about your services."
   );
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 15);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
+    <header className={`sticky top-0 z-50 w-full transition-all duration-200 ${
+      isScrolled 
+        ? 'bg-white/98 backdrop-blur-lg border-b border-slate-200/90 shadow-md' 
+        : 'bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className={`flex items-center justify-between transition-all duration-200 ${
+          isScrolled ? 'h-16' : 'h-20'
+        }`}>
           
           {/* Logo with Link to Home */}
           <BrandLogo />

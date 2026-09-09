@@ -265,7 +265,7 @@ export default function Home() {
                     Scripted, edited, and scheduled short-form videos posted across TikTok, Instagram, and Facebook.
                   </p>
                   <div className="my-4 font-mono font-extrabold text-2xl text-slate-900">
-                    {formatPrice(4000)} <span className="text-xs font-sans font-normal text-slate-500">/ month</span>
+                    {formatPrice(4500)} <span className="text-xs font-sans font-normal text-slate-500">/ month</span>
                   </div>
                 </div>
                 <Link

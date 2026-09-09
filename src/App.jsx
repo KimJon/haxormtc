@@ -11,6 +11,7 @@ import ContactPage from './pages/ContactPage';
 import GoogleFamilyLinkPage from './pages/GoogleFamilyLinkPage';
 import BusinessKitsPage from './pages/BusinessKitsPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import ServiceDiscoveryToast from './components/ServiceDiscoveryToast';
 
 import { CurrencyProvider } from './context/CurrencyContext';
 
@@ -77,6 +78,7 @@ function App() {
       <CurrencyProvider>
       <ScrollToTop />
       <ScrollToTopButton />
+      <ServiceDiscoveryToast />
       <Routes>
         {/* Main Universal Landing Page */}
         <Route path="/" element={<Home />} />

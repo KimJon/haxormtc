@@ -82,6 +82,46 @@ export default function TrustSection() {
           </p>
         </div>
 
+        {/* Client Logos Strip */}
+        <div className="mb-14">
+          <p className="text-center text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-6">
+            Trusted by Verified Businesses Across Multiple Sectors
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 items-center justify-center max-w-5xl mx-auto">
+            {[
+              { src: '/clients/stem-hotel.png', alt: 'Stem Hotel', name: 'Stem Hotel', sector: 'Hospitality' },
+              { src: '/clients/818-hotel.png', alt: '818 Hotel', name: '818 Hotel', sector: 'Hotels & Dining' },
+              { src: '/clients/eco-septic-ventures.png', alt: 'Eco Septic Ventures', name: 'Eco Septic', sector: 'Sanitation' },
+              { src: '/clients/mihe-works.png', alt: 'Mihe Works Engineering', name: 'Mihe Works', sector: 'Engineering' },
+              { src: '/clients/ngiro-organic-treasures.png', alt: 'Ngiro Organic Treasures', name: 'Ngiro Organics', sector: 'Organic Products' },
+              { src: '/clients/elitteride.png', alt: 'ElitteRide', name: 'ElitteRide', sector: 'Mobility & Taxi' },
+            ].map((client) => (
+              <div
+                key={client.name}
+                className="p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs hover:shadow-sm hover:border-brand-cyan transition duration-200 flex flex-col items-center justify-center gap-2 group"
+                title={`${client.name} (${client.sector})`}
+              >
+                <div className="h-14 w-full flex items-center justify-center overflow-hidden">
+                  <img
+                    src={client.src}
+                    alt={client.alt}
+                    className="max-h-12 max-w-[120px] object-contain transition duration-200 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="text-center">
+                  <span className="text-[11px] font-bold text-slate-800 block truncate">
+                    {client.name}
+                  </span>
+                  <span className="text-[9px] text-slate-400 block font-medium">
+                    {client.sector}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* 4 Big Verifiable Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {verifiableMetrics.map((stat, idx) => (

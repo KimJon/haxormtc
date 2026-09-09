@@ -137,11 +137,24 @@ export default function PortfolioPage() {
                   className="p-7 rounded-3xl bg-white border border-slate-200 shadow-card hover:shadow-card-hover transition flex flex-col justify-between group"
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-start justify-between gap-3 mb-4">
+                      {client.logo ? (
+                        <div className="w-16 h-16 rounded-2xl bg-slate-50 border border-slate-200/90 p-2 flex items-center justify-center shrink-0 shadow-2xs group-hover:border-brand-cyan transition">
+                          <img 
+                            src={client.logo} 
+                            alt={client.name} 
+                            className="max-h-full max-w-full object-contain" 
+                            loading="lazy" 
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-12 h-12 rounded-2xl bg-cyan-50 border border-brand-cyan/20 flex items-center justify-center text-brand-cyanDeep shrink-0">
+                          <Globe className="w-6 h-6" />
+                        </div>
+                      )}
                       <span className="text-[10px] font-extrabold uppercase px-3 py-1 rounded-full bg-cyan-50 text-brand-cyanDeep border border-brand-cyan/20">
                         {client.badge}
                       </span>
-                      <Globe className="w-5 h-5 text-slate-400 group-hover:text-brand-cyanDeep transition" />
                     </div>
 
                     <h3 className="text-2xl font-extrabold text-[#373656] font-heading">

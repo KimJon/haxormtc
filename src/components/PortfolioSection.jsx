@@ -50,15 +50,6 @@ export const PORTFOLIO_STATS = [
 
 export const CLIENT_WEBSITES = [
   {
-    name: 'The 818 Hotel',
-    domain: 'the818hotel.com',
-    url: 'https://the818hotel.com',
-    category: 'Hospitality & Accommodation',
-    tagline: 'Modern hotel rooms, restaurant dining, bar & event conference facilities.',
-    tags: ['Direct Room Booking', 'Mobile-First Design', 'WhatsApp Reservation', 'Google Maps SEO'],
-    badge: 'Hotel & Events',
-  },
-  {
     name: 'Stem Hotel',
     domain: 'stemhotel.co.ke',
     url: 'https://stemhotel.co.ke',
@@ -66,15 +57,17 @@ export const CLIENT_WEBSITES = [
     tagline: 'Premier Kenyan accommodation, luxury dining, executive meeting halls & weddings.',
     tags: ['Multi-Page Web Architecture', 'Room Showcase', 'M-Pesa Inquiries', 'Speed Optimized'],
     badge: 'Hospitality',
+    logo: '/clients/stem-hotel.png',
   },
   {
-    name: 'Mihe Works',
-    domain: 'miheworks.co.ke',
-    url: 'https://miheworks.co.ke',
-    category: 'Industrial Engineering & Construction',
-    tagline: 'Commercial fabrication, construction contracting, equipment maintenance & repairs.',
-    tags: ['Enterprise Web Architecture', 'Project Portfolio', 'Quote Request Form', 'Business Email'],
-    badge: 'Engineering',
+    name: 'The 818 Hotel',
+    domain: 'the818hotel.com',
+    url: 'https://the818hotel.com',
+    category: 'Hospitality & Accommodation',
+    tagline: 'Modern hotel rooms, restaurant dining, bar & event conference facilities.',
+    tags: ['Direct Room Booking', 'Mobile-First Design', 'WhatsApp Reservation', 'Google Maps SEO'],
+    badge: 'Hotel & Events',
+    logo: '/clients/818-hotel.png',
   },
   {
     name: 'Eco Septic Ventures',
@@ -83,7 +76,38 @@ export const CLIENT_WEBSITES = [
     category: 'Environmental & Sanitation Engineering',
     tagline: 'Bio-digester septic installation, modern wastewater treatment & environmental services.',
     tags: ['Lead Capture Funnel', 'Service Showcase', 'On-Page SEO', 'Click-to-Call'],
-    badge: 'Environmental',
+    badge: 'Sanitation',
+    logo: '/clients/eco-septic-ventures.png',
+  },
+  {
+    name: 'Mihe Works Engineering',
+    domain: 'miheworks.co.ke',
+    url: 'https://miheworks.co.ke',
+    category: 'Industrial Engineering & Construction',
+    tagline: 'Commercial fabrication, construction contracting, equipment maintenance & repairs.',
+    tags: ['Industrial Web Architecture', 'Project Portfolio', 'Quote Request Form', 'Business Email'],
+    badge: 'Engineering',
+    logo: '/clients/mihe-works.png',
+  },
+  {
+    name: 'Ngiro Organic Treasures',
+    domain: 'ngiroorganictreasures.com',
+    url: 'https://wa.me/254729915459?text=Hello%20Haxor%20MTC,%20I%20am%20inquiring%20about%20Ngiro%20Organic%20Treasures',
+    category: 'Organic Wellness & Natural Skincare',
+    tagline: "Nature's best kept secret — pure essential oils, organic skincare & botanical remedies.",
+    tags: ['Product Catalog', 'WhatsApp Commerce', 'Payment Gateway', 'Mobile Optimized'],
+    badge: 'Organic & Wellness',
+    logo: '/clients/ngiro-organic-treasures.png',
+  },
+  {
+    name: 'ElitteRide',
+    domain: 'elitteride.com',
+    url: 'https://wa.me/254729915459?text=Hello%20Haxor%20MTC,%20I%20am%20inquiring%20about%20the%20ElitteRide%20mobility%20solution',
+    category: 'Mobility, Logistics & Taxi Booking',
+    tagline: 'Fast, reliable, and local taxi hailing and parcel delivery system with WhatsApp dispatch.',
+    tags: ['Driver Dispatch App', 'WhatsApp Booking', 'GPS Tracking', 'M-Pesa STK'],
+    badge: 'Logistics & Mobility',
+    logo: '/clients/elitteride.png',
   },
   {
     name: 'Prom Taani',
@@ -93,15 +117,6 @@ export const CLIENT_WEBSITES = [
     tagline: 'Grassroots urban directory connecting neighborhood businesses with local buyers.',
     tags: ['Interactive Directory', 'Vendor Search', 'Social Media Links', 'Mobile Responsive'],
     badge: 'Directory',
-  },
-  {
-    name: 'Nyiro Treasures',
-    domain: 'nyirotreasures.com',
-    url: 'https://nyirotreasures.com',
-    category: 'Travel, Safari & Heritage',
-    tagline: 'Northern Kenya cultural expeditions, wildlife eco-tours & indigenous arts.',
-    tags: ['Safari Itineraries', 'High-Res Galleries', 'WhatsApp Tour Booking', 'Analytics'],
-    badge: 'Tours & Safari',
   },
 ];
 
@@ -199,11 +214,24 @@ export default function PortfolioSection() {
                 className="p-6 rounded-3xl bg-white border border-slate-200 shadow-card hover:shadow-card-hover transition flex flex-col justify-between group"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-start justify-between gap-3 mb-4">
+                    {client.logo ? (
+                      <div className="w-16 h-16 rounded-2xl bg-slate-50 border border-slate-200/90 p-2 flex items-center justify-center shrink-0 shadow-2xs group-hover:border-brand-cyan transition">
+                        <img 
+                          src={client.logo} 
+                          alt={client.name} 
+                          className="max-h-full max-w-full object-contain" 
+                          loading="lazy" 
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-12 h-12 rounded-2xl bg-cyan-50 border border-brand-cyan/20 flex items-center justify-center text-brand-cyanDeep shrink-0">
+                        <Globe className="w-6 h-6" />
+                      </div>
+                    )}
                     <span className="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-cyan-50 text-brand-cyanDeep border border-brand-cyan/20">
                       {client.badge}
                     </span>
-                    <Globe className="w-4 h-4 text-slate-400 group-hover:text-brand-cyanDeep transition" />
                   </div>
 
                   <h4 className="text-xl font-extrabold text-[#373656] font-heading">
