@@ -56,16 +56,16 @@ export default function Home() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             
             {/* Category Eyebrow */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-cyan-50 border border-brand-cyan/30 text-xs font-bold text-slate-800 shadow-2xs">
-              <span className="w-2 h-2 rounded-full bg-brand-cyanDeep" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700 shadow-2xs">
+              <span className="w-2 h-2 rounded-full bg-slate-900" />
               <span>Turnkey Digital Infrastructure</span>
               <span className="text-slate-300">•</span>
-              <span className="text-brand-cyanDeep font-extrabold">Websites, Cloud POS &amp; ERP</span>
+              <span className="text-slate-900 font-bold">Websites, Cloud POS &amp; ERP</span>
             </div>
 
             {/* Client-Centric & Action-Driven Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12] max-w-4xl mx-auto font-recoleta">
-              Run Your Entire Business on Modern Software — <span className="text-brand-cyanDeep">Websites, Cloud POS &amp; ERP.</span>
+              Run Your Entire Business on Modern Software — Websites, Cloud POS &amp; ERP.
             </h1>
 
             {/* Specific, High-Converting Subhead */}
@@ -79,7 +79,7 @@ export default function Home() {
                 href="#calculator"
                 className="w-full sm:w-auto px-8 py-4 rounded-2xl text-sm font-black text-white bg-slate-900 hover:bg-slate-800 shadow-md flex items-center justify-center gap-2.5 transition-all transform hover:-translate-y-0.5 group cursor-pointer border border-slate-900"
               >
-                <Calculator className="w-4 h-4 text-brand-cyan group-hover:rotate-12 transition-transform" />
+                <Calculator className="w-4 h-4 text-white group-hover:rotate-12 transition-transform" />
                 <span>Get Instant Quote</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
@@ -90,7 +90,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-7 py-4 rounded-2xl text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border-2 border-slate-300 hover:border-slate-400 shadow-2xs flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5"
               >
-                <MessageSquare className="w-4 h-4 text-brand-green fill-brand-green/20 shrink-0" />
+                <MessageSquare className="w-4 h-4 text-slate-700 shrink-0" />
                 <span>Book 15-Min Walkthrough</span>
               </a>
             </div>
@@ -98,18 +98,18 @@ export default function Home() {
             {/* One-Line Trust Bar */}
             <div className="pt-2">
               <div className="inline-flex flex-wrap items-center justify-center gap-3 px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs text-xs font-semibold text-slate-700">
-                <span className="flex items-center gap-1.5 text-slate-900">
-                  <ShieldCheck className="w-4 h-4 text-brand-cyanDeep shrink-0" />
+                <span className="flex items-center gap-1.5 text-slate-800">
+                  <ShieldCheck className="w-4 h-4 text-slate-600 shrink-0" />
                   <strong>100% Source Code &amp; IP Ownership</strong>
                 </span>
                 <span className="text-slate-300 hidden sm:inline">•</span>
-                <span className="flex items-center gap-1.5 text-slate-900">
-                  <Clock className="w-4 h-4 text-brand-green shrink-0" />
+                <span className="flex items-center gap-1.5 text-slate-800">
+                  <Clock className="w-4 h-4 text-slate-600 shrink-0" />
                   <strong>Zero-Risk 30/40/30 Milestones</strong>
                 </span>
                 <span className="text-slate-300 hidden sm:inline">•</span>
-                <span className="flex items-center gap-1.5 text-slate-900">
-                  <CheckCircle2 className="w-4 h-4 text-brand-purple shrink-0" />
+                <span className="flex items-center gap-1.5 text-slate-800">
+                  <CheckCircle2 className="w-4 h-4 text-slate-600 shrink-0" />
                   <strong>12-Month Dedicated SLA</strong>
                 </span>
               </div>
