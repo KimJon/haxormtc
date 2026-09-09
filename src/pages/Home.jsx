@@ -58,19 +58,19 @@ export default function Home() {
             {/* Category Eyebrow */}
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-cyan-50 border border-brand-cyan/30 text-xs font-bold text-slate-800 shadow-2xs">
               <span className="w-2 h-2 rounded-full bg-brand-cyanDeep" />
-              <span>Odoo &amp; Zoho Implementation</span>
+              <span>Turnkey Digital Infrastructure</span>
               <span className="text-slate-300">•</span>
-              <span className="text-brand-cyanDeep font-extrabold">Commission-Free Booking &amp; Cloud POS</span>
+              <span className="text-brand-cyanDeep font-extrabold">Websites, Cloud POS &amp; ERP</span>
             </div>
 
-            {/* Single Crystal-Clear Headline */}
+            {/* Client-Centric & Action-Driven Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12] max-w-4xl mx-auto font-recoleta">
-              Launch a Commission-Free Booking &amp; POS System for Your Business — <span className="text-brand-cyanDeep">In 90 Days.</span>
+              Run Your Entire Business on Modern Software — <span className="text-brand-cyanDeep">Websites, Cloud POS &amp; ERP.</span>
             </h1>
 
-            {/* Crisp Outcome-Led Subhead */}
+            {/* Specific, High-Converting Subhead */}
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-sans leading-relaxed">
-              Custom Odoo &amp; Zoho ERP + native booking and POS systems. 100% source code ownership, zero upfront risk, and phased milestone delivery serving all 47 counties and international clients.
+              From high-speed commercial websites and Google Maps SEO to touchscreen checkout and certified Odoo &amp; Zoho ERP. Production-grade systems with instant M-Pesa integration, 100% code ownership, and zero upfront risk.
             </p>
 
             {/* Dual Clear-Contrast CTAs */}
@@ -91,12 +91,12 @@ export default function Home() {
                 className="w-full sm:w-auto px-7 py-4 rounded-2xl text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border-2 border-slate-300 hover:border-slate-400 shadow-2xs flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5"
               >
                 <MessageSquare className="w-4 h-4 text-brand-green fill-brand-green/20 shrink-0" />
-                <span>See a 10-Min Demo</span>
+                <span>Book 15-Min Walkthrough</span>
               </a>
             </div>
 
             {/* One-Line Trust Bar */}
-            <div className="pt-1">
+            <div className="pt-2">
               <div className="inline-flex flex-wrap items-center justify-center gap-3 px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs text-xs font-semibold text-slate-700">
                 <span className="flex items-center gap-1.5 text-slate-900">
                   <ShieldCheck className="w-4 h-4 text-brand-cyanDeep shrink-0" />
@@ -112,36 +112,6 @@ export default function Home() {
                   <CheckCircle2 className="w-4 h-4 text-brand-purple shrink-0" />
                   <strong>12-Month Dedicated SLA</strong>
                 </span>
-              </div>
-            </div>
-
-            {/* Above-The-Fold Verified Client Logo Strip */}
-            <div className="pt-6 border-t border-slate-100">
-              <span className="text-[11px] font-bold uppercase tracking-widest text-slate-400 block mb-4">
-                Trusted by Established Businesses Across Kenya &amp; Regional Markets
-              </span>
-              <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 items-center justify-center max-w-4xl mx-auto">
-                {[
-                  { src: '/clients/stem-hotel.png', alt: 'Stem Hotel', name: 'Stem Hotel' },
-                  { src: '/clients/818-hotel.png', alt: '818 Hotel', name: '818 Hotel' },
-                  { src: '/clients/eco-septic-ventures.png', alt: 'Eco Septic Ventures', name: 'Eco Septic' },
-                  { src: '/clients/mihe-works.png', alt: 'Mihe Works Engineering', name: 'Mihe Works' },
-                  { src: '/clients/ngiro-organic-treasures.png', alt: 'Ngiro Organic Treasures', name: 'Ngiro Organics' },
-                  { src: '/clients/elitteride.png', alt: 'ElitteRide', name: 'ElitteRide' },
-                ].map((client) => (
-                  <div
-                    key={client.name}
-                    className="h-14 p-2 rounded-xl bg-slate-50/80 border border-slate-200/60 flex items-center justify-center grayscale hover:grayscale-0 opacity-75 hover:opacity-100 transition duration-200"
-                    title={client.name}
-                  >
-                    <img
-                      src={client.src}
-                      alt={client.alt}
-                      className="max-h-10 max-w-[100px] object-contain"
-                      loading="eager"
-                    />
-                  </div>
-                ))}
               </div>
             </div>
 
