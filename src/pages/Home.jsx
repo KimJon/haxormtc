@@ -64,13 +64,13 @@ export default function Home() {
             </div>
 
             {/* Client-Centric & Action-Driven Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12] max-w-4xl mx-auto font-recoleta">
-              Run Your Entire Business on Modern Software — Websites, Cloud POS &amp; ERP.
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15] max-w-4xl mx-auto font-recoleta">
+              Software, Websites &amp; POS Systems Built for Growing Businesses.
             </h1>
 
-            {/* Specific, High-Converting Subhead */}
+            {/* Concise, Scannable Subhead */}
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-sans leading-relaxed">
-              From high-speed commercial websites and Google Maps SEO to touchscreen checkout and certified Odoo &amp; Zoho ERP. Production-grade systems with instant M-Pesa integration, 100% code ownership, and zero upfront risk.
+              We build custom commercial websites, touchscreen POS, and Odoo ERP — with instant M-Pesa integration, 100% source code ownership, and zero upfront risk.
             </p>
 
             {/* Dual Clear-Contrast CTAs */}
@@ -121,12 +121,13 @@ export default function Home() {
         {/* Verified Business Trust & Authenticity Section */}
         <TrustSection />
 
-        {/* Turnkey Digital Business Kits for 40+ Industries with Real-time Search */}
+        {/* Curated Digital Business Kits Spotlight (Hospitality, Retail, Contracting) */}
         <BusinessKitsShowcase 
-          limit={6} 
-          showSearch={true}
-          title="Turnkey Digital Business Kits for 40+ Industries"
-          subtitle="Select your sector or search below to explore the 4-pillar digital stack (Presence, Sales, Operations, Growth) serving all 47 counties and international clients."
+          limit={3} 
+          showSearch={false}
+          compact={true}
+          title="Turnkey Digital Business Kits"
+          subtitle="Pre-configured operational stacks complete with custom web app, direct booking/POS, and M-Pesa integration."
         />
 
         {/* HUB 1: Digital Marketing & Web Presence */}
@@ -164,222 +165,205 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 8 Curated Marketing & Web Cards with dedicated links */}
+            {/* 4 Flagship Digital Solutions for Fast Scanning */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               
-              {/* Card 1: Website Development */}
-              <div className="p-6 rounded-2xl bg-slate-50 border-2 border-brand-cyan/40 flex flex-col justify-between shadow-xs hover:shadow-card transition group relative">
-                <div className="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full bg-brand-cyanDeep text-white text-[10px] font-extrabold tracking-wider uppercase shadow-2xs">
-                  Most Requested
-                </div>
+              {/* Flagship 1: Custom Website Development */}
+              <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-2xs hover:shadow-card transition flex flex-col justify-between group">
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-cyan-100 text-brand-cyanDeep">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full bg-slate-200/80 text-slate-800">
                       Turnkey Web
                     </span>
-                    <Monitor className="w-5 h-5 text-brand-cyanDeep" />
+                    <Monitor className="w-5 h-5 text-slate-700" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900">Custom Website Development</h3>
-                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    Custom websites for Kenyan businesses. <strong>Starter ({formatPrice(25000)})</strong>, <strong>Business ({formatPrice(45000)})</strong>, <strong>Premium ({formatPrice(85000)})</strong> & <strong>Landing Page ({formatPrice(7000)})</strong>.
+                  <h3 className="text-lg font-extrabold text-slate-900 font-sans">
+                    Custom Websites
+                  </h3>
+                  <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                    Fast, secure commercial web apps with direct WhatsApp &amp; M-Pesa checkout.
                   </p>
-                  <div className="my-3 py-2 border-y border-slate-100">
-                    <div className="font-mono font-extrabold text-xl text-slate-900">
-                      From {formatPrice(7000)} <span className="text-xs font-sans font-normal text-slate-500">to {formatPrice(85000)}</span>
+
+                  <div className="my-4 py-2 border-y border-slate-200/60">
+                    <div className="font-mono font-black text-xl text-slate-900">
+                      From {formatPrice(7000)}
                     </div>
-                    <div className="text-[11px] text-emerald-700 font-semibold mt-1 flex items-center gap-1.5">
-                      <Check className="w-3.5 h-3.5 text-brand-green shrink-0" />
-                      <span>30% Start → 40% Design → 30% Launch</span>
+                    <div className="text-[11px] text-slate-500 mt-0.5">
+                      1 Year Free Domain &amp; Cloud Hosting
                     </div>
                   </div>
+
+                  <ul className="space-y-1.5 text-xs text-slate-700 mb-6">
+                    <li className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>Mobile-first responsive design</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>WhatsApp room/order bookings</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>100% full source code ownership</span>
+                    </li>
+                  </ul>
                 </div>
+
                 <Link
                   to="/services/website-development"
-                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-center bg-brand-cyanDeep text-white hover:bg-cyan-700 flex items-center justify-center gap-1.5 transition shadow-xs"
+                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5 transition shadow-xs"
                 >
-                  <span>Explore All 4 Packages</span>
+                  <span>Explore 4 Tiers</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
 
-              {/* Card 2: Social Media */}
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between shadow-xs hover:shadow-card transition group">
+              {/* Flagship 2: Google Maps & Local SEO */}
+              <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-2xs hover:shadow-card transition flex flex-col justify-between group">
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-cyan-100 text-brand-cyanDeep">
-                      20–30 Videos/mo
-                    </span>
-                    <TrendingUp className="w-5 h-5 text-brand-coral" />
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900">Social Video Posting</h3>
-                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    Scripted, edited, and scheduled short-form videos posted across TikTok, Instagram, and Facebook.
-                  </p>
-                  <div className="my-4 font-mono font-extrabold text-2xl text-slate-900">
-                    {formatPrice(4500)} <span className="text-xs font-sans font-normal text-slate-500">/ month</span>
-                  </div>
-                </div>
-                <Link
-                  to="/services/social-media"
-                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5 transition"
-                >
-                  <span>View Package & Order</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-
-              {/* Card 3: Meta Ads */}
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between shadow-xs hover:shadow-card transition group">
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-green-100 text-green-800">
-                      WhatsApp Ads
-                    </span>
-                    <Zap className="w-5 h-5 text-brand-green" />
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900">Meta Ads Placement</h3>
-                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    Targeted Facebook & Instagram ads that route ready Kenyan buyers directly into your WhatsApp.
-                  </p>
-                  <div className="my-4 font-mono font-extrabold text-2xl text-slate-900">
-                    {formatPrice(4200)} <span className="text-xs font-sans font-normal text-slate-500">/ month</span>
-                  </div>
-                </div>
-                <Link
-                  to="/services/meta-ads"
-                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5 transition"
-                >
-                  <span>View Package & Order</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-
-              {/* Card 4: Google Ads */}
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between shadow-xs hover:shadow-card transition group">
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-amber-100 text-amber-800">
-                      High Intent
-                    </span>
-                    <Search className="w-5 h-5 text-brand-goldDeep" />
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900">Google Ads PPC</h3>
-                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    Target customers actively typing search queries to buy your product or emergency service right now.
-                  </p>
-                  <div className="my-4 font-mono font-extrabold text-2xl text-slate-900">
-                    {formatPrice(2500)} <span className="text-xs font-sans font-normal text-slate-500">/ month</span>
-                  </div>
-                </div>
-                <Link
-                  to="/services/google-ads"
-                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5 transition"
-                >
-                  <span>View Package & Order</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-
-              {/* Card 5: GMB */}
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between shadow-xs hover:shadow-card transition group">
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-200 text-slate-700">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full bg-slate-200/80 text-slate-800">
                       Local 3-Pack
                     </span>
-                    <MapPin className="w-5 h-5 text-brand-coral" />
+                    <MapPin className="w-5 h-5 text-slate-700" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900">Google Business Profile</h3>
-                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    Google Maps GPS pin, opening hours, product catalog, and 5-star review setup for local walk-ins.
+                  <h3 className="text-lg font-extrabold text-slate-900 font-sans">
+                    Google Business &amp; Maps
+                  </h3>
+                  <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                    Dominate local search walk-ins and phone calls across all 47 counties.
                   </p>
-                  <div className="my-4 font-mono font-extrabold text-2xl text-slate-900">
-                    {formatPrice(300)} <span className="text-xs font-sans font-normal text-slate-500">starting</span>
+
+                  <div className="my-4 py-2 border-y border-slate-200/60">
+                    <div className="font-mono font-black text-xl text-slate-900">
+                      From {formatPrice(300)}
+                    </div>
+                    <div className="text-[11px] text-slate-500 mt-0.5">
+                      One-time setup &amp; optimization
+                    </div>
                   </div>
+
+                  <ul className="space-y-1.5 text-xs text-slate-700 mb-6">
+                    <li className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>Verified Google Maps GPS pin</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>Product catalog &amp; photo showcase</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>5-Star customer review generation</span>
+                    </li>
+                  </ul>
                 </div>
+
                 <Link
                   to="/services/google-my-business"
-                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5 transition"
+                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5 transition shadow-xs"
                 >
-                  <span>View Tiers & Order</span>
+                  <span>View GMB Tiers</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
 
-              {/* Card 6: Business Email */}
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between shadow-xs hover:shadow-card transition group">
+              {/* Flagship 3: High-Intent Paid Ads */}
+              <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-2xs hover:shadow-card transition flex flex-col justify-between group">
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-200 text-slate-700">
-                      Outlook & Workspace
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full bg-slate-200/80 text-slate-800">
+                      Targeted Traffic
                     </span>
-                    <Mail className="w-5 h-5 text-brand-cyanDeep" />
+                    <Zap className="w-5 h-5 text-slate-700" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900">Business Email Setup</h3>
-                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    Custom domain email (name@yourcompany.com) with SPF/DKIM DNS anti-spam protection.
+                  <h3 className="text-lg font-extrabold text-slate-900 font-sans">
+                    Google &amp; Meta Ads
+                  </h3>
+                  <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                    Route active ready buyers directly into your WhatsApp sales funnel.
                   </p>
-                  <div className="my-4 font-mono font-extrabold text-2xl text-slate-900">
-                    {formatPrice(700)} <span className="text-xs font-sans font-normal text-slate-500">starting</span>
+
+                  <div className="my-4 py-2 border-y border-slate-200/60">
+                    <div className="font-mono font-black text-xl text-slate-900">
+                      From {formatPrice(2500)} <span className="text-xs font-sans font-normal text-slate-500">/ mo</span>
+                    </div>
+                    <div className="text-[11px] text-slate-500 mt-0.5">
+                      Campaign setup &amp; weekly optimization
+                    </div>
                   </div>
+
+                  <ul className="space-y-1.5 text-xs text-slate-700 mb-6">
+                    <li className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>Direct-to-WhatsApp click ads</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>Google search intent targeting</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>Transparent weekly ROI reporting</span>
+                    </li>
+                  </ul>
                 </div>
+
                 <Link
-                  to="/services/email-management"
-                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5 transition"
+                  to="/services/google-ads"
+                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5 transition shadow-xs"
                 >
-                  <span>View Packages</span>
+                  <span>View Ad Packages</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
 
-              {/* Card 7: Local SEO */}
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between shadow-xs hover:shadow-card transition group">
+              {/* Flagship 4: Social Video & Content Posting */}
+              <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-2xs hover:shadow-card transition flex flex-col justify-between group">
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-200 text-slate-700">
-                      Organic Rank
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full bg-slate-200/80 text-slate-800">
+                      20–30 Videos/mo
                     </span>
-                    <Search className="w-5 h-5 text-brand-green" />
+                    <TrendingUp className="w-5 h-5 text-slate-700" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900">Search Engine Optimization</h3>
-                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    Rank higher on Google organically for Kenyan search terms and get free monthly customer leads.
+                  <h3 className="text-lg font-extrabold text-slate-900 font-sans">
+                    Social Video Posting
+                  </h3>
+                  <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                    Consistent TikTok, Instagram &amp; Facebook presence for brand trust.
                   </p>
-                  <div className="my-4 font-mono font-extrabold text-2xl text-slate-900">
-                    {formatPrice(3000)} <span className="text-xs font-sans font-normal text-slate-500">starting</span>
-                  </div>
-                </div>
-                <Link
-                  to="/services/seo"
-                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5 transition"
-                >
-                  <span>View Packages</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
 
-              {/* Card 8: ICT & Training */}
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between shadow-xs hover:shadow-card transition group">
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-200 text-slate-700">
-                      Advisory
-                    </span>
-                    <BookOpen className="w-5 h-5 text-brand-goldDeep" />
+                  <div className="my-4 py-2 border-y border-slate-200/60">
+                    <div className="font-mono font-black text-xl text-slate-900">
+                      {formatPrice(4500)} <span className="text-xs font-sans font-normal text-slate-500">/ mo</span>
+                    </div>
+                    <div className="text-[11px] text-slate-500 mt-0.5">
+                      Scripted, edited &amp; posted monthly
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900">ICT Consulting & Training</h3>
-                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    1-on-1 strategic infrastructure audits and practical 10-session digital literacy staff training.
-                  </p>
-                  <div className="my-4 font-mono font-extrabold text-2xl text-slate-900">
-                    {formatPrice(3000)} <span className="text-xs font-sans font-normal text-slate-500">/ session</span>
-                  </div>
+
+                  <ul className="space-y-1.5 text-xs text-slate-700 mb-6">
+                    <li className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>20–30 short-form reels/videos</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>Captions, hashtags &amp; scheduling</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>Zero staff time required</span>
+                    </li>
+                  </ul>
                 </div>
+
                 <Link
-                  to="/services/ict-consulting"
-                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5 transition"
+                  to="/services/social-media"
+                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5 transition shadow-xs"
                 >
-                  <span>View Consulting</span>
+                  <span>View Video Plan</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -474,198 +458,128 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* 6 Software Cards linking to dedicated landing pages */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* 3 Core Production Systems for Fast Scanning */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               
-              {/* 1. HaxPos */}
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-card hover:shadow-card-hover transition flex flex-col justify-between">
+              {/* 1. HaxPos Point of Sale */}
+              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-2xs hover:shadow-card transition flex flex-col justify-between group">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-cyan-100 text-brand-cyanDeep">
-                      Universal POS
+                    <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
+                      Touchscreen POS
                     </span>
-                    <Store className="w-6 h-6 text-brand-cyanDeep" />
+                    <Store className="w-5 h-5 text-slate-700" />
                   </div>
-                  <h3 className="text-2xl font-extrabold text-slate-900">HaxPos Point of Sale</h3>
-                  <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-                    Barcode checkout, M-Pesa STK push prompt, receipt printing, and stock alerts for Cafes, Restaurants, Liquor Stores, Hardware, and Retail Shops.
+                  <h3 className="text-xl font-black text-slate-900 font-sans">
+                    HaxPos Point of Sale
+                  </h3>
+                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                    Barcode checkout, M-Pesa STK push prompt, receipt printing, and stock alerts for retail shops, cafes, and supermarkets.
                   </p>
                   
-                  <div className="my-5 p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 text-xs font-semibold text-slate-700">
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Direct M-Pesa STK push to customer phone</div>
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Real-time stock alerts & shift cash reconciliation</div>
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Works offline when internet is temporarily down</div>
-                  </div>
+                  <ul className="my-6 space-y-2 text-xs text-slate-700 font-medium">
+                    <li className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Instant M-Pesa STK push prompt</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Stock alerts &amp; cashier shift reconciliation</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Works offline when internet is down</span>
+                    </li>
+                  </ul>
                 </div>
 
                 <Link
                   to="/software/haxpos"
-                  className="w-full py-3 px-5 rounded-xl text-xs sm:text-sm font-bold text-center bg-brand-cyanDeep text-white hover:bg-cyan-700 flex items-center justify-center gap-2 transition"
+                  className="w-full py-3 px-5 rounded-xl text-xs sm:text-sm font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-2 transition shadow-xs"
                 >
-                  <span>View System & Book Demo</span>
+                  <span>Explore POS &amp; Book Demo</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
 
-              {/* 2. ElitteGo */}
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-card hover:shadow-card-hover transition flex flex-col justify-between">
+              {/* 2. HaxOne Hospitality Suite */}
+              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-2xs hover:shadow-card transition flex flex-col justify-between group">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-[11px] font-extrabold uppercase px-3 py-1 rounded-full bg-coral-50 text-brand-coral border border-brand-coral/20">
-                      Localized Regional Service • Kenya & East Africa
+                    <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
+                      Hotel &amp; Lodges
                     </span>
-                    <Truck className="w-6 h-6 text-brand-coral" />
+                    <Hotel className="w-5 h-5 text-slate-700" />
                   </div>
-                  <h3 className="text-2xl font-extrabold text-slate-900">ElitteGo Delivery Platform</h3>
-                  <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-                    Specialized turnkey multi-vendor ordering and delivery software ecosystem for regional logistics fleets in Kenya & East Africa. Customer app, merchant portal, and driver live GPS dispatch for Food, Drinks, Medicine, and Groceries.
+                  <h3 className="text-xl font-black text-slate-900 font-sans">
+                    HaxOne Hospitality Suite
+                  </h3>
+                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                    Complete Property Management System. Visual room reservation calendar, front desk check-in, and Restaurant KOT ticketing.
                   </p>
 
-                  {/* QR Code Demo Banner */}
-                  <div className="my-4 p-3 rounded-2xl bg-cyan-50 border border-brand-cyan/30 flex items-center gap-3">
-                    <img 
-                      src="/elittego-qr.png" 
-                      alt="Scan ElitteGo QR Demo" 
-                      className="w-12 h-12 rounded-lg bg-white p-1 border border-slate-200 shrink-0 object-contain shadow-2xs"
-                    />
-                    <div>
-                      <div className="text-xs font-extrabold text-slate-900">Live Smartphone App Demo</div>
-                      <div className="text-[11px] text-slate-600">Scan QR code to test rider & customer flow</div>
-                    </div>
-                  </div>
-
-                  <div className="mb-5 p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 text-xs font-semibold text-slate-700">
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Customer web/mobile ordering app</div>
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Merchant catalog & driver GPS dispatch app</div>
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Automated M-Pesa payments & commission splits</div>
-                  </div>
-                </div>
-
-                <Link
-                  to="/software/elittego"
-                  className="w-full py-3 px-5 rounded-xl text-xs sm:text-sm font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-2 transition"
-                >
-                  <span>View Platform & Scan QR Demo</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-
-              {/* 3. HaxOne */}
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-card hover:shadow-card-hover transition flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-amber-50 text-brand-goldDeep">
-                      Hospitality PMS
-                    </span>
-                    <Hotel className="w-6 h-6 text-brand-goldDeep" />
-                  </div>
-                  <h3 className="text-2xl font-extrabold text-slate-900">HaxOne Hospitality Suite</h3>
-                  <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-                    Complete Property Management System for Hotels, Lodges, and Resorts. Visual room calendar, front desk check-in, and Kitchen Order Ticket (KOT) POS.
-                  </p>
-
-                  <div className="my-5 p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 text-xs font-semibold text-slate-700">
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Visual room booking calendar & guest folios</div>
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Restaurant POS with KOT kitchen ticket printers</div>
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Channel Manager sync (Booking.com & Airbnb)</div>
-                  </div>
+                  <ul className="my-6 space-y-2 text-xs text-slate-700 font-medium">
+                    <li className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Visual room booking calendar &amp; folios</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Direct 0% commission guest reservations</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Restaurant POS with kitchen ticket printers</span>
+                    </li>
+                  </ul>
                 </div>
 
                 <Link
                   to="/software/haxone"
-                  className="w-full py-3 px-5 rounded-xl text-xs sm:text-sm font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-2 transition"
+                  className="w-full py-3 px-5 rounded-xl text-xs sm:text-sm font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-2 transition shadow-xs"
                 >
-                  <span>View Hospitality Suite</span>
+                  <span>Explore Hotel Suite</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
 
-              {/* 4. HMS */}
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-card hover:shadow-card-hover transition flex flex-col justify-between">
+              {/* 3. Odoo & Zoho ERP Consulting */}
+              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-2xs hover:shadow-card transition flex flex-col justify-between group">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-cyan-100 text-brand-cyanDeep">
-                      Healthcare ERP
+                    <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
+                      Odoo &amp; Zoho ERP
                     </span>
-                    <Activity className="w-6 h-6 text-brand-cyanDeep" />
+                    <Database className="w-5 h-5 text-slate-700" />
                   </div>
-                  <h3 className="text-2xl font-extrabold text-slate-900">Hospital Management System</h3>
-                  <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-                    Digital health infrastructure. Electronic Health Records (EHR), OPD triage, IPD bed tracking, pharmacy dispensary, lab orders, and insurance claims.
+                  <h3 className="text-xl font-black text-slate-900 font-sans">
+                    Custom ERP Implementation
+                  </h3>
+                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                    Certified implementation and automation for Odoo &amp; Zoho. Connect warehouse inventory, accounting, and multi-branch sales.
                   </p>
 
-                  <div className="my-5 p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 text-xs font-semibold text-slate-700">
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Paperless patient doctor consultation notes</div>
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Pharmacy batch stock & lab test results</div>
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Insurance, NHIF/SHIF, and M-Pesa billing</div>
-                  </div>
-                </div>
-
-                <Link
-                  to="/software/hospital-system"
-                  className="w-full py-3 px-5 rounded-xl text-xs sm:text-sm font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-2 transition"
-                >
-                  <span>View Hospital System</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-
-              {/* 5. Odoo Expert */}
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-card hover:shadow-card-hover transition flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-purple-50 text-purple-700">
-                      Odoo ERP Partner
-                    </span>
-                    <Database className="w-6 h-6 text-purple-700" />
-                  </div>
-                  <h3 className="text-2xl font-extrabold text-slate-900">Odoo ERP Consulting</h3>
-                  <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-                    Implementation, migration, and custom module programming for Odoo Community and Enterprise. Connect your sales, warehouse inventory, and accounting.
-                  </p>
-
-                  <div className="my-5 p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 text-xs font-semibold text-slate-700">
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> KRA eTIMS invoice synchronization</div>
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Multi-warehouse inventory and logistics</div>
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Legacy data migration (Excel, QuickBooks, Sage)</div>
-                  </div>
+                  <ul className="my-6 space-y-2 text-xs text-slate-700 font-medium">
+                    <li className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>KRA eTIMS automated invoice integration</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Multi-warehouse inventory &amp; logistics</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Legacy data migration from Excel/QuickBooks</span>
+                    </li>
+                  </ul>
                 </div>
 
                 <Link
                   to="/software/odoo"
-                  className="w-full py-3 px-5 rounded-xl text-xs sm:text-sm font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-2 transition"
+                  className="w-full py-3 px-5 rounded-xl text-xs sm:text-sm font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-2 transition shadow-xs"
                 >
-                  <span>View Odoo Services</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-
-              {/* 6. Zoho Expert */}
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-card hover:shadow-card-hover transition flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-amber-50 text-brand-goldDeep">
-                      Zoho Automation
-                    </span>
-                    <Cpu className="w-6 h-6 text-brand-goldDeep" />
-                  </div>
-                  <h3 className="text-2xl font-extrabold text-slate-900">Zoho Suite Consulting</h3>
-                  <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-                    Setup and Deluge workflow automation for Zoho CRM, Zoho Books, Zoho Desk, and Zoho One. Eliminate repetitive data entry and automate sales pipelines.
-                  </p>
-
-                  <div className="my-5 p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 text-xs font-semibold text-slate-700">
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Zoho CRM sales blueprints and lead scoring</div>
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Zoho Books localized VAT accounting</div>
-                    <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-brand-green shrink-0" /> Custom Deluge scripts and webhook integration</div>
-                  </div>
-                </div>
-
-                <Link
-                  to="/software/zoho"
-                  className="w-full py-3 px-5 rounded-xl text-xs sm:text-sm font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-2 transition"
-                >
-                  <span>View Zoho Services</span>
+                  <span>Explore ERP Services</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

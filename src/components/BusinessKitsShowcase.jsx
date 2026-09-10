@@ -102,7 +102,8 @@ export default function BusinessKitsShowcase({
   title = "Turnkey Digital Business Kits for 40+ Industries",
   subtitle = "Production-ready operational stacks serving all 47 counties and international clients. Select your sector or search below.",
   showSearch = true,
-  fullPage = false
+  fullPage = false,
+  compact = false
 }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
@@ -247,60 +248,63 @@ export default function BusinessKitsShowcase({
             {subtitle}
           </p>
 
-          {/* Phased Milestone Delivery Highlight Banner */}
-          <div className="mt-8 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-xs text-left flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-cyan-50 border border-brand-cyan/30 text-brand-cyanDeep flex items-center justify-center shrink-0">
-                <Sparkles className="w-5 h-5" />
+          {/* Phased Milestone Delivery & Pricing Levels (Full View Only) */}
+          {!compact && (
+            <>
+              <div className="mt-8 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-xs text-left flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-cyan-50 border border-brand-cyan/30 text-brand-cyanDeep flex items-center justify-center shrink-0">
+                    <Sparkles className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="font-bold text-slate-900 text-sm block">
+                      Pay As You Grow — Phased Milestone Delivery
+                    </span>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      You do not need to pay for the complete kit upfront. You can unlock individual phases at separate times. You only pay for the service needed at that time.
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  to="/calculator"
+                  className="shrink-0 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs"
+                >
+                  <Calculator className="w-3.5 h-3.5" />
+                  <span>Customize Phases</span>
+                </Link>
               </div>
-              <div>
-                <span className="font-bold text-slate-900 text-sm block">
-                  Pay As You Grow — Phased Milestone Delivery
-                </span>
-                <p className="text-xs text-slate-600 mt-0.5">
-                  You do not need to pay for the complete kit upfront. You can unlock individual phases at separate times (e.g. launch your website and Google profile first, then add the booking engine or inventory system later). You only pay for the service needed at that time.
-                </p>
-              </div>
-            </div>
-            <Link
-              to="/calculator"
-              className="shrink-0 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs"
-            >
-              <Calculator className="w-3.5 h-3.5" />
-              <span>Customize Phases</span>
-            </Link>
-          </div>
 
-          {/* 4 Pricing Levels Architecture Grid */}
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
-            {PRICING_LEVELS.map((lvl) => (
-              <div 
-                key={lvl.id}
-                className="bg-white border border-slate-200/90 rounded-2xl p-4 shadow-2xs hover:border-brand-cyan transition flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className="text-xs font-black uppercase tracking-wider text-slate-900">
-                      {lvl.level}
-                    </span>
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
-                      {lvl.badge}
-                    </span>
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+                {PRICING_LEVELS.map((lvl) => (
+                  <div 
+                    key={lvl.id}
+                    className="bg-white border border-slate-200/90 rounded-2xl p-4 shadow-2xs hover:border-brand-cyan transition flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-2">
+                        <span className="text-xs font-black uppercase tracking-wider text-slate-900">
+                          {lvl.level}
+                        </span>
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+                          {lvl.badge}
+                        </span>
+                      </div>
+                      <div className="text-sm sm:text-base font-extrabold text-brand-cyanDeep mb-1 font-mono">
+                        {lvl.priceRangeKES}
+                      </div>
+                      <p className="text-[11px] text-slate-500 line-clamp-2 mb-3">
+                        {lvl.purpose}
+                      </p>
+                    </div>
+                    <div className="pt-2 border-t border-slate-100 text-[10px] text-slate-600">
+                      <span className="font-semibold block text-slate-800 mb-0.5">Ideal For:</span>
+                      <span className="line-clamp-2">{lvl.idealFor}</span>
+                    </div>
                   </div>
-                  <div className="text-sm sm:text-base font-extrabold text-brand-cyanDeep mb-1 font-mono">
-                    {lvl.priceRangeKES}
-                  </div>
-                  <p className="text-[11px] text-slate-500 line-clamp-2 mb-3">
-                    {lvl.purpose}
-                  </p>
-                </div>
-                <div className="pt-2 border-t border-slate-100 text-[10px] text-slate-600">
-                  <span className="font-semibold block text-slate-800 mb-0.5">Ideal For:</span>
-                  <span className="line-clamp-2">{lvl.idealFor}</span>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
         </div>
 
         {/* Real-time Search & Sector Filter Controls */}
