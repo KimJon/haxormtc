@@ -33,10 +33,6 @@ AddDefaultCharset UTF-8
     Header always set X-Frame-Options "SAMEORIGIN"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
-    # Allow JavaScript modules and font assets to load without CORS rejection
-    <FilesMatch "\.(js|css|woff2|woff|ttf|svg|png|jpg|jpeg|ico|webmanifest)$">
-        Header set Access-Control-Allow-Origin "*"
-    </FilesMatch>
 </IfModule>
 
 # ------------------------------------------------------------------------------
