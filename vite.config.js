@@ -4,5 +4,5 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', // Use relative paths so assets load seamlessly on domain roots, subfolders, addon domains, or cPanel preview URLs
+  base: '/', // Use root-absolute paths so assets resolve cleanly from all routes (/services, /software, etc.) on domain
 })

@@ -73,6 +73,13 @@ async function main() {
   const zipPath = path.resolve(__dirname, 'haxormtc-cpanel-upload.zip');
   const tarPath = path.resolve(__dirname, 'haxormtc-cpanel-upload.tar.gz');
 
+  const distHtaccess = path.resolve(__dirname, 'dist', '.htaccess');
+  const distHtaccessTxt = path.resolve(__dirname, 'dist', 'htaccess.txt');
+  if (fs.existsSync(distHtaccess)) {
+    fs.copyFileSync(distHtaccess, distHtaccessTxt);
+    console.log('[INFO] Created htaccess.txt fallback in dist');
+  }
+
   if (fs.existsSync(zipPath)) fs.unlinkSync(zipPath);
   if (fs.existsSync(tarPath)) fs.unlinkSync(tarPath);
 

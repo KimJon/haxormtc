@@ -44,6 +44,7 @@ AddDefaultCharset UTF-8
 # ------------------------------------------------------------------------------
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /
 
     # Step 1: Force non-www (https://haxormtc.com) if accessed via www.haxormtc.com
     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
@@ -54,19 +55,12 @@ AddDefaultCharset UTF-8
     RewriteCond %{HTTP:X-Forwarded-Proto} !https
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-    # Step 3: Route any nested subpath requests for assets back to the assets folder
-    RewriteRule ^.+/(assets/.*)$ $1 [L]
-
-    # Step 4: If the requested file or directory physically exists, serve it immediately
+    # Step 3: If the requested file or directory physically exists, serve it immediately
     RewriteCond %{REQUEST_FILENAME} -f [OR]
     RewriteCond %{REQUEST_FILENAME} -d
     RewriteRule ^ - [L]
 
-    # Step 5: Never rewrite static asset requests (.js, .css, images, fonts) to index.html
-    RewriteCond %{REQUEST_URI} \.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|webp|webmanifest|json|xml|txt)$ [NC]
-    RewriteRule ^ - [L]
-
-    # Step 6: Route all other client-side URLs (/services, /kits, /calculator, etc.) to index.html
+    # Step 4: Route all other client-side URLs (/services, /kits, /calculator, etc.) to index.html
     RewriteRule ^ index.html [L]
 </IfModule>
 
