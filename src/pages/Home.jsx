@@ -57,10 +57,10 @@ export default function Home() {
             
             {/* Category Eyebrow */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700 shadow-2xs">
-              <span className="w-2 h-2 rounded-full bg-slate-900" />
-              <span>Turnkey Digital Infrastructure</span>
+              <span className="w-2 h-2 rounded-full bg-brand-cyanDeep" />
+              <span>Certified Zoho &amp; Odoo Partner</span>
               <span className="text-slate-300">•</span>
-              <span className="text-slate-900 font-bold">Websites, Cloud POS &amp; ERP</span>
+              <span className="text-slate-900 font-bold">Custom Software, POS &amp; ERP</span>
             </div>
 
             {/* Client-Centric & Action-Driven Headline */}
@@ -70,7 +70,7 @@ export default function Home() {
 
             {/* Concise, Scannable Subhead */}
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-sans leading-relaxed">
-              We build custom commercial websites, touchscreen POS, and Odoo ERP — with instant M-Pesa integration, 100% source code ownership, and zero upfront risk.
+              Certified Zoho consulting, touchscreen cloud POS, and custom commercial software with instant M-Pesa integration, 100% source code ownership, and zero upfront risk.
             </p>
 
             {/* Dual Clear-Contrast CTAs */}
@@ -432,6 +432,116 @@ export default function Home() {
           </div>
         </section>
 
+        {/* DEDICATED ZOHO PLATFORM SHOWCASE (MAXIMIZING GOOGLE SEARCH CONSOLE TOP QUERIES) */}
+        <section className="py-20 bg-gradient-to-b from-slate-900 via-[#182032] to-[#121927] text-white border-b border-slate-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              
+              {/* Left Column: High-Intent Zoho Pitch */}
+              <div className="lg:col-span-6 space-y-6">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-extrabold uppercase tracking-wider border border-cyan-500/30">
+                  <Sparkles className="w-4 h-4 text-cyan-400" />
+                  <span>Certified Zoho Consulting &amp; Implementation Partner</span>
+                </div>
+
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-heading tracking-tight leading-tight">
+                  Automate Sales, Accounts &amp; Operations with Zoho One.
+                </h2>
+
+                <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+                  Eliminate disconnected spreadsheets and manual data entry. As certified Zoho implementation consultants, we architect, customize, and integrate the full Zoho ecosystem for growing businesses across Kenya and international markets.
+                </p>
+
+                {/* 4 Core Zoho Solution Pillars */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                  <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                    <h4 className="font-bold text-sm text-cyan-300 flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
+                      Zoho CRM Pipelines
+                    </h4>
+                    <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                      Lead scoring, automated assignment, deal stages, and WhatsApp chat triggers.
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                    <h4 className="font-bold text-sm text-cyan-300 flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
+                      Zoho Books Accounting
+                    </h4>
+                    <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                      KRA eTIMS compliant invoicing, localized VAT, and automated bank reconciliation.
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                    <h4 className="font-bold text-sm text-cyan-300 flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
+                      Zoho Desk Support
+                    </h4>
+                    <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                      Omnichannel ticketing across email, WhatsApp, and phone with automated SLAs.
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                    <h4 className="font-bold text-sm text-cyan-300 flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
+                      Deluge Custom Code
+                    </h4>
+                    <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                      Bespoke webhooks, multi-app sync, and executive dashboards in Zoho Analytics.
+                    </p>
+                  </div>
+                </div>
+
+                {/* CTAs */}
+                <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
+                  <Link
+                    to="/services/zoho"
+                    className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-sm font-bold text-slate-900 bg-white hover:bg-slate-100 transition flex items-center justify-center gap-2 shadow-lg"
+                  >
+                    <span>Explore Zoho Consulting</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+
+                  <a
+                    href={createWhatsAppUrl("Hello Haxor MTC, I want to consult with your Zoho Experts regarding Zoho One and CRM implementation.")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-brand-green hover:bg-[#20ba5a] shadow-glow-whatsapp flex items-center justify-center gap-2 transition"
+                  >
+                    <MessageSquare className="w-4 h-4 fill-white" />
+                    <span>Schedule Zoho Consultation</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Visual Dashboard Preview */}
+              <div className="lg:col-span-6">
+                <div className="relative rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl group">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-[11px] font-bold text-cyan-300 border border-cyan-500/30">
+                      Live Dashboard Architecture
+                    </span>
+                  </div>
+                  <img
+                    src="/images/zoho-dashboard.jpg"
+                    alt="Zoho CRM and Zoho One Executive Dashboard Interface"
+                    className="w-full h-auto object-cover transform transition duration-500 group-hover:scale-102"
+                    loading="lazy"
+                  />
+                  <div className="p-4 bg-slate-900/90 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+                    <span>Executive KPI Analytics &amp; Pipeline Visualization</span>
+                    <span className="text-cyan-400 font-semibold">100% Data Ownership</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
         {/* HUB 2: Software Solutions & Systems */}
         <section id="software" className="py-20 bg-slate-50 border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -462,14 +572,22 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               
               {/* 1. HaxPos Point of Sale */}
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-2xs hover:shadow-card transition flex flex-col justify-between group">
+              <div className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200 shadow-2xs hover:shadow-card transition flex flex-col justify-between group">
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
-                      Touchscreen POS
-                    </span>
-                    <Store className="w-5 h-5 text-slate-700" />
+                  <div className="relative rounded-2xl overflow-hidden mb-5 border border-slate-200 shadow-2xs group-hover:border-slate-300 transition">
+                    <img
+                      src="/images/pos-system.jpg"
+                      alt="HaxPos Point of Sale Touchscreen Interface"
+                      className="w-full h-44 object-cover object-top transition duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-2.5 left-2.5">
+                      <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-white border border-white/20">
+                        Touchscreen POS
+                      </span>
+                    </div>
                   </div>
+
                   <h3 className="text-xl font-black text-slate-900 font-sans">
                     HaxPos Point of Sale
                   </h3>
@@ -477,7 +595,7 @@ export default function Home() {
                     Barcode checkout, M-Pesa STK push prompt, receipt printing, and stock alerts for retail shops, cafes, and supermarkets.
                   </p>
                   
-                  <ul className="my-6 space-y-2 text-xs text-slate-700 font-medium">
+                  <ul className="my-5 space-y-2 text-xs text-slate-700 font-medium">
                     <li className="flex items-center gap-2">
                       <Check className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span>Instant M-Pesa STK push prompt</span>
@@ -503,14 +621,22 @@ export default function Home() {
               </div>
 
               {/* 2. HaxOne Hospitality Suite */}
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-2xs hover:shadow-card transition flex flex-col justify-between group">
+              <div className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200 shadow-2xs hover:shadow-card transition flex flex-col justify-between group">
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
-                      Hotel &amp; Lodges
-                    </span>
-                    <Hotel className="w-5 h-5 text-slate-700" />
+                  <div className="relative rounded-2xl overflow-hidden mb-5 border border-slate-200 shadow-2xs group-hover:border-slate-300 transition">
+                    <img
+                      src="/images/hotel-booking.jpg"
+                      alt="HaxOne Hospitality Suite Room Booking Engine"
+                      className="w-full h-44 object-cover object-top transition duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-2.5 left-2.5">
+                      <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-white border border-white/20">
+                        Hotel &amp; Lodges
+                      </span>
+                    </div>
                   </div>
+
                   <h3 className="text-xl font-black text-slate-900 font-sans">
                     HaxOne Hospitality Suite
                   </h3>
@@ -518,7 +644,7 @@ export default function Home() {
                     Complete Property Management System. Visual room reservation calendar, front desk check-in, and Restaurant KOT ticketing.
                   </p>
 
-                  <ul className="my-6 space-y-2 text-xs text-slate-700 font-medium">
+                  <ul className="my-5 space-y-2 text-xs text-slate-700 font-medium">
                     <li className="flex items-center gap-2">
                       <Check className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span>Visual room booking calendar &amp; folios</span>
@@ -544,14 +670,22 @@ export default function Home() {
               </div>
 
               {/* 3. Odoo & Zoho ERP Consulting */}
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-2xs hover:shadow-card transition flex flex-col justify-between group">
+              <div className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200 shadow-2xs hover:shadow-card transition flex flex-col justify-between group">
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
-                      Odoo &amp; Zoho ERP
-                    </span>
-                    <Database className="w-5 h-5 text-slate-700" />
+                  <div className="relative rounded-2xl overflow-hidden mb-5 border border-slate-200 shadow-2xs group-hover:border-slate-300 transition">
+                    <img
+                      src="/images/zoho-dashboard.jpg"
+                      alt="Zoho One and CRM Executive Dashboard"
+                      className="w-full h-44 object-cover object-top transition duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-2.5 left-2.5">
+                      <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-white border border-white/20">
+                        Zoho &amp; Odoo ERP
+                      </span>
+                    </div>
                   </div>
+
                   <h3 className="text-xl font-black text-slate-900 font-sans">
                     Custom ERP Implementation
                   </h3>
@@ -559,7 +693,7 @@ export default function Home() {
                     Certified implementation and automation for Odoo &amp; Zoho. Connect warehouse inventory, accounting, and multi-branch sales.
                   </p>
 
-                  <ul className="my-6 space-y-2 text-xs text-slate-700 font-medium">
+                  <ul className="my-5 space-y-2 text-xs text-slate-700 font-medium">
                     <li className="flex items-center gap-2">
                       <Check className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span>KRA eTIMS automated invoice integration</span>
