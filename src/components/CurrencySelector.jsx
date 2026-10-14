@@ -52,8 +52,8 @@ export default function CurrencySelector({ compact = false }) {
     },
     {
       id: 'ke-kes',
-      label: 'Kenya & Regional (KSh)',
-      sub: 'Standard Regional Rate',
+      label: 'Regional African (KES)',
+      sub: 'African Regional Rate',
       currency: 'KES',
       isAfrica: true,
       code: 'KES',

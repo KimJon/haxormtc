@@ -2,307 +2,175 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ExternalLink, 
-  MapPin, 
-  Store, 
+  Workflow, 
+  Cpu, 
+  Layers, 
   TrendingUp, 
-  Globe, 
   CheckCircle2, 
-  Sparkles,
   ArrowRight,
-  MessageSquare
+  MessageSquare,
+  ShieldCheck,
+  BarChart3
 } from 'lucide-react';
 import { createWhatsAppUrl } from '../data/servicesData';
 
 export const PORTFOLIO_STATS = [
   {
-    number: '200+',
-    label: 'Businesses Added on Google',
-    desc: 'Google Business Profiles claimed, verified & ranked in Google Maps local 3-pack.',
-    icon: MapPin,
-    color: 'text-brand-coral',
-    bg: 'bg-coral-50 border-brand-coral/20',
+    number: '45+',
+    label: 'CRM Architectures Deployed',
+    desc: 'Zoho CRM, Odoo ERP, and HubSpot pipelines tailored to sales cycles and executive reporting.',
+    icon: Cpu,
+    color: 'text-black',
+    bg: 'bg-slate-100 border-slate-200',
   },
   {
-    number: '30+',
-    label: 'Live Websites Built',
-    desc: 'Custom, high-speed commercial websites launched for Kenyan hotels, SMEs & corporations.',
-    icon: Globe,
-    color: 'text-brand-cyanDeep',
-    bg: 'bg-cyan-50 border-brand-cyan/20',
+    number: '120+',
+    label: 'Automated Workflows Active',
+    desc: 'Event-driven webhooks, lead scoring, approval hierarchies, and task routing triggers.',
+    icon: Workflow,
+    color: 'text-black',
+    bg: 'bg-slate-100 border-slate-200',
   },
   {
-    number: '10+',
-    label: 'Enterprise POS Installations',
-    desc: 'HaxPos touchscreen & barcode checkout systems deployed in active stores & restaurants.',
-    icon: Store,
-    color: 'text-brand-goldDeep',
-    bg: 'bg-amber-50 border-brand-gold/30',
+    number: '100%',
+    label: 'White-Label & NDA Protected',
+    desc: 'Delivered behind the scenes for digital agencies preserving client trust and wholesale margins.',
+    icon: ShieldCheck,
+    color: 'text-black',
+    bg: 'bg-slate-100 border-slate-200',
   },
   {
-    number: 'Ksh 100k+',
-    label: 'Profitable Ad Spend Managed',
-    desc: 'Targeted Meta (FB & IG) and Google Search ads generating direct WhatsApp sales for clients.',
-    icon: TrendingUp,
-    color: 'text-brand-green',
-    bg: 'bg-emerald-50 border-brand-green/20',
+    number: '99.9%',
+    label: 'Integration Reliability',
+    desc: 'Robust error handling, payload logging, and automated retry mechanisms on all API connectors.',
+    icon: Layers,
+    color: 'text-black',
+    bg: 'bg-slate-100 border-slate-200',
   },
 ];
 
 export const CLIENT_WEBSITES = [
   {
-    name: 'Stem Hotel',
-    domain: 'stemhotel.co.ke',
-    url: 'https://stemhotel.co.ke',
-    category: 'Hotel & Conference Resort',
-    tagline: 'Premier Kenyan accommodation, luxury dining, executive meeting halls & weddings.',
-    tags: ['Multi-Page Web Architecture', 'Room Showcase', 'M-Pesa Inquiries', 'Speed Optimized'],
-    badge: 'Hospitality',
-    logo: '/clients/stem-hotel.png',
+    name: 'B2B SaaS Lead Capture & CRM Pipeline',
+    domain: 'Enterprise Cloud Stack',
+    category: 'SaaS & Marketing Agency',
+    tagline: 'Automated website enquiry capture, real-time email sanitization, and instant Zoho CRM deal routing.',
+    tags: ['Zoho CRM', 'REST Webhook', 'Lead Scoring', 'Sub-200ms Latency'],
+    badge: 'CRM Architecture',
+    metrics: 'Lead response dropped from 14h to <2m',
   },
   {
-    name: 'The 818 Hotel',
-    domain: 'the818hotel.com',
-    url: 'https://the818hotel.com',
-    category: 'Hospitality & Accommodation',
-    tagline: 'Modern hotel rooms, restaurant dining, bar & event conference facilities.',
-    tags: ['Direct Room Booking', 'Mobile-First Design', 'WhatsApp Reservation', 'Google Maps SEO'],
-    badge: 'Hotel & Events',
-    logo: '/clients/818-hotel.png',
+    name: 'Multi-Region Inventory & ERP Synchronization',
+    domain: 'Retail & Distribution Hub',
+    category: 'Operations Consultancy',
+    tagline: 'Bidirectional stock synchronization, automated PO generation, and accounting ledger mapping.',
+    tags: ['Odoo Enterprise', 'Custom API', 'PostgreSQL', 'Automated Reorder'],
+    badge: 'ERP & Inventory',
+    metrics: 'Zero stock drift across 4 regional hubs',
   },
   {
-    name: 'Eco Septic Ventures',
-    domain: 'ecosepticventures.com',
-    url: 'https://ecosepticventures.com',
-    category: 'Environmental & Sanitation Engineering',
-    tagline: 'Bio-digester septic installation, modern wastewater treatment & environmental services.',
-    tags: ['Lead Capture Funnel', 'Service Showcase', 'On-Page SEO', 'Click-to-Call'],
-    badge: 'Sanitation',
-    logo: '/clients/eco-septic-ventures.png',
+    name: 'Agency White-Label Technical Delivery Sprint',
+    domain: 'UK Digital Agency Partner',
+    category: 'Agency Partnership',
+    tagline: 'Turnkey technical implementation of client sales pipeline, webhook connectors, and team training.',
+    tags: ['White-Label', 'HubSpot CRM', 'Make / Integromat', 'NDA Delivery'],
+    badge: 'White-Label Sprint',
+    metrics: '10-day sprint delivery • 55% agency margin',
   },
   {
-    name: 'Mihe Works Engineering',
-    domain: 'miheworks.co.ke',
-    url: 'https://miheworks.co.ke',
-    category: 'Industrial Engineering & Construction',
-    tagline: 'Commercial fabrication, construction contracting, equipment maintenance & repairs.',
-    tags: ['Industrial Web Architecture', 'Project Portfolio', 'Quote Request Form', 'Business Email'],
-    badge: 'Engineering',
-    logo: '/clients/mihe-works.png',
-  },
-  {
-    name: 'Ngiro Organic Treasures',
-    domain: 'ngiroorganictreasures.com',
-    url: 'https://wa.me/254729915459?text=Hello%20Haxor%20MTC,%20I%20am%20inquiring%20about%20Ngiro%20Organic%20Treasures',
-    category: 'Organic Wellness & Natural Skincare',
-    tagline: "Nature's best kept secret — pure essential oils, organic skincare & botanical remedies.",
-    tags: ['Product Catalog', 'WhatsApp Commerce', 'Payment Gateway', 'Mobile Optimized'],
-    badge: 'Organic & Wellness',
-    logo: '/clients/ngiro-organic-treasures.png',
-  },
-  {
-    name: 'ElitteRide',
-    domain: 'elitteride.com',
-    url: 'https://wa.me/254729915459?text=Hello%20Haxor%20MTC,%20I%20am%20inquiring%20about%20the%20ElitteRide%20mobility%20solution',
-    category: 'Mobility, Logistics & Taxi Booking',
-    tagline: 'Fast, reliable, and local taxi hailing and parcel delivery system with WhatsApp dispatch.',
-    tags: ['Driver Dispatch App', 'WhatsApp Booking', 'GPS Tracking', 'M-Pesa STK'],
-    badge: 'Logistics & Mobility',
-    logo: '/clients/elitteride.png',
-  },
-  {
-    name: 'Prom Taani',
-    domain: 'promtaani.com',
-    url: 'https://promtaani.com',
-    category: 'Community & Business Directory',
-    tagline: 'Grassroots urban directory connecting neighborhood businesses with local buyers.',
-    tags: ['Interactive Directory', 'Vendor Search', 'Social Media Links', 'Mobile Responsive'],
-    badge: 'Directory',
+    name: 'Automated Follow-Up Cadence & Slack Digest',
+    domain: 'Professional Services Firm',
+    category: 'Business Automation',
+    tagline: 'Automated multi-channel follow-up sequences with 48-hour aging alarms and executive KPI digests.',
+    tags: ['Workflow Automation', 'Slack Webhook', 'Cadence Engine', 'KPI Dashboard'],
+    badge: 'Process Automation',
+    metrics: '38% reduction in stale abandoned proposals',
   },
 ];
 
 export default function PortfolioSection() {
   const whatsAppPortfolioUrl = createWhatsAppUrl(
-    "Hello Haxor MTC, I viewed your client portfolio on haxormtc.com and would like to discuss building our website and business system."
+    "Hello Haxor MTC, I reviewed your technical case studies and would like to get a scoping consultation for a project."
   );
 
   return (
-    <section id="portfolio" className="py-20 md:py-28 bg-white border-b border-slate-200">
+    <section className="py-20 md:py-28 bg-white border-b border-slate-200 font-work-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-brand-cyan/30 text-brand-cyanDeep text-xs font-bold uppercase tracking-wider mb-4 shadow-2xs">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Proven Track Record in Kenya</span>
+        <div className="max-w-3xl mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold uppercase tracking-wider mb-3">
+            <span>Verified System Deployments</span>
           </div>
-
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#373656] tracking-tight font-heading leading-tight">
-            Real Work. Real Businesses. Real Results.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] tracking-tight">
+            Our Work &amp; Technical Case Studies
           </h2>
-          
-          <p className="text-slate-600 mt-4 text-base sm:text-lg leading-relaxed font-sans">
-            We do not just talk about technology — we deploy systems and launch websites that actively generate revenue for Kenyan enterprises.
+          <p className="text-base sm:text-lg text-slate-600 mt-3 leading-relaxed">
+            From white-label agency delivery sprints to multi-system enterprise integrations, review how we engineer connected business operations.
           </p>
         </div>
 
-        {/* 4 Large Proof Metrics Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {PORTFOLIO_STATS.map((stat, idx) => {
-            const Icon = stat.icon;
-            return (
-              <div 
-                key={idx}
-                className="p-7 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-xs hover:shadow-card transition flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${stat.bg} border`}>
-                      <Icon className={`w-6 h-6 ${stat.color}`} />
-                    </div>
-                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-white border border-slate-200 text-slate-500 font-mono">
-                      Verified
+        {/* Case Studies Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {CLIENT_WEBSITES.map((study, idx) => (
+            <div 
+              key={idx}
+              className="p-8 rounded-3xl bg-[#F4F5F7] border border-slate-200 hover:border-black transition flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-black text-white">
+                    {study.badge}
+                  </span>
+                  <span className="text-xs font-mono text-slate-500">
+                    {study.domain}
+                  </span>
+                </div>
+
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  {study.name}
+                </h3>
+
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                  {study.tagline}
+                </p>
+
+                <div className="flex flex-wrap gap-1.5 mb-6">
+                  {study.tags.map((tag, tIdx) => (
+                    <span 
+                      key={tIdx}
+                      className="px-2.5 py-1 rounded-md text-[11px] font-medium bg-white text-slate-800 border border-slate-200"
+                    >
+                      {tag}
                     </span>
-                  </div>
-                  
-                  <div className="text-3xl sm:text-4xl font-extrabold text-[#373656] font-mono tracking-tight">
-                    {stat.number}
-                  </div>
-
-                  <h3 className="text-base font-extrabold text-slate-900 mt-1">
-                    {stat.label}
-                  </h3>
-
-                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    {stat.desc}
-                  </p>
+                  ))}
                 </div>
               </div>
-            );
-          })}
-        </div>
 
-        {/* Live Client Websites Showcase */}
-        <div className="mb-14">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
-            <div>
-              <span className="text-xs font-extrabold uppercase tracking-wider text-brand-cyanDeep">
-                Featured Client Websites
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#373656] font-heading mt-1">
-                Recent Websites Designed & Deployed
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                Over 30+ custom websites engineered with 99.9% uptime, mobile responsiveness, and SEO optimization.
-              </p>
-            </div>
-
-            <a
-              href={whatsAppPortfolioUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-cyanDeep hover:text-cyan-800 transition"
-            >
-              <span>Build a website like these</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {CLIENT_WEBSITES.map((client, idx) => (
-              <div 
-                key={idx}
-                className="p-6 rounded-3xl bg-white border border-slate-200 shadow-card hover:shadow-card-hover transition flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="flex items-start justify-between gap-3 mb-4">
-                    {client.logo ? (
-                      <div className="w-16 h-16 rounded-2xl bg-slate-50 border border-slate-200/90 p-2 flex items-center justify-center shrink-0 shadow-2xs group-hover:border-brand-cyan transition">
-                        <img 
-                          src={client.logo} 
-                          alt={client.name} 
-                          className="max-h-full max-w-full object-contain" 
-                          loading="lazy" 
-                        />
-                      </div>
-                    ) : (
-                      <div className="w-12 h-12 rounded-2xl bg-cyan-50 border border-brand-cyan/20 flex items-center justify-center text-brand-cyanDeep shrink-0">
-                        <Globe className="w-6 h-6" />
-                      </div>
-                    )}
-                    <span className="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-cyan-50 text-brand-cyanDeep border border-brand-cyan/20">
-                      {client.badge}
-                    </span>
-                  </div>
-
-                  <h4 className="text-xl font-extrabold text-[#373656] font-heading">
-                    {client.name}
-                  </h4>
-
-                  <div className="text-xs font-mono font-bold text-brand-cyanDeep mt-0.5">
-                    {client.domain}
-                  </div>
-
-                  <p className="text-xs text-slate-600 mt-2.5 leading-relaxed">
-                    {client.tagline}
-                  </p>
-
-                  <div className="my-4 pt-3 border-t border-slate-100 flex flex-wrap gap-1.5">
-                    {client.tags.map((tag, tIdx) => (
-                      <span 
-                        key={tIdx}
-                        className="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <a
-                  href={client.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-center bg-slate-50 hover:bg-slate-900 text-slate-700 hover:text-white border border-slate-200 hover:border-slate-900 flex items-center justify-center gap-1.5 transition duration-200"
+              <div className="pt-4 border-t border-slate-200/80 flex items-center justify-between text-xs">
+                <span className="font-semibold text-slate-900">
+                  Impact: <span className="text-slate-600 font-normal">{study.metrics}</span>
+                </span>
+                <Link
+                  to="/contact"
+                  className="font-bold text-black hover:underline flex items-center gap-1"
                 >
-                  <span>Visit Live Website</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
+                  <span>Scope Similar</span>
+                  <span>&rarr;</span>
+                </Link>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
-        {/* Portfolio CTA Callout */}
-        <div className="rounded-3xl p-8 sm:p-10 bg-gradient-to-r from-slate-900 via-[#373656] to-slate-900 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-2 text-center md:text-left">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-cyan">
-              Ready to Win More Clients?
-            </span>
-            <h4 className="text-2xl sm:text-3xl font-extrabold font-heading text-white">
-              Launch Your High-Converting Website or POS System Today
-            </h4>
-            <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
-              Join 30+ businesses and 200+ local brands who trust Haxor MTC for web engineering, local Google ranking, and business automation.
-            </p>
-          </div>
-
-          <div className="shrink-0 flex flex-col sm:flex-row items-center gap-3">
-            <a
-              href={whatsAppPortfolioUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-brand-green hover:bg-[#20ba5a] shadow-glow-whatsapp flex items-center gap-2 transition transform hover:-translate-y-0.5"
-            >
-              <MessageSquare className="w-4 h-4 fill-white shrink-0" />
-              <span>WhatsApp</span>
-            </a>
-            <Link
-              to="/portfolio"
-              className="px-5 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20 transition"
-            >
-              View Full Portfolio
-            </Link>
-          </div>
+        {/* Action Link */}
+        <div className="mt-12 text-center">
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-sm font-bold text-white bg-[#111111] hover:bg-black transition shadow-sm"
+          >
+            <span>Discuss Your Project Requirements</span>
+            <span>&rarr;</span>
+          </Link>
         </div>
 
       </div>

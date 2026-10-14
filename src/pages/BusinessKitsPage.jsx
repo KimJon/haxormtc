@@ -56,7 +56,7 @@ export default function BusinessKitsPage() {
             
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-brand-cyan/30 text-brand-cyanDeep text-xs font-bold uppercase tracking-wider shadow-2xs">
               <Layers className="w-4 h-4" />
-              <span>40 Turnkey Industry Architectures • All 47 Counties & Regional Markets</span>
+              <span>40 Turnkey Industry Architectures • Global Deployment</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 font-recoleta tracking-tight leading-tight max-w-4xl mx-auto">
@@ -82,7 +82,7 @@ export default function BusinessKitsPage() {
                   <CreditCard className="w-4 h-4" />
                 </div>
                 <div className="text-xs font-bold text-slate-900">2. Sales & Checkout</div>
-                <p className="text-[11px] text-slate-500 mt-1">POS, E-Commerce, 0% commission booking & M-Pesa/Card gateways.</p>
+                <p className="text-[11px] text-slate-500 mt-1">POS, E-Commerce, 0% commission booking & Stripe/Card gateways.</p>
               </div>
 
               <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs">
@@ -218,10 +218,10 @@ export default function BusinessKitsPage() {
 
               <div className="p-6 rounded-2xl bg-white border border-slate-200">
                 <h3 className="text-base font-bold text-slate-900">
-                  Do you provide delivery and setup across all 47 counties?
+                  Do you provide deployment and setup internationally?
                 </h3>
                 <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-                  Yes. Our cloud software and web platforms are deployed remotely nationwide across all 47 counties and internationally. Hardware peripherals (thermal printers, barcode scanners, touch terminals) are couriered with step-by-step remote video assistance or on-site engineer dispatch.
+                  Yes. Our cloud software and web platforms are deployed remotely to clients worldwide. Hardware peripherals (thermal printers, barcode scanners, touch terminals) are shipped with step-by-step remote video assistance and virtual onboarding sessions.
                 </p>
               </div>
 
@@ -248,7 +248,7 @@ export default function BusinessKitsPage() {
                   What payment methods are supported?
                 </h3>
                 <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-                  We accept M-Pesa Buy Goods & Paybill, Bank Wire Transfer (KES, USD, EUR), Visa, Mastercard, PayPal, and Binance Pay for both local and international clients.
+                  We accept Bank Wire Transfer (USD, EUR, GBP), Visa, Mastercard, PayPal, Stripe, and cryptocurrency payments for international clients.
                 </p>
               </div>
             </div>

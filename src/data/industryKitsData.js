@@ -54,7 +54,7 @@ export const INDUSTRY_KITS_40 = [
     ],
     sales: [
       'Direct guest reservation & room availability calendar',
-      'Instant M-Pesa STK push, Card & Wire payment gateways',
+      'Instant Stripe, Card & Wire payment gateways',
       'Automated SMS & email booking confirmations',
       'Channel Manager sync (Booking.com, Airbnb, Expedia)',
       'Customer CRM database with stay history',
@@ -99,7 +99,7 @@ export const INDUSTRY_KITS_40 = [
       'Direct online ordering for delivery and pickup',
       'Table reservation booking calendar',
       'Contactless QR code digital table menus',
-      'M-Pesa STK push and Card payment settlement',
+      'Stripe and credit card payment settlement',
       'Customer loyalty points & return diner discounts'
     ],
     operations: [
@@ -125,7 +125,7 @@ export const INDUSTRY_KITS_40 = [
     name: 'Retail Shops & Supermarkets',
     category: 'retail',
     iconName: 'Store',
-    tagline: 'High-speed barcode checkout, M-Pesa STK push, real-time stock alerts, e-commerce sync, and multi-branch management.',
+    tagline: 'High-speed barcode checkout, Stripe checkout, real-time stock alerts, e-commerce sync, and multi-branch management.',
     haxorProducts: 'HaxPos Retail Suite + E-Commerce Web + Google Shopping',
     basePriceKES: 55000,
     badge: 'High-Volume Retail',
@@ -137,7 +137,7 @@ export const INDUSTRY_KITS_40 = [
     ],
     sales: [
       'Touchscreen POS with thermal receipt and barcode scanning',
-      'Online e-commerce checkout with M-Pesa & Card integration',
+      'Online e-commerce checkout with Stripe & Card integration',
       'In-store customer loyalty reward points system',
       'Customer purchase accounts and digital receipts'
     ],
@@ -182,7 +182,7 @@ export const INDUSTRY_KITS_40 = [
       'Multi-warehouse inventory with bin locations and batch tracking',
       'Procurement workflows and supplier container shipment tracking',
       'Fleet delivery dispatch, route planning & proof-of-delivery',
-      'Centralized accounting with KRA eTIMS invoice synchronization'
+      'Centralized accounting with automated multi-currency invoice synchronization'
     ],
     growth: [
       'B2B Google Search Ads targeting wholesale purchasing managers',
@@ -211,14 +211,14 @@ export const INDUSTRY_KITS_40 = [
     ],
     sales: [
       'Digital student application and enrollment system',
-      'Online fee statement portal with M-Pesa Paybill integration',
+      'Online fee statement portal with automated card and wire integration',
       'Instant fee clearance receipts and financial ledger sync'
     ],
     operations: [
       'Student Information System (SIS): class registers & attendance',
       'Exam grading, digital report card generation and ranking',
       'Parent SMS & WhatsApp broadcast notification engine',
-      'Google Family Link device integration (Ksh. 1,000 / device)'
+      'Google Family Link device supervision ( / device)'
     ],
     growth: [
       'Google Ads admissions campaigns targeting enrolling parents',
@@ -246,7 +246,7 @@ export const INDUSTRY_KITS_40 = [
     ],
     sales: [
       'Online student application and document upload portal',
-      'Multi-currency and M-Pesa semester fee payment integration',
+      'Multi-currency and automated online semester fee payment integration',
       'Admissions CRM to follow up with inquiring prospective students'
     ],
     operations: [
@@ -270,7 +270,7 @@ export const INDUSTRY_KITS_40 = [
     name: 'Hospitals, Clinics & Medical Centres',
     category: 'healthcare',
     iconName: 'Activity',
-    tagline: 'Electronic Health Records (EHR), online doctor appointments, queue triage, pharmacy stock, and insurance/NHIF billing.',
+    tagline: 'Electronic Health Records (EHR), online doctor appointments, queue triage, pharmacy stock, and automated health insurance billing.',
     haxorProducts: 'Hospital Management System (HMS) + Healthcare Web + Google Maps Emergency Rank',
     basePriceKES: 85000,
     badge: 'Healthcare Infrastructure',
@@ -282,7 +282,7 @@ export const INDUSTRY_KITS_40 = [
     ],
     sales: [
       'Online appointment booking calendar with doctor selection',
-      'Cashless outpatient billing (M-Pesa, Credit Card & Insurance)',
+      'Cashless outpatient billing (Credit Card, Stripe & Insurance)',
       'Automated appointment reminder SMS to eliminate no-shows'
     ],
     operations: [
@@ -290,7 +290,7 @@ export const INDUSTRY_KITS_40 = [
       'Outpatient (OPD) queue triage and Inpatient (IPD) bed management',
       'Pharmacy dispensary inventory with expiry date tracking',
       'Laboratory test ordering, specimen tracking & result PDF generation',
-      'Insurance claims reconciliation and NHIF / SHIF billing'
+      'Insurance claims reconciliation and automated third-party billing'
     ],
     growth: [
       'Local healthcare SEO for nearby clinic and specialist searches',
@@ -307,7 +307,7 @@ export const INDUSTRY_KITS_40 = [
     name: 'Pharmacies & Chemists',
     category: 'healthcare',
     iconName: 'Heart',
-    tagline: 'Prescription intake, drug batch expiry tracking, barcode POS, M-Pesa checkout, and WhatsApp medicine delivery.',
+    tagline: 'Prescription intake, drug batch expiry tracking, barcode POS, contactless checkout, and WhatsApp medicine delivery.',
     haxorProducts: 'HaxPos Pharmacy Edition + WhatsApp Medicine Order Funnel',
     basePriceKES: 45000,
     badge: 'Pharmacy & Drugstore',
@@ -319,7 +319,7 @@ export const INDUSTRY_KITS_40 = [
     sales: [
       'Touchscreen POS with barcode scanning and receipt printing',
       'Online order and prescription request portal',
-      'M-Pesa STK push payment integration for delivery & pickup'
+      'Stripe & digital payment integration for delivery & pickup'
     ],
     operations: [
       'Drug inventory batch management with automated expiry alerts',
@@ -359,7 +359,7 @@ export const INDUSTRY_KITS_40 = [
     ],
     operations: [
       'Tenant management portal: digital lease agreements and records',
-      'Automated rent invoicing, M-Pesa Paybill & bank reconciliation',
+      'Automated rent invoicing, direct debit & bank reconciliation',
       'Tenant maintenance request ticketing and contractor assignment',
       'Property owner financial statements and expense reports'
     ],
@@ -426,7 +426,7 @@ export const INDUSTRY_KITS_40 = [
     sales: [
       'Instant service quotation request and emergency call-out form',
       'WhatsApp direct photo/video diagnostic consultation channel',
-      'On-site mobile invoicing and M-Pesa payment collection'
+      'On-site mobile invoicing and contactless payment collection'
     ],
     operations: [
       'Technician job scheduling and dispatch calendar',
@@ -482,13 +482,13 @@ export const INDUSTRY_KITS_40 = [
     name: 'Accounting & Auditing Firms',
     category: 'professional',
     iconName: 'FileText',
-    tagline: 'Client tax intake, KRA compliance consulting, secure document portal, automated bookkeeping CRM, and advisory funnels.',
+    tagline: 'Client tax intake, business tax compliance consulting, secure document portal, automated bookkeeping CRM, and advisory funnels.',
     haxorProducts: 'Accounting Firm Portal + Zoho / Odoo Practice Tools',
     basePriceKES: 55000,
     badge: 'Financial Advisory',
     presence: [
       'Professional accounting firm website with service scope breakdown',
-      'Tax season and KRA compliance advisory pages',
+      'Tax season and regulatory compliance advisory pages',
       'Google Business Profile optimized for business bookkeeping queries'
     ],
     sales: [
@@ -528,7 +528,7 @@ export const INDUSTRY_KITS_40 = [
     sales: [
       'Online policy inquiry forms with vehicle/medical detail capture',
       'Instant WhatsApp quote generation and policy advisor routing',
-      'Online premium payment gateway with M-Pesa and card support'
+      'Online premium payment gateway with Stripe and card support'
     ],
     operations: [
       'Policyholder CRM tracking coverage dates and policy schedules',
@@ -550,7 +550,7 @@ export const INDUSTRY_KITS_40 = [
     name: 'SACCOs & Microfinance',
     category: 'financial',
     iconName: 'CreditCard',
-    tagline: 'Member registration, online loan application, dividend calculator, savings statements, and M-Pesa payment integration.',
+    tagline: 'Member registration, online loan application, dividend calculator, savings statements, and online card/wire payment integration.',
     haxorProducts: 'SACCO Member Portal + Loan Management + Financial Web Architecture',
     basePriceKES: 95000,
     badge: 'Financial Services',
@@ -562,7 +562,7 @@ export const INDUSTRY_KITS_40 = [
     sales: [
       'Online member application and KYC document submission portal',
       'Digital loan application with guarantor verification workflows',
-      'Instant share capital and contribution payment via M-Pesa Paybill'
+      'Instant share capital and contribution payment via secure card/wire'
     ],
     operations: [
       'Secure member self-service portal for savings statements and balances',
@@ -595,7 +595,7 @@ export const INDUSTRY_KITS_40 = [
       'Downloadable annual reports and financial audit disclosures'
     ],
     sales: [
-      'Multi-currency online donation engine (PayPal, Cards, M-Pesa Global)',
+      'Multi-currency online donation engine (PayPal, Stripe, Cards)',
       'Recurring monthly donor subscription sponsorship program',
       'Volunteer and institutional partnership application funnels'
     ],
@@ -620,7 +620,7 @@ export const INDUSTRY_KITS_40 = [
     category: 'community',
     iconName: 'Users',
     tagline: 'Online sermon streaming, digital tithe/offering giving, event registrations, ministry portals, and SMS communication.',
-    haxorProducts: 'Church Media Portal + M-Pesa Tithe Gateway + Member CRM',
+    haxorProducts: 'Church Media Portal + Online Tithe Gateway + Member CRM',
     basePriceKES: 45000,
     badge: 'Faith & Community',
     presence: [
@@ -629,7 +629,7 @@ export const INDUSTRY_KITS_40 = [
       'Google Business Profile for worship location and driving directions'
     ],
     sales: [
-      'Secure digital tithe, offering and building fund giving (M-Pesa, Card)',
+      'Secure digital tithe, offering and building fund giving (Stripe, Card, PayPal)',
       'Event and conference registration with digital pass generation'
     ],
     operations: [
@@ -664,7 +664,7 @@ export const INDUSTRY_KITS_40 = [
     ],
     sales: [
       'Direct itinerary booking engine with deposit milestone payments',
-      'Instant PayPal, Visa/Mastercard and M-Pesa payment integration',
+      'Instant PayPal, Visa/Mastercard and Stripe payment integration',
       'Tailored private safari quotation inquiry request funnels'
     ],
     operations: [
@@ -699,7 +699,7 @@ export const INDUSTRY_KITS_40 = [
     sales: [
       'Online cargo booking and consignment pickup request portal',
       'Automated waybill generation and digital commercial invoicing',
-      'M-Pesa STK push and commercial credit terms payment integration'
+      'Stripe checkout and commercial credit terms payment integration'
     ],
     operations: [
       'Driver live GPS dispatch, route scheduling and vehicle assignment',
@@ -768,7 +768,7 @@ export const INDUSTRY_KITS_40 = [
     sales: [
       'Online vehicle service appointment booking calendar',
       'Emergency roadside assistance click-to-WhatsApp trigger',
-      'Digital repair quote approvals and M-Pesa payment integration'
+      'Digital repair quote approvals and online payment integration'
     ],
     operations: [
       'Digital job card creation with vehicle VIN, plate number and reported faults',
@@ -803,7 +803,7 @@ export const INDUSTRY_KITS_40 = [
     ],
     sales: [
       'Online 24/7 appointment scheduling with stylist selection',
-      'Walk-in touchscreen POS with M-Pesa STK push checkout',
+      'Walk-in touchscreen POS with contactless card & digital checkout',
       'VIP prepaid packages and gift voucher sales'
     ],
     operations: [
@@ -838,7 +838,7 @@ export const INDUSTRY_KITS_40 = [
       'Google Business Profile optimized for gym and workout searches'
     ],
     sales: [
-      'Online membership registration and M-Pesa subscription payments',
+      'Online membership registration and recurring Stripe subscription payments',
       'Day pass and personal training package checkout',
       'Lead capture form offering free trial day pass for local prospects'
     ],
@@ -950,7 +950,7 @@ export const INDUSTRY_KITS_40 = [
       'Raw material inventory tracking with automated purchase alerts',
       'Quality control (QC) inspection checkpoints and batch traceability',
       'Equipment maintenance scheduling and plant downtime tracking',
-      'Comprehensive accounting with KRA eTIMS invoice synchronization'
+      'Comprehensive accounting with automated multi-currency invoice synchronization'
     ],
     growth: [
       'Targeted B2B Google Search Ads capturing commercial procurement officers',
@@ -979,7 +979,7 @@ export const INDUSTRY_KITS_40 = [
     sales: [
       'Wholesale farm produce ordering portal for supermarkets and exporters',
       'Direct WhatsApp bulk ordering for restaurants and grocers',
-      'M-Pesa Paybill and wire transfer payment reconciliation'
+      'Stripe, card, and wire transfer payment reconciliation'
     ],
     operations: [
       'Harvest inventory tracking with cold room storage and shelf-life monitoring',
@@ -1014,7 +1014,7 @@ export const INDUSTRY_KITS_40 = [
     sales: [
       'Touchscreen POS for over-the-counter agrovet sales with receipt printing',
       'Online appointment booking for clinic visits and mobile farm callouts',
-      'M-Pesa STK push checkout for supplies and treatments'
+      'Contactless and card checkout for supplies and treatments'
     ],
     operations: [
       'Animal patient medical records (vaccination history, deworming dates)',
@@ -1048,7 +1048,7 @@ export const INDUSTRY_KITS_40 = [
     ],
     sales: [
       'Online clothing store with size, color and style variant selectors',
-      'M-Pesa STK push and international card payments checkout',
+      'Stripe and international card payments checkout',
       'Physical boutique touchscreen POS synchronized with online inventory'
     ],
     operations: [
@@ -1105,7 +1105,7 @@ export const INDUSTRY_KITS_40 = [
     name: 'Electronics & Phone Shops',
     category: 'retail',
     iconName: 'Smartphone',
-    tagline: 'Barcode inventory, IMEI/serial number warranty tracking, phone repair ticketing, e-commerce store, and M-Pesa POS.',
+    tagline: 'Barcode inventory, IMEI/serial number warranty tracking, phone repair ticketing, e-commerce store, and modern retail POS.',
     haxorProducts: 'Electronics E-Commerce + IMEI POS + Repair Ticketing',
     basePriceKES: 55000,
     badge: 'Tech & Gadgets',
@@ -1116,7 +1116,7 @@ export const INDUSTRY_KITS_40 = [
     ],
     sales: [
       'High-speed POS with barcode scanner and IMEI serial number capture',
-      'Online checkout with doorstep delivery and M-Pesa integration',
+      'Online checkout with doorstep delivery and Stripe integration',
       'Trade-in smartphone valuation request funnels'
     ],
     operations: [
@@ -1219,7 +1219,7 @@ export const INDUSTRY_KITS_40 = [
     sales: [
       'Instant print quote calculator by quantity, finish, and material',
       'Online artwork file upload portal (PDF, AI, PSD, High-res images)',
-      'POS checkout for walk-in print orders with M-Pesa integration'
+      'POS checkout for walk-in print orders with contactless payment integration'
     ],
     operations: [
       'Print job ticket workflow: Pre-press proofing → Print → Lamination → Dispatch',
@@ -1253,7 +1253,7 @@ export const INDUSTRY_KITS_40 = [
     sales: [
       'Interactive cleaning quote calculator with instant price estimation',
       'Online booking calendar for one-off deep cleans or recurring schedules',
-      'M-Pesa STK push and card payment integration'
+      'Stripe and credit card payment integration'
     ],
     operations: [
       'Cleaning crew dispatch calendar and job address management',
@@ -1330,7 +1330,7 @@ export const INDUSTRY_KITS_40 = [
     ],
     growth: [
       'LinkedIn B2B executive outreach strategy for HR directors',
-      'SEO ranking for top jobs in Kenya and executive recruitment terms',
+      'SEO ranking for executive recruitment and specialized talent search terms',
       'Automated candidate job alert email newsletters'
     ],
     recommendedItemIds: ['calc-web-biz', 'calc-lead-portal', 'calc-email-outlook', 'calc-seo-growth', 'calc-social']

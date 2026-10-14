@@ -100,7 +100,7 @@ const ICON_MAP = {
 export default function BusinessKitsShowcase({ 
   limit = null, 
   title = "Turnkey Digital Business Kits for 40+ Industries",
-  subtitle = "Production-ready operational stacks serving all 47 counties and international clients. Select your sector or search below.",
+  subtitle = "Production-ready operational stacks engineered for growing businesses and international clients. Select your sector or search below.",
   showSearch = true,
   fullPage = false,
   compact = false
@@ -119,10 +119,8 @@ export default function BusinessKitsShowcase({
 
   // Price formatting helper based on active currency
   const fmt = useCallback((val) => {
-    return currency === 'KES' 
-      ? `KSh ${val.toLocaleString()}` 
-      : `${currencySymbol}${val.toLocaleString()}`;
-  }, [currency, currencySymbol]);
+    return `${currencySymbol}${val.toLocaleString()}`;
+  }, [currencySymbol]);
 
   // Filter kits based on search input and active category
   const filteredKits = useMemo(() => {
@@ -167,7 +165,7 @@ export default function BusinessKitsShowcase({
           'Verified Google Business Profile & Google Maps 3-Pack local ranking',
           'WhatsApp Business catalog, quick replies, and automated customer routing',
           'Single-page high-converting mobile landing page (Free custom domain & 1-year hosting)',
-          'Direct M-Pesa STK push or verified Paybill / Till number integration',
+          'Direct Stripe, Card, or digital payment gateway integration',
           'Official Google Search indexing & QR code generation for walk-in clients'
         ],
         recurringOption: `Optional: Social media video posting (20–30 videos/mo) @ ${fmt(convertPrice(4500))}/month`,
@@ -357,7 +355,7 @@ export default function BusinessKitsShowcase({
             {/* Match Counter & Reset */}
             <div className="flex items-center justify-between text-xs text-slate-500 px-1">
               <span>
-                Showing <strong>{displayedKits.length}</strong> of <strong>40</strong> Industry Kits across all 47 counties & regional markets
+                Showing <strong>{displayedKits.length}</strong> of <strong>40</strong> Industry Kits for modern businesses worldwide
               </span>
               {(searchQuery || activeCategory !== 'all') && (
                 <button
@@ -800,7 +798,7 @@ export default function BusinessKitsShowcase({
                   <span>
                     {modalTier === 'starter' 
                       ? 'Pay only for basic presence: Google Maps & WhatsApp' 
-                      : 'Milestone rollouts & transparent pricing across all 47 counties'}
+                      : 'Milestone rollouts & transparent international pricing'}
                   </span>
                 </div>
               </div>

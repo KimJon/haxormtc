@@ -17,13 +17,13 @@ export default function WhyChooseUs() {
     },
     {
       icon: <ShieldCheck className="w-6 h-6 text-brand-coral" />,
-      title: "M-Pesa & KRA eTIMS Native",
-      desc: "Our HaxPos POS, websites, and custom software integrate directly with M-Pesa STK push and support modern tax compliance workflows.",
+      title: "White-Label NDA Protected",
+      desc: "We work behind the scenes for agencies under strict non-disclosure agreements, delivering CRM and automation projects your clients will never know were outsourced.",
     },
     {
       icon: <Zap className="w-6 h-6 text-brand-goldDeep" />,
-      title: "Turnkey Free Domain & Hosting",
-      desc: "Our Ksh. 7,000 website package includes 1 full year of your custom .com or .co.ke domain plus high-speed cloud hosting at zero hidden cost.",
+      title: "CRM & Automation Specialists",
+      desc: "Deep expertise in Zoho, Odoo, HubSpot, and custom workflow automation. We configure systems around your actual business processes, not generic templates.",
     },
     {
       icon: <Code2 className="w-6 h-6 text-brand-cyanDeep" />,

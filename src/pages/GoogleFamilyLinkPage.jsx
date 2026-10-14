@@ -47,10 +47,10 @@ export default function GoogleFamilyLinkPage() {
 
   // Dynamic pricing calculation with volume tiers
   const getRatePerDevice = (count) => {
-    if (count >= 250) return 730;
-    if (count >= 100) return 850;
-    if (count >= 50) return 900;
-    return 1000;
+    if (count >= 250) return 6;
+    if (count >= 100) return 7;
+    if (count >= 50) return 8;
+    return 10;
   };
 
   const currentRate = getRatePerDevice(deviceCount);
@@ -58,9 +58,9 @@ export default function GoogleFamilyLinkPage() {
   const convertedRate = convertPrice(currentRate);
   const convertedTotal = convertPrice(rawSubtotal);
 
-  const fmt = (val) => currency === 'KES' ? `KSh ${val.toLocaleString()}` : `${currencySymbol}${val.toLocaleString()}`;
+  const fmt = (val) => `${currencySymbol}${val.toLocaleString()}`;
 
-  const defaultWhatsAppMsg = `Hello Haxor MTC, I am interested in your Google Family Link integration service for student devices (starting at ${formatPrice(1000)}/device). Please share onboarding details for our institution.`;
+  const defaultWhatsAppMsg = `Hello Haxor MTC, I am interested in your Google Family Link integration service for student devices (starting at $10/device). Please share onboarding details for our institution.`;
   const defaultWhatsAppUrl = createWhatsAppUrl(defaultWhatsAppMsg);
 
   const calculatorWhatsAppMsg = `Hello Haxor MTC, I used your Device Cost Estimator on your website for Google Family Link integration. We have approximately ${deviceCount} student devices (Rate: ${fmt(convertedRate)}/device, Total: ${fmt(convertedTotal)}). Please guide us on kickoff and scheduling!`;
@@ -122,7 +122,7 @@ export default function GoogleFamilyLinkPage() {
     {
       id: 'pilot',
       name: 'Pilot / Per-Device Setup',
-      price: 1000,
+      price: 10,
       priceNote: 'per device (Min 10 devices)',
       bestFor: 'Individual families, homeschooling groups, and pilot classroom batches.',
       badge: 'Flexible Entry',
@@ -139,8 +139,8 @@ export default function GoogleFamilyLinkPage() {
     {
       id: 'classroom',
       name: 'Classroom / Standard Rollout',
-      price: 85000,
-      priceNote: 'up to 100 devices (~Ksh 850/device)',
+      price: 700,
+      priceNote: 'up to 100 devices (~$7/device)',
       bestFor: 'Primary, Junior Secondary & High School grades with digital learning devices.',
       badge: 'Most Popular for Schools',
       popular: true,
@@ -156,8 +156,8 @@ export default function GoogleFamilyLinkPage() {
     {
       id: 'campus',
       name: 'Whole-School Campus Rollout',
-      price: 22000,
-      priceNote: 'up to 300+ devices (~Ksh 730/device)',
+      price: 1800,
+      priceNote: 'up to 300+ devices (~$6/device)',
       bestFor: 'Large campuses, international schools, boarding academies & multi-streams.',
       badge: 'Campus Scale',
       popular: false,
@@ -186,8 +186,8 @@ export default function GoogleFamilyLinkPage() {
       a: 'It restores total classroom focus. Tablets brought into school can have non-educational games, social media, and camera apps locked during class periods, ensuring digital devices remain purely learning instruments.'
     },
     {
-      q: 'How does the Ksh. 1,000 per device pricing work?',
-      a: 'For individual parents or smaller groups, we charge Ksh. 1,000 per device (minimum 10 devices). For whole classes (up to 100 devices) or full schools (up to 300+ devices), we provide volume discount tiers starting from ~Ksh. 730 per device with on-site staff and workshops included.'
+      q: 'How does the per-device pricing work?',
+      a: 'For individual parents or smaller groups, we charge $10 per device (minimum 10 devices). For whole classes (up to 100 devices) or full schools (up to 300+ devices), we provide volume discount tiers starting from ~$6 per device with remote onboarding and workshops included.'
     },
     {
       q: 'Do you conduct on-site PTA or school workshops?',
@@ -234,7 +234,7 @@ export default function GoogleFamilyLinkPage() {
                 </h1>
 
                 <p className="text-base sm:text-lg text-slate-600 leading-relaxed body-figtree max-w-2xl">
-                  Eliminate classroom distractions, block inappropriate internet content, enforce study & bedtime screen hours, and empower parents with complete digital child protection across Kenya.
+                  Eliminate classroom distractions, block inappropriate internet content, enforce study & bedtime screen hours, and empower parents with complete digital child protection for schools worldwide.
                 </p>
 
                 {/* Key Metric Badges */}
@@ -323,7 +323,7 @@ export default function GoogleFamilyLinkPage() {
                         <input
                           type="text"
                           required
-                          placeholder="e.g. David Mwangi (Principal / PTA Chair)"
+                          placeholder="e.g. David Thompson (Principal / PTA Chair)"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-cyan"
@@ -352,7 +352,7 @@ export default function GoogleFamilyLinkPage() {
                           <input
                             type="tel"
                             required
-                            placeholder="07XX XXX XXX"
+                            placeholder="e.g., +44 7700 900123"
                             value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                             className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-cyan"
@@ -842,7 +842,7 @@ export default function GoogleFamilyLinkPage() {
                   Protect Your Students & Children Today
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300">
-                  Speak directly with an education cybersecurity specialist. Custom school rollouts starting at {formatPrice(1000)} per device.
+                  Speak directly with an education cybersecurity specialist. Custom school rollouts starting at $10 per device.
                 </p>
               </div>
 

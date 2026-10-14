@@ -175,7 +175,7 @@ export default function LandingPage() {
           <div className="pt-2 flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-600">
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-brand-green" />
-              M-Pesa STK & Bank Transfer
+              Stripe, PayPal & Bank Transfer
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-brand-cyanDeep" />
@@ -183,7 +183,7 @@ export default function LandingPage() {
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-brand-coral" />
-              Direct Support in Kenya
+              Global Remote Delivery
             </span>
           </div>
 
@@ -474,7 +474,7 @@ export default function LandingPage() {
                 <input
                   type="text"
                   required
-                  placeholder="e.g., Brian Mwangi"
+                  placeholder="e.g., James Wilson"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-brand-cyan focus:bg-white transition"
@@ -488,7 +488,7 @@ export default function LandingPage() {
                 <input
                   type="tel"
                   required
-                  placeholder="e.g., 0712 345 678"
+                  placeholder="e.g., +44 7700 900123"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-brand-cyan focus:bg-white transition"

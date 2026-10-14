@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TopTicker from '../components/TopTicker';
 import Navbar from '../components/Navbar';
-import QuoteCalculator from '../components/QuoteCalculator';
 import Footer from '../components/Footer';
 import FloatingWhatsApp from '../components/FloatingWhatsApp';
 import MobileBottomBar from '../components/MobileBottomBar';
@@ -11,24 +10,17 @@ import {
   MessageSquare, 
   Mail, 
   Check, 
-  CheckCircle2, 
   ChevronDown, 
-  ChevronUp, 
-  Sparkles, 
-  Briefcase, 
   Workflow, 
   Cpu, 
   Layers, 
-  ShieldCheck, 
   Clock, 
   Zap, 
   BarChart3, 
   Database, 
   FileText, 
-  FileCode2, 
-  TrendingUp, 
-  Download, 
-  ExternalLink 
+  ShieldCheck,
+  Code2
 } from 'lucide-react';
 import { createWhatsAppUrl, CONTACT_INFO } from '../data/servicesData';
 import { useCurrency } from '../context/CurrencyContext';
@@ -36,10 +28,9 @@ import { useCurrency } from '../context/CurrencyContext';
 export default function Home() {
   const { formatPrice } = useCurrency();
   const [activeFaq, setActiveFaq] = useState(0);
-  const [activeTab, setActiveTab] = useState('agencies');
 
   const partnerWhatsAppUrl = createWhatsAppUrl(
-    "Hello Haxor MTC, I run an agency / consultancy and would like to discuss a white-label CRM & automation delivery partnership."
+    "Hello Haxor MTC, I run an agency / consultancy and would like to discuss a white-label CRM & automation technical delivery partnership."
   );
 
   const discussProjectWhatsAppUrl = createWhatsAppUrl(
@@ -49,94 +40,86 @@ export default function Home() {
   const faqs = [
     {
       q: "What is a white-label technical delivery partner?",
-      a: "A white-label technical delivery partner works behind the scenes for digital agencies, marketing consultancies, and web development studios. We deliver CRM configuration, custom workflow automations, and API integrations under your agency's branding, allowing you to offer advanced technical capabilities without hiring full-time senior engineers."
+      a: "A white-label technical delivery partner works behind the scenes for digital marketing agencies, web design firms, and management consultancies. We handle the technical implementation of CRM systems, workflow automation, and custom API integrations under your agency's brand, allowing you to expand your service offering without hiring full-time senior engineers."
     },
     {
-      q: "How do agency partnerships work behind the scenes?",
-      a: "We operate under strict bilateral Non-Disclosure (NDA) and non-compete agreements. We can either operate completely invisibly (submitting deliverables directly to your project managers) or act as your agency's dedicated technical implementation specialists on client calls using your company email domain."
+      q: "How do agency partnerships work in practice?",
+      a: "We operate under strict bilateral Non-Disclosure (NDA) and non-compete agreements. We can work completely invisibly (reporting only to your project managers) or act as your agency's technical implementation specialists on client calls using your company email domain."
     },
     {
       q: "Which CRM platforms and automation tools do you specialize in?",
-      a: "Our core platforms include Zoho CRM & Zoho One, Odoo Community & Enterprise, and HubSpot. For automation and integrations, we build custom REST API connectors, webhook listeners, Make/Integromat scenarios, and serverless scripts to synchronize your web forms, billing, and databases."
+      a: "Our core platforms include Zoho CRM & Zoho One, Odoo Community & Enterprise, and HubSpot. For automation and integrations, we build custom REST API connectors, webhook listeners, and automated workflows to synchronize web forms, sales pipelines, accounting, and billing systems."
     },
     {
       q: "How do you protect client confidentiality and data security?",
-      a: "Every project begins with a binding Non-Disclosure Agreement and clear intellectual property transfer terms. Your agency and your clients retain 100% ownership of all configurations, source code, data schemas, and documentation upon project milestone handover."
+      a: "Every engagement begins with a mutual Non-Disclosure Agreement and clear intellectual property transfer terms. Your agency and your clients retain 100% ownership of all configurations, source code, data schemas, and documentation upon project handover."
     },
     {
-      q: "What are your wholesale pricing models and delivery timelines?",
-      a: "We offer two flexible agency models: Fixed-Scope Sprints (delivered within 1 to 3 weeks with defined deliverables) and Monthly Retainer Blocks (reserved monthly engineering hours at wholesale partner rates). Rates are structured so agencies preserve 40% to 60% gross margins."
+      q: "What are your engagement models and delivery timelines?",
+      a: "We offer two flexible agency models: Fixed-Scope Technical Sprints (typically delivered in 1 to 3 weeks with defined milestone acceptance criteria) and Dedicated Monthly Retainers (reserved monthly engineering blocks at wholesale partner rates). Rates are structured so agencies preserve healthy 40% to 60% gross margins."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-white text-[#3F4040] font-sans antialiased flex flex-col selection:bg-[#18D2FA]/30 selection:text-[#3F4040]">
+    <div className="min-h-screen bg-white text-[#111111] font-work-sans antialiased flex flex-col selection:bg-slate-200 selection:text-black">
       <TopTicker />
       <Navbar />
 
       <main className="flex-grow">
         
         {/* =========================================================================
-            SECTION 1: HERO BANNER (Clarity Performance Banner Layout & Gradients)
+            SECTION 1: HERO BANNER (Clarity Performance Clean Mono Style)
             ========================================================================= */}
-        <section className="relative pt-16 pb-20 md:pt-24 md:pb-32 overflow-hidden bg-gradient-to-b from-[#1C1D1D] via-[#2A2B2B] to-[#1C1D1D] text-white">
-          {/* Subtle Ambient Radial Gradients with Exact Brand Colors */}
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#18D2FA]/15 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-10 right-1/4 w-[500px] h-[500px] bg-[#FE4775]/15 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FED147]/5 rounded-full blur-3xl pointer-events-none" />
-
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
+        <section className="relative pt-20 pb-20 md:pt-28 md:pb-32 bg-white border-b border-slate-200">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             
-            {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#18D2FA]/30 text-xs font-semibold uppercase tracking-wider text-[#18D2FA] shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-[#18D2FA] animate-pulse" />
-              <span>⚡ White-Label Technical Delivery Partner for Agencies</span>
+            {/* Minimalist Monochrome Category Pill */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold uppercase tracking-wider">
+              <span>White-Label Technical Delivery Partner</span>
             </div>
 
-            {/* Hero Title in Work Sans */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.1] max-w-5xl mx-auto font-work-sans">
+            {/* Solid Bold Headline in Work Sans - No Rainbow Gradients */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#111111] tracking-tight leading-[1.08] max-w-4xl mx-auto">
               Build Better Business Systems. <br className="hidden sm:inline" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#18D2FA] via-[#FE4775] to-[#FED147]">
-                Deliver More for Your Clients.
-              </span>
+              Deliver More for Your Clients.
             </h1>
 
-            {/* Sub-headline */}
-            <p className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed font-normal">
-              We’re the white-label technical delivery partner specialising in CRM implementation, workflow automation, and software integrations — delivering scalable results for digital agencies, consultancies, and growing businesses across the UK, Europe, Australia &amp; worldwide.
+            {/* Focused Sub-headline */}
+            <p className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed font-normal">
+              We’re the white-label technical delivery partner specialising in CRM implementation, workflow automation, and software integrations — delivering scalable results for digital agencies, consultancies, and growing businesses across the UK, Europe, Australia, and worldwide.
             </p>
 
-            {/* Dual Clarity Button Layout */}
+            {/* Dual Clarity Button Layout: Solid Black + Clean Ghost Button with Arrow */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Link
                 to="/agency-partners"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-[#18D2FA] hover:bg-[#0EA5C6] transition-all shadow-lg hover:shadow-cyan-500/20 flex items-center justify-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-[#111111] hover:bg-black transition-all shadow-sm flex items-center justify-center gap-2"
               >
                 <span>Partner With Haxor</span>
                 <ArrowRight className="w-4 h-4 text-white" />
               </Link>
 
               <Link
-                to="/contact"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-transparent hover:bg-white/10 border-2 border-[#FE4775] text-[#FE4775] hover:text-white transition-all shadow-xs flex items-center justify-center gap-2"
+                to="/services"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-[#111111] bg-white hover:bg-slate-50 border border-slate-300 hover:border-black transition-all flex items-center justify-center gap-2"
               >
-                <span>Get in Touch</span>
-                <span className="text-[#FE4775]">→</span>
+                <span>Our Services</span>
+                <span>→</span>
               </Link>
             </div>
 
-            {/* Supporting Trust Bar */}
-            <div className="pt-8 flex flex-wrap items-center justify-center gap-6 text-xs font-semibold text-slate-400">
+            {/* Clean Monochrome Trust Indicators */}
+            <div className="pt-8 flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-500">
               <span className="flex items-center gap-1.5">
-                <span className="text-[#18D2FA]">✓</span> Practical implementation
+                <span className="text-black font-bold">✓</span> Practical implementation
               </span>
-              <span className="text-slate-600 hidden sm:inline">•</span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5">
-                <span className="text-[#18D2FA]">✓</span> Clear communication
+                <span className="text-black font-bold">✓</span> Clear communication
               </span>
-              <span className="text-slate-600 hidden sm:inline">•</span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5">
-                <span className="text-[#18D2FA]">✓</span> Documented delivery
+                <span className="text-black font-bold">✓</span> Documented delivery
               </span>
             </div>
 
@@ -146,31 +129,31 @@ export default function Home() {
         {/* =========================================================================
             SECTION 2: LOGO PANEL (Clarity logo-panel--grey-lt)
             ========================================================================= */}
-        <section className="py-8 bg-surface-50 border-b border-[#3F4040]/10">
+        <section className="py-8 bg-[#F4F5F7] border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-5">
-              Enterprise Ecosystems &amp; Certified Implementations
+            <div className="text-center text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-4">
+              Enterprise Platforms &amp; Architecture Standards
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
-              <div className="flex items-center gap-2 font-bold text-slate-700 text-sm">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#18D2FA]" />
+            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 text-slate-700 font-semibold text-xs sm:text-sm">
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-black" />
                 <span>Zoho Certified Consulting</span>
               </div>
-              <div className="flex items-center gap-2 font-bold text-slate-700 text-sm">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#FE4775]" />
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-black" />
                 <span>Odoo ERP Implementation</span>
               </div>
-              <div className="flex items-center gap-2 font-bold text-slate-700 text-sm">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#FED147]" />
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-black" />
                 <span>HubSpot Solutions Architecture</span>
               </div>
-              <div className="flex items-center gap-2 font-bold text-slate-700 text-sm">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#18D2FA]" />
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-black" />
                 <span>REST API &amp; Webhook Sync</span>
               </div>
-              <div className="flex items-center gap-2 font-bold text-slate-700 text-sm">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#25D366]" />
-                <span>M-Pesa &amp; Stripe Gateways</span>
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-black" />
+                <span>Stripe &amp; Global Gateways</span>
               </div>
             </div>
           </div>
@@ -179,88 +162,73 @@ export default function Home() {
         {/* =========================================================================
             SECTION 3: SPLIT PANEL 1 (Clarity panel-split--left Focused on Results)
             ========================================================================= */}
-        <section className="py-20 md:py-28 bg-white border-b border-[#3F4040]/10">
+        <section className="py-20 md:py-28 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               
-              {/* Left Side: System Diagram & Metric Visual */}
-              <div className="lg:col-span-5 relative">
-                <div className="p-8 rounded-3xl bg-gradient-to-br from-[#1C1D1D] to-[#2A2B2B] text-white shadow-xl relative overflow-hidden border border-white/10">
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-[#18D2FA]/20 rounded-full blur-2xl pointer-events-none" />
-                  
-                  <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
-                    <span className="text-xs font-bold font-mono text-[#18D2FA] uppercase tracking-wider">
-                      Live Operations Engine
+              {/* Left Side: Crisp Monochromatic System Graphic */}
+              <div className="lg:col-span-5">
+                <div className="p-8 rounded-3xl bg-[#111111] text-white shadow-lg border border-neutral-800 space-y-4">
+                  <div className="flex items-center justify-between pb-4 border-b border-neutral-800">
+                    <span className="text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">
+                      Technical Delivery Operations
                     </span>
-                    <span className="text-[10px] bg-emerald-500/20 text-emerald-400 font-bold px-2 py-0.5 rounded">
-                      ● Active Sync
+                    <span className="text-[10px] bg-white/10 text-white font-mono px-2 py-0.5 rounded">
+                      Production
                     </span>
                   </div>
 
-                  <div className="space-y-4 text-xs">
-                    <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
-                      <div className="flex items-center gap-2.5">
-                        <span className="text-base">⚡</span>
-                        <div>
-                          <div className="font-bold text-white">Lead Capture &amp; Validation</div>
-                          <div className="text-[10px] text-slate-400">Zero data entry • 180ms execution</div>
-                        </div>
+                  <div className="space-y-3 text-xs">
+                    <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+                      <div>
+                        <div className="font-bold text-white">Lead Capture &amp; Validation</div>
+                        <div className="text-[10px] text-slate-400">Zero data entry • 180ms webhook</div>
                       </div>
-                      <span className="text-[#18D2FA] font-mono font-bold">100%</span>
+                      <span className="font-mono text-white font-bold">100%</span>
                     </div>
 
-                    <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
-                      <div className="flex items-center gap-2.5">
-                        <span className="text-base">📊</span>
-                        <div>
-                          <div className="font-bold text-white">Pipeline Cadence Automation</div>
-                          <div className="text-[10px] text-slate-400">Overdue tasks &amp; stale deal alerts</div>
-                        </div>
+                    <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+                      <div>
+                        <div className="font-bold text-white">Pipeline Cadence Automation</div>
+                        <div className="text-[10px] text-slate-400">Overdue tasks &amp; stale deal alerts</div>
                       </div>
-                      <span className="text-[#FE4775] font-mono font-bold">48h SLA</span>
+                      <span className="font-mono text-white font-bold">48h SLA</span>
                     </div>
 
-                    <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
-                      <div className="flex items-center gap-2.5">
-                        <span className="text-base">💎</span>
-                        <div>
-                          <div className="font-bold text-white">Agency Margin Preservation</div>
-                          <div className="text-[10px] text-slate-400">Fixed wholesale sprint rates</div>
-                        </div>
+                    <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+                      <div>
+                        <div className="font-bold text-white">Agency Margin Preservation</div>
+                        <div className="text-[10px] text-slate-400">Wholesale fixed sprint rates</div>
                       </div>
-                      <span className="text-[#FED147] font-mono font-bold">40–60%</span>
+                      <span className="font-mono text-white font-bold">40–60%</span>
                     </div>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-[11px] text-slate-400">
+                  <div className="pt-4 border-t border-neutral-800 flex items-center justify-between text-[11px] text-slate-400">
                     <span>100% White-Label &amp; NDA Backed</span>
-                    <span className="font-mono text-slate-300">v2.4 Production</span>
+                    <span className="font-mono text-slate-300">v3.2 Sync</span>
                   </div>
                 </div>
               </div>
 
               {/* Right Side: Copy & Narrative */}
-              <div className="lg:col-span-7 space-y-6">
-                <span className="text-xs font-black uppercase tracking-wider text-[#0EA5C6] bg-[#18D2FA]/10 px-3.5 py-1 rounded-full border border-[#18D2FA]/20">
-                  Performance Over Fluff
-                </span>
-
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1C1D1D] tracking-tight font-work-sans">
-                  Focused on Automation, Pipeline &amp; Real Revenue
+              <div className="lg:col-span-7 space-y-5">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] tracking-tight">
+                  Focused on Automation, Pipeline &amp; Revenue
                 </h2>
 
-                <p className="text-base sm:text-lg text-[#3F4040]/90 leading-relaxed">
-                  With hands-on software engineering experience, a passion for technology, and a steadfast focus on quality over quantity: our deep understanding of complex B2B buyer journeys and sales operations sets us apart.
+                <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
+                  With deep in-house systems architecture experience, a passion for technology, and a steadfast focus on quality over quantity: our understanding of the B2B buyer journey and sales operations sets us apart.
                 </p>
 
-                <p className="text-base text-[#3F4040]/80 leading-relaxed">
-                  Most agencies and providers are interested in traffic, vanity clicks, or selling generic retail IT support. We’re more interested in capturing qualified <em>leads</em>, accelerating <em>sales pipeline velocity</em>, and eliminating hundreds of hours of manual administrative overhead: <strong>real results</strong>.
+                <p className="text-base text-slate-600 leading-relaxed font-normal">
+                  Most providers are interested in vanity metrics or generic IT support. We’re more interested in capturing qualified <em>leads</em>, accelerating <em>sales pipeline velocity</em>, and saving hundreds of hours of manual administrative overhead: <strong>real results</strong>.
                 </p>
 
                 <div className="pt-2">
                   <Link 
                     to="/services" 
-                    className="inline-flex items-center gap-2 text-sm font-bold text-[#1C1D1D] hover:text-[#0EA5C6] transition border-b-2 border-[#1C1D1D] pb-1"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-black hover:underline pb-1"
                   >
                     <span>Our Services</span>
                     <span>→</span>
@@ -275,61 +243,57 @@ export default function Home() {
         {/* =========================================================================
             SECTION 4: DARK PANEL: OUR APPROACH (Clarity panel--black content-box-grid)
             ========================================================================= */}
-        <section className="py-24 bg-[#1C1D1D] text-white relative overflow-hidden">
-          {/* Subtle Radial Glows */}
-          <div className="absolute top-0 right-10 w-96 h-96 bg-[#18D2FA]/10 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#FE4775]/10 rounded-full blur-3xl pointer-events-none" />
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-24 bg-[#111111] text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Centered Heading */}
-            <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight font-work-sans">
+            <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
                 Our approach to B2B Systems &amp; Automation
               </h2>
               <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
-                We combine best practice systems architecture, agile sprint execution, and deep experience of the B2B tech buyer journey to eliminate operational friction.
+                We combine best practice systems architecture with our experience of B2B sales cycles and agency delivery workflows.
               </p>
             </div>
 
-            {/* 3-Column Centered Cards with Symbols */}
+            {/* 3-Column Centered Cards with Monochromatic Styling */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               
               {/* Card 1: Deep Immersion */}
-              <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-[#18D2FA]/40 transition text-center flex flex-col items-center">
-                <div className="w-16 h-16 rounded-2xl bg-[#18D2FA]/15 text-[#18D2FA] text-2xl flex items-center justify-center mb-6">
+              <div className="p-8 rounded-3xl bg-neutral-900 border border-neutral-800 text-center flex flex-col items-center">
+                <div className="w-14 h-14 rounded-2xl bg-neutral-800 text-white flex items-center justify-center mb-6 text-xl">
                   ⤢
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
                   Deep Immersion
                 </h3>
-                <p className="text-sm text-slate-300 leading-relaxed">
+                <p className="text-sm text-slate-400 leading-relaxed">
                   Passionate about technology, we completely immerse ourselves in what your business or agency client does, and are comfortable working with complex technical logic and multi-tier workflows.
                 </p>
               </div>
 
               {/* Card 2: Quality Architecture */}
-              <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-[#FE4775]/40 transition text-center flex flex-col items-center">
-                <div className="w-16 h-16 rounded-2xl bg-[#FE4775]/15 text-[#FE4775] text-2xl flex items-center justify-center mb-6">
+              <div className="p-8 rounded-3xl bg-neutral-900 border border-neutral-800 text-center flex flex-col items-center">
+                <div className="w-14 h-14 rounded-2xl bg-neutral-800 text-white flex items-center justify-center mb-6 text-xl">
                   💎
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
-                  Quality Delivery
+                  Quality Architecture
                 </h3>
-                <p className="text-sm text-slate-300 leading-relaxed">
+                <p className="text-sm text-slate-400 leading-relaxed">
                   Quality results require quality systems. We design clean data schemas, robust error-handled webhooks, and documented field mappings that don't fail when transaction volume scales.
                 </p>
               </div>
 
               {/* Card 3: AI & Technology */}
-              <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-[#FED147]/40 transition text-center flex flex-col items-center">
-                <div className="w-16 h-16 rounded-2xl bg-[#FED147]/15 text-[#FED147] text-2xl flex items-center justify-center mb-6">
+              <div className="p-8 rounded-3xl bg-neutral-900 border border-neutral-800 text-center flex flex-col items-center">
+                <div className="w-14 h-14 rounded-2xl bg-neutral-800 text-white flex items-center justify-center mb-6 text-xl">
                   ⚙️
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
                   AI &amp; Automation
                 </h3>
-                <p className="text-sm text-slate-300 leading-relaxed">
+                <p className="text-sm text-slate-400 leading-relaxed">
                   Our work is always guided by modern automation frameworks, real-time webhooks, and AI-assisted workflows. Repetitive manual data entry is systematically replaced by smart triggers.
                 </p>
               </div>
@@ -340,63 +304,63 @@ export default function Home() {
         </section>
 
         {/* =========================================================================
-            SECTION 5: OPTIMISED FOR THE B2B BUYER JOURNEY (Clarity Workflow Section)
+            SECTION 5: OPTIMISED FOR THE B2B SYSTEM JOURNEY (Clarity Workflow Section)
             ========================================================================= */}
-        <section className="py-20 md:py-28 bg-white border-b border-[#3F4040]/10">
+        <section className="py-20 md:py-28 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mb-12">
-              <h2 className="text-3xl sm:text-4xl font-black text-[#1C1D1D] tracking-tight pl-4 border-l-4 border-[#18D2FA] font-work-sans">
+              <h2 className="text-3xl sm:text-4xl font-black text-[#111111] tracking-tight pl-4 border-l-4 border-black">
                 Optimised for the B2B System Journey
               </h2>
-              <p className="text-base sm:text-lg text-[#3F4040]/90 leading-relaxed mt-4">
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed mt-4">
                 We have a deep understanding and first-hand experience of the B2B buyer journey for our technology clients. Often revolving around high value deals and long buying cycles, we build digital strategies and CRM architectures that align with the reality of the buying process.
               </p>
             </div>
 
-            {/* Visual Workflow Journey Map */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-surface-50 border border-slate-200">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+            {/* Minimalist 4-Stage Workflow Architecture Map */}
+            <div className="p-8 sm:p-10 rounded-3xl bg-[#F4F5F7] border border-slate-200">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 
-                <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
-                  <div className="text-xs font-mono font-bold text-[#0EA5C6] mb-1">STAGE 01</div>
+                <div className="p-6 rounded-2xl bg-white border border-slate-200">
+                  <div className="text-xs font-mono font-bold text-slate-400 mb-1">STAGE 01</div>
                   <h4 className="font-bold text-slate-900 mb-1">Inbound Capture</h4>
                   <p className="text-xs text-slate-600 leading-relaxed">
                     Lead submits web form, quote tool, or booking request. Input sanitized &amp; parsed.
                   </p>
-                  <div className="mt-3 text-[10px] font-mono bg-cyan-50 text-[#0EA5C6] p-1.5 rounded">
+                  <div className="mt-4 text-[10px] font-mono bg-slate-100 text-slate-700 p-2 rounded">
                     Webhook &lt; 200ms
                   </div>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
-                  <div className="text-xs font-mono font-bold text-[#FE4775] mb-1">STAGE 02</div>
+                <div className="p-6 rounded-2xl bg-white border border-slate-200">
+                  <div className="text-xs font-mono font-bold text-slate-400 mb-1">STAGE 02</div>
                   <h4 className="font-bold text-slate-900 mb-1">CRM Deal Routing</h4>
                   <p className="text-xs text-slate-600 leading-relaxed">
                     Account matched, deal created with custom stage probability and rep assignment.
                   </p>
-                  <div className="mt-3 text-[10px] font-mono bg-pink-50 text-[#FE4775] p-1.5 rounded">
+                  <div className="mt-4 text-[10px] font-mono bg-slate-100 text-slate-700 p-2 rounded">
                     Zoho / Odoo Deal #Mapped
                   </div>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
-                  <div className="text-xs font-mono font-bold text-amber-600 mb-1">STAGE 03</div>
+                <div className="p-6 rounded-2xl bg-white border border-slate-200">
+                  <div className="text-xs font-mono font-bold text-slate-400 mb-1">STAGE 03</div>
                   <h4 className="font-bold text-slate-900 mb-1">Follow-Up Cadence</h4>
                   <p className="text-xs text-slate-600 leading-relaxed">
                     Automated email / WhatsApp confirmation sent + 48-hour aging alarm set for sales.
                   </p>
-                  <div className="mt-3 text-[10px] font-mono bg-amber-50 text-amber-700 p-1.5 rounded">
+                  <div className="mt-4 text-[10px] font-mono bg-slate-100 text-slate-700 p-2 rounded">
                     Task: Immediate Call
                   </div>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
-                  <div className="text-xs font-mono font-bold text-emerald-600 mb-1">STAGE 04</div>
+                <div className="p-6 rounded-2xl bg-white border border-slate-200">
+                  <div className="text-xs font-mono font-bold text-slate-400 mb-1">STAGE 04</div>
                   <h4 className="font-bold text-slate-900 mb-1">Closed-Won &amp; Invoicing</h4>
                   <p className="text-xs text-slate-600 leading-relaxed">
                     Deal marks won; triggers automated contract, invoice dispatch, and onboarding board.
                   </p>
-                  <div className="mt-3 text-[10px] font-mono bg-emerald-50 text-emerald-700 p-1.5 rounded">
+                  <div className="mt-4 text-[10px] font-mono bg-slate-100 text-slate-700 p-2 rounded">
                     Revenue Logged
                   </div>
                 </div>
@@ -407,7 +371,7 @@ export default function Home() {
                 <div>
                   <strong>Outcome:</strong> Eliminates lost enquiries, holds sales teams accountable, and gives leadership 100% real-time pipeline visibility.
                 </div>
-                <Link to="/services/crm-implementation" className="font-bold text-[#0EA5C6] hover:underline flex items-center gap-1">
+                <Link to="/services/crm-implementation" className="font-bold text-black hover:underline flex items-center gap-1">
                   <span>Explore CRM Implementation</span>
                   <span>→</span>
                 </Link>
@@ -419,19 +383,19 @@ export default function Home() {
         {/* =========================================================================
             SECTION 6: ABOUT US / THE AGENCY GAP (Clarity Two-Column Split)
             ========================================================================= */}
-        <section className="py-20 bg-white border-b border-[#3F4040]/10">
+        <section className="py-20 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
               
               <div className="lg:col-span-4">
-                <h2 className="text-3xl sm:text-4xl font-black text-[#1C1D1D] tracking-tight pl-4 border-l-4 border-[#FE4775] font-work-sans">
+                <h2 className="text-3xl sm:text-4xl font-black text-[#111111] tracking-tight pl-4 border-l-4 border-black">
                   About Haxor MTC
                 </h2>
               </div>
 
-              <div className="lg:col-span-8 space-y-4 text-base sm:text-lg text-[#3F4040]/90 leading-relaxed">
+              <div className="lg:col-span-8 space-y-4 text-base sm:text-lg text-slate-700 leading-relaxed">
                 <p>
-                  Modern business systems are complicated. Journeys can be lengthy, considered, and complex. CRM implementation, business automation, and data synchronization need to be approached with deep engineering rigor rather than superficial templates.
+                  Modern business systems are complicated. Journeys can be lengthy, considered, and complex. CRM implementation, business automation, and data synchronization need to be approached with architectural rigor.
                 </p>
                 <p>
                   We established Haxor MTC because digital agencies and growing businesses were tired of generic IT repair shops that didn’t understand the B2B sales cycle, were focused on the wrong metrics, and struggled to produce reliable technical work, often because they couldn’t get their head around complex webhook integrations and multi-tier workflows.
@@ -439,7 +403,7 @@ export default function Home() {
                 <div className="pt-2">
                   <Link 
                     to="/about" 
-                    className="inline-flex items-center gap-2 text-sm font-bold text-[#1C1D1D] hover:text-[#FE4775] transition border-b-2 border-[#1C1D1D] pb-1"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-black hover:underline pb-1"
                   >
                     <span>About Us</span>
                     <span>→</span>
@@ -454,14 +418,14 @@ export default function Home() {
         {/* =========================================================================
             SECTION 7: SERVICES GRID (Clarity panel--light-grey content-box-grid)
             ========================================================================= */}
-        <section id="services" className="py-24 bg-surface-50 border-b border-[#3F4040]/10">
+        <section id="services" className="py-24 bg-[#F4F5F7] border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1C1D1D] tracking-tight font-work-sans">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] tracking-tight">
                 Our Technical Delivery Services
               </h2>
-              <p className="text-base sm:text-lg text-[#3F4040]/80 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
                 Our core specialism is in creating connected operational systems using CRM, workflow automation, and custom software integrations to scale client capacity predictably.
               </p>
             </div>
@@ -469,9 +433,9 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               
               {/* Box 1: CRM Implementation */}
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-xs hover:shadow-card transition flex flex-col justify-between text-center group">
+              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-xs hover:border-black transition flex flex-col justify-between text-center group">
                 <div>
-                  <div className="w-16 h-16 rounded-2xl bg-[#18D2FA]/15 text-[#18D2FA] text-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl bg-slate-100 text-slate-900 text-xl flex items-center justify-center mx-auto mb-6">
                     📊
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">
@@ -483,7 +447,7 @@ export default function Home() {
                 </div>
                 <Link
                   to="/services/crm-implementation"
-                  className="w-full py-3 px-4 rounded-xl text-xs font-bold text-center bg-[#1C1D1D] hover:bg-[#18D2FA] text-white flex items-center justify-center gap-2 transition shadow-xs"
+                  className="w-full py-3.5 px-4 rounded-xl text-xs font-bold text-center bg-[#111111] hover:bg-black text-white flex items-center justify-center gap-2 transition"
                 >
                   <span>Learn More</span>
                   <span>→</span>
@@ -491,9 +455,9 @@ export default function Home() {
               </div>
 
               {/* Box 2: Business Automation */}
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-xs hover:shadow-card transition flex flex-col justify-between text-center group">
+              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-xs hover:border-black transition flex flex-col justify-between text-center group">
                 <div>
-                  <div className="w-16 h-16 rounded-2xl bg-[#FE4775]/15 text-[#FE4775] text-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl bg-slate-100 text-slate-900 text-xl flex items-center justify-center mx-auto mb-6">
                     ⚡
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">
@@ -505,7 +469,7 @@ export default function Home() {
                 </div>
                 <Link
                   to="/services/business-automation"
-                  className="w-full py-3 px-4 rounded-xl text-xs font-bold text-center bg-[#1C1D1D] hover:bg-[#FE4775] text-white flex items-center justify-center gap-2 transition shadow-xs"
+                  className="w-full py-3.5 px-4 rounded-xl text-xs font-bold text-center bg-[#111111] hover:bg-black text-white flex items-center justify-center gap-2 transition"
                 >
                   <span>Learn More</span>
                   <span>→</span>
@@ -513,9 +477,9 @@ export default function Home() {
               </div>
 
               {/* Box 3: Software Integrations */}
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-xs hover:shadow-card transition flex flex-col justify-between text-center group">
+              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-xs hover:border-black transition flex flex-col justify-between text-center group">
                 <div>
-                  <div className="w-16 h-16 rounded-2xl bg-[#FED147]/25 text-amber-700 text-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl bg-slate-100 text-slate-900 text-xl flex items-center justify-center mx-auto mb-6">
                     🔗
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">
@@ -527,7 +491,7 @@ export default function Home() {
                 </div>
                 <Link
                   to="/services/integrations"
-                  className="w-full py-3 px-4 rounded-xl text-xs font-bold text-center bg-[#1C1D1D] hover:bg-amber-600 text-white flex items-center justify-center gap-2 transition shadow-xs"
+                  className="w-full py-3.5 px-4 rounded-xl text-xs font-bold text-center bg-[#111111] hover:bg-black text-white flex items-center justify-center gap-2 transition"
                 >
                   <span>Learn More</span>
                   <span>→</span>
@@ -542,33 +506,32 @@ export default function Home() {
         {/* =========================================================================
             SECTION 8: BRIEFING TEMPLATE DOWNLOAD (Clarity download-panel panel--black)
             ========================================================================= */}
-        <section className="py-20 bg-[#1C1D1D] text-white border-y border-white/10 relative overflow-hidden">
-          <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#18D2FA]/15 rounded-full blur-3xl pointer-events-none" />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 bg-[#111111] text-white border-y border-neutral-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               
               {/* Left Graphic Preview */}
               <div className="lg:col-span-5">
-                <div className="p-6 rounded-3xl bg-white/5 border border-white/10 shadow-xl space-y-3">
-                  <div className="flex items-center justify-between text-xs font-mono text-[#FED147] border-b border-white/10 pb-3">
+                <div className="p-6 rounded-3xl bg-neutral-900 border border-neutral-800 space-y-3">
+                  <div className="flex items-center justify-between text-xs font-mono text-slate-300 border-b border-neutral-800 pb-3">
                     <span>📄 Agency Briefing Template.pdf</span>
-                    <span>v3.1</span>
+                    <span>v3.4</span>
                   </div>
-                  <div className="text-xs text-slate-300 space-y-2 pt-2">
+                  <div className="text-xs text-slate-400 space-y-2 pt-2">
                     <div className="flex items-center gap-2">
-                      <span className="text-[#18D2FA]">✓</span>
+                      <span className="text-white">✓</span>
                       <span>Client Sales Funnel &amp; Pipeline Stages</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[#18D2FA]">✓</span>
+                      <span className="text-white">✓</span>
                       <span>Data Migration &amp; Field Mapping Schema</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[#18D2FA]">✓</span>
+                      <span className="text-white">✓</span>
                       <span>Automation Triggers, Rules &amp; SLA Alarms</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[#18D2FA]">✓</span>
+                      <span className="text-white">✓</span>
                       <span>Wholesale Margin &amp; Retainer Costing Model</span>
                     </div>
                   </div>
@@ -577,22 +540,22 @@ export default function Home() {
 
               {/* Right Content & CTA */}
               <div className="lg:col-span-7 space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-bold uppercase tracking-wider text-[#FED147]">
-                  <span>Free Resource for Digital Agencies</span>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-800 text-xs font-bold uppercase tracking-wider text-slate-300">
+                  <span>Resource for Digital Agencies</span>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight font-work-sans">
+                <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
                   Briefing Template &amp; Scoping Playbook
                 </h2>
 
                 <p className="text-base text-slate-300 leading-relaxed">
-                  If you’re unsure about the type of technical information you’ll need to provide an implementation partner like ourselves to deliver successful CRM &amp; automation projects, we’ve produced a comprehensive briefing template in Google Docs you can use as a starting point.
+                  If you’re unsure about the type of technical information you’ll need to provide an implementation partner like ourselves to deliver successful CRM &amp; automation projects, we’ve produced a comprehensive briefing template you can use as a starting point.
                 </p>
 
                 <div className="pt-2">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-sm font-bold text-white bg-[#FE4775] hover:bg-[#e43864] transition shadow-md"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-sm font-bold text-black bg-white hover:bg-slate-200 transition"
                   >
                     <span>Get a Copy &amp; Discuss Project</span>
                     <span>→</span>
@@ -607,15 +570,15 @@ export default function Home() {
         {/* =========================================================================
             SECTION 9: THREE-COLUMN SPLIT STATEMENT (Clarity three-column-split--black)
             ========================================================================= */}
-        <section className="py-20 bg-gradient-to-r from-[#1C1D1D] via-[#242525] to-[#1C1D1D] text-white border-b border-white/10">
+        <section className="py-20 bg-neutral-900 text-white border-b border-neutral-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               
               <div className="lg:col-span-4 space-y-1">
-                <div className="text-xs uppercase tracking-widest text-[#18D2FA] font-bold">
+                <div className="text-xs uppercase tracking-widest text-slate-400 font-bold">
                   All in on
                 </div>
-                <h3 className="text-3xl sm:text-4xl font-black text-white font-work-sans">
+                <h3 className="text-3xl sm:text-4xl font-black text-white">
                   B2B Systems
                 </h3>
               </div>
@@ -634,21 +597,16 @@ export default function Home() {
         </section>
 
         {/* =========================================================================
-            SECTION 10: INTERACTIVE QUOTE & SPRINT CALCULATOR
+            SECTION 10: FAQ ACCORDION (Clarity panel--grey-lt accordion)
             ========================================================================= */}
-        <QuoteCalculator />
-
-        {/* =========================================================================
-            SECTION 11: FAQ ACCORDION (Clarity panel--grey-lt accordion)
-            ========================================================================= */}
-        <section className="py-24 bg-surface-50 border-b border-[#3F4040]/10">
+        <section className="py-24 bg-[#F4F5F7] border-b border-slate-200">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="text-center mb-14 space-y-3">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1C1D1D] tracking-tight font-work-sans">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] tracking-tight">
                 FAQ
               </h2>
-              <p className="text-base text-[#3F4040]/80">
+              <p className="text-base text-slate-600">
                 Some frequent B2B technical delivery and agency partnership questions and answers:
               </p>
             </div>
@@ -659,15 +617,15 @@ export default function Home() {
                 return (
                   <div 
                     key={idx}
-                    className="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-2xs transition"
+                    className="rounded-2xl bg-white border border-slate-200 overflow-hidden transition"
                   >
                     <button
                       type="button"
                       onClick={() => setActiveFaq(isOpen ? -1 : idx)}
-                      className="w-full p-6 text-left font-bold text-base sm:text-lg text-[#1C1D1D] flex items-center justify-between gap-4 hover:text-[#0EA5C6] transition"
+                      className="w-full p-6 text-left font-bold text-base sm:text-lg text-[#111111] flex items-center justify-between gap-4 hover:text-black transition cursor-pointer"
                     >
                       <span>{faq.q}</span>
-                      <span className={`text-xl transition-transform ${isOpen ? 'rotate-180 text-[#0EA5C6]' : 'text-slate-400'}`}>
+                      <span className={`text-xl transition-transform ${isOpen ? 'rotate-180' : 'text-slate-400'}`}>
                         ⌄
                       </span>
                     </button>
@@ -685,27 +643,27 @@ export default function Home() {
         </section>
 
         {/* =========================================================================
-            SECTION 12: FINAL CALL TO ACTION (Clarity Closing Block)
+            SECTION 11: FINAL CALL TO ACTION (Clarity Closing Block)
             ========================================================================= */}
-        <section className="py-24 bg-gradient-to-b from-white via-surface-50 to-white text-center">
+        <section className="py-24 bg-white text-center">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
             
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#18D2FA]/10 border border-[#18D2FA]/30 text-xs font-bold uppercase tracking-wider text-[#0EA5C6]">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-100 text-xs font-bold uppercase tracking-wider text-slate-800">
               <span>Let's Discuss Your Roadmap</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1C1D1D] tracking-tight font-work-sans">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] tracking-tight">
               Have a CRM or Automation Project in Mind?
             </h2>
 
-            <p className="text-base sm:text-lg text-[#3F4040]/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
               Tell us what you need to implement, automate, or integrate. We will review your requirements and discuss a practical next step.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Link
                 to="/contact"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-[#FE4775] hover:bg-[#e43864] shadow-md hover:shadow-lg flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-[#111111] hover:bg-black transition-all flex items-center justify-center gap-2"
               >
                 <span>Discuss Your Project</span>
                 <span>→</span>
@@ -715,16 +673,16 @@ export default function Home() {
                 href={discussProjectWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-[#3F4040] bg-white hover:bg-slate-50 border border-[#3F4040]/20 hover:border-[#18D2FA] shadow-xs flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-[#111111] bg-white hover:bg-slate-50 border border-slate-300 hover:border-black transition-all flex items-center justify-center gap-2"
               >
-                <MessageSquare className="w-4 h-4 text-[#18D2FA]" />
-                <span>Quick WhatsApp Chat</span>
+                <MessageSquare className="w-4 h-4 text-emerald-600" />
+                <span>WhatsApp Technical Desk</span>
               </a>
             </div>
 
-            <div className="pt-4 text-xs text-[#3F4040]/70 flex items-center justify-center gap-2">
-              <Mail className="w-3.5 h-3.5 text-[#0EA5C6]" />
-              <span>Direct inquiries: <a href={`mailto:${CONTACT_INFO.emailOfficial}`} className="font-bold text-[#0EA5C6] hover:underline">{CONTACT_INFO.emailOfficial}</a></span>
+            <div className="pt-4 text-xs text-slate-500 flex items-center justify-center gap-2">
+              <Mail className="w-3.5 h-3.5 text-slate-400" />
+              <span>Direct inquiries: <a href={`mailto:${CONTACT_INFO.emailOfficial}`} className="font-bold text-black hover:underline">{CONTACT_INFO.emailOfficial}</a></span>
             </div>
 
           </div>

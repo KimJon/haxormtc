@@ -59,9 +59,9 @@ export default function IntegrationsPage() {
   ];
 
   const popularIntegrations = [
-    { name: "Zoho CRM & Books", desc: "Automate deal-to-invoice workflows, eTIMS tax compliance, and payment reconciliations." },
+    { name: "Zoho CRM & Books", desc: "Automate deal-to-invoice workflows, multi-currency billing, and payment reconciliations across your sales pipeline." },
     { name: "Odoo ERP & POS", desc: "Sync physical point-of-sale checkout with central warehouse inventory and financial ledgers." },
-    { name: "M-Pesa STK & Card Gateways", desc: "Instant phone STK push prompts and card payment webhooks for retail and direct booking apps." },
+    { name: "Stripe & Payment Webhooks", desc: "Secure payment processing with real-time webhooks for subscriptions, one-time charges, and marketplace payouts." },
     { name: "WordPress & React Web Apps", desc: "Custom contact form listeners, lead capture hooks, and customer portal database connections." },
     { name: "Google & Meta Lead Ads", desc: "Direct webhook routing from Facebook/Instagram Lead Ads directly into your active sales pipeline." },
     { name: "WhatsApp Business API", desc: "Automated booking notifications, payment receipt dispatches, and interactive customer bot journeys." }

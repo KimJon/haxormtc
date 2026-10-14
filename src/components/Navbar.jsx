@@ -6,12 +6,11 @@ import {
   Menu, 
   X, 
   ArrowRight, 
-  Briefcase, 
   ChevronDown, 
   Workflow, 
   Cpu, 
   Layers,
-  Sparkles
+  Globe
 } from 'lucide-react';
 import { CONTACT_INFO, createWhatsAppUrl } from '../data/servicesData';
 import BrandLogo from './BrandLogo';
@@ -20,12 +19,15 @@ import CurrencySelector from './CurrencySelector';
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
+  
   const dropdownRef = useRef(null);
+  const timeoutRef = useRef(null);
   const location = useLocation();
 
   const defaultWhatsAppUrl = createWhatsAppUrl(
-    "Hello Haxor MTC, I am visiting haxormtc.com and would like to discuss a project / agency partnership."
+    "Hello Haxor MTC, I would like to discuss a white-label CRM & automation technical delivery project."
   );
 
   useEffect(() => {
@@ -36,6 +38,13 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close menus on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setServicesDropdownOpen(false);
+  }, [location.pathname]);
+
+  // Handle click outside to close dropdown
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -46,19 +55,26 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Close menus on route change
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setServicesDropdownOpen(false);
-  }, [location.pathname]);
+  // Debounced mouse enter/leave so the dropdown NEVER flickers or closes unexpectedly
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setServicesDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      setServicesDropdownOpen(false);
+    }, 180);
+  };
 
   const isServicesActive = location.pathname.startsWith('/services');
 
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+    <header className={`sticky top-0 z-50 w-full transition-all duration-200 ${
       isScrolled 
-        ? 'bg-white/95 backdrop-blur-md border-b border-[#3F4040]/10 shadow-sm' 
-        : 'bg-white/90 backdrop-blur-md border-b border-[#3F4040]/10'
+        ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs' 
+        : 'bg-white border-b border-slate-200'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex items-center justify-between transition-all duration-200 ${
@@ -68,120 +84,134 @@ export default function Navbar() {
           {/* Brand Logo */}
           <BrandLogo />
 
-          {/* Clarity-Style B2B Navigation */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-[#3F4040] font-sans">
+          {/* Clarity Performance Style Monochromatic Navigation */}
+          <nav className="hidden lg:flex items-center gap-8 text-[14px] font-semibold text-[#111111] font-work-sans">
             <Link 
               to="/" 
               className={`transition-colors py-1 ${
                 location.pathname === '/'
-                  ? 'text-[#18D2FA] font-bold border-b-2 border-[#18D2FA]'
-                  : 'hover:text-[#18D2FA]'
+                  ? 'text-black font-bold border-b-2 border-black'
+                  : 'hover:text-black text-slate-700'
               }`}
             >
               Home
             </Link>
 
-            {/* Services Dropdown */}
+            {/* Seamless Services Dropdown with zero deadzone gap */}
             <div 
-              className="relative" 
+              className="relative py-2" 
               ref={dropdownRef}
-              onMouseEnter={() => setServicesDropdownOpen(true)}
-              onMouseLeave={() => setServicesDropdownOpen(false)}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
               <button
                 type="button"
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                className={`flex items-center gap-1.5 transition-colors py-1 ${
+                className={`flex items-center gap-1.5 transition-colors py-1 cursor-pointer ${
                   isServicesActive
-                    ? 'text-[#18D2FA] font-bold border-b-2 border-[#18D2FA]'
-                    : 'hover:text-[#18D2FA]'
+                    ? 'text-black font-bold border-b-2 border-black'
+                    : 'hover:text-black text-slate-700'
                 }`}
+                aria-expanded={servicesDropdownOpen}
               >
                 <span>Services</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180 text-[#18D2FA]' : 'text-slate-400'}`} />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180 text-black' : 'text-slate-400'}`} />
               </button>
 
+              {/* Zero-gap dropdown container with internal padding bridge */}
               {servicesDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-72 rounded-2xl bg-white/98 backdrop-blur-xl border border-slate-200/90 shadow-xl p-3 z-50 animate-in fade-in zoom-in-95 duration-150">
-                  <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">
-                    Core Technical Delivery
+                <div 
+                  className="absolute top-full left-0 pt-2 w-80 z-50 animate-in fade-in zoom-in-95 duration-100"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="rounded-2xl bg-white border border-slate-200 shadow-xl p-3">
+                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1.5 border-b border-slate-100">
+                      Technical Delivery Services
+                    </div>
+                    
+                    <div className="pt-1 space-y-1">
+                      <Link
+                        to="/services/crm-implementation"
+                        onClick={() => setServicesDropdownOpen(false)}
+                        className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition group"
+                      >
+                        <div className="p-2 rounded-lg bg-slate-100 text-slate-800 group-hover:bg-black group-hover:text-white transition">
+                          <Cpu className="w-4 h-4" />
+                        </div>
+                        <div>
+                          <div className="text-xs font-bold text-slate-900 group-hover:text-black">
+                            CRM Implementation
+                          </div>
+                          <div className="text-[11px] text-slate-500 leading-tight mt-0.5">
+                            Zoho, Odoo &amp; pipeline architecture
+                          </div>
+                        </div>
+                      </Link>
+
+                      <Link
+                        to="/services/business-automation"
+                        onClick={() => setServicesDropdownOpen(false)}
+                        className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition group"
+                      >
+                        <div className="p-2 rounded-lg bg-slate-100 text-slate-800 group-hover:bg-black group-hover:text-white transition">
+                          <Workflow className="w-4 h-4" />
+                        </div>
+                        <div>
+                          <div className="text-xs font-bold text-slate-900 group-hover:text-black">
+                            Business Automation
+                          </div>
+                          <div className="text-[11px] text-slate-500 leading-tight mt-0.5">
+                            Workflows, triggers &amp; task logic
+                          </div>
+                        </div>
+                      </Link>
+
+                      <Link
+                        to="/services/integrations"
+                        onClick={() => setServicesDropdownOpen(false)}
+                        className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition group"
+                      >
+                        <div className="p-2 rounded-lg bg-slate-100 text-slate-800 group-hover:bg-black group-hover:text-white transition">
+                          <Layers className="w-4 h-4" />
+                        </div>
+                        <div>
+                          <div className="text-xs font-bold text-slate-900 group-hover:text-black">
+                            Software Integrations
+                          </div>
+                          <div className="text-[11px] text-slate-500 leading-tight mt-0.5">
+                            REST APIs, webhooks &amp; data sync
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+
+                    <div className="my-1.5 border-t border-slate-100" />
+
+                    <Link
+                      to="/services"
+                      onClick={() => setServicesDropdownOpen(false)}
+                      className="flex items-center justify-between px-3 py-2 text-xs font-bold text-slate-900 hover:bg-slate-50 rounded-xl transition"
+                    >
+                      <span>Explore All Capabilities</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
                   </div>
-                  <Link
-                    to="/services/crm-implementation"
-                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition group"
-                  >
-                    <div className="p-2 rounded-lg bg-[#18D2FA]/10 text-[#0EA5C6] group-hover:bg-[#18D2FA] group-hover:text-white transition">
-                      <Cpu className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#0EA5C6]">
-                        CRM Implementation
-                      </div>
-                      <div className="text-[11px] text-slate-500 leading-tight mt-0.5">
-                        Zoho, Odoo &amp; pipeline architecture
-                      </div>
-                    </div>
-                  </Link>
-
-                  <Link
-                    to="/services/business-automation"
-                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition group"
-                  >
-                    <div className="p-2 rounded-lg bg-[#FE4775]/10 text-[#FE4775] group-hover:bg-[#FE4775] group-hover:text-white transition">
-                      <Workflow className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#FE4775]">
-                        Business Automation
-                      </div>
-                      <div className="text-[11px] text-slate-500 leading-tight mt-0.5">
-                        Workflows, notifications &amp; triggers
-                      </div>
-                    </div>
-                  </Link>
-
-                  <Link
-                    to="/services/integrations"
-                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition group"
-                  >
-                    <div className="p-2 rounded-lg bg-[#FED147]/20 text-amber-700 group-hover:bg-[#FED147] group-hover:text-slate-900 transition">
-                      <Layers className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-amber-800">
-                        Software Integrations
-                      </div>
-                      <div className="text-[11px] text-slate-500 leading-tight mt-0.5">
-                        APIs, webhooks &amp; data sync
-                      </div>
-                    </div>
-                  </Link>
-
-                  <div className="my-1.5 border-t border-slate-100" />
-
-                  <Link
-                    to="/services"
-                    className="flex items-center justify-between px-3 py-2 text-xs font-bold text-[#0EA5C6] hover:bg-cyan-50/50 rounded-xl transition"
-                  >
-                    <span>View All Services &amp; Packages</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
                 </div>
               )}
             </div>
 
-            {/* Agency Partners - Highlighted Prominently */}
+            {/* Agency Partners */}
             <Link 
               to="/agency-partners" 
-              className={`transition-all py-1.5 px-3 rounded-full flex items-center gap-1.5 ${
+              className={`transition-colors py-1 flex items-center gap-1.5 ${
                 location.pathname === '/agency-partners'
-                  ? 'bg-[#18D2FA]/15 text-[#0EA5C6] font-bold border border-[#18D2FA]/40 shadow-xs'
-                  : 'hover:bg-[#18D2FA]/10 text-[#3F4040] hover:text-[#0EA5C6] border border-transparent'
+                  ? 'text-black font-bold border-b-2 border-black'
+                  : 'hover:text-black text-slate-700'
               }`}
             >
-              <Briefcase className="w-3.5 h-3.5 text-[#18D2FA]" />
               <span>Agency Partners</span>
-              <span className="px-1.5 py-0.2 text-[9px] font-black uppercase tracking-wider bg-[#FE4775] text-white rounded-full">
+              <span className="px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider bg-slate-100 text-slate-800 rounded border border-slate-200">
                 White-Label
               </span>
             </Link>
@@ -190,19 +220,19 @@ export default function Navbar() {
               to="/work" 
               className={`transition-colors py-1 ${
                 location.pathname === '/work' || location.pathname === '/portfolio'
-                  ? 'text-[#18D2FA] font-bold border-b-2 border-[#18D2FA]'
-                  : 'hover:text-[#18D2FA]'
+                  ? 'text-black font-bold border-b-2 border-black'
+                  : 'hover:text-black text-slate-700'
               }`}
             >
-              Our Work
+              Work
             </Link>
 
             <Link 
               to="/about" 
               className={`transition-colors py-1 ${
                 location.pathname === '/about' || location.pathname === '/why-us'
-                  ? 'text-[#18D2FA] font-bold border-b-2 border-[#18D2FA]'
-                  : 'hover:text-[#18D2FA]'
+                  ? 'text-black font-bold border-b-2 border-black'
+                  : 'hover:text-black text-slate-700'
               }`}
             >
               About
@@ -210,46 +240,46 @@ export default function Navbar() {
           </nav>
 
           {/* Right Action Buttons */}
-          <div className="hidden sm:flex items-center gap-3 shrink-0">
+          <div className="hidden sm:flex items-center gap-3 shrink-0 font-work-sans">
             <CurrencySelector />
 
             <a
               href={`mailto:${CONTACT_INFO.emailOfficial}`}
-              className="px-3 py-2 text-xs font-bold text-[#3F4040] hover:text-[#0EA5C6] flex items-center gap-1.5 rounded-xl hover:bg-slate-50 transition border border-[#3F4040]/15"
-              title="Email Technical Desk Directly"
+              className="px-3.5 py-2 text-xs font-bold text-slate-700 hover:text-black flex items-center gap-1.5 rounded-xl hover:bg-slate-50 transition border border-slate-200"
+              title="Direct Inquiries"
             >
-              <Mail className="w-3.5 h-3.5 text-[#18D2FA]" />
-              <span className="hidden xl:inline">haxorconsults@gmail.com</span>
-              <span className="xl:hidden">Email</span>
+              <Mail className="w-3.5 h-3.5 text-slate-600" />
+              <span>Email Us</span>
             </a>
 
+            {/* Clarity Solid Black Button */}
             <Link
               to="/contact"
-              className="px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-[#FE4775] hover:bg-[#e43864] shadow-md hover:shadow-lg flex items-center gap-1.5 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#111111] hover:bg-black transition-all flex items-center gap-1.5 shadow-sm"
             >
               <span>Discuss a Project</span>
-              <ArrowRight className="w-3.5 h-3.5 text-white" />
+              <span className="text-white">→</span>
             </Link>
           </div>
 
-          {/* Mobile Currency & Menu Toggle */}
+          {/* Mobile Currency & Menu Trigger */}
           <div className="flex sm:hidden items-center gap-2">
             <CurrencySelector compact={true} />
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition border border-slate-200"
+              className="p-2.5 rounded-xl text-slate-900 bg-slate-50 hover:bg-slate-100 transition border border-slate-200 cursor-pointer"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
 
-          {/* Tablet Menu Button (sm to lg) */}
+          {/* Tablet Menu Trigger (sm to lg) */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-xl text-slate-700 hover:text-slate-900 hover:bg-slate-100 hidden sm:block lg:hidden transition border border-slate-200"
+            className="p-2.5 rounded-xl text-slate-900 bg-slate-50 hover:bg-slate-100 hidden sm:block lg:hidden transition border border-slate-200 cursor-pointer"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -257,136 +287,158 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* =========================================================================
+          OPTIMIZED MOBILE DRAWER (Full screen smooth slide-over, touch friendly)
+          ========================================================================= */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200/90 bg-white/98 backdrop-blur-xl px-5 py-6 space-y-4 shadow-2xl">
-          <nav className="flex flex-col space-y-1.5 text-sm font-semibold text-[#3F4040]">
-            <Link
-              to="/"
-              onClick={() => setMobileMenuOpen(false)}
-              className={`py-2 px-3 rounded-xl transition ${
-                location.pathname === '/'
-                  ? 'bg-[#18D2FA]/10 text-[#0EA5C6] font-bold'
-                  : 'hover:text-[#0EA5C6] hover:bg-slate-50'
-              }`}
-            >
-              Home
-            </Link>
+        <div className="fixed inset-0 top-16 sm:top-20 z-50 lg:hidden">
+          {/* Backdrop overlay */}
+          <div 
+            className="fixed inset-0 bg-black/40 backdrop-blur-xs transition-opacity" 
+            onClick={() => setMobileMenuOpen(false)}
+          />
 
-            <Link
-              to="/agency-partners"
-              onClick={() => setMobileMenuOpen(false)}
-              className={`py-2.5 px-3 rounded-xl transition flex items-center justify-between ${
-                location.pathname === '/agency-partners'
-                  ? 'bg-[#18D2FA]/15 text-[#0EA5C6] font-bold border border-[#18D2FA]/30'
-                  : 'hover:text-[#0EA5C6] hover:bg-slate-50 bg-[#18D2FA]/5'
-              }`}
-            >
-              <div className="flex items-center gap-2">
-                <Briefcase className="w-4 h-4 text-[#18D2FA]" />
-                <span className="font-bold text-[#1C1D1D]">Agency Partners</span>
+          {/* Drawer Sheet */}
+          <div className="relative bg-white border-t border-slate-200 w-full max-h-[calc(100vh-4rem)] sm:max-h-[calc(100vh-5rem)] overflow-y-auto px-6 py-6 space-y-6 shadow-2xl font-work-sans">
+            <nav className="flex flex-col space-y-2 text-base font-semibold text-[#111111]">
+              <Link
+                to="/"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-3 px-3 rounded-xl transition ${
+                  location.pathname === '/'
+                    ? 'bg-slate-100 text-black font-bold'
+                    : 'hover:bg-slate-50 text-slate-800'
+                }`}
+              >
+                Home
+              </Link>
+
+              {/* Mobile Services Accordion */}
+              <div className="rounded-xl border border-slate-200 overflow-hidden bg-slate-50/50">
+                <button
+                  type="button"
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  className="w-full py-3 px-3 flex items-center justify-between font-bold text-slate-900 hover:bg-slate-100 transition"
+                >
+                  <span className="text-base">Services</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {mobileServicesOpen && (
+                  <div className="px-3 pb-3 space-y-1 bg-white border-t border-slate-100 pt-2 text-sm">
+                    <Link
+                      to="/services/crm-implementation"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2 px-2.5 rounded-lg text-slate-700 hover:bg-slate-50 font-medium"
+                    >
+                      CRM Implementation (Zoho, Odoo)
+                    </Link>
+                    <Link
+                      to="/services/business-automation"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2 px-2.5 rounded-lg text-slate-700 hover:bg-slate-50 font-medium"
+                    >
+                      Business Automation
+                    </Link>
+                    <Link
+                      to="/services/integrations"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2 px-2.5 rounded-lg text-slate-700 hover:bg-slate-50 font-medium"
+                    >
+                      Software &amp; API Integrations
+                    </Link>
+                    <Link
+                      to="/services"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2 px-2.5 rounded-lg text-black font-bold hover:bg-slate-50 text-xs border-t border-slate-100 mt-1"
+                    >
+                      All Services &rarr;
+                    </Link>
+                  </div>
+                )}
               </div>
-              <span className="text-[10px] uppercase font-black bg-[#FE4775] text-white px-2 py-0.5 rounded-full">
-                White-Label
-              </span>
-            </Link>
 
-            {/* Core Services Sub-links */}
-            <div className="pl-3 py-1 space-y-1 border-l-2 border-[#18D2FA]/30 my-1">
-              <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider pl-2">
-                Services
+              <Link
+                to="/agency-partners"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-3 px-3 rounded-xl transition flex items-center justify-between ${
+                  location.pathname === '/agency-partners'
+                    ? 'bg-slate-100 text-black font-bold'
+                    : 'hover:bg-slate-50 text-slate-800'
+                }`}
+              >
+                <span>Agency Partners</span>
+                <span className="text-[10px] uppercase font-bold bg-black text-white px-2 py-0.5 rounded">
+                  White-Label
+                </span>
+              </Link>
+
+              <Link
+                to="/work"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-3 px-3 rounded-xl transition ${
+                  location.pathname === '/work' || location.pathname === '/portfolio'
+                    ? 'bg-slate-100 text-black font-bold'
+                    : 'hover:bg-slate-50 text-slate-800'
+                }`}
+              >
+                Work &amp; Case Studies
+              </Link>
+
+              <Link
+                to="/about"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-3 px-3 rounded-xl transition ${
+                  location.pathname === '/about' || location.pathname === '/why-us'
+                    ? 'bg-slate-100 text-black font-bold'
+                    : 'hover:bg-slate-50 text-slate-800'
+                }`}
+              >
+                About Haxor MTC
+              </Link>
+
+              <Link
+                to="/contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-3 px-3 rounded-xl transition ${
+                  location.pathname === '/contact'
+                    ? 'bg-slate-100 text-black font-bold'
+                    : 'hover:bg-slate-50 text-slate-800'
+                }`}
+              >
+                Contact
+              </Link>
+            </nav>
+
+            <div className="pt-4 border-t border-slate-200 flex flex-col gap-3">
+              <div className="flex items-center justify-between px-3 py-2 bg-slate-50 rounded-xl border border-slate-200">
+                <span className="text-xs font-bold text-slate-600">Currency:</span>
+                <CurrencySelector />
               </div>
+
               <Link
-                to="/services/crm-implementation"
+                to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-1.5 px-2 rounded-lg text-xs text-slate-700 hover:text-[#0EA5C6] hover:bg-slate-50"
+                className="w-full py-3.5 text-center rounded-xl text-sm font-bold text-white bg-[#111111] hover:bg-black flex items-center justify-center gap-2 shadow-sm"
               >
-                CRM Implementation
+                <span>Discuss a Project</span>
+                <span>→</span>
               </Link>
-              <Link
-                to="/services/business-automation"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block py-1.5 px-2 rounded-lg text-xs text-slate-700 hover:text-[#0EA5C6] hover:bg-slate-50"
+
+              <a
+                href={defaultWhatsAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3 text-center rounded-xl text-sm font-bold text-slate-900 bg-slate-100 hover:bg-slate-200 border border-slate-300 flex items-center justify-center gap-2"
               >
-                Business Automation
-              </Link>
-              <Link
-                to="/services/integrations"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block py-1.5 px-2 rounded-lg text-xs text-slate-700 hover:text-[#0EA5C6] hover:bg-slate-50"
-              >
-                Software Integrations
-              </Link>
-              <Link
-                to="/services"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block py-1.5 px-2 rounded-lg text-xs font-bold text-[#0EA5C6] hover:bg-cyan-50/50"
-              >
-                All Services &amp; Packages &rarr;
-              </Link>
+                <MessageSquare className="w-4 h-4 text-emerald-600" />
+                <span>WhatsApp Technical Desk</span>
+              </a>
+
+              <div className="text-center text-xs text-slate-500 pt-1">
+                {CONTACT_INFO.emailOfficial}
+              </div>
             </div>
-
-            <Link
-              to="/work"
-              onClick={() => setMobileMenuOpen(false)}
-              className={`py-2 px-3 rounded-xl transition ${
-                location.pathname === '/work' || location.pathname === '/portfolio'
-                  ? 'bg-[#18D2FA]/10 text-[#0EA5C6] font-bold'
-                  : 'hover:text-[#0EA5C6] hover:bg-slate-50'
-              }`}
-            >
-              Our Work &amp; Case Studies
-            </Link>
-
-            <Link
-              to="/about"
-              onClick={() => setMobileMenuOpen(false)}
-              className={`py-2 px-3 rounded-xl transition ${
-                location.pathname === '/about' || location.pathname === '/why-us'
-                  ? 'bg-[#18D2FA]/10 text-[#0EA5C6] font-bold'
-                  : 'hover:text-[#0EA5C6] hover:bg-slate-50'
-              }`}
-            >
-              About Haxor
-            </Link>
-
-            <Link
-              to="/contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className={`py-2 px-3 rounded-xl transition ${
-                location.pathname === '/contact'
-                  ? 'bg-[#18D2FA]/10 text-[#0EA5C6] font-bold'
-                  : 'hover:text-[#0EA5C6] hover:bg-slate-50'
-              }`}
-            >
-              Contact
-            </Link>
-          </nav>
-
-          <div className="pt-4 border-t border-slate-200/90 flex flex-col gap-2.5">
-            <div className="flex items-center justify-between px-3 py-1.5 bg-slate-50 rounded-xl border border-slate-200">
-              <span className="text-xs font-bold text-slate-600">Currency:</span>
-              <CurrencySelector />
-            </div>
-
-            <Link
-              to="/contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-3 text-center rounded-xl text-xs font-bold text-white bg-[#FE4775] hover:bg-[#e43864] flex items-center justify-center gap-2 shadow-md"
-            >
-              <span>Discuss a Project</span>
-              <ArrowRight className="w-3.5 h-3.5 text-white" />
-            </Link>
-
-            <a
-              href={defaultWhatsAppUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full py-2.5 text-center rounded-xl text-xs font-bold text-white bg-brand-green flex items-center justify-center gap-2 shadow-glow-whatsapp"
-            >
-              <MessageSquare className="w-3.5 h-3.5 fill-white shrink-0" />
-              <span>WhatsApp Direct</span>
-            </a>
           </div>
         </div>
       )}

@@ -92,20 +92,20 @@ export default function ContactPage() {
         {/* Embedded Contact Section with Interactive Form */}
         <ContactSection />
 
-        {/* Location & Coverage */}
-        <section className="py-16 bg-slate-50 border-t border-slate-200">
+        {/* International Delivery & Global Operations */}
+        <section className="py-16 bg-[#F4F5F7] border-t border-slate-200 font-work-sans">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-card flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="space-y-3">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-brand-cyan/20 text-brand-cyanDeep text-xs font-bold uppercase">
-                  <MapPin className="w-3.5 h-3.5" />
-                  <span>Nationwide Operations</span>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-bold uppercase tracking-wider">
+                  <MapPin className="w-3.5 h-3.5 text-black" />
+                  <span>Global Technical Delivery</span>
                 </div>
-                <h3 className="text-2xl font-extrabold text-[#373656] font-heading">
-                  Nationwide Technology Delivery Across All 47 Counties
+                <h3 className="text-2xl font-black text-[#111111] tracking-tight">
+                  Serving Digital Agencies &amp; Consultancies Worldwide
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 max-w-xl leading-relaxed">
-                  We conduct remote website and software delivery nationwide and on-site hardware/POS integrations across Mombasa, Nakuru, Eldoret, Kisumu, Thika, and throughout the region.
+                  We conduct remote technical sprints, CRM configurations, and custom workflow automations for agencies and businesses across the United Kingdom, Europe, Australia, North America, and worldwide.
                 </p>
               </div>
 
@@ -114,10 +114,10 @@ export default function ContactPage() {
                   href={directWhatsAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-brand-green hover:bg-[#20ba5a] shadow-glow-whatsapp flex items-center gap-2 transition"
+                  className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#111111] hover:bg-black flex items-center gap-2 transition"
                 >
                   <MessageSquare className="w-4 h-4 fill-white shrink-0" />
-                  <span>WhatsApp</span>
+                  <span>WhatsApp Technical Desk</span>
                 </a>
               </div>
             </div>

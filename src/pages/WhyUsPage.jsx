@@ -118,18 +118,18 @@ export default function WhyUsPage() {
           </div>
         </section>
 
-        {/* The Kenya Specific Advantage */}
+        {/* International Delivery Advantage */}
         <section className="py-20 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-12">
               <span className="text-xs font-extrabold uppercase tracking-wider text-brand-cyanDeep bg-cyan-50 px-3 py-1 rounded-full border border-brand-cyan/20">
-                Specialized Regional Mastery
+                Global Delivery Standards
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#373656] font-heading mt-3">
-                Global Code Standards Combined with Deep Local Execution
+                Enterprise-Grade Implementation With Flexible Engagement
               </h2>
               <p className="text-slate-600 text-sm sm:text-base mt-2">
-                While our software engineering and AI solutions serve enterprises worldwide, our regional products are uniquely tailored to local payment infrastructure, mobile telecom realities, and regulatory compliance.
+                Our technical delivery is built for agencies and businesses operating across the UK, Europe, and Australia who need reliable implementation partners without the overhead of permanent hires.
               </p>
             </div>
 
@@ -139,10 +139,10 @@ export default function WhyUsPage() {
                   <Target className="w-6 h-6 text-brand-green" />
                 </div>
                 <h3 className="text-xl font-extrabold text-[#373656] font-heading">
-                  M-Pesa First Architecture
+                  White-Label Agency Delivery
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-                  Kenyan customers do not checkout with credit cards. Every website, checkout page, and POS we deploy is optimized for M-Pesa STK Push prompts and Click-to-WhatsApp order triggers.
+                  We operate under your agency's brand and NDA. Your clients see seamless delivery from your team while we handle the technical implementation behind the scenes.
                 </p>
               </div>
 
@@ -151,10 +151,10 @@ export default function WhyUsPage() {
                   <Zap className="w-6 h-6 text-brand-coral" />
                 </div>
                 <h3 className="text-xl font-extrabold text-[#373656] font-heading">
-                  Safaricom & Airtel Speed Optimized
+                  Timezone-Aligned Collaboration
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-                  Over 85% of Kenyan traffic browses on mobile 4G/3G connections. Our websites load in under 1.5 seconds, avoiding the heavy bloat that causes 60% bounce rates on competitor sites.
+                  Our working hours overlap with GMT, CET, and AEST business schedules. Daily standups, async Slack/Teams updates, and milestone reviews keep every project on track.
                 </p>
               </div>
 
@@ -163,10 +163,10 @@ export default function WhyUsPage() {
                   <ShieldCheck className="w-6 h-6 text-brand-goldDeep" />
                 </div>
                 <h3 className="text-xl font-extrabold text-[#373656] font-heading">
-                  KRA eTIMS & Local Tax Readiness
+                  Documented Technical Handover
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-                  Tax compliance is mandatory for modern SMEs in Kenya. Our software systems and POS terminals are engineered to support electronic invoicing and eTIMS integrations seamlessly.
+                  Every project includes complete setup documentation, workflow explanations, admin credentials, and training materials so your team can maintain and extend the solution independently.
                 </p>
               </div>
             </div>
@@ -185,7 +185,7 @@ export default function WhyUsPage() {
                   Ready to Modernize?
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-extrabold font-heading text-white">
-                  Work With a Partner Who Understands Kenya
+                  Work With a Technical Partner You Can Trust
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300">
                   Book a free discovery call or message our technical team on WhatsApp for an immediate consultation.

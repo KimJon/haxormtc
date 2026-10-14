@@ -5,11 +5,11 @@ export const LANDING_PAGES = {
   'website-development': {
     slug: 'website-development',
     type: 'service',
-    title: 'Professional Website Design & Development Packages in Kenya',
-    badge: 'Helping Kenyan Businesses Win Clients Online',
+    title: 'Professional Web Architecture & High-Converting Landing Page Packages',
+    badge: 'High-Converting Web Architecture & Systems',
     heroHeadline: 'High-Converting, Mobile-Friendly Websites Engineered to Generate More Enquiries & Sales.',
-    heroSubheadline: 'Custom, top-notch websites designed specifically for Kenyan businesses, SMEs, and startups. Transparent pricing with free .co.ke domain, fast cloud hosting, business emails, and safe milestone payments.',
-    priceDisplay: 'From Ksh. 7,000',
+    heroSubheadline: 'Custom, high-performance web systems designed for modern agencies, businesses, and startups. Transparent pricing with custom domain, fast cloud hosting, business emails, and milestone delivery.',
+    priceDisplay: 'From $450',
     pricingNote: '30% start → 40% after design → 30% before launch',
     whatsappMessage: 'Hello Haxor MTC, I am interested in your Professional Website Design packages. Please share more details!',
     milestonePayment: '30% start → 40% after design → 30% before launch',
@@ -17,14 +17,14 @@ export const LANDING_PAGES = {
       {
         id: 'single-landing',
         name: 'Single-Page Landing Page',
-        price: '7,000',
+        price: '450',
         priceNote: 'One-Time • All Inclusive',
         bestFor: 'Small businesses & ad campaigns needing a fast, high-converting online sales funnel.',
         badge: 'Fast 48hr Turnaround',
         popular: false,
         features: [
           'Single conversion-focused landing page',
-          'Free .com or .co.ke domain & 1 year hosting',
+          'Free custom domain & 1 year cloud hosting',
           'Free SSL certificate (HTTPS padlock)',
           'Click-to-WhatsApp order triggers & lead contact form',
           'Mobile-first responsive layout (< 1.5s load)',
@@ -32,13 +32,13 @@ export const LANDING_PAGES = {
           '12 months technical support & backup',
         ],
         ctaText: 'Order Landing Page',
-        whatsappMessage: 'Hello Haxor MTC, I want to order the Single-Page Landing Page package at Ksh. 7,000 (with Free Domain & Hosting).',
+        whatsappMessage: 'Hello Haxor MTC, I want to order the Single-Page Landing Page package at $450 (with Free Domain & Hosting).',
       },
       {
         id: 'starter-website',
         name: 'Starter Website',
-        price: '25,000',
-        priceNote: '+ VAT',
+        price: '850',
+        priceNote: 'One-Time • All Inclusive',
         bestFor: 'Individuals, personal brands and early-stage startups establishing credibility online.',
         badge: 'Starter Package',
         popular: false,
@@ -46,17 +46,17 @@ export const LANDING_PAGES = {
           'Up to 5 pages',
           'Mobile-friendly design',
           '2 business emails',
-          'Free .co.ke domain & 5GB hosting for 1 year',
+          'Free custom domain & 5GB cloud hosting for 1 year',
           'SSL & basic SEO',
           '30% start → 40% after design → 30% before launch',
         ],
         ctaText: 'Get Starter Recommendation',
-        whatsappMessage: 'Hello Haxor MTC, I am interested in the Starter Website package (Up to 5 pages, KSh 25,000 + VAT). Please guide me on getting started.',
+        whatsappMessage: 'Hello Haxor MTC, I am interested in the Starter Website package (Up to 5 pages, $850). Please guide me on getting started.',
       },
       {
         id: 'business-website',
         name: 'Business Website',
-        price: '45,000',
+        price: '2,500',
         priceNote: '+ VAT',
         bestFor: 'SMEs and established businesses that want stronger credibility and more enquiries.',
         badge: 'MOST POPULAR',
@@ -71,12 +71,12 @@ export const LANDING_PAGES = {
           '30% start → 40% after design → 30% before launch',
         ],
         ctaText: 'Choose Business Package',
-        whatsappMessage: 'Hello Haxor MTC, I want to choose the Business Website package (Up to 10 pages, KSh 45,000 + VAT). How do we begin?',
+        whatsappMessage: 'Hello Haxor MTC, I want to choose the Business Website package (Up to 10 pages, $2,500). How do we begin?',
       },
       {
         id: 'premium-website',
         name: 'Premium Website',
-        price: '85,000',
+        price: '4,500',
         priceNote: '+ VAT',
         bestFor: 'Growing businesses needing more pages, advanced SEO, stronger branding and room to scale.',
         badge: 'Premium Scale',
@@ -91,21 +91,21 @@ export const LANDING_PAGES = {
           '30% start → 40% after design → 30% before launch',
         ],
         ctaText: 'Discuss Premium',
-        whatsappMessage: 'Hello Haxor MTC, I would like to discuss the Premium Website package (Up to 25 pages, KSh 85,000 + VAT). Let\'s schedule a call.',
+        whatsappMessage: 'Hello Haxor MTC, I would like to discuss the Premium Website package (Up to 25 pages, $4,500). Let\'s schedule a call.',
       },
     ],
     keyHighlights: [
-      { title: 'Free Domain & Cloud Hosting', desc: 'We cover your custom .com or .co.ke domain name and provide fast SSD cloud hosting with 99.9% uptime.' },
+      { title: 'Free Domain & Cloud Hosting', desc: 'We cover your custom domain name and provide fast SSD cloud hosting with 99.9% uptime.' },
       { title: 'Structured Milestone Payments', desc: 'Low-risk payment schedule: 30% to start → 40% after design mockup approval → 30% before final live launch.' },
       { title: 'High-Converting WhatsApp CTAs', desc: 'Mobile-first design with direct WhatsApp triggers that convert online traffic into paying customers.' },
       { title: 'SEO-Ready & Speed Optimized', desc: 'Pre-configured on-page SEO, Google Analytics, and lightning speed loading (< 2s) to rank on Google.' }
     ],
     deliverables: [
-      'Custom .com or .co.ke domain registration included for 1 full year',
+      'Custom domain registration included for 1 full year',
       'High-speed SSD cloud web hosting included for 1 full year',
       'Free SSL security certificate (green padlock HTTPS)',
-      'Mobile-responsive layout optimized for Kenyan smartphone users',
-      'Branded business emails (e.g. info@yourdomain.co.ke)',
+      'Mobile-responsive layout optimized for modern mobile and desktop visitors',
+      'Branded business emails (e.g. info@youragency.com)',
       'Direct Click-to-WhatsApp order triggers & lead contact forms',
       'Google Maps location embed and business hours display',
       'Meta Pixel and Google Analytics tracking tags installed',
@@ -116,7 +116,7 @@ export const LANDING_PAGES = {
       { q: 'How does the milestone payment work?', a: 'You pay 30% to commence project research and design, 40% only after reviewing and approving the design mockup, and the final 30% once your website is fully tested and ready to launch.' },
       { q: 'What happens after the first year of domain & hosting?', a: 'After 12 months, standard annual domain renewal and hosting fees apply at normal market rates. There are no hidden fees or locked contracts, and you 100% own your domain and website files.' },
       { q: 'Can I update the website content myself?', a: 'Yes! We build on modern, user-friendly CMS platforms or intuitive admin dashboards, and we provide staff walkthrough training so you can easily update text, photos, and prices.' },
-      { q: 'Do you support M-Pesa integration?', a: 'Yes! We integrate M-Pesa Till / Paybill / STK push so customers can make payments directly through your website.' }
+      { q: 'Do you support modern payment integrations?', a: 'Yes! We integrate Stripe, PayPal, and digital payment webhooks so customers can pay directly through your site.' }
     ]
   },
 
@@ -124,16 +124,16 @@ export const LANDING_PAGES = {
     slug: 'social-media',
     type: 'service',
     title: 'Social Media Video Creation & Account Management',
-    badge: 'Monthly Growth • Ksh. 4,500/mo',
+    badge: 'B2B Organic Content Growth • $450/mo',
     heroHeadline: '20 to 30 Short-Form Videos Created & Posted on TikTok, Instagram & Facebook Every Month.',
     heroSubheadline: 'Running a business leaves no time to edit TikToks, find trending sounds, and post consistently every day. We handle script hooks, professional video editing, captions, and publishing so your brand stays in front of buyers.',
-    priceDisplay: 'Ksh. 4,500',
+    priceDisplay: '$450',
     pricingNote: 'Per Month • 20 to 30 Finished Videos • 3 Major Platforms',
-    whatsappMessage: 'Hello Haxor MTC, I want to enroll my business for the Social Media Video Management package (20-30 videos/mo for Ksh. 4,500).',
+    whatsappMessage: 'Hello Haxor MTC, I want to enroll my business for the Social Media Video Management package (20-30 videos/mo for $450).',
     keyHighlights: [
       { title: 'Consistent Video Volume', desc: '20 to 30 edited Reels, TikToks, and Shorts posted across Facebook, Instagram, and TikTok every month.' },
       { title: 'Viral Hooks & Kinetic Captions', desc: 'Engaging text animations, trending audio curation, and clear call-to-actions that drive viewer inquiries.' },
-      { title: 'Kenyan Peak-Hour Scheduling', desc: 'Videos are published during lunch breaks and evening hours when local audiences are most active.' },
+      { title: 'Audience Peak-Hour Scheduling', desc: 'Videos are published during optimal engagement windows when target audiences are most active.' },
       { title: 'Bio & WhatsApp Lead Routing', desc: 'We optimize your profile bios so interested viewers land directly in your WhatsApp chat.' }
     ],
     deliverables: [
@@ -141,7 +141,7 @@ export const LANDING_PAGES = {
       'Synchronized posting on TikTok, Instagram Reels, and Facebook Reels',
       'Content ideation, scripting hooks, and niche trend adaptation',
       'Professional captions, subtitles, and branded color grading',
-      'Local hashtag strategy targeting Kenyan buyers in your niche',
+      'Targeted hashtag strategy reaching qualified decision makers in your niche',
       'Profile bio overhaul with direct click-to-WhatsApp link',
       'Monthly engagement summary report'
     ],
@@ -155,21 +155,21 @@ export const LANDING_PAGES = {
     slug: 'meta-ads',
     type: 'service',
     title: 'Meta Ads Placement (Facebook & Instagram)',
-    badge: 'Paid Acquisition • From Ksh. 4,200/mo',
+    badge: 'Paid Acquisition • From $350/mo',
     heroHeadline: 'Targeted Facebook & Instagram Ads That Send Paying Customers Directly to Your WhatsApp.',
     heroSubheadline: 'Stop wasting money clicking "Boost Post" with zero sales to show for it. We build structured Meta Ad campaigns targeting exact locations, ages, and buyer interests with direct Click-to-WhatsApp funnels.',
-    priceDisplay: 'Ksh. 4,200',
-    pricingNote: 'Basic: Ksh. 4,200/mo • Growth: Ksh. 7,500/mo (Excludes ad spend paid to Meta)',
+    priceDisplay: '$350',
+    pricingNote: 'Basic: $350/mo • Growth: $750/mo (Excludes ad spend paid to Meta)',
     whatsappMessage: 'Hello Haxor MTC, I need help running profitable Facebook & Instagram Ads for my business.',
     keyHighlights: [
       { title: 'Click-to-WhatsApp Conversion', desc: 'Shoppers click your ad and instantly open a WhatsApp chat with you with a pre-filled product inquiry.' },
-      { title: 'Laser Kenyan Targeting', desc: 'Target by specific town, estate radius, gender, age, and verified purchasing interests in Kenya.' },
+      { title: 'Precision Audience Targeting', desc: 'Target by industry, job role, geographic market, gender, age, and verified purchasing intent.' },
       { title: 'Compelling Ad Creatives', desc: 'Eye-catching graphic images and video reels designed to stop the scroll and trigger quick action.' },
       { title: 'Weekly Budget Optimization', desc: 'We monitor cost-per-message continuously, turning off non-performing ads and scaling winners.' }
     ],
     deliverables: [
       'Meta Business Suite & Ads Manager setup and verification',
-      'Audience research (demographics, geographical radius, interests in Kenya)',
+      'Audience research (demographics, geographical markets, industry interests)',
       'Click-to-WhatsApp conversation ad campaign architecture',
       'Compelling ad copywriting and visual banner/video creation',
       'Meta Pixel integration on your website for retargeting',
@@ -177,8 +177,8 @@ export const LANDING_PAGES = {
       'Clear bi-weekly ROI and lead generation reports'
     ],
     faqs: [
-      { q: 'How much should I spend on ads with Meta?', a: 'You can start with as little as Ksh 500 to Ksh 1,000 per day in ad budget paid directly to Facebook via your debit card or M-Pesa virtual card. We manage and optimize the campaign.' },
-      { q: 'What is the difference between Basic and Growth?', a: 'Basic (Ksh 4,200/mo) focuses on 1 primary objective and 2 ad variants. Growth (Ksh 7,500/mo) includes multi-ad creative testing, video ads, custom lookalike audiences, and website retargeting.' }
+      { q: 'How much should I spend on ads with Meta?', a: 'You can start with as little as $20 to $50 per day in ad budget paid directly to Meta via your debit or corporate card. We manage and optimize the campaign.' },
+      { q: 'What is the difference between Basic and Growth?', a: 'Basic ($350/mo) focuses on 1 primary objective and 2 ad variants. Growth ($750/mo) includes multi-ad creative testing, video ads, custom lookalike audiences, and website retargeting.' }
     ]
   },
 
@@ -186,11 +186,11 @@ export const LANDING_PAGES = {
     slug: 'google-ads',
     type: 'service',
     title: 'Google Ads High-Intent Search Management',
-    badge: 'Google Search • From Ksh. 2,500/mo',
+    badge: 'Google Search • From $350/mo',
     heroHeadline: 'Get Found at the Exact Second Customers Search for Your Services on Google.',
     heroSubheadline: 'When people need a product or emergency service, they search Google. We position your business at the very top of Google Search results with direct phone call and WhatsApp extensions.',
-    priceDisplay: 'Ksh. 2,500',
-    pricingNote: 'Basic: Ksh. 2,500/mo • Enterprise: Ksh. 30,000/mo',
+    priceDisplay: '$350',
+    pricingNote: 'Starter: $350/mo • Scale: $1,500/mo',
     whatsappMessage: 'Hello Haxor MTC, I want to set up Google Search Ads to capture high-intent customer leads.',
     keyHighlights: [
       { title: 'High-Intent Searchers', desc: 'Capture people actively typing "buy salon equipment" or "hardware supplier near me".' },
@@ -199,7 +199,7 @@ export const LANDING_PAGES = {
       { title: 'Measurable ROI', desc: 'Track exactly how many calls, form submissions, and inquiries each keyword produces.' }
     ],
     deliverables: [
-      'Comprehensive keyword research for high-intent Kenyan search volume',
+      'Comprehensive keyword research for high-intent transactional search volume',
       'Negative keyword list creation to eliminate wasted ad budget',
       'Compelling text ad headlines and persuasive descriptions',
       'Call extensions, sitelink extensions, and location extensions',
@@ -216,11 +216,11 @@ export const LANDING_PAGES = {
     slug: 'google-my-business',
     type: 'service',
     title: 'Google My Business & Map Rank Optimization',
-    badge: 'Local SEO • From Ksh. 300',
+    badge: 'Local SEO • From $65',
     heroHeadline: 'Put Your Shop or Office on Google Maps & Get Local Customers Calling You.',
     heroSubheadline: 'When customers nearby search on Google or open Google Maps, does your business show up? We claim, verify, and fully optimize your Google Business Profile so you rank in the coveted Local 3-Pack.',
-    priceDisplay: 'Ksh. 300',
-    pricingNote: 'Basic: Ksh. 300 • SME: Ksh. 500 • Enterprise Rank Booster: Ksh. 3,000',
+    priceDisplay: '$65',
+    pricingNote: 'Basic: $65 • Professional: $120 • Enterprise Booster: $350',
     whatsappMessage: 'Hello Haxor MTC, I want to set up and optimize my Google My Business profile.',
     keyHighlights: [
       { title: 'Google Maps Pin Verification', desc: 'Accurate GPS location so customers get driving and walking directions straight to your door.' },
@@ -238,7 +238,7 @@ export const LANDING_PAGES = {
       '5-Star review link generation for easy WhatsApp sharing'
     ],
     faqs: [
-      { q: 'Which tier should I choose?', a: 'Basic (Ksh 300) is simple profile setup. SME (Ksh 500) adds full catalog, operating hours, and photo uploads. Enterprise (Ksh 3,000) includes local citation work, review booster, and Google Map 3-Pack rank optimization.' }
+      { q: 'Which tier should I choose?', a: 'Basic ($65) is simple profile setup. Professional ($120) adds full catalog, operating hours, and photo uploads. Enterprise ($350) includes local citation work, review booster, and Google Map 3-Pack rank optimization.' }
     ]
   },
 
@@ -246,11 +246,11 @@ export const LANDING_PAGES = {
     slug: 'email-management',
     type: 'service',
     title: 'Custom Domain Business Email Setup & Security',
-    badge: 'Business Identity • From Ksh. 700',
+    badge: 'Business Identity • From $45',
     heroHeadline: 'Stop Using Free Gmail for Business. Establish Instant Credibility with name@yourcompany.com.',
     heroSubheadline: 'Sending quotations and tenders from free gmail.com addresses hurts trust. We configure professional branded mailboxes on Microsoft Outlook, webmail, or Google Workspace with full anti-spam protection.',
-    priceDisplay: 'Ksh. 700',
-    pricingNote: 'Webmail: Ksh. 700 • Outlook Pro: Ksh. 1,500 • Google Workspace: Custom',
+    priceDisplay: '$45',
+    pricingNote: 'Standard: $45 • Microsoft 365 Setup: $95 • Google Workspace: Custom',
     whatsappMessage: 'Hello Haxor MTC, I need professional business email setup for my company.',
     keyHighlights: [
       { title: 'Branded Company Email', desc: 'Create info@yourbusiness.com, sales@yourbusiness.com, and personal staff emails.' },
@@ -275,21 +275,21 @@ export const LANDING_PAGES = {
     slug: 'seo',
     type: 'service',
     title: 'Search Engine Optimization & Google Ranking',
-    badge: 'Organic Traffic • From Ksh. 3,000',
+    badge: 'Organic Traffic • From $350',
     heroHeadline: 'Rank on Page 1 of Google and Get Free, Qualified Inbound Leads Every Month.',
     heroSubheadline: 'Paid ads stop delivering the moment you stop paying. SEO builds a permanent pipeline of organic Google searchers who find your website, trust your authority, and contact you directly.',
-    priceDisplay: 'Ksh. 3,000',
-    pricingNote: 'Basic: Ksh. 3,000 • Growth: Ksh. 5,000',
+    priceDisplay: '$350',
+    pricingNote: 'Technical Audit: $350 • Growth Sprint: $650',
     whatsappMessage: 'Hello Haxor MTC, I want to improve my website Google rankings with SEO.',
     keyHighlights: [
-      { title: 'Page 1 Keyword Strategy', desc: 'Target high-volume search phrases that Kenyan buyers use when looking for your services.' },
+      { title: 'Page 1 Keyword Strategy', desc: 'Target high-volume search phrases that qualified buyers use when looking for your services.' },
       { title: 'Core Web Vitals & Speed', desc: 'Speed up your website loading times so Google rewards you with higher rankings.' },
       { title: 'Local Citation Building', desc: 'Ensure your business name, address, and phone number match across all online directories.' },
       { title: 'Monthly Progress Tracking', desc: 'Transparent reports showing exactly which keywords are moving up the Google ranks.' }
     ],
     deliverables: [
       'Full technical SEO crawl & broken link audit',
-      'Keyword research focused on Kenyan buyer intent',
+      'Keyword research focused on transactional buyer intent',
       'Title tags, meta descriptions, and header structure optimization',
       'Google Search Console indexing and XML sitemap submission',
       'Mobile speed optimization and image compression',
@@ -305,10 +305,10 @@ export const LANDING_PAGES = {
     slug: 'ict-consulting',
     type: 'service',
     title: 'ICT Strategic Consulting & Systems Audit',
-    badge: 'Expert Advisory • Ksh. 3,000/session',
+    badge: 'Technical Advisory • $150/session',
     heroHeadline: 'Fix Slow Tech, Secure Your Business Data & Eliminate Wasted IT Subscriptions.',
     heroSubheadline: 'Technology should speed up your business, not frustrate your team. Book a 1-on-1 strategic IT audit to evaluate your network, hardware, software stack, and security protocols with clear, actionable recommendations.',
-    priceDisplay: 'Ksh. 3,000',
+    priceDisplay: '$150',
     pricingNote: 'Per 1-on-1 Consulting Session • Written Technology Roadmap Included',
     whatsappMessage: 'Hello Haxor MTC, I would like to book an ICT Consulting session for our business.',
     keyHighlights: [
@@ -334,22 +334,22 @@ export const LANDING_PAGES = {
     slug: 'digital-literacy',
     type: 'service',
     title: 'Professional & Executive Digital Literacy Training',
-    badge: '10 Structured Sessions • Ksh. 7,500',
-    heroHeadline: 'Train Your Team on Modern Cloud Tools, M-Pesa Systems & AI Productivity.',
-    heroSubheadline: 'Boost office productivity and eliminate basic digital mistakes. Our structured 10-session curriculum teaches your staff how to use Google Workspace, Office 365, M-Pesa business reconciliations, and modern AI tools.',
-    priceDisplay: 'Ksh. 750',
-    pricingNote: 'Per Session • Minimum 10 Sessions (Total Ksh. 7,500) • Certificate Included',
+    badge: 'Executive Systems Training • $450',
+    heroHeadline: 'Train Your Team on Modern Cloud Tools, Automation Systems & AI Productivity.',
+    heroSubheadline: 'Boost office productivity and eliminate workflow friction. Our structured 10-session curriculum teaches your staff how to use Google Workspace, Office 365, automated billing reconciliations, and modern AI tools.',
+    priceDisplay: '$450',
+    pricingNote: 'Comprehensive 10-Session Curriculum • Certificate Included',
     whatsappMessage: 'Hello Haxor MTC, I want to enroll for the Digital Literacy Training course.',
     keyHighlights: [
       { title: '10 Hands-On Sessions', desc: 'Practical, step-by-step learning focused on daily office tasks rather than boring theory.' },
       { title: 'Cloud & Office Tools', desc: 'Master Google Docs, Sheets, Drive, Microsoft Word, Excel, and Outlook email.' },
-      { title: 'Digital Finance & M-Pesa', desc: 'Learn how to manage business tills, download statements, and reconcile payments.' },
+      { title: 'Digital Operations & Billing', desc: 'Learn how to manage automated invoices, reconcile payments, and streamline reporting.' },
       { title: 'Modern AI for Business', desc: 'Use ChatGPT and AI tools to draft emails, write reports, and summarize documents fast.' }
     ],
     deliverables: [
       '10 structured practical learning sessions',
       'Cloud productivity (Google Docs, Sheets, Drive, MS Office)',
-      'Digital payment handling and M-Pesa business till reconciliation',
+      'Digital payment handling and automated billing reconciliation',
       'Essential cybersecurity hygiene (avoiding phishing, password security)',
       'AI productivity tools (ChatGPT for office writing & research)',
       'One-on-one question time and practical assignments',
@@ -365,9 +365,9 @@ export const LANDING_PAGES = {
     slug: 'haxpos',
     type: 'software',
     title: 'HaxPos Universal Point of Sale',
-    badge: 'Universal POS • M-Pesa Native',
-    heroHeadline: 'The Fast, Reliable Point of Sale with M-Pesa STK Push Built for Kenyan Retail & Hospitality.',
-    heroSubheadline: 'Stop losing stock and manual cash reconciliation headaches. HaxPos handles instant barcode checkout, direct M-Pesa prompt to customer phones, low-stock alerts, and daily cash drawer auditing for multi-branch businesses.',
+    badge: 'Universal Cloud POS • High Volume',
+    heroHeadline: 'The Fast, Reliable Cloud Point of Sale Built for High-Volume Retail & Hospitality.',
+    heroSubheadline: 'Stop losing stock and manual cash reconciliation headaches. HaxPos handles instant barcode checkout, digital and card payment hooks, low-stock alerts, and daily cash drawer auditing for multi-branch businesses.',
     priceDisplay: 'Free Demo',
     pricingNote: 'Demo on Demand • Flexible Licensing • Hardware Packages Available',
     whatsappMessage: 'Hello Haxor MTC, I want to schedule a live demo of the HaxPos POS system for my business.',
@@ -382,14 +382,14 @@ export const LANDING_PAGES = {
       'Pharmacies & Chemists'
     ],
     keyHighlights: [
-      { title: 'Integrated M-Pesa STK Push', desc: 'Cashier taps M-Pesa, customer gets instant PIN prompt on their phone, receipt prints automatically upon payment.' },
+      { title: 'Integrated Digital & Card Payments', desc: 'Cashier initiates checkout, customer completes contactless card or mobile payment, receipt prints automatically.' },
       { title: 'Real-Time Inventory Alerts', desc: 'Track every single unit sold. Get automated warnings before you run out of fast-selling stock.' },
       { title: 'Cash Drawer & Shift Auditing', desc: 'Prevent cashier discrepancies with shift opening/closing counts and blind reconciliation.' },
-      { title: 'KRA eTIMS Integration Ready', desc: 'Compliant invoice output and integration ready for Kenyan tax authorities.' }
+      { title: 'Automated Tax & Financial Ledgers', desc: 'Compliant multi-currency invoice output and automated synchronization with central financial ledgers.' }
     ],
     features: [
       'Lightning-fast barcode scanning and thermal receipt printing',
-      'Integrated M-Pesa STK push with automated payment confirmation',
+      'Integrated card and digital payment processing with automated payment confirmation',
       'Real-time inventory deduction and supplier purchase order management',
       'Cashier shift management and daily cash drawer reconciliation',
       'Multi-branch stock transfer and centralized cloud sales dashboard',
@@ -408,9 +408,9 @@ export const LANDING_PAGES = {
     slug: 'elittego',
     type: 'software',
     title: 'ElitteGo On-Demand Delivery Platform (Localized Regional Service)',
-    badge: 'Localized Regional Logistics • Kenya & East Africa',
+    badge: 'On-Demand Delivery Logistics Ecosystem',
     heroHeadline: 'Turnkey On-Demand Multi-Vendor Delivery Ecosystem for Regional Logistics.',
-    heroSubheadline: 'A specialized, localized software ecosystem engineered specifically for regional restaurant, grocery, liquor, and pharmacy delivery fleets across Kenya and East Africa. Features integrated M-Pesa STK push, driver GPS navigation, and merchant vendor management.',
+    heroSubheadline: 'A complete software ecosystem engineered for on-demand restaurant, grocery, retail, and courier delivery fleets worldwide. Features driver GPS navigation, live dispatch, and multi-merchant vendor portals.',
     priceDisplay: 'Turnkey Solution',
     pricingNote: 'Localized Regional Deployment • White-Label Ready • Full Platform Ownership',
     whatsappMessage: 'Hello Haxor MTC, I am interested in deploying the ElitteGo delivery software platform for our regional fleet.',
@@ -435,7 +435,7 @@ export const LANDING_PAGES = {
       'Vendor management dashboard for restaurants and retail stores',
       'Driver mobile app with automated order dispatch and GPS routing',
       'Dynamic delivery fee engine based on distance and delivery zones',
-      'M-Pesa STK push and debit card gateway pre-integrated',
+      'Stripe, Apple Pay, Google Pay, and credit card gateways pre-integrated',
       'Admin financial reporting with automated commission split calculation',
       'Automated SMS and WhatsApp order status updates to customers',
       'Instant smartphone demo via live QR Code scanning'
@@ -443,7 +443,7 @@ export const LANDING_PAGES = {
     faqs: [
       { q: 'How do I test the app using the QR Code?', a: 'Simply point your smartphone camera at the ElitteGo QR code displayed on this page. Your phone will instantly prompt you to open the live interactive demo app.' },
       { q: 'Can we rebrand the platform under our own business name?', a: 'Yes! ElitteGo is 100% white-labeled with your business logo, brand colors, and custom domain.' },
-      { q: 'Is M-Pesa already integrated for customer checkout?', a: 'Yes, both M-Pesa STK Push (where customer enters their PIN on phone prompt) and Paybill/Till integration are built-in.' }
+      { q: 'What payment gateways are supported for customer checkout?', a: 'Stripe, PayPal, Apple Pay, Google Pay, and custom webhook-enabled card processors are supported out of the box.' }
     ]
   },
 
@@ -489,7 +489,7 @@ export const LANDING_PAGES = {
     title: 'Hospital & Clinic Management System (HMS)',
     badge: 'Healthcare ERP • OPD & IPD',
     heroHeadline: 'Digital Health Infrastructure Streamlining Patient Records, Pharmacy, Lab & Billing.',
-    heroSubheadline: 'Say goodbye to lost paper files and billing leakage. Our Hospital Management System gives Kenyan healthcare facilities secure Electronic Health Records (EHR), pharmacy stock control, and automated insurance claims.',
+    heroSubheadline: 'Say goodbye to lost paper files and billing leakage. Our Hospital Management System gives modern clinics and healthcare facilities secure Electronic Health Records (EHR), pharmacy stock control, and automated insurance claims.',
     priceDisplay: 'Enterprise Solution',
     pricingNote: 'Custom Clinic / Hospital Deployment • Role-Based Security',
     whatsappMessage: 'Hello Haxor MTC, We need a demonstration of your Hospital Management System for our clinic/hospital facility.',
@@ -503,7 +503,7 @@ export const LANDING_PAGES = {
       { title: 'Paperless Patient Records (EHR)', desc: 'Instant access to doctor notes, clinical diagnosis, vitals, allergy alerts, and prescription history.' },
       { title: 'Pharmacy Inventory & Batch Control', desc: 'Dispense medications, monitor expiry dates, and prevent medicine shrinkage with audit logs.' },
       { title: 'Laboratory Workflows', desc: 'Doctors request lab tests digitally; lab technicians record results that update the patient file automatically.' },
-      { title: 'Insurance & Cashier Billing', desc: 'Manage private insurance, NHIF/SHIF billing, cash, and M-Pesa payments with itemized invoices.' }
+      { title: 'Insurance & Cashier Billing', desc: 'Manage private health insurance claims, credit cards, and online payments with itemized invoices.' }
     ],
     features: [
       'Electronic Health Records (EHR) with secure doctor consultations',
@@ -524,7 +524,7 @@ export const LANDING_PAGES = {
     type: 'software',
     title: 'Odoo ERP Implementation & Customization',
     badge: 'Certified Odoo Expertise',
-    heroHeadline: 'Streamline Your Business Operations with Custom Odoo ERP Workflows in Kenya.',
+    heroHeadline: 'Streamline Your Business Operations with Custom Odoo ERP Architecture.',
     heroSubheadline: 'Eliminate chaotic spreadsheets and disconnected software. We implement, customize, and support Odoo Community and Enterprise ERP for manufacturing, distribution, retail, and service businesses.',
     priceDisplay: 'Custom Scope',
     pricingNote: 'Scope-Based Implementation • Data Migration • Staff Training Included',
@@ -538,21 +538,21 @@ export const LANDING_PAGES = {
     ],
     keyHighlights: [
       { title: 'All-in-One Operations', desc: 'Unify sales, purchasing, inventory, manufacturing, accounting, and HR in a single dashboard.' },
-      { title: 'KRA eTIMS & Local Tax Setup', desc: 'Generate eTIMS-compliant invoices with automated tax calculations and ledger sync.' },
+      { title: 'Multi-Currency Tax & Ledger Setup', desc: 'Generate multi-currency compliant invoices with automated tax calculations and ledger sync.' },
       { title: 'Legacy Data Migration', desc: 'Seamlessly migrate your customer lists, vendor history, and inventory from QuickBooks, Excel, or Sage.' },
       { title: 'Local Training & SLA Support', desc: 'We train your accounting and operations teams in person and provide dependable technical support.' }
     ],
     features: [
       'Odoo Community and Enterprise version deployment on secure cloud servers',
       'Custom module programming and third-party API integration',
-      'Full accounting, chart of accounts, and KRA eTIMS synchronization',
+      'Full accounting, chart of accounts, and multi-currency ledger synchronization',
       'Multi-warehouse inventory tracking with automated reordering points',
       'CRM and sales pipeline management with automated quote-to-invoice flows',
       'Historical data migration from legacy accounting systems',
       'Staff onboarding, user manuals, and dedicated SLA maintenance contracts'
     ],
     faqs: [
-      { q: 'Can Odoo integrate with our local bank and M-Pesa?', a: 'Yes! We configure M-Pesa statement reconciliation and bank feeds so your accounting books reconcile automatically.' }
+      { q: 'Can Odoo integrate with our bank feeds and payment processors?', a: 'Yes! We configure automated bank reconciliation feeds, Stripe, PayPal, and custom payment webhooks so ledgers update automatically.' }
     ]
   },
 
@@ -575,7 +575,7 @@ export const LANDING_PAGES = {
     ],
     keyHighlights: [
       { title: 'Zoho CRM Sales Pipelines', desc: 'Automate lead assignment, follow-up reminders, email templates, and deal stages.' },
-      { title: 'Zoho Books Kenyan Accounting', desc: 'Manage localized VAT invoicing, expense tracking, and financial statements with ease.' },
+      { title: 'Zoho Books Multi-Currency Accounting', desc: 'Manage multi-currency VAT/GST invoicing, expense tracking, and financial statements with ease.' },
       { title: 'Omnichannel Customer Desk', desc: 'Centralize support emails, WhatsApp inquiries, and tickets in Zoho Desk.' },
       { title: 'Custom Deluge Automation', desc: 'Custom code workflows, webhook triggers, and third-party API connections.' }
     ],
@@ -710,7 +710,7 @@ export const LANDING_PAGES = {
       { title: 'Modern Full-Stack Architecture', desc: 'React, Next.js, Node.js, Python, PostgreSQL, Redis, Docker, and Kubernetes engineered for high velocity and security.' },
       { title: '100% Code & IP Ownership', desc: 'You retain complete copyright and ownership of all source code, databases, documentation, and cloud deployment pipelines.' },
       { title: 'Scalable Microservices & APIs', desc: 'RESTful and GraphQL API design with secure token authentication, rate limiting, and webhook dispatch.' },
-      { title: 'International Payment Gateways', desc: 'Seamless integration with Stripe, PayPal, Lemon Squeezy, credit cards, and regional mobile money (M-Pesa STK).' }
+      { title: 'International Payment Gateways', desc: 'Seamless integration with Stripe, PayPal, Lemon Squeezy, credit cards, and custom payment webhooks.' }
     ],
     features: [
       'Full-stack custom web and mobile application engineering',
@@ -736,7 +736,7 @@ export const LANDING_PAGES = {
     badge: 'International SEO • Enterprise Search Growth',
     heroHeadline: 'Dominate Organic Search Rankings Globally with Data-Driven Technical & Enterprise SEO.',
     heroSubheadline: 'Drive high-intent, sustainable organic pipeline without burning budget on continuous PPC ads. We deliver comprehensive technical SEO audits, international multi-region search optimization, authority link architecture, and conversion-focused content strategy.',
-    priceDisplay: 'From Ksh. 15,000',
+    priceDisplay: 'From $750',
     pricingNote: 'Monthly Growth Retainers • Technical Crawl Overhaul • Transparent Keyword Rank Tracking',
     whatsappMessage: 'Hello Haxor MTC, I want to explore Enterprise & Global SEO Consulting services for our business.',
     keyHighlights: [
@@ -785,7 +785,7 @@ export const LANDING_PAGES = {
     ],
     features: [
       'Cloud POS terminal software compatible with Windows, Android, Mac, and iOS',
-      'Integrated payment gateways (Cards, Apple Pay, Google Pay, and localized M-Pesa STK)',
+      'Integrated payment gateways (Cards, Apple Pay, Google Pay, and digital payment webhooks)',
       'Multi-warehouse stock transfers and real-time inventory deduction',
       'Supplier purchase orders, goods received notes (GRN), and reorder triggers',
       'Cashier shift management, opening/closing blind float reconciliation, and audit logs',
@@ -878,11 +878,11 @@ export const LANDING_PAGES = {
     slug: 'virtual-assistance',
     type: 'service',
     title: 'Executive & Technical Virtual Assistance Services | Dedicated Remote Talent',
-    badge: 'Pre-Vetted Remote Talent • From Ksh 25,000/mo',
+    badge: 'Pre-Vetted Remote Talent • From $650/mo',
     heroHeadline: 'High-Impact Executive, Administrative & Technical Virtual Assistants.',
     heroSubheadline: 'Free up 20+ hours every week. Our college-educated, English-fluent dedicated remote assistants handle customer service, inbox zero, calendar scheduling, CRM maintenance, order fulfillment, and daily business operations.',
-    priceDisplay: 'From Ksh. 25,000',
-    pricingNote: 'Part-Time (20 hrs/wk): Ksh 25k • Full-Time (40 hrs/wk): Ksh 45k • Hourly: Ksh 800/hr',
+    priceDisplay: '$650',
+    pricingNote: 'Part-Time (20 hrs/wk): $650/mo • Full-Time (40 hrs/wk): $1,200/mo • Hourly: $25/hr',
     whatsappMessage: 'Hello Haxor MTC, I am interested in hiring a Virtual Assistant for my business. Please share available candidate profiles.',
     milestonePayment: 'Monthly Rolling Retainer • Cancel Anytime with 14 Days Notice',
     packages: [
@@ -903,7 +903,7 @@ export const LANDING_PAGES = {
           'Weekly activity log & direct Slack / WhatsApp team sync'
         ],
         ctaText: 'Hire Part-Time VA',
-        whatsappMessage: 'Hello Haxor MTC, I want to hire a Part-Time Virtual Assistant (20 hrs/wk at Ksh 25,000/mo).'
+        whatsappMessage: 'Hello Haxor MTC, I want to hire a Part-Time Virtual Assistant (20 hrs/wk at $650/mo).'
       },
       {
         id: 'va-full-time',
@@ -923,7 +923,7 @@ export const LANDING_PAGES = {
           'Free replacement guarantee within 48 hours if fit is unsatisfactory'
         ],
         ctaText: 'Hire Full-Time VA',
-        whatsappMessage: 'Hello Haxor MTC, I want to hire a Full-Time Virtual Assistant (40 hrs/wk at Ksh 45,000/mo).'
+        whatsappMessage: 'Hello Haxor MTC, I want to hire a Full-Time Virtual Assistant (40 hrs/wk at $1,200/mo).'
       },
       {
         id: 'va-hourly',
@@ -941,7 +941,7 @@ export const LANDING_PAGES = {
           'Itemized minute-by-minute Toggl time logs provided'
         ],
         ctaText: 'Book Hourly Support',
-        whatsappMessage: 'Hello Haxor MTC, I need On-Demand Hourly Virtual Assistance (Ksh 800/hr).'
+        whatsappMessage: 'Hello Haxor MTC, I need On-Demand Hourly Virtual Assistance ($25/hr).'
       }
     ],
     targetIndustries: [
@@ -979,10 +979,10 @@ export const LANDING_PAGES = {
     title: 'Google Family Link Integration for Schools, Academies & Parents',
     badge: 'Child Cyber Safety & Educational Device Supervision',
     heroHeadline: 'Safe, Monitored & Distraction-Free Digital Learning for Children and Students.',
-    heroSubheadline: 'Turnkey Google Family Link integration for educational institutions and parents across Kenya. Web SafeSearch filtering, automatic school & bedtime screen limits, app download controls, and live device GPS tracking from Ksh. 1,000 per device.',
-    priceDisplay: 'From Ksh. 1,000 / Device',
+    heroSubheadline: 'Turnkey Google Family Link integration for educational institutions and parents worldwide. Web SafeSearch filtering, automatic school & bedtime screen limits, app download controls, and live device GPS tracking starting at $10 per device.',
+    priceDisplay: 'From $10 / Device',
     pricingNote: 'Custom institutional tiers • Minimum 10 devices',
-    whatsappMessage: 'Hello Haxor MTC, I am interested in Google Family Link integration for our school / student devices (Ksh 1,000 / device). Please share details!',
+    whatsappMessage: 'Hello Haxor MTC, I am interested in Google Family Link integration for our school / student devices ($10 / device). Please share details!',
     milestonePayment: '50% deposit upon scope signoff → 50% upon batch enrollment and PTA handover',
     packages: [
       {
@@ -1002,13 +1002,13 @@ export const LANDING_PAGES = {
           'Parent walkthrough guide & 30 days setup support',
         ],
         ctaText: 'Order Device Setup',
-        whatsappMessage: 'Hello Haxor MTC, I want to order the Google Family Link Per-Device Setup (Ksh. 1,000 / device).',
+        whatsappMessage: 'Hello Haxor MTC, I want to order the Google Family Link Per-Device Setup ($10 / device).',
       },
       {
         id: 'family-link-classroom',
         name: 'Classroom / Standard Rollout',
         price: '85,000',
-        priceNote: 'up to 100 devices (~Ksh 850/device)',
+        priceNote: 'up to 100 devices (~$7/device)',
         bestFor: 'Primary, Junior Secondary & High School grades rolling out digital learning devices.',
         badge: 'Most Popular for Schools',
         popular: true,
@@ -1021,13 +1021,13 @@ export const LANDING_PAGES = {
           'Direct administrative ICT coordinator handover & 90-day support',
         ],
         ctaText: 'Choose Classroom Package',
-        whatsappMessage: 'Hello Haxor MTC, our school is interested in the Standard Google Family Link Rollout for up to 100 devices (Ksh 85,000).',
+        whatsappMessage: 'Hello Haxor MTC, our school is interested in the Standard Google Family Link Rollout for up to 100 devices ($700).',
       },
       {
         id: 'family-link-institution',
         name: 'Whole-School Institution Rollout',
         price: '220,000',
-        priceNote: 'up to 300+ devices (~Ksh 730/device)',
+        priceNote: 'up to 300+ devices (~$6/device)',
         bestFor: 'Full-campus deployments, international schools, boarding academies, and multi-stream institutions.',
         badge: 'Campus Scale',
         popular: false,
@@ -1070,7 +1070,7 @@ export const LANDING_PAGES = {
       { q: 'What devices are supported by Google Family Link?', a: 'Google Family Link supports Android tablets, Android smartphones, and Chromebooks used by students. Parents can supervise their children from either an Android phone or an iPhone/iPad.' },
       { q: 'Can children bypass or uninstall Google Family Link?', a: 'No. When configured properly by our team, the child account cannot remove supervision, disable GPS, or uninstall the management profile without the parent account password or secret override code.' },
       { q: 'How does this benefit school principals and teachers?', a: 'It completely eliminates classroom distractions. Tablets brought to school can have games, social media, and camera apps locked during class periods, guaranteeing that devices are strictly educational tools.' },
-      { q: 'How does the Ksh. 1,000 per device pricing work?', a: 'For smaller groups or individual parents, we configure each device for Ksh. 1,000 (minimum 10 devices). For whole classes (up to 100 devices) or whole schools (up to 300+ devices), we provide discounted package tiers that include on-site staff, PTA workshops, and ongoing support.' },
+      { q: 'How does the per-device pricing work?', a: 'For smaller groups or individual parents, we configure each device for $10 (minimum 10 devices). For whole classes (up to 100 devices) or whole schools (up to 300+ devices), we provide discounted package tiers that include remote onboarding, PTA workshops, and ongoing support.' },
       { q: 'Do you conduct on-site PTA or school workshops?', a: 'Yes! For school and classroom rollouts, our certified engineers conduct interactive on-site or virtual sessions with parents and teachers to guide everyone through using the parent app and setting house rules.' },
     ],
   }

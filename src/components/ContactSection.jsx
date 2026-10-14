@@ -17,7 +17,7 @@ export default function ContactSection() {
     name: '',
     phone: '',
     email: '',
-    service: 'Website Development (Ksh 7,000)',
+    service: 'CRM Implementation & Configuration',
     message: '',
   });
 
@@ -167,7 +167,7 @@ export default function ContactSection() {
                   <input
                     type="text"
                     required
-                    placeholder="e.g., Brian Mwangi"
+                    placeholder="e.g., James Wilson"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition shadow-xs"
@@ -182,7 +182,7 @@ export default function ContactSection() {
                     <input
                       type="tel"
                       required
-                      placeholder="e.g., 0712 345 678"
+                      placeholder="e.g., +44 7700 900123"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition shadow-xs"
@@ -195,7 +195,7 @@ export default function ContactSection() {
                     </label>
                     <input
                       type="email"
-                      placeholder="e.g., brian@mybusiness.co.ke"
+                      placeholder="e.g., james@agency.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition shadow-xs"
@@ -212,21 +212,17 @@ export default function ContactSection() {
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition shadow-xs"
                   >
-                    <option value="Website Development (Ksh 7,000 with Free Domain & Hosting)">Website Development (Ksh 7,000 + Free Domain/Hosting)</option>
-                    <option value="Social Media Posting (20-30 videos/mo - Ksh 4,500)">Social Media Posting (20-30 videos/mo - Ksh 4,500)</option>
-                    <option value="HaxPos Universal Point of Sale Demo">HaxPos Universal POS (Cafes, Retail, Hardware, Spirits)</option>
-                    <option value="ElitteGo On-Demand Delivery Platform">ElitteGo On-Demand Delivery Platform</option>
-                    <option value="HaxOne Hospitality Suite (Hotels, Lodges, PMS)">HaxOne Hospitality Suite (Hotels, Lodges, PMS)</option>
-                    <option value="Hospital & Clinic Management System (HMS)">Hospital & Clinic Management System (HMS)</option>
-                    <option value="Meta Ads Placement (Ksh 4,200 / Ksh 7,500)">Meta Ads Placement (FB & IG)</option>
-                    <option value="Google Ads PPC Management (Ksh 2,500 / Ksh 30,000)">Google Ads PPC Management</option>
-                    <option value="Business Email Setup (Outlook / Webmail / Workspace)">Business Email Setup & Migration</option>
-                    <option value="Google My Business Profile Setup">Google My Business & Map Rank</option>
-                    <option value="Odoo ERP Implementation & Customization">Odoo ERP Consulting</option>
-                    <option value="Zoho Suite Architecture & Automation">Zoho CRM & Books Automation</option>
-                    <option value="ICT Consulting (Ksh 3,000)">ICT Strategic Consulting Session</option>
-                    <option value="Digital Literacy Training (10 Sessions)">Digital Literacy Training</option>
-                    <option value="Custom Multi-Service Bundle">Custom Multi-Service Bundle</option>
+                    <option value="CRM Implementation & Configuration">CRM Implementation & Configuration</option>
+                    <option value="Business Process Automation">Business Process Automation</option>
+                    <option value="Software & API Integrations">Software & API Integrations</option>
+                    <option value="Agency White-Label Partnership">Agency White-Label Partnership</option>
+                    <option value="Workflow Automation & Optimization">Workflow Automation & Optimization</option>
+                    <option value="Zoho Suite Architecture & Automation">Zoho Suite Architecture & Automation</option>
+                    <option value="Odoo ERP Implementation & Customization">Odoo ERP Implementation & Customization</option>
+                    <option value="HaxPos Universal Point of Sale">HaxPos Universal Point of Sale</option>
+                    <option value="HaxOne Hospitality Suite">HaxOne Hospitality Suite</option>
+                    <option value="Technical Consulting Session">Technical Consulting Session</option>
+                    <option value="Custom Project Scope">Custom Project Scope</option>
                   </select>
                 </div>
 

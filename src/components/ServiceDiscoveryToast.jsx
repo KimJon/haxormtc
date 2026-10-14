@@ -16,70 +16,59 @@ import { useCurrency } from '../context/CurrencyContext';
 
 const DISCOVERY_SERVICES = [
   {
-    id: 'whatsapp-commerce',
-    badge: 'Trending High-ROI',
-    title: 'WhatsApp Commerce & M-Pesa Ordering',
-    desc: 'Turn WhatsApp into an automated sales channel with interactive catalogs, in-chat M-Pesa STK push & CRM sync.',
-    priceLabel: 'From Ksh 15,000',
-    link: '/services',
-    icon: MessageSquare,
-    color: 'emerald',
-    whatsappMsg: 'Hello Haxor MTC, I saw your WhatsApp Commerce & M-Pesa ordering solution and would like full setup details.'
-  },
-  {
-    id: 'social-media',
-    badge: 'Monthly Growth',
-    title: 'Social Media Video Management',
-    desc: '20 to 30 viral short-form videos edited & posted to TikTok, Instagram & Facebook every month.',
-    priceLabel: 'Only Ksh 4,500 / month',
-    link: '/services/social-media',
-    icon: TrendingUp,
-    color: 'coral',
-    whatsappMsg: 'Hello Haxor MTC, I want to enroll my business in your Social Media Video Posting package (Ksh 4,500/month).'
-  },
-  {
-    id: 'single-landing',
-    badge: 'Fast Turnaround',
-    title: 'Single-Page Business Website',
-    desc: 'High-converting mobile-first web presence inclusive of free custom domain, 1-year hosting & SSL certificate.',
-    priceLabel: 'Ksh 7,000 (All Inclusive)',
-    link: '/services/website-development',
-    icon: Globe,
-    color: 'cyan',
-    whatsappMsg: 'Hello Haxor MTC, I would like to order the Single-Page Website package at Ksh 7,000 with free domain and hosting.'
-  },
-  {
-    id: 'google-maps',
-    badge: 'Local Discovery',
-    title: 'Google Maps 3-Pack Rank Booster',
-    desc: 'Get your shop, clinic, or restaurant ranked #1 when customers search for your trade or services nearby.',
-    priceLabel: 'From Ksh 500',
-    link: '/services/google-business',
-    icon: Store,
-    color: 'amber',
-    whatsappMsg: 'Hello Haxor MTC, I want to optimize my Google Business Profile and rank in the Google Maps 3-Pack.'
-  },
-  {
-    id: 'haxpos-demo',
-    badge: 'Retail & Dining',
-    title: 'HaxPos Universal Point of Sale',
-    desc: 'Lightning-fast touchscreen POS with barcode scanning, automated M-Pesa STK push & thermal receipt printing.',
-    priceLabel: 'Free Live Demo Available',
-    link: '/software/haxpos',
+    id: 'crm-implementation',
+    badge: 'Core Service',
+    title: 'CRM Implementation Sprint',
+    desc: 'Custom pipeline setup, lead scoring, and automated task reminders in Zoho, Odoo, or HubSpot.',
+    priceLabel: 'From $1,800',
+    link: '/services/crm-implementation',
     icon: Layers,
-    color: 'purple',
-    whatsappMsg: 'Hello Haxor MTC, I would like to schedule a free demonstration of the HaxPos Universal POS system.'
+    color: 'emerald',
+    whatsappMsg: 'Hello Haxor MTC, I am interested in your CRM Implementation Sprint for our business.'
   },
   {
-    id: 'family-link',
-    badge: 'Child & Student Safety',
-    title: 'Google Family Link Integration',
-    desc: 'Turnkey parental control & school digital device management for tablets and smartphones across Kenya.',
-    priceLabel: 'Ksh 1,000 / device',
-    link: '/services/google-family-link',
+    id: 'agency-partners',
+    badge: 'Agency Specialization',
+    title: 'White-Label Agency Retainer',
+    desc: 'Behind-the-scenes CRM and workflow automation delivery under your agency brand and NDA.',
+    priceLabel: 'From $2,800 / month',
+    link: '/agency-partners',
     icon: ShieldCheck,
-    color: 'blue',
-    whatsappMsg: 'Hello Haxor MTC, I want to inquire about Google Family Link device integration for our students/children.'
+    color: 'coral',
+    whatsappMsg: 'Hello Haxor MTC, I run an agency and would like to discuss your White-Label Delivery Retainer.'
+  },
+  {
+    id: 'business-automation',
+    badge: 'Operational Efficiency',
+    title: 'Business Process Automation',
+    desc: 'Automate multi-step approval workflows, lead distribution, and cross-platform notification webhooks.',
+    priceLabel: 'From $1,200',
+    link: '/services/business-automation',
+    icon: TrendingUp,
+    color: 'cyan',
+    whatsappMsg: 'Hello Haxor MTC, I would like to consult on business process automation.'
+  },
+  {
+    id: 'software-integrations',
+    badge: 'Systems Connectivity',
+    title: 'Custom API & Software Integrations',
+    desc: 'Bi-directional data synchronization between your CRM, accounting software, and web applications.',
+    priceLabel: 'From $950',
+    link: '/services/integrations',
+    icon: Globe,
+    color: 'purple',
+    whatsappMsg: 'Hello Haxor MTC, I need assistance connecting our business software via custom API integrations.'
+  },
+  {
+    id: 'technical-audit',
+    badge: 'Discovery Sprint',
+    title: 'Technical Systems Audit',
+    desc: 'Comprehensive review of your tool stack, workflow bottlenecks, and data schemas with actionable roadmap.',
+    priceLabel: 'From $450',
+    link: '/contact',
+    icon: Sparkles,
+    color: 'amber',
+    whatsappMsg: 'Hello Haxor MTC, I would like to book a Technical Systems Audit sprint.'
   }
 ];
 

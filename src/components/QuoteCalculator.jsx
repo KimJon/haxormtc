@@ -155,7 +155,7 @@ export default function QuoteCalculator() {
   const grandTotal = subtotal - discountAmount;
 
   // Format currency helper
-  const fmt = (val) => currency === 'KES' ? `KSh ${val.toLocaleString()}` : `${currencySymbol}${val.toLocaleString()}`;
+  const fmt = (val) => `${currencySymbol}${val.toLocaleString()}`;
 
   // Generate WhatsApp message with itemized order
   const generateWhatsAppMessage = () => {
@@ -431,7 +431,7 @@ export default function QuoteCalculator() {
                       Estimated Investment
                     </span>
                     <span className="text-[11px] text-slate-500 font-medium">
-                      {isAfrica ? 'Settlement via M-Pesa or Card' : 'International wire or card invoice'}
+                      International wire, card or Stripe settlement
                     </span>
                   </div>
                   <div className="text-right">
