@@ -15,6 +15,7 @@ import {
 import { CONTACT_INFO, createWhatsAppUrl } from '../data/servicesData';
 import BrandLogo from './BrandLogo';
 import CurrencySelector from './CurrencySelector';
+import TopTicker from './TopTicker';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -71,11 +72,13 @@ export default function Navbar() {
   const isServicesActive = location.pathname.startsWith('/services');
 
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-200 ${
-      isScrolled 
-        ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs' 
-        : 'bg-white border-b border-slate-200'
-    }`}>
+    <div className="sticky top-0 z-50 w-full">
+      <TopTicker standalone={true} />
+      <header className={`w-full transition-all duration-200 ${
+        isScrolled 
+          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs' 
+          : 'bg-white border-b border-slate-200'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex items-center justify-between transition-all duration-200 ${
           isScrolled ? 'h-16' : 'h-20'
@@ -443,5 +446,6 @@ export default function Navbar() {
         </div>
       )}
     </header>
+    </div>
   );
 }

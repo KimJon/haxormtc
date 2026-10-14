@@ -25,6 +25,16 @@ import {
 import { createWhatsAppUrl, CONTACT_INFO } from '../data/servicesData';
 import { useCurrency } from '../context/CurrencyContext';
 import SocialProofSection from '../components/SocialProofSection';
+import { 
+  OfficialLogoCloud, 
+  BrandBadge, 
+  OdooLogo, 
+  ZohoLogo, 
+  HubSpotLogo, 
+  StripeLogo, 
+  GoogleAdsLogo, 
+  MetaPixelLogo 
+} from '../components/OfficialLogos';
 
 export default function Home() {
   const { formatPrice } = useCurrency();
@@ -79,14 +89,14 @@ export default function Home() {
               <span>White-Label Technical Delivery Partner</span>
             </div>
 
-            {/* Solid Bold Headline in Work Sans - No Rainbow Gradients */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#111111] tracking-tight leading-[1.08] max-w-4xl mx-auto">
+            {/* Solid Bold Headline in Work Sans - User Specified 52px 300 Weight Style */}
+            <h1 className="clarity-h1 text-4xl sm:text-5xl lg:text-[52px] font-light text-black tracking-[-1.82px] leading-[1.08] max-w-4xl mx-auto">
               Build Better Business Systems. <br className="hidden sm:inline" />
               Deliver More for Your Clients.
             </h1>
 
-            {/* Focused Sub-headline */}
-            <p className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed font-normal">
+            {/* Focused Sub-headline - 18px 400 Weight */}
+            <p className="clarity-text max-w-3xl mx-auto text-base sm:text-[18px] text-slate-600 leading-[27px] font-normal">
               We’re the white-label technical delivery partner specialising in CRM implementation, workflow automation, and software integrations — delivering scalable results for digital agencies, consultancies, and growing businesses across the UK, Europe, Australia, and worldwide.
             </p>
 
@@ -94,7 +104,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Link
                 to="/agency-partners"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-[#111111] hover:bg-black transition-all shadow-sm flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-black hover:bg-neutral-800 transition-all shadow-sm flex items-center justify-center gap-2"
               >
                 <span>Partner With Haxor</span>
                 <ArrowRight className="w-4 h-4 text-white" />
@@ -102,7 +112,7 @@ export default function Home() {
 
               <Link
                 to="/services"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-[#111111] bg-white hover:bg-slate-50 border border-slate-300 hover:border-black transition-all flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-black bg-white hover:bg-slate-50 border border-slate-300 hover:border-black transition-all flex items-center justify-center gap-2"
               >
                 <span>Our Services</span>
                 <span>→</span>
@@ -110,7 +120,7 @@ export default function Home() {
             </div>
 
             {/* Clean Monochrome Trust Indicators */}
-            <div className="pt-8 flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-500">
+            <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-500">
               <span className="flex items-center gap-1.5">
                 <span className="text-black font-bold">✓</span> Practical implementation
               </span>
@@ -124,41 +134,41 @@ export default function Home() {
               </span>
             </div>
 
+            {/* Humanized Hero Architecture Showcase Image */}
+            <div className="pt-10 max-w-5xl mx-auto">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 group">
+                <img 
+                  src="/images/hero-collaboration.jpg" 
+                  alt="Haxor MTC Senior Systems Architects and Technical Delivery Directors collaborating" 
+                  className="w-full h-auto max-h-[500px] object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6 sm:p-10 text-left">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider">
+                      Technical Delivery Architecture
+                    </span>
+                    <span className="px-3 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md text-emerald-300 text-xs font-semibold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> Overlap Hours: GMT • CET • AEST
+                    </span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-light text-white tracking-tight">
+                    Senior Systems Engineering &amp; White-Label Implementation Behind Your Brand
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-200 mt-1 max-w-2xl hidden sm:block font-normal leading-relaxed">
+                    Direct access to dedicated technical leads handling Zoho, Odoo, HubSpot, and custom API webhooks for digital agencies worldwide.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
         {/* =========================================================================
-            SECTION 2: LOGO PANEL (Clarity logo-panel--grey-lt)
+            SECTION 2: OFFICIAL LOGO CLOUD (Odoo, Zoho, Google, Pixel, Ads, HubSpot, Stripe)
             ========================================================================= */}
-        <section className="py-8 bg-[#F4F5F7] border-b border-slate-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-4">
-              Enterprise Platforms &amp; Architecture Standards
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 text-slate-700 font-semibold text-xs sm:text-sm">
-              <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-black" />
-                <span>Zoho Certified Consulting</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-black" />
-                <span>Odoo ERP Implementation</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-black" />
-                <span>HubSpot Solutions Architecture</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-black" />
-                <span>REST API &amp; Webhook Sync</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-black" />
-                <span>Stripe &amp; Global Gateways</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        <OfficialLogoCloud />
 
         {/* =========================================================================
             SECTION 3: SPLIT PANEL 1 (Clarity panel-split--left Focused on Results)
@@ -167,64 +177,52 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               
-              {/* Left Side: Crisp Monochromatic System Graphic */}
+              {/* Left Side: Humanized Corporate Image with Stats Overlay */}
               <div className="lg:col-span-5">
-                <div className="p-8 rounded-3xl bg-[#111111] text-white shadow-lg border border-neutral-800 space-y-4">
-                  <div className="flex items-center justify-between pb-4 border-b border-neutral-800">
-                    <span className="text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">
-                      Technical Delivery Operations
-                    </span>
-                    <span className="text-[10px] bg-white/10 text-white font-mono px-2 py-0.5 rounded">
-                      Production
-                    </span>
-                  </div>
-
-                  <div className="space-y-3 text-xs">
-                    <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
-                      <div>
-                        <div className="font-bold text-white">Lead Capture &amp; Validation</div>
-                        <div className="text-[10px] text-slate-400">Zero data entry • 180ms webhook</div>
-                      </div>
-                      <span className="font-mono text-white font-bold">100%</span>
+                <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-md group">
+                  <img
+                    src="/images/agency-partnership.jpg"
+                    alt="Agency Executive and Haxor MTC Technical Partner"
+                    className="w-full h-80 sm:h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                      <span className="text-xs font-bold uppercase tracking-wider text-slate-200">
+                        100% White-Label Delivery
+                      </span>
                     </div>
-
-                    <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
-                      <div>
-                        <div className="font-bold text-white">Pipeline Cadence Automation</div>
-                        <div className="text-[10px] text-slate-400">Overdue tasks &amp; stale deal alerts</div>
-                      </div>
-                      <span className="font-mono text-white font-bold">48h SLA</span>
+                    <div className="font-bold text-base text-white">
+                      Direct Senior Leadership Collaboration
                     </div>
-
-                    <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
-                      <div>
-                        <div className="font-bold text-white">Agency Margin Preservation</div>
-                        <div className="text-[10px] text-slate-400">Wholesale fixed sprint rates</div>
-                      </div>
-                      <span className="font-mono text-white font-bold">40–60%</span>
+                    <div className="text-xs text-slate-300 mt-0.5">
+                      Fixed sprint scopes • Zero client poaching guarantee
                     </div>
-                  </div>
-
-                  <div className="pt-4 border-t border-neutral-800 flex items-center justify-between text-[11px] text-slate-400">
-                    <span>100% White-Label &amp; NDA Backed</span>
-                    <span className="font-mono text-slate-300">v3.2 Sync</span>
                   </div>
                 </div>
               </div>
 
-              {/* Right Side: Copy & Narrative */}
+              {/* Right Side: Copy & Narrative with Exact Clarity Specs */}
               <div className="lg:col-span-7 space-y-5">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] tracking-tight">
+                <h2 className="clarity-h1 text-3xl sm:text-4xl lg:text-[46px] font-light text-black tracking-[-1.82px] leading-[1.12]">
                   Focused on Automation, Pipeline &amp; Revenue
                 </h2>
 
-                <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
+                <p className="clarity-text text-base sm:text-[18px] text-slate-700 leading-[27px] font-normal">
                   With deep in-house systems architecture experience, a passion for technology, and a steadfast focus on quality over quantity: our understanding of the B2B buyer journey and sales operations sets us apart.
                 </p>
 
-                <p className="text-base text-slate-600 leading-relaxed font-normal">
+                <p className="clarity-text text-base sm:text-[18px] text-slate-600 leading-[27px] font-normal">
                   Most providers are interested in vanity metrics or generic IT support. We’re more interested in capturing qualified <em>leads</em>, accelerating <em>sales pipeline velocity</em>, and saving hundreds of hours of manual administrative overhead: <strong>real results</strong>.
                 </p>
+
+                <div className="pt-2 flex flex-wrap items-center gap-3">
+                  <BrandBadge brand="zoho" label="Zoho One" />
+                  <BrandBadge brand="odoo" label="Odoo ERP" />
+                  <BrandBadge brand="hubspot" label="HubSpot" />
+                  <BrandBadge brand="stripe" label="Stripe Sync" />
+                </div>
 
                 <div className="pt-2">
                   <Link 
@@ -247,12 +245,12 @@ export default function Home() {
         <section className="py-24 bg-[#111111] text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            {/* Centered Heading */}
+            {/* Centered Heading with Exact Clarity Specs */}
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+              <h2 className="clarity-h1 text-3xl sm:text-4xl lg:text-[52px] font-light text-white tracking-[-1.82px] leading-[55px]">
                 Our approach to B2B Systems &amp; Automation
               </h2>
-              <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+              <p className="clarity-text-dark text-base sm:text-[18px] text-white/90 leading-[27px] font-normal max-w-2xl mx-auto">
                 We combine best practice systems architecture with our experience of B2B sales cycles and agency delivery workflows.
               </p>
             </div>
@@ -423,10 +421,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] tracking-tight">
+              <h2 className="clarity-h1 text-3xl sm:text-4xl lg:text-[52px] font-light text-black tracking-[-1.82px] leading-[55px]">
                 Our Technical Delivery Services
               </h2>
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+              <p className="clarity-text text-base sm:text-[18px] text-slate-600 leading-[27px] font-normal">
                 Our core specialism is in creating connected operational systems using CRM, workflow automation, and custom software integrations to scale client capacity predictably.
               </p>
             </div>
@@ -436,21 +434,25 @@ export default function Home() {
               {/* Box 1: CRM Implementation */}
               <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-xs hover:border-black transition flex flex-col justify-between text-center group">
                 <div>
-                  <div className="w-14 h-14 rounded-2xl bg-slate-100 text-slate-900 text-xl flex items-center justify-center mx-auto mb-6">
-                    📊
+                  <div className="flex items-center justify-center gap-3 mb-6 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                    <ZohoLogo className="h-5 w-auto" />
+                    <span className="text-slate-300">•</span>
+                    <OdooLogo className="h-5 w-auto" />
+                    <span className="text-slate-300">•</span>
+                    <HubSpotLogo className="h-4 w-4" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  <h3 className="text-xl font-bold text-black mb-2">
                     CRM Implementation
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                  <p className="clarity-text text-xs sm:text-[15px] text-slate-600 leading-relaxed mb-6 font-normal">
                     Custom built CRM architectures (Zoho, Odoo, HubSpot) shaped by your sales process, data migration, and executive dashboards.
                   </p>
                 </div>
                 <Link
                   to="/services/crm-implementation"
-                  className="w-full py-3.5 px-4 rounded-xl text-xs font-bold text-center bg-[#111111] hover:bg-black text-white flex items-center justify-center gap-2 transition"
+                  className="w-full py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold text-center bg-black hover:bg-neutral-800 text-white flex items-center justify-center gap-2 transition shadow-sm"
                 >
-                  <span>Learn More</span>
+                  <span>Explore CRM Implementation</span>
                   <span>→</span>
                 </Link>
               </div>
@@ -458,21 +460,25 @@ export default function Home() {
               {/* Box 2: Business Automation */}
               <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-xs hover:border-black transition flex flex-col justify-between text-center group">
                 <div>
-                  <div className="w-14 h-14 rounded-2xl bg-slate-100 text-slate-900 text-xl flex items-center justify-center mx-auto mb-6">
-                    ⚡
+                  <div className="flex items-center justify-center gap-3 mb-6 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                    <GoogleAdsLogo className="h-5 w-5" />
+                    <span className="text-slate-300">•</span>
+                    <MetaPixelLogo className="h-5 w-5" />
+                    <span className="text-slate-300">•</span>
+                    <BrandBadge brand="google" label="Cloud API" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  <h3 className="text-xl font-bold text-black mb-2">
                     Business Automation
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                  <p className="clarity-text text-xs sm:text-[15px] text-slate-600 leading-relaxed mb-6 font-normal">
                     Reduce repetitive work by connecting the steps, tools, and people involved in your business processes with automated triggers.
                   </p>
                 </div>
                 <Link
                   to="/services/business-automation"
-                  className="w-full py-3.5 px-4 rounded-xl text-xs font-bold text-center bg-[#111111] hover:bg-black text-white flex items-center justify-center gap-2 transition"
+                  className="w-full py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold text-center bg-black hover:bg-neutral-800 text-white flex items-center justify-center gap-2 transition shadow-sm"
                 >
-                  <span>Learn More</span>
+                  <span>Explore Automation</span>
                   <span>→</span>
                 </Link>
               </div>
@@ -480,21 +486,25 @@ export default function Home() {
               {/* Box 3: Software Integrations */}
               <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-xs hover:border-black transition flex flex-col justify-between text-center group">
                 <div>
-                  <div className="w-14 h-14 rounded-2xl bg-slate-100 text-slate-900 text-xl flex items-center justify-center mx-auto mb-6">
-                    🔗
+                  <div className="flex items-center justify-center gap-3 mb-6 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                    <StripeLogo className="h-4 w-auto" />
+                    <span className="text-slate-300">•</span>
+                    <BrandBadge brand="odoo" label="REST API" />
+                    <span className="text-slate-300">•</span>
+                    <BrandBadge brand="zoho" label="Webhooks" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  <h3 className="text-xl font-bold text-black mb-2">
                     Software Integrations
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                  <p className="clarity-text text-xs sm:text-[15px] text-slate-600 leading-relaxed mb-6 font-normal">
                     Connect business applications reliably via custom REST APIs, event-driven webhooks, and bidirectional database synchronization.
                   </p>
                 </div>
                 <Link
                   to="/services/integrations"
-                  className="w-full py-3.5 px-4 rounded-xl text-xs font-bold text-center bg-[#111111] hover:bg-black text-white flex items-center justify-center gap-2 transition"
+                  className="w-full py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold text-center bg-black hover:bg-neutral-800 text-white flex items-center justify-center gap-2 transition shadow-sm"
                 >
-                  <span>Learn More</span>
+                  <span>Explore Integrations</span>
                   <span>→</span>
                 </Link>
               </div>

@@ -24,6 +24,16 @@ import {
 } from 'lucide-react';
 import { createWhatsAppUrl } from '../data/servicesData';
 import { useCurrency } from '../context/CurrencyContext';
+import { 
+  OfficialLogoCloud, 
+  BrandBadge, 
+  OdooLogo, 
+  ZohoLogo, 
+  HubSpotLogo, 
+  StripeLogo, 
+  GoogleAdsLogo, 
+  MetaPixelLogo 
+} from '../components/OfficialLogos';
 
 export default function AgencyPartnersPage() {
   const { formatPrice } = useCurrency();
@@ -51,14 +61,14 @@ export default function AgencyPartnersPage() {
               <span>Agency White-Label &amp; Technical Delivery Partner</span>
             </div>
 
-            {/* Solid Bold Headline in Work Sans - No Rainbow Gradients */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#111111] tracking-tight leading-[1.08] max-w-4xl mx-auto">
+            {/* Solid Bold Headline in Work Sans - User Specified 52px 300 Weight Style */}
+            <h1 className="clarity-h1 text-4xl sm:text-5xl lg:text-[52px] font-light text-black tracking-[-1.82px] leading-[1.08] max-w-4xl mx-auto">
               Your Behind-the-Scenes <br className="hidden sm:inline" />
               CRM &amp; Automation Team.
             </h1>
 
-            {/* Focused Subheadline */}
-            <p className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed font-normal">
+            {/* Focused Subheadline - 18px 400 Weight */}
+            <p className="clarity-text max-w-3xl mx-auto text-base sm:text-[18px] text-slate-600 leading-[27px] font-normal">
               Your agency focuses on client relationships, strategy, and creative growth. Haxor MTC handles the technical implementation behind the projects you sell. Partner with us for CRM configuration, workflow automation, and custom API integrations under your brand and strict NDA.
             </p>
 
@@ -68,7 +78,7 @@ export default function AgencyPartnersPage() {
                 href={partnerWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-[#111111] hover:bg-black transition-all shadow-sm flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-black hover:bg-neutral-800 transition-all shadow-sm flex items-center justify-center gap-2"
               >
                 <MessageSquare className="w-4 h-4 fill-white" />
                 <span>Discuss an Agency Partnership</span>
@@ -76,7 +86,7 @@ export default function AgencyPartnersPage() {
 
               <Link
                 to="/contact"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-[#111111] bg-white hover:bg-slate-50 border border-slate-300 hover:border-black transition-all flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-black bg-white hover:bg-slate-50 border border-slate-300 hover:border-black transition-all flex items-center justify-center gap-2"
               >
                 <span>Submit a Project Brief</span>
                 <ArrowRight className="w-4 h-4 text-black" />
@@ -84,7 +94,7 @@ export default function AgencyPartnersPage() {
             </div>
 
             {/* Clean Monochrome Trust Indicators */}
-            <div className="pt-8 flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-500">
+            <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-500">
               <span className="flex items-center gap-1.5">
                 <span className="text-black font-bold">✓</span> 100% White-Label &amp; NDA Protected
               </span>
@@ -98,8 +108,39 @@ export default function AgencyPartnersPage() {
               </span>
             </div>
 
+            {/* Humanized Agency Partnership Showcase Image */}
+            <div className="pt-10 max-w-5xl mx-auto">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 group">
+                <img 
+                  src="/images/agency-partnership.jpg" 
+                  alt="Agency Executive aligning on deliverables with Haxor MTC Technical Partner" 
+                  className="w-full h-auto max-h-[500px] object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6 sm:p-10 text-left">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider">
+                      Executive Partnership Briefing
+                    </span>
+                    <span className="px-3 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md text-emerald-300 text-xs font-semibold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> 100% Under Your Agency Brand
+                    </span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-light text-white tracking-tight">
+                    Technical Capacity On Demand Without Adding Headcount
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-200 mt-1 max-w-2xl hidden sm:block font-normal leading-relaxed">
+                    We act as your behind-the-scenes senior delivery team. You sell higher-value retainer contracts; we build the pipelines, databases, and automations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
+
+        {/* Official Ecosystem & Tools Strip */}
+        <OfficialLogoCloud />
 
         {/* =========================================================================
             WHO WE PARTNER WITH - High-Contrast Clean Grid
@@ -352,10 +393,92 @@ export default function AgencyPartnersPage() {
         </section>
 
         {/* =========================================================================
+            BEHIND-THE-SCENES TECHNICAL DELIVERY ARCHITECTURE (Humanized Showcase)
+            ========================================================================= */}
+        <section className="py-20 md:py-28 bg-[#F4F5F7] border-b border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              
+              {/* Left Side: Real Senior Architects Photo with Floating Badges */}
+              <div className="lg:col-span-6">
+                <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 group">
+                  <img
+                    src="/images/hero-collaboration.jpg"
+                    alt="Haxor MTC Senior Systems Architects and Technical Delivery Team"
+                    className="w-full h-80 sm:h-[420px] object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                      <span className="text-xs font-bold uppercase tracking-wider text-slate-200">
+                        Senior Engineering Squad
+                      </span>
+                    </div>
+                    <div className="font-bold text-lg sm:text-xl text-white">
+                      Direct Communication With Technical Architects
+                    </div>
+                    <div className="text-xs text-slate-300 mt-1 font-normal">
+                      No junior handoffs • Async Slack/Teams channels • Daily progress git logs
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side: Clarity Narrative & Badges */}
+              <div className="lg:col-span-6 space-y-6">
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
+                    Behind-The-Scenes Delivery
+                  </span>
+                  <h2 className="clarity-h1 text-3xl sm:text-4xl lg:text-[46px] font-light text-black tracking-[-1.82px] leading-[1.12] mt-3">
+                    Architectural Rigor for Every Agency Client
+                  </h2>
+                </div>
+
+                <p className="clarity-text text-base sm:text-[18px] text-slate-700 leading-[27px] font-normal">
+                  When you introduce Haxor MTC as your white-label technical partner, you gain an experienced senior engineering squad without overhead or payroll liabilities. We handle the heavy technical lifting while your account directors focus on relationship management and upselling.
+                </p>
+
+                <div className="space-y-3 pt-2">
+                  <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
+                    <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 mt-0.5 font-bold">
+                      ✓
+                    </div>
+                    <div>
+                      <div className="font-bold text-sm text-black">100% Bilateral Non-Disclosure &amp; Non-Compete</div>
+                      <div className="text-xs text-slate-600 mt-0.5">We never solicit, market to, or contact your clients directly. All IP is transferred upon handover.</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
+                    <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-xs shrink-0 mt-0.5 font-bold">
+                      ✓
+                    </div>
+                    <div>
+                      <div className="font-bold text-sm text-black">Timezone-Aligned Delivery Standups</div>
+                      <div className="text-xs text-slate-600 mt-0.5">Daily asynchronous Loom video walkthroughs, shared linear sprints, and real-time Slack/Teams updates.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-2 flex flex-wrap items-center gap-3">
+                  <BrandBadge brand="zoho" label="Zoho One" />
+                  <BrandBadge brand="odoo" label="Odoo ERP" />
+                  <BrandBadge brand="hubspot" label="HubSpot" />
+                  <BrandBadge brand="stripe" label="Stripe APIs" />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* =========================================================================
             SOCIAL PROOF (Agency Testimonials & Metrics)
             ========================================================================= */}
         <SocialProofSection 
-          variant="grey" 
+          variant="light" 
           showCta={false} 
           title="Proven Technical Delivery for Growth-Minded Agencies"
         />

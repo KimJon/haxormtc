@@ -14,9 +14,11 @@
     @apply bg-white antialiased;
     overflow-x: clip;
     background-color: #FFFFFF;
-    color: rgb(55, 54, 86);
-    font-family: 'Figtree', sans-serif;
+    color: #111111;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 18px;
     font-weight: 400;
+    line-height: 27px;
     width: 100%;
     max-width: 100vw;
     min-width: 320px;
@@ -40,27 +42,70 @@
     height: auto;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Recoleta', 'Fraunces', Arial, sans-serif;
-    font-weight: 500;
-    color: rgb(55, 54, 86);
+  /* Exact User-Specified Clarity Performance Header Typography */
+  h1 {
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 55px;
+    letter-spacing: -1.82px;
+    color: #000000;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: -1.2px;
+    }
+  }
+
+  h2 {
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 300;
+    letter-spacing: -1.2px;
+    color: #000000;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    letter-spacing: -0.5px;
+    color: #000000;
   }
 }
 
 /* User Defined Typography Specification */
-.font-recoleta {
-  font-family: 'Recoleta', 'Fraunces', Georgia, serif;
-  font-style: normal;
+.clarity-h1 {
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 52px;
+  font-weight: 300;
+  line-height: 55px;
+  letter-spacing: -1.82px;
+  color: #000000;
 }
 
-.hero-recoleta {
-  font-family: 'Recoleta', 'Fraunces', Georgia, serif;
-  font-style: normal;
+@media (max-width: 768px) {
+  .clarity-h1 {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -1.2px;
+  }
 }
 
-.body-figtree {
-  font-family: 'Figtree', sans-serif;
-  font-style: normal;
+.clarity-text {
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #111111;
+}
+
+.clarity-text-dark {
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #FFFFFF;
 }
 
 /* Crisp, high-end white card styling */
@@ -74,8 +119,8 @@
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .clean-card-hover:hover {
-  border-color: #00CDFA;
-  box-shadow: 0 12px 30px -4px rgba(0, 205, 250, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+  border-color: #000000;
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
 }
 
@@ -97,7 +142,4 @@
 ::-webkit-scrollbar-thumb {
   background: #CBD5E1;
   border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
 }
