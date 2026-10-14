@@ -1,0 +1,96 @@
+# ==============================================================================
+# HAXOR MTC - PRODUCTION APACHE / CPANEL CONFIGURATION (.htaccess)
+# ==============================================================================
+# 100% SEO, Cybersecurity & Performance Optimization
+# Addresses Seobility Canonical Redirects, Charset Header, MIME, SPA Routing & Speed.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. CHARACTER ENCODING & MIME TYPES (Fixes HTTP Charset Header Warning)
+# ------------------------------------------------------------------------------
+AddDefaultCharset UTF-8
+
+<IfModule mod_mime.c>
+    AddCharset UTF-8 .html .css .js .xml .json .webmanifest
+    AddType text/css .css
+    AddType application/javascript .js
+    AddType image/svg+xml .svg
+    AddType application/manifest+json .webmanifest
+    AddType font/woff2 .woff2
+    AddType font/woff .woff
+    AddType image/webp .webp
+    AddType image/png .png
+    AddType image/jpeg .jpg .jpeg
+    AddType image/x-icon .ico
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 2. CORS & SECURITY HEADERS (Allows ES Modules to load cleanly)
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # Strict MIME & Framing Protection
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 3. CANONICAL REDIRECTS (301 Permanent Redirect for HTTPS and non-www)
+# ------------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Step 1: Force non-www (https://haxormtc.com) if accessed via www.haxormtc.com
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+    # Step 2: Force HTTPS if accessed via plain HTTP
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # Step 3: If the requested file or directory physically exists, serve it immediately
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Step 4: Route all other client-side URLs (/services, /kits, /calculator, etc.) to index.html
+    RewriteRule ^ index.html [L]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 4. GZIP / DEFLATE COMPRESSION (Speed Optimization - Lowers Response Time)
+# ------------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 5. BROWSER CACHING HEADERS (Fast Repeat Visitor Loading)
+# ------------------------------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+</IfModule>
