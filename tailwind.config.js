@@ -8,29 +8,32 @@ export default {
     extend: {
       colors: {
         brand: {
-          // Exact colors extracted from public/logo.png
-          cyan: '#00CDFA',
-          cyanDeep: '#0096B8',
-          cyanLight: '#E6F9FE',
-          coral: '#FF3366',
-          coralDeep: '#E61A4E',
-          coralLight: '#FFF0F3',
-          gold: '#FFCC33',
-          goldDeep: '#DDA800',
-          goldLight: '#FFF9E6',
-          // Conversion color
+          // Exact colors specified by user & logo palette
+          coral: '#FE4775',
+          coralDeep: '#E0335E',
+          coralLight: '#FFF0F4',
+          cyan: '#18D2FA',
+          cyanDeep: '#0EA5C6',
+          cyanLight: '#EAFBFF',
+          gold: '#FED147',
+          goldDeep: '#D8AB16',
+          goldLight: '#FFFBE8',
+          charcoal: '#3F4040',
+          dark: '#1C1D1D',
+          white: '#FFFFFF',
+          // Conversion accents
           green: '#25D366',
           greenHover: '#20BA5A',
-          textDark: '#373656', // rgb(55, 54, 86)
+          textDark: '#3F4040',
         },
-        primaryText: '#373656', // rgb(55, 54, 86)
+        primaryText: '#3F4040',
         surface: {
-          50: '#F8FAFC',
-          100: '#F1F5F9',
-          200: '#E2E8F0',
-          300: '#CBD5E1',
-          800: '#1E293B',
-          900: '#0F172A',
+          50: '#F9FAFB',
+          100: '#F3F4F6',
+          200: '#E5E7EB',
+          300: '#D1D5DB',
+          800: '#3F4040',
+          900: '#1C1D1D',
         }
       },
       fontFamily: {

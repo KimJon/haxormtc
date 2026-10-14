@@ -71,6 +71,76 @@ export default function ServicesPage() {
           </div>
         </section>
 
+        {/* Flagship Technical Delivery Pillars */}
+        <section className="py-10 bg-slate-50 border-b border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-wider text-[#0EA5C6] bg-[#18D2FA]/15 px-2.5 py-0.5 rounded-full">
+                  Flagship B2B Capabilities
+                </span>
+                <h2 className="text-xl sm:text-2xl font-black text-slate-900 mt-1">
+                  Core Implementation Pillars
+                </h2>
+              </div>
+              <Link
+                to="/agency-partners"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#FE4775] hover:bg-[#e43864] transition shadow-xs shrink-0"
+              >
+                <span>Agency White-Label Hub</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <Link
+                to="/services/crm-implementation"
+                className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-card hover:border-[#18D2FA]/50 transition group"
+              >
+                <div className="text-[10px] font-bold uppercase text-[#0EA5C6] mb-1">
+                  Zoho • Odoo • HubSpot
+                </div>
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-[#0EA5C6] transition">
+                  CRM Implementation &rarr;
+                </h3>
+                <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                  Pipelines, data migration, lead assignment, automated triggers and executive dashboards.
+                </p>
+              </Link>
+
+              <Link
+                to="/services/business-automation"
+                className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-card hover:border-[#FE4775]/50 transition group"
+              >
+                <div className="text-[10px] font-bold uppercase text-[#FE4775] mb-1">
+                  Workflows • Triggers • Logic
+                </div>
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-[#FE4775] transition">
+                  Business Automation &rarr;
+                </h3>
+                <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                  End-to-end process mapping, notification cadences, routing, and multi-tier approvals.
+                </p>
+              </Link>
+
+              <Link
+                to="/services/integrations"
+                className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-card hover:border-[#FED147]/70 transition group"
+              >
+                <div className="text-[10px] font-bold uppercase text-amber-700 mb-1">
+                  APIs • Webhooks • Sync
+                </div>
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-amber-800 transition">
+                  Software Integrations &rarr;
+                </h3>
+                <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                  REST APIs, webhooks, website-to-CRM sync, bidirectional data mapping, and docs.
+                </p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Services Grid */}
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

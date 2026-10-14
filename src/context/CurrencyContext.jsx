@@ -14,13 +14,17 @@ const AFRICAN_COUNTRY_CODES = new Set([
 export const EXCHANGE_RATES = {
   KES: 1,
   USD: 130, // 1 USD ≈ 130 KES
-  EUR: 142, // 1 EUR ≈ 142 KES
+  GBP: 168, // 1 GBP ≈ 168 KES (UK)
+  EUR: 142, // 1 EUR ≈ 142 KES (Europe)
+  AUD: 86,  // 1 AUD ≈ 86 KES (Australia)
 };
 
 export const CURRENCY_SYMBOLS = {
   KES: 'KSh',
   USD: '$',
+  GBP: '£',
   EUR: '€',
+  AUD: 'A$',
 };
 
 const CurrencyContext = createContext(null);
@@ -78,8 +82,13 @@ export function CurrencyProvider({ children }) {
           setIsAfrica(inAfrica);
           
           if (!inAfrica) {
-            const europeanCodes = ['DE', 'FR', 'IT', 'ES', 'NL', 'BE', 'AT', 'IE', 'PT', 'FI', 'GR', 'SE', 'PL', 'CH', 'NO', 'DK', 'GB'];
-            if (continent === 'EU' || europeanCodes.includes(code)) {
+            const eurozoneCodes = ['DE', 'FR', 'IT', 'ES', 'NL', 'BE', 'AT', 'IE', 'PT', 'FI', 'GR', 'SE', 'PL', 'CH', 'NO', 'DK'];
+            const apacCodes = ['AU', 'NZ'];
+            if (code === 'GB') {
+              setCurrency('GBP');
+            } else if (apacCodes.includes(code)) {
+              setCurrency('AUD');
+            } else if (continent === 'EU' || eurozoneCodes.includes(code)) {
               setCurrency('EUR');
             } else {
               setCurrency('USD');

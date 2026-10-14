@@ -38,12 +38,12 @@ export default function ContactPage() {
               <span>Direct Communication & Support</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#373656] font-heading tracking-tight leading-tight max-w-4xl mx-auto">
-              Get in Touch With Our Engineering Team
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#1C1D1D] font-heading tracking-tight leading-tight max-w-4xl mx-auto">
+              Discuss Your Project or Agency Partnership
             </h1>
 
             <p className="body-figtree max-w-2xl mx-auto text-slate-600 leading-relaxed">
-              Have a question about website design, our POS software, or digital marketing packages? Connect directly with our engineers and strategists today.
+              Have a CRM implementation, workflow automation, or agency white-label technical delivery project in mind? Connect directly with our solutions architects and delivery leads.
             </p>
 
             {/* Quick Contact Cards */}

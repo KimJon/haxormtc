@@ -42,17 +42,17 @@ export default function PortfolioPage() {
         {/* Page Header */}
         <section className="pt-12 pb-14 md:pt-18 md:pb-20 bg-gradient-to-b from-slate-50 via-white to-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-brand-cyan/30 text-brand-cyanDeep text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Verified Client Results in Kenya</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#18D2FA]/15 border border-[#18D2FA]/30 text-[#0EA5C6] text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-[#18D2FA]" />
+              <span>Verified Client Work &amp; Delivery Proof</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#373656] font-heading tracking-tight leading-tight max-w-4xl mx-auto">
-              Our Proven Work, Live Websites & Systems
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#1C1D1D] font-heading tracking-tight leading-tight max-w-4xl mx-auto">
+              Our Proven Work, Live Websites &amp; Systems
             </h1>
 
             <p className="body-figtree max-w-2xl mx-auto text-slate-600 leading-relaxed">
-              From hotel booking portals and engineering firm sites to retail touchscreen POS and Google Maps #1 rankings. Explore our work across Kenya.
+              From hotel booking portals and engineering firm platforms to retail touchscreen POS, white-label CRM architectures, and custom workflow automations across Kenya and international clients.
             </p>
 
             <div className="pt-4 flex flex-wrap items-center justify-center gap-4">

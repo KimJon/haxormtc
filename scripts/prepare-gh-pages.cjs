@@ -29,6 +29,12 @@ console.log('[GH-PAGES] Created dist/.nojekyll');
 
 // 4. Extract routes from sitemap.xml
 const routes = new Set([
+  'agency-partners',
+  'services/crm-implementation',
+  'services/business-automation',
+  'services/integrations',
+  'work',
+  'about',
   'services',
   'software',
   'kits',

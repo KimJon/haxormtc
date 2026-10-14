@@ -19,14 +19,6 @@ export default function CurrencySelector({ compact = false }) {
 
   const options = [
     {
-      id: 'ke-kes',
-      label: 'Kenya & Regional (KSh)',
-      sub: 'Standard Regional Rates',
-      currency: 'KES',
-      isAfrica: true,
-      code: 'KES',
-    },
-    {
       id: 'us-usd',
       label: 'International (USD $)',
       sub: 'Global International Rate',
@@ -35,12 +27,36 @@ export default function CurrencySelector({ compact = false }) {
       code: 'USD',
     },
     {
+      id: 'gb-gbp',
+      label: 'United Kingdom (GBP £)',
+      sub: 'UK International Rate',
+      currency: 'GBP',
+      isAfrica: false,
+      code: 'GBP',
+    },
+    {
       id: 'eu-eur',
-      label: 'Europe & International (EUR €)',
-      sub: 'Global International Rate',
+      label: 'Europe (EUR €)',
+      sub: 'European Rate',
       currency: 'EUR',
       isAfrica: false,
       code: 'EUR',
+    },
+    {
+      id: 'au-aud',
+      label: 'Australia (AUD A$)',
+      sub: 'Australia & APAC Rate',
+      currency: 'AUD',
+      isAfrica: false,
+      code: 'AUD',
+    },
+    {
+      id: 'ke-kes',
+      label: 'Kenya & Regional (KSh)',
+      sub: 'Standard Regional Rate',
+      currency: 'KES',
+      isAfrica: true,
+      code: 'KES',
     },
   ];
 

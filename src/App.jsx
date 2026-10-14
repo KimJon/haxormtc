@@ -10,6 +10,10 @@ import WhyUsPage from './pages/WhyUsPage';
 import ContactPage from './pages/ContactPage';
 import GoogleFamilyLinkPage from './pages/GoogleFamilyLinkPage';
 import BusinessKitsPage from './pages/BusinessKitsPage';
+import AgencyPartnersPage from './pages/AgencyPartnersPage';
+import CrmImplementationPage from './pages/CrmImplementationPage';
+import BusinessAutomationPage from './pages/BusinessAutomationPage';
+import IntegrationsPage from './pages/IntegrationsPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import ServiceDiscoveryToast from './components/ServiceDiscoveryToast';
 
@@ -83,14 +87,22 @@ function App() {
         {/* Main Universal Landing Page */}
         <Route path="/" element={<Home />} />
 
+        {/* Strategic B2B & Agency Partner Pages */}
+        <Route path="/agency-partners" element={<AgencyPartnersPage />} />
+        <Route path="/services/crm-implementation" element={<CrmImplementationPage />} />
+        <Route path="/services/business-automation" element={<BusinessAutomationPage />} />
+        <Route path="/services/integrations" element={<IntegrationsPage />} />
+
         {/* Dedicated Menu Destination Pages */}
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/software" element={<SoftwarePage />} />
         <Route path="/kits" element={<BusinessKitsPage />} />
         <Route path="/solutions/kits" element={<BusinessKitsPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/work" element={<PortfolioPage />} />
         <Route path="/calculator" element={<CalculatorPage />} />
         <Route path="/why-us" element={<WhyUsPage />} />
+        <Route path="/about" element={<WhyUsPage />} />
         <Route path="/contact" element={<ContactPage />} />
 
         {/* Dedicated Ad-Conversion Landing Page for Google Family Link */}

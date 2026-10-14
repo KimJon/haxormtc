@@ -1,16 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { MessageSquare, Mail, Menu, X, ArrowRight, Sparkles } from 'lucide-react';
+import { 
+  MessageSquare, 
+  Mail, 
+  Menu, 
+  X, 
+  ArrowRight, 
+  Briefcase, 
+  ChevronDown, 
+  Workflow, 
+  Cpu, 
+  Layers,
+  Sparkles
+} from 'lucide-react';
 import { CONTACT_INFO, createWhatsAppUrl } from '../data/servicesData';
 import BrandLogo from './BrandLogo';
 import CurrencySelector from './CurrencySelector';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const dropdownRef = useRef(null);
   const location = useLocation();
+
   const defaultWhatsAppUrl = createWhatsAppUrl(
-    "Hello Haxor MTC, I am visiting haxormtc.com and would like to inquire about your services."
+    "Hello Haxor MTC, I am visiting haxormtc.com and would like to discuss a project / agency partnership."
   );
 
   useEffect(() => {
@@ -21,112 +36,200 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setServicesDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Close menus on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setServicesDropdownOpen(false);
+  }, [location.pathname]);
+
+  const isServicesActive = location.pathname.startsWith('/services');
+
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-200 ${
+    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/98 backdrop-blur-lg border-b border-slate-200/90 shadow-md' 
-        : 'bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs'
+        ? 'bg-white/95 backdrop-blur-md border-b border-[#3F4040]/10 shadow-sm' 
+        : 'bg-white/90 backdrop-blur-md border-b border-[#3F4040]/10'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex items-center justify-between transition-all duration-200 ${
           isScrolled ? 'h-16' : 'h-20'
         }`}>
           
-          {/* Logo with Link to Home */}
+          {/* Brand Logo */}
           <BrandLogo />
 
-          {/* Clean, Conversion-Focused Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-800 font-sans">
+          {/* Clarity-Style B2B Navigation */}
+          <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-[#3F4040] font-sans">
             <Link 
-              to="/services" 
+              to="/" 
               className={`transition-colors py-1 ${
-                location.pathname === '/services'
-                  ? 'text-brand-cyanDeep font-extrabold border-b-2 border-brand-cyanDeep'
-                  : 'hover:text-brand-cyanDeep'
+                location.pathname === '/'
+                  ? 'text-[#18D2FA] font-bold border-b-2 border-[#18D2FA]'
+                  : 'hover:text-[#18D2FA]'
               }`}
             >
-              Services
+              Home
             </Link>
+
+            {/* Services Dropdown */}
+            <div 
+              className="relative" 
+              ref={dropdownRef}
+              onMouseEnter={() => setServicesDropdownOpen(true)}
+              onMouseLeave={() => setServicesDropdownOpen(false)}
+            >
+              <button
+                type="button"
+                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                className={`flex items-center gap-1.5 transition-colors py-1 ${
+                  isServicesActive
+                    ? 'text-[#18D2FA] font-bold border-b-2 border-[#18D2FA]'
+                    : 'hover:text-[#18D2FA]'
+                }`}
+              >
+                <span>Services</span>
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180 text-[#18D2FA]' : 'text-slate-400'}`} />
+              </button>
+
+              {servicesDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-72 rounded-2xl bg-white/98 backdrop-blur-xl border border-slate-200/90 shadow-xl p-3 z-50 animate-in fade-in zoom-in-95 duration-150">
+                  <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">
+                    Core Technical Delivery
+                  </div>
+                  <Link
+                    to="/services/crm-implementation"
+                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition group"
+                  >
+                    <div className="p-2 rounded-lg bg-[#18D2FA]/10 text-[#0EA5C6] group-hover:bg-[#18D2FA] group-hover:text-white transition">
+                      <Cpu className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#0EA5C6]">
+                        CRM Implementation
+                      </div>
+                      <div className="text-[11px] text-slate-500 leading-tight mt-0.5">
+                        Zoho, Odoo &amp; pipeline architecture
+                      </div>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/services/business-automation"
+                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition group"
+                  >
+                    <div className="p-2 rounded-lg bg-[#FE4775]/10 text-[#FE4775] group-hover:bg-[#FE4775] group-hover:text-white transition">
+                      <Workflow className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#FE4775]">
+                        Business Automation
+                      </div>
+                      <div className="text-[11px] text-slate-500 leading-tight mt-0.5">
+                        Workflows, notifications &amp; triggers
+                      </div>
+                    </div>
+                  </Link>
+
+                  <Link
+                    to="/services/integrations"
+                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition group"
+                  >
+                    <div className="p-2 rounded-lg bg-[#FED147]/20 text-amber-700 group-hover:bg-[#FED147] group-hover:text-slate-900 transition">
+                      <Layers className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-slate-900 group-hover:text-amber-800">
+                        Software Integrations
+                      </div>
+                      <div className="text-[11px] text-slate-500 leading-tight mt-0.5">
+                        APIs, webhooks &amp; data sync
+                      </div>
+                    </div>
+                  </Link>
+
+                  <div className="my-1.5 border-t border-slate-100" />
+
+                  <Link
+                    to="/services"
+                    className="flex items-center justify-between px-3 py-2 text-xs font-bold text-[#0EA5C6] hover:bg-cyan-50/50 rounded-xl transition"
+                  >
+                    <span>View All Services &amp; Packages</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Agency Partners - Highlighted Prominently */}
             <Link 
-              to="/kits" 
-              className={`transition-colors py-1 flex items-center gap-1.5 ${
-                location.pathname === '/kits' || location.pathname === '/solutions/kits'
-                  ? 'text-brand-cyanDeep font-extrabold border-b-2 border-brand-cyanDeep'
-                  : 'hover:text-brand-cyanDeep'
+              to="/agency-partners" 
+              className={`transition-all py-1.5 px-3 rounded-full flex items-center gap-1.5 ${
+                location.pathname === '/agency-partners'
+                  ? 'bg-[#18D2FA]/15 text-[#0EA5C6] font-bold border border-[#18D2FA]/40 shadow-xs'
+                  : 'hover:bg-[#18D2FA]/10 text-[#3F4040] hover:text-[#0EA5C6] border border-transparent'
               }`}
             >
-              <span>Business Kits</span>
-              <span className="px-1.5 py-0.5 text-[10px] font-bold bg-cyan-50 text-brand-cyanDeep border border-brand-cyan/20 rounded">
-                40 Kits
+              <Briefcase className="w-3.5 h-3.5 text-[#18D2FA]" />
+              <span>Agency Partners</span>
+              <span className="px-1.5 py-0.2 text-[9px] font-black uppercase tracking-wider bg-[#FE4775] text-white rounded-full">
+                White-Label
               </span>
             </Link>
+
             <Link 
-              to="/software" 
+              to="/work" 
               className={`transition-colors py-1 ${
-                location.pathname === '/software'
-                  ? 'text-brand-cyanDeep font-extrabold border-b-2 border-brand-cyanDeep'
-                  : 'hover:text-brand-cyanDeep'
+                location.pathname === '/work' || location.pathname === '/portfolio'
+                  ? 'text-[#18D2FA] font-bold border-b-2 border-[#18D2FA]'
+                  : 'hover:text-[#18D2FA]'
               }`}
             >
-              Software
+              Our Work
             </Link>
+
             <Link 
-              to="/calculator" 
-              className={`transition-colors py-1 flex items-center gap-1.5 ${
-                location.pathname === '/calculator'
-                  ? 'text-brand-cyanDeep font-extrabold border-b-2 border-brand-cyanDeep'
-                  : 'hover:text-brand-cyanDeep'
-              }`}
-            >
-              <span>Calculator</span>
-              <span className="px-1.5 py-0.5 text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 rounded">
-                Quote
-              </span>
-            </Link>
-            <Link 
-              to="/portfolio" 
+              to="/about" 
               className={`transition-colors py-1 ${
-                location.pathname === '/portfolio'
-                  ? 'text-brand-cyanDeep font-extrabold border-b-2 border-brand-cyanDeep'
-                  : 'hover:text-brand-cyanDeep'
+                location.pathname === '/about' || location.pathname === '/why-us'
+                  ? 'text-[#18D2FA] font-bold border-b-2 border-[#18D2FA]'
+                  : 'hover:text-[#18D2FA]'
               }`}
             >
-              Case Studies
-            </Link>
-            <Link 
-              to="/contact" 
-              className={`transition-colors py-1 ${
-                location.pathname === '/contact'
-                  ? 'text-brand-cyanDeep font-extrabold border-b-2 border-brand-cyanDeep'
-                  : 'hover:text-brand-cyanDeep'
-              }`}
-            >
-              Contact
+              About
             </Link>
           </nav>
 
-          {/* Conversion Action Buttons */}
+          {/* Right Action Buttons */}
           <div className="hidden sm:flex items-center gap-3 shrink-0">
             <CurrencySelector />
 
             <a
               href={`mailto:${CONTACT_INFO.emailOfficial}`}
-              className="px-3 py-2 text-xs font-bold text-[#373656] hover:text-brand-cyanDeep flex items-center gap-1.5 rounded-lg hover:bg-slate-50 transition border border-slate-200"
-              title="Email Us Directly"
+              className="px-3 py-2 text-xs font-bold text-[#3F4040] hover:text-[#0EA5C6] flex items-center gap-1.5 rounded-xl hover:bg-slate-50 transition border border-[#3F4040]/15"
+              title="Email Technical Desk Directly"
             >
-              <Mail className="w-3.5 h-3.5 text-brand-cyanDeep" />
-              <span>Email Us</span>
+              <Mail className="w-3.5 h-3.5 text-[#18D2FA]" />
+              <span className="hidden xl:inline">haxorconsults@gmail.com</span>
+              <span className="xl:hidden">Email</span>
             </a>
 
-            <a
-              href={defaultWhatsAppUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-brand-green hover:bg-[#20ba5a] shadow-glow-whatsapp flex items-center gap-1.5 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+            <Link
+              to="/contact"
+              className="px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-[#FE4775] hover:bg-[#e43864] shadow-md hover:shadow-lg flex items-center gap-1.5 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
-              <MessageSquare className="w-3.5 h-3.5 fill-white shrink-0" />
-              <span>WhatsApp</span>
-            </a>
+              <span>Discuss a Project</span>
+              <ArrowRight className="w-3.5 h-3.5 text-white" />
+            </Link>
           </div>
 
           {/* Mobile Currency & Menu Toggle */}
@@ -135,10 +238,10 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition"
+              className="p-2 rounded-xl text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition border border-slate-200"
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
 
@@ -146,109 +249,143 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 hidden sm:block lg:hidden transition"
+            className="p-2 rounded-xl text-slate-700 hover:text-slate-900 hover:bg-slate-100 hidden sm:block lg:hidden transition border border-slate-200"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200 bg-white px-6 py-6 space-y-4 shadow-xl">
-          <nav className="flex flex-col space-y-2 text-base font-semibold text-slate-800">
+        <div className="lg:hidden border-t border-slate-200/90 bg-white/98 backdrop-blur-xl px-5 py-6 space-y-4 shadow-2xl">
+          <nav className="flex flex-col space-y-1.5 text-sm font-semibold text-[#3F4040]">
             <Link
-              to="/services"
+              to="/"
               onClick={() => setMobileMenuOpen(false)}
               className={`py-2 px-3 rounded-xl transition ${
-                location.pathname === '/services'
-                  ? 'bg-cyan-50 text-brand-cyanDeep font-extrabold'
-                  : 'hover:text-brand-cyanDeep hover:bg-slate-50'
+                location.pathname === '/'
+                  ? 'bg-[#18D2FA]/10 text-[#0EA5C6] font-bold'
+                  : 'hover:text-[#0EA5C6] hover:bg-slate-50'
               }`}
             >
-              Services
+              Home
             </Link>
+
             <Link
-              to="/kits"
+              to="/agency-partners"
               onClick={() => setMobileMenuOpen(false)}
-              className={`py-2 px-3 rounded-xl transition flex items-center justify-between ${
-                location.pathname === '/kits' || location.pathname === '/solutions/kits'
-                  ? 'bg-cyan-50 text-brand-cyanDeep font-extrabold'
-                  : 'hover:text-brand-cyanDeep hover:bg-slate-50'
+              className={`py-2.5 px-3 rounded-xl transition flex items-center justify-between ${
+                location.pathname === '/agency-partners'
+                  ? 'bg-[#18D2FA]/15 text-[#0EA5C6] font-bold border border-[#18D2FA]/30'
+                  : 'hover:text-[#0EA5C6] hover:bg-slate-50 bg-[#18D2FA]/5'
               }`}
             >
-              <span>Business Kits</span>
-              <span className="text-xs bg-cyan-100 text-brand-cyanDeep font-bold px-2 py-0.5 rounded">40 Kits</span>
+              <div className="flex items-center gap-2">
+                <Briefcase className="w-4 h-4 text-[#18D2FA]" />
+                <span className="font-bold text-[#1C1D1D]">Agency Partners</span>
+              </div>
+              <span className="text-[10px] uppercase font-black bg-[#FE4775] text-white px-2 py-0.5 rounded-full">
+                White-Label
+              </span>
             </Link>
+
+            {/* Core Services Sub-links */}
+            <div className="pl-3 py-1 space-y-1 border-l-2 border-[#18D2FA]/30 my-1">
+              <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider pl-2">
+                Services
+              </div>
+              <Link
+                to="/services/crm-implementation"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block py-1.5 px-2 rounded-lg text-xs text-slate-700 hover:text-[#0EA5C6] hover:bg-slate-50"
+              >
+                CRM Implementation
+              </Link>
+              <Link
+                to="/services/business-automation"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block py-1.5 px-2 rounded-lg text-xs text-slate-700 hover:text-[#0EA5C6] hover:bg-slate-50"
+              >
+                Business Automation
+              </Link>
+              <Link
+                to="/services/integrations"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block py-1.5 px-2 rounded-lg text-xs text-slate-700 hover:text-[#0EA5C6] hover:bg-slate-50"
+              >
+                Software Integrations
+              </Link>
+              <Link
+                to="/services"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block py-1.5 px-2 rounded-lg text-xs font-bold text-[#0EA5C6] hover:bg-cyan-50/50"
+              >
+                All Services &amp; Packages &rarr;
+              </Link>
+            </div>
+
             <Link
-              to="/software"
+              to="/work"
               onClick={() => setMobileMenuOpen(false)}
               className={`py-2 px-3 rounded-xl transition ${
-                location.pathname === '/software'
-                  ? 'bg-cyan-50 text-brand-cyanDeep font-extrabold'
-                  : 'hover:text-brand-cyanDeep hover:bg-slate-50'
+                location.pathname === '/work' || location.pathname === '/portfolio'
+                  ? 'bg-[#18D2FA]/10 text-[#0EA5C6] font-bold'
+                  : 'hover:text-[#0EA5C6] hover:bg-slate-50'
               }`}
             >
-              Software
+              Our Work &amp; Case Studies
             </Link>
+
             <Link
-              to="/calculator"
-              onClick={() => setMobileMenuOpen(false)}
-              className={`py-2 px-3 rounded-xl transition flex items-center justify-between ${
-                location.pathname === '/calculator'
-                  ? 'bg-cyan-50 text-brand-cyanDeep font-extrabold'
-                  : 'hover:text-brand-cyanDeep hover:bg-slate-50'
-              }`}
-            >
-              <span>Calculator</span>
-              <span className="text-xs bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded border border-emerald-200">Quote</span>
-            </Link>
-            <Link
-              to="/portfolio"
+              to="/about"
               onClick={() => setMobileMenuOpen(false)}
               className={`py-2 px-3 rounded-xl transition ${
-                location.pathname === '/portfolio'
-                  ? 'bg-cyan-50 text-brand-cyanDeep font-extrabold'
-                  : 'hover:text-brand-cyanDeep hover:bg-slate-50'
+                location.pathname === '/about' || location.pathname === '/why-us'
+                  ? 'bg-[#18D2FA]/10 text-[#0EA5C6] font-bold'
+                  : 'hover:text-[#0EA5C6] hover:bg-slate-50'
               }`}
             >
-              Case Studies &amp; Clients
+              About Haxor
             </Link>
+
             <Link
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className={`py-2 px-3 rounded-xl transition ${
                 location.pathname === '/contact'
-                  ? 'bg-cyan-50 text-brand-cyanDeep font-extrabold'
-                  : 'hover:text-brand-cyanDeep hover:bg-slate-50'
+                  ? 'bg-[#18D2FA]/10 text-[#0EA5C6] font-bold'
+                  : 'hover:text-[#0EA5C6] hover:bg-slate-50'
               }`}
             >
               Contact
             </Link>
           </nav>
 
-          <div className="pt-4 border-t border-slate-200 flex flex-col gap-3">
-            <div className="flex items-center justify-between px-2 py-1 bg-slate-50 rounded-xl border border-slate-200">
+          <div className="pt-4 border-t border-slate-200/90 flex flex-col gap-2.5">
+            <div className="flex items-center justify-between px-3 py-1.5 bg-slate-50 rounded-xl border border-slate-200">
               <span className="text-xs font-bold text-slate-600">Currency:</span>
               <CurrencySelector />
             </div>
 
-            <a
-              href={`mailto:${CONTACT_INFO.emailOfficial}`}
-              className="w-full py-2.5 text-center rounded-xl text-sm font-bold text-[#373656] border border-slate-200 bg-slate-50 flex items-center justify-center gap-2"
+            <Link
+              to="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full py-3 text-center rounded-xl text-xs font-bold text-white bg-[#FE4775] hover:bg-[#e43864] flex items-center justify-center gap-2 shadow-md"
             >
-              <Mail className="w-4 h-4 text-brand-cyanDeep" />
-              Email Us
-            </a>
+              <span>Discuss a Project</span>
+              <ArrowRight className="w-3.5 h-3.5 text-white" />
+            </Link>
+
             <a
               href={defaultWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-2.5 text-center rounded-xl text-sm font-bold text-white bg-brand-green flex items-center justify-center gap-2 shadow-glow-whatsapp"
+              className="w-full py-2.5 text-center rounded-xl text-xs font-bold text-white bg-brand-green flex items-center justify-center gap-2 shadow-glow-whatsapp"
             >
-              <MessageSquare className="w-4 h-4 fill-white shrink-0" />
-              <span>WhatsApp</span>
+              <MessageSquare className="w-3.5 h-3.5 fill-white shrink-0" />
+              <span>WhatsApp Direct</span>
             </a>
           </div>
         </div>
