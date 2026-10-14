@@ -27,6 +27,19 @@ const nojekyllPath = path.join(distDir, '.nojekyll');
 fs.writeFileSync(nojekyllPath, '# Disable Jekyll processing on GitHub Pages\n', 'utf8');
 console.log('[GH-PAGES] Created dist/.nojekyll');
 
+// 3b. Ensure _headers exists with hardened security headers
+const headersPath = path.join(distDir, '_headers');
+const headersContent = `/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://api.whatsapp.com https://ipapi.co; object-src 'none'; base-uri 'self'; form-action 'self' https://api.whatsapp.com https://wa.me; frame-ancestors 'none';
+`;
+fs.writeFileSync(headersPath, headersContent, 'utf8');
+console.log('[GH-PAGES] Created dist/_headers (hardened security policies)');
+
 // 4. Extract routes from sitemap.xml
 const routes = new Set([
   'agency-partners',

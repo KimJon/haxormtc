@@ -19,17 +19,43 @@ export default function ContactSection() {
     email: '',
     service: 'CRM Implementation & Configuration',
     message: '',
+    hp: '', // Honeypot field for bot detection
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [rateLimited, setRateLimited] = useState(false);
 
   const sanitize = (str, maxLen = 300) => {
     if (!str) return '';
-    return String(str).replace(/[<>]/g, '').trim().slice(0, maxLen);
+    return String(str)
+      .replace(/[<>'"`;\\]/g, '') // Strip script injection and delimiter characters
+      .replace(/javascript:/gi, '')
+      .replace(/on\w+=/gi, '')
+      .trim()
+      .slice(0, maxLen);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // 1. Honeypot check: If bot filled the hidden honeypot field, drop silently
+    if (formData.hp && formData.hp.trim().length > 0) {
+      console.warn('Bot submission blocked by honeypot security.');
+      return;
+    }
+
+    // 2. Client-side rate-limiting: Max 1 submission per 45 seconds per session
+    try {
+      const lastSubmit = sessionStorage.getItem('haxor_last_submit_ts');
+      const now = Date.now();
+      if (lastSubmit && (now - parseInt(lastSubmit, 10)) < 45000) {
+        setRateLimited(true);
+        return;
+      }
+      sessionStorage.setItem('haxor_last_submit_ts', String(now));
+    } catch {
+      // Ignore storage restrictions
+    }
     
     const cleanName = sanitize(formData.name, 100);
     const cleanPhone = sanitize(formData.phone, 30);
@@ -46,7 +72,7 @@ export default function ContactSection() {
 
     const url = createWhatsAppUrl(msg);
     setSubmitted(true);
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -158,7 +184,26 @@ export default function ContactSection() {
                 </div>
               )}
 
+              {rateLimited && (
+                <div className="mb-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs font-semibold flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0" />
+                  <span>Security rate limit active. Please wait 45 seconds before sending another inquiry.</span>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-4">
+                
+                {/* Honeypot field for anti-bot defense - completely hidden from humans */}
+                <input
+                  type="text"
+                  name="user_website_hp"
+                  value={formData.hp}
+                  onChange={(e) => setFormData({ ...formData, hp: e.target.value })}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  style={{ display: 'none', position: 'absolute', left: '-9999px' }}
+                  aria-hidden="true"
+                />
                 
                 <div>
                   <label className="block text-xs font-bold text-slate-700 mb-1.5">

@@ -179,15 +179,15 @@ export default function WhyUsPage() {
         {/* Bottom CTA Banner */}
         <section className="py-16 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="rounded-3xl p-8 sm:p-12 bg-gradient-to-r from-slate-900 via-[#373656] to-slate-900 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+            <div className="rounded-3xl p-8 sm:p-12 bg-[#111111] text-white border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
               <div className="space-y-2 max-w-xl">
-                <span className="text-xs font-bold uppercase tracking-wider text-brand-cyan">
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
                   Ready to Modernize?
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-extrabold font-heading text-white">
+                <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                   Work With a Technical Partner You Can Trust
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                   Book a free discovery call or message our technical team on WhatsApp for an immediate consultation.
                 </p>
               </div>
@@ -197,14 +197,14 @@ export default function WhyUsPage() {
                   href={whatsAppWhyUsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-brand-green hover:bg-[#20ba5a] shadow-glow-whatsapp flex items-center gap-2 transition transform hover:-translate-y-0.5"
+                  className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-black bg-white hover:bg-slate-100 transition shadow-sm flex items-center gap-2"
                 >
-                  <MessageSquare className="w-4 h-4 fill-white shrink-0" />
+                  <MessageSquare className="w-4 h-4 fill-black shrink-0" />
                   <span>WhatsApp</span>
                 </a>
                 <Link
                   to="/services"
-                  className="px-5 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20 transition"
+                  className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#1F2937] hover:bg-slate-800 border border-slate-700 transition"
                 >
                   View Packages
                 </Link>

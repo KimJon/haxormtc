@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import { createWhatsAppUrl, CONTACT_INFO } from '../data/servicesData';
 import { useCurrency } from '../context/CurrencyContext';
+import SocialProofSection from '../components/SocialProofSection';
 
 export default function Home() {
   const { formatPrice } = useCurrency();
@@ -502,6 +503,11 @@ export default function Home() {
 
           </div>
         </section>
+
+        {/* =========================================================================
+            SOCIAL PROOF & VERIFIED AGENCY TESTIMONIALS (Clarity Social Proof Engine)
+            ========================================================================= */}
+        <SocialProofSection />
 
         {/* =========================================================================
             SECTION 8: BRIEFING TEMPLATE DOWNLOAD (Clarity download-panel panel--black)
