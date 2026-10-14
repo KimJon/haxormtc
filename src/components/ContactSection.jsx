@@ -99,25 +99,20 @@ export default function ContactSection() {
               </div>
             </a>
 
-            {/* Official Emails */}
+            {/* Official Email */}
             <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 shadow-xs">
               <div className="flex items-center gap-2 text-xs font-extrabold text-slate-700 uppercase tracking-wider">
                 <Mail className="w-4 h-4 text-brand-coral" />
-                Official Email Addresses
+                Official Email
               </div>
-              <div className="space-y-1.5 text-sm">
+              <div className="text-sm">
                 <a
                   href={`mailto:${CONTACT_INFO.emailOfficial}`}
-                  className="block font-mono font-semibold text-slate-800 hover:text-brand-cyanDeep transition"
+                  className="block font-mono font-semibold text-slate-900 hover:text-brand-cyanDeep transition"
                 >
                   {CONTACT_INFO.emailOfficial}
                 </a>
-                <a
-                  href={`mailto:${CONTACT_INFO.emailPrimary}`}
-                  className="block font-mono font-semibold text-slate-600 hover:text-brand-cyanDeep transition"
-                >
-                  {CONTACT_INFO.emailPrimary}
-                </a>
+                <span className="text-[11px] text-slate-500 mt-0.5 block">Direct Client Inquiries &amp; Scope Briefs</span>
               </div>
             </div>
 

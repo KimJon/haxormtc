@@ -33,12 +33,6 @@ export default function Footer() {
                   {CONTACT_INFO.emailOfficial}
                 </a>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-brand-gold" />
-                <a href={`mailto:${CONTACT_INFO.emailPrimary}`} className="hover:text-white font-mono transition">
-                  {CONTACT_INFO.emailPrimary}
-                </a>
-              </div>
             </div>
           </div>
 

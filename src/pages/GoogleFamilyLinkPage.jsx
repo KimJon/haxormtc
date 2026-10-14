@@ -60,7 +60,7 @@ export default function GoogleFamilyLinkPage() {
 
   const fmt = (val) => currency === 'KES' ? `KSh ${val.toLocaleString()}` : `${currencySymbol}${val.toLocaleString()}`;
 
-  const defaultWhatsAppMsg = `Hello Haxor MTC, I am interested in your Google Family Link integration service for student devices (starting at Ksh 1,000/device). Please share onboarding details for our institution.`;
+  const defaultWhatsAppMsg = `Hello Haxor MTC, I am interested in your Google Family Link integration service for student devices (starting at ${formatPrice(1000)}/device). Please share onboarding details for our institution.`;
   const defaultWhatsAppUrl = createWhatsAppUrl(defaultWhatsAppMsg);
 
   const calculatorWhatsAppMsg = `Hello Haxor MTC, I used your Device Cost Estimator on your website for Google Family Link integration. We have approximately ${deviceCount} student devices (Rate: ${fmt(convertedRate)}/device, Total: ${fmt(convertedTotal)}). Please guide us on kickoff and scheduling!`;
@@ -842,7 +842,7 @@ export default function GoogleFamilyLinkPage() {
                   Protect Your Students & Children Today
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300">
-                  Speak directly with an education cybersecurity specialist. Custom school rollouts starting at Ksh. 1,000 per device.
+                  Speak directly with an education cybersecurity specialist. Custom school rollouts starting at {formatPrice(1000)} per device.
                 </p>
               </div>
 

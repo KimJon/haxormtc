@@ -78,7 +78,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="text-[11px] font-extrabold text-slate-700 uppercase tracking-wider">Official Email</div>
-                  <div className="text-xs font-bold text-slate-900 group-hover:text-brand-cyanDeep transition truncate max-w-[150px]">
+                  <div className="text-xs font-bold text-slate-900 group-hover:text-brand-cyanDeep transition truncate max-w-[220px]">
                     {CONTACT_INFO.emailOfficial}
                   </div>
                   <div className="text-[11px] text-slate-500">Quotes & Proposals</div>

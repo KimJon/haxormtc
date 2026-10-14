@@ -10,6 +10,7 @@ import {
   CLIENT_WEBSITES 
 } from '../components/PortfolioSection';
 import { createWhatsAppUrl } from '../data/servicesData';
+import { useCurrency } from '../context/CurrencyContext';
 import { 
   ExternalLink, 
   MapPin, 
@@ -26,6 +27,7 @@ import {
 } from 'lucide-react';
 
 export default function PortfolioPage() {
+  const { formatPrice } = useCurrency();
   const whatsAppPortfolioUrl = createWhatsAppUrl(
     "Hello Haxor MTC, I reviewed your client portfolio on haxormtc.com and would like to get a quote for a similar project."
   );
@@ -280,7 +282,7 @@ export default function PortfolioPage() {
                     to="/services/google-business"
                     className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-cyanDeep hover:text-cyan-800 transition"
                   >
-                    <span>Explore Google Maps Setup (Ksh 2,500)</span>
+                    <span>Explore Google Maps Setup ({formatPrice(2500)})</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>

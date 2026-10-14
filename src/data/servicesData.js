@@ -4,7 +4,7 @@ export const CONTACT_INFO = {
   whatsappNumber: "254729915459",
   displayPhone: "0729 915 459",
   emailPrimary: "haxorconsults@gmail.com",
-  emailOfficial: "info@haxormtc.com",
+  emailOfficial: "haxorconsults@gmail.com",
   domain: "haxormtc.com",
   companyName: "Haxor MTC",
   address: "Kenya • Delivering Worldwide Remote Engineering & Regional Services",

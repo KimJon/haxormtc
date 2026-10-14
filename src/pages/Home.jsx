@@ -31,7 +31,10 @@ import {
   Zap,
   Monitor,
   Calculator,
-  Clock
+  Clock,
+  Briefcase,
+  Lock,
+  Workflow
 } from 'lucide-react';
 import { createWhatsAppUrl, DEVELOPMENT_PROCESS } from '../data/servicesData';
 import { useCurrency } from '../context/CurrencyContext';
@@ -737,6 +740,126 @@ export default function Home() {
                 <span>Explore All 6 Systems</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
+            </div>
+
+          </div>
+        </section>
+
+        {/* White-Label Partner Hub for Digital Agencies */}
+        <section id="agency-partner" className="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden border-b border-slate-800">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,205,250,0.08),transparent_50%)] pointer-events-none" />
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-400 text-xs font-bold uppercase tracking-wider">
+                <Briefcase className="w-3.5 h-3.5" />
+                <span>White-Label Agency Partner Program</span>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-sans tracking-tight">
+                The Invisible Automation &amp; CRM Backend for Digital Agencies
+              </h2>
+
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-sans">
+                Are your clients demanding Zoho CRM pipelines, Odoo ERP, custom WhatsApp API bots, or automated invoicing? Expand your agency's service catalog and capture high-margin retainers without hiring full-time software engineers.
+              </p>
+            </div>
+
+            {/* 4 Value Pillars */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col justify-between hover:border-cyan-500/40 transition">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4">
+                    <Lock className="w-5 h-5" />
+                  </div>
+                  <h3 className="font-bold text-base text-white">100% White-Label &amp; NDA</h3>
+                  <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+                    We work silently behind the scenes. Client reports, Deluge scripts, and architecture blueprints carry your agency's branding.
+                  </p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-white/10 text-[11px] font-semibold text-cyan-300">
+                  Zero Client Poaching Guarantee
+                </div>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col justify-between hover:border-cyan-500/40 transition">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+                    <TrendingUp className="w-5 h-5" />
+                  </div>
+                  <h3 className="font-bold text-base text-white">High-Margin Expansion</h3>
+                  <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+                    Sell {formatPrice(85000)} to {formatPrice(350000)}+ CRM implementations and retainers to your existing roster while keeping 35%–50% agency margins.
+                  </p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-white/10 text-[11px] font-semibold text-emerald-300">
+                  Fixed Wholesale Partner Rates
+                </div>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col justify-between hover:border-cyan-500/40 transition">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
+                    <Workflow className="w-5 h-5" />
+                  </div>
+                  <h3 className="font-bold text-base text-white">Certified Zoho &amp; Odoo</h3>
+                  <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+                    Lead scoring pipelines, automated WhatsApp triggers, localized accounting, inventory sync, and custom webhook listener integrations.
+                  </p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-white/10 text-[11px] font-semibold text-amber-300">
+                  Full Stack Implementation
+                </div>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col justify-between hover:border-cyan-500/40 transition">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center mb-4">
+                    <Zap className="w-5 h-5" />
+                  </div>
+                  <h3 className="font-bold text-base text-white">Dedicated Slack / Chat</h3>
+                  <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+                    Direct access to a senior solutions architect, rapid milestone staging links, and prompt technical support for your account managers.
+                  </p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-white/10 text-[11px] font-semibold text-purple-300">
+                  Agile Sprint Delivery
+                </div>
+              </div>
+
+            </div>
+
+            {/* Partner Action Banner */}
+            <div className="p-6 sm:p-8 rounded-3xl bg-slate-800/80 border border-slate-700/80 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="space-y-1 text-center md:text-left">
+                <h4 className="text-lg font-bold text-white">
+                  Ready to offer enterprise CRM &amp; automation to your clients?
+                </h4>
+                <p className="text-xs sm:text-sm text-slate-300">
+                  Schedule a private partner briefing with our technical director or review wholesale white-label scopes.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full md:w-auto">
+                <a
+                  href={createWhatsAppUrl("Hello Haxor MTC, I run a digital agency and want to explore your white-label CRM and business automation implementation partnership.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-white bg-brand-green hover:bg-[#20ba5a] shadow-glow-whatsapp flex items-center justify-center gap-2 transition"
+                >
+                  <MessageSquare className="w-4 h-4 fill-white shrink-0" />
+                  <span>Partner Brief via WhatsApp</span>
+                </a>
+
+                <a
+                  href="mailto:haxorconsults@gmail.com?subject=Agency%20White-Label%20Partnership%20Inquiry"
+                  className="w-full sm:w-auto px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-200 hover:text-white bg-slate-700/80 hover:bg-slate-700 border border-slate-600 flex items-center justify-center gap-2 transition"
+                >
+                  <Mail className="w-4 h-4 text-cyan-400 shrink-0" />
+                  <span>Email Partner Desk</span>
+                </a>
+              </div>
             </div>
 
           </div>

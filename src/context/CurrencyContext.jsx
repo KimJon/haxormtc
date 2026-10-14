@@ -127,6 +127,7 @@ export function CurrencyProvider({ children }) {
           countryCode: newIsAfrica ? 'KE' : 'US',
           countryName: newIsAfrica ? 'Kenya / Africa' : 'International'
         }));
+        window.dispatchEvent(new Event('haxor_currency_change'));
       }
     } catch (e) {
       // Ignore storage write errors in private/incognito modes
@@ -137,11 +138,21 @@ export function CurrencyProvider({ children }) {
   const multiplier = isAfrica ? 1 : 2.1;
 
   const convertPrice = (baseKshAmount) => {
+    if (baseKshAmount === null || baseKshAmount === undefined) return 0;
+    
     if (typeof baseKshAmount === 'string') {
-      const parsed = parseFloat(baseKshAmount.replace(/,/g, ''));
+      const lower = baseKshAmount.toLowerCase();
+      if (lower.includes('custom') || lower.includes('free demo') || lower.includes('quotation')) {
+        return 0;
+      }
+      // Robust extraction of numeric amount, handling "Ksh.", "Ksh", commas, and spaces
+      const match = baseKshAmount.match(/[\d,]+(\.\d+)?/);
+      if (!match) return 0;
+      const parsed = parseFloat(match[0].replace(/,/g, ''));
       if (isNaN(parsed)) return 0;
       baseKshAmount = parsed;
     }
+    
     if (!baseKshAmount || isNaN(baseKshAmount)) return 0;
 
     const effectiveKsh = baseKshAmount * multiplier;
@@ -163,17 +174,45 @@ export function CurrencyProvider({ children }) {
   };
 
   const formatPrice = (baseKshAmount) => {
-    if (baseKshAmount === 'Custom' || !baseKshAmount) {
-      return 'Custom';
+    if (baseKshAmount === null || baseKshAmount === undefined) {
+      return 'Custom Scope';
+    }
+
+    if (typeof baseKshAmount === 'string') {
+      const lower = baseKshAmount.toLowerCase();
+      if (lower.includes('custom')) return 'Custom Scope';
+      if (lower.includes('free demo')) return 'Free Demo';
+      if (lower.includes('turnkey')) return 'Turnkey Solution';
+      if (lower.includes('enterprise solution')) return 'Enterprise Solution';
+      if (lower.includes('strategic retainer')) return 'Strategic Retainer';
+      if (lower.includes('free')) return 'Free';
+    }
+
+    let prefix = '';
+    let suffix = '';
+    if (typeof baseKshAmount === 'string') {
+      if (baseKshAmount.toLowerCase().includes('from')) prefix = 'From ';
+      if (baseKshAmount.includes('/mo')) suffix = ' / mo';
+      else if (baseKshAmount.includes('/month')) suffix = ' / mo';
+      else if (baseKshAmount.includes('/hr')) suffix = ' / hr';
+      else if (baseKshAmount.includes('/hour')) suffix = ' / hr';
+      else if (baseKshAmount.toLowerCase().includes('/device')) suffix = ' / device';
+      else if (baseKshAmount.toLowerCase().includes('per device')) suffix = ' / device';
+      else if (baseKshAmount.toLowerCase().includes('per session')) suffix = ' / session';
     }
 
     const converted = convertPrice(baseKshAmount);
+    if (!converted) {
+      return typeof baseKshAmount === 'string' ? baseKshAmount : 'Custom Scope';
+    }
+
     const symbol = CURRENCY_SYMBOLS[currency] || '$';
+    const formattedNumber = converted.toLocaleString();
 
     if (currency === 'KES') {
-      return `${symbol} ${converted.toLocaleString()}`;
+      return `${prefix}${symbol} ${formattedNumber}${suffix}`;
     }
-    return `${symbol}${converted.toLocaleString()}`;
+    return `${prefix}${symbol}${formattedNumber}${suffix}`;
   };
 
   const formatPriceWithNote = (baseKshAmount, originalNote = '') => {

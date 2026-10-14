@@ -736,7 +736,7 @@ export const LANDING_PAGES = {
     badge: 'International SEO • Enterprise Search Growth',
     heroHeadline: 'Dominate Organic Search Rankings Globally with Data-Driven Technical & Enterprise SEO.',
     heroSubheadline: 'Drive high-intent, sustainable organic pipeline without burning budget on continuous PPC ads. We deliver comprehensive technical SEO audits, international multi-region search optimization, authority link architecture, and conversion-focused content strategy.',
-    priceDisplay: 'From Ksh. 15,000 / $120',
+    priceDisplay: 'From Ksh. 15,000',
     pricingNote: 'Monthly Growth Retainers • Technical Crawl Overhaul • Transparent Keyword Rank Tracking',
     whatsappMessage: 'Hello Haxor MTC, I want to explore Enterprise & Global SEO Consulting services for our business.',
     keyHighlights: [
