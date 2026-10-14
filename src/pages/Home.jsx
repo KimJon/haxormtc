@@ -178,26 +178,36 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               
               {/* Left Side: Humanized Corporate Image with Stats Overlay */}
+              {/* Left Side: Architectural Delivery Console */}
               <div className="lg:col-span-5">
-                <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-md group">
-                  <img
-                    src="/images/agency-partnership.jpg"
-                    alt="Agency Executive and Haxor MTC Technical Partner"
-                    className="w-full h-80 sm:h-96 object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                      <span className="text-xs font-bold uppercase tracking-wider text-slate-200">
-                        100% White-Label Delivery
+                <div className="rounded-3xl p-8 bg-[#111111] text-white border border-neutral-800 shadow-xl space-y-6">
+                  <div className="flex items-center justify-between pb-4 border-b border-neutral-800">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                      <span className="text-xs font-semibold uppercase tracking-wider text-slate-300">
+                        Delivery Hub Status: Active
                       </span>
                     </div>
-                    <div className="font-bold text-base text-white">
-                      Direct Senior Leadership Collaboration
+                    <span className="text-xs text-slate-400 font-medium">Sprint Q4</span>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="p-4 rounded-2xl bg-neutral-900 border border-neutral-800">
+                      <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">Architecture Guarantee</div>
+                      <div className="clarity-h3 !text-lg !text-white text-white">100% White-Label Delivery</div>
+                      <div className="text-xs text-slate-300 mt-1">Strict bilateral NDAs • Zero client poaching</div>
                     </div>
-                    <div className="text-xs text-slate-300 mt-0.5">
-                      Fixed sprint scopes • Zero client poaching guarantee
+
+                    <div className="p-4 rounded-2xl bg-neutral-900 border border-neutral-800">
+                      <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">Response Time SLA</div>
+                      <div className="clarity-h3 !text-lg !text-white text-white">&lt; 15 Minute WhatsApp / Slack Reply</div>
+                      <div className="text-xs text-slate-300 mt-1">Direct communication with senior engineers</div>
+                    </div>
+
+                    <div className="p-4 rounded-2xl bg-neutral-900 border border-neutral-800">
+                      <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">Production Milestones</div>
+                      <div className="clarity-h3 !text-lg !text-white text-white">Milestone Sign-Off Before Deployment</div>
+                      <div className="text-xs text-slate-300 mt-1">30% Kickoff • 40% Stage Review • 30% Final Launch</div>
                     </div>
                   </div>
                 </div>

@@ -34,27 +34,56 @@ export default function SoftwarePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-primaryText font-sans antialiased flex flex-col">
+    <div className="min-h-screen bg-white text-[#111111] font-sans antialiased flex flex-col selection:bg-black selection:text-white">
       <TopTicker />
       <Navbar />
 
       <main className="flex-grow">
         
         {/* Page Header */}
-        <section className="pt-12 pb-14 md:pt-18 md:pb-20 bg-gradient-to-b from-slate-50 via-white to-white border-b border-slate-200">
+        <section className="pt-20 pb-16 md:pt-28 md:pb-24 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-brand-cyan/30 text-brand-cyanDeep text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Enterprise & SME Business Platforms</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-black" />
+              <span>Enterprise &amp; SME Business Platforms</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#373656] font-heading tracking-tight leading-tight max-w-4xl mx-auto">
-              Enterprise Business Software, Cloud POS & Management Systems
+            <h1 className="clarity-h1 max-w-4xl mx-auto">
+              Enterprise Business Software, Cloud POS &amp; Management Systems
             </h1>
 
-            <p className="body-figtree max-w-2xl mx-auto text-slate-600 leading-relaxed">
+            <p className="clarity-text max-w-2xl mx-auto text-slate-600">
               Engineered for high-traffic retail, hospitality, clinics, and multi-branch operations worldwide, with specialized localized regional platforms like ElitteGo.
             </p>
+
+            {/* Humanized POS & Cloud Software Showcase Image */}
+            <div className="pt-10 max-w-5xl mx-auto">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 group">
+                <img 
+                  src="/images/pos-system.jpg" 
+                  alt="Modern touchscreen Cloud Point of Sale and Retail Management System" 
+                  className="w-full h-auto max-h-[480px] object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-6 sm:p-10 text-left">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider">
+                      Turnkey Enterprise Software
+                    </span>
+                    <span className="px-3 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md text-emerald-300 text-xs font-semibold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> Offline Sync &bull; Multi-Branch POS
+                    </span>
+                  </div>
+                  <h3 className="clarity-h3 !text-2xl !text-white text-white">
+                    Cloud POS &amp; Operational Management Engines
+                  </h3>
+                  <p className="clarity-text-dark text-slate-300 mt-1 max-w-2xl hidden sm:block">
+                    Built for speed, inventory reconciliation, multi-store tax compliance, and automated branch reporting.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -67,47 +96,47 @@ export default function SoftwarePage() {
                 return (
                   <div
                     key={prod.id}
-                    className="p-8 rounded-3xl bg-white border border-slate-200 shadow-card hover:shadow-card-hover transition flex flex-col justify-between group"
+                    className="p-8 rounded-3xl bg-white border border-slate-200 clean-card-hover transition flex flex-col justify-between group"
                   >
                     <div>
                       <div className="flex items-center justify-between mb-4">
-                        <span className="text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-slate-100 text-slate-700">
+                        <span className="text-xs font-semibold uppercase px-3 py-1 rounded-full bg-slate-100 text-slate-700">
                           {prod.badge}
                         </span>
                         {getIcon(prod.id)}
                       </div>
 
-                      <h2 className="text-2xl font-extrabold text-[#373656] font-heading">
+                      <h2 className="clarity-h3 text-black mb-2">
                         {prod.name}
                       </h2>
 
-                      <p className="text-sm text-slate-600 mt-2 leading-relaxed">
+                      <p className="text-sm text-slate-600 leading-relaxed">
                         {prod.tagline}
                       </p>
 
                       {/* QR Code Demo Banner for ElitteGo */}
                       {prod.qrCodeImage && (
-                        <div className="my-4 p-3 rounded-2xl bg-cyan-50 border border-brand-cyan/30 flex items-center gap-3">
+                        <div className="my-4 p-3 rounded-2xl bg-slate-50 border border-slate-200 flex items-center gap-3">
                           <img 
                             src={prod.qrCodeImage} 
                             alt="Scan QR Demo" 
                             className="w-12 h-12 rounded-lg bg-white p-1 border border-slate-200 shrink-0 object-contain shadow-2xs"
                           />
                           <div>
-                            <div className="text-xs font-extrabold text-slate-900">Live Smartphone App Demo</div>
-                            <div className="text-[11px] text-slate-600">Scan with phone camera to test rider app</div>
+                            <div className="text-xs font-semibold text-slate-900">Live Smartphone App Demo</div>
+                            <div className="text-[11px] text-slate-500">Scan with phone camera to test rider app</div>
                           </div>
                         </div>
                       )}
 
                       {/* Sectors */}
                       <div className="my-4 pt-3 border-t border-slate-100">
-                        <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-2">
+                        <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider block mb-2">
                           Target Sectors:
                         </span>
                         <div className="flex flex-wrap gap-1.5">
                           {prod.sectors.slice(0, 4).map((sec, sIdx) => (
-                            <span key={sIdx} className="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">
+                            <span key={sIdx} className="text-[11px] font-medium px-2 py-0.5 rounded bg-slate-100 text-slate-700">
                               {sec}
                             </span>
                           ))}
@@ -118,7 +147,7 @@ export default function SoftwarePage() {
                       <div className="my-4 space-y-1.5 text-xs text-slate-700">
                         {prod.features.slice(0, 4).map((feat, fIdx) => (
                           <div key={fIdx} className="flex items-start gap-2">
-                            <Check className="w-3.5 h-3.5 text-brand-green shrink-0 mt-0.5 stroke-[3]" />
+                            <Check className="w-3.5 h-3.5 text-black shrink-0 mt-0.5" />
                             <span className="leading-snug">{feat}</span>
                           </div>
                         ))}
@@ -128,7 +157,7 @@ export default function SoftwarePage() {
                     <div className="pt-6 border-t border-slate-100 space-y-2.5">
                       <Link
                         to={`/software/${prod.id}`}
-                        className="w-full py-2.5 px-4 rounded-xl text-xs sm:text-sm font-bold text-center bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5 transition"
+                        className="w-full py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold text-center bg-[#111111] text-white hover:bg-black flex items-center justify-center gap-1.5 transition"
                       >
                         <span>View System Details & Demo</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -138,9 +167,9 @@ export default function SoftwarePage() {
                         href={demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full py-2.5 px-4 rounded-xl text-xs sm:text-sm font-bold text-center text-white bg-brand-green hover:bg-[#20ba5a] shadow-glow-whatsapp flex items-center justify-center gap-1.5 transition"
+                        className="w-full py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold text-center text-[#111111] bg-white hover:bg-slate-50 border border-slate-300 hover:border-black flex items-center justify-center gap-1.5 transition"
                       >
-                        <MessageSquare className="w-3.5 h-3.5 fill-white shrink-0" />
+                        <MessageSquare className="w-3.5 h-3.5 fill-[#111111] shrink-0" />
                         <span>WhatsApp</span>
                       </a>
                     </div>

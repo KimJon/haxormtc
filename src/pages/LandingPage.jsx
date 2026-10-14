@@ -109,16 +109,16 @@ export default function LandingPage() {
       <section className="pt-10 pb-14 md:pt-16 md:pb-20 bg-gradient-to-b from-slate-50 via-white to-white border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-brand-cyan/30 text-xs font-extrabold text-brand-cyanDeep shadow-xs">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-xs font-semibold text-slate-800 uppercase tracking-wider">
+            <Sparkles className="w-3.5 h-3.5 text-black" />
             <span>{page.badge}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15] max-w-4xl mx-auto">
+          <h1 className="clarity-h1 max-w-4xl mx-auto">
             {page.heroHeadline}
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="clarity-text max-w-3xl mx-auto text-slate-600">
             {page.heroSubheadline}
           </p>
 

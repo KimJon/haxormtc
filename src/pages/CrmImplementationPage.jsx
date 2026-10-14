@@ -76,12 +76,12 @@ export default function CrmImplementationPage() {
               <span>CRM Systems &amp; Pipeline Architecture</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#111111] tracking-tight leading-[1.12] max-w-4xl mx-auto">
+            <h1 className="clarity-h1 max-w-4xl mx-auto">
               A CRM That Works Around <br className="hidden sm:inline" />
               Your Actual Business.
             </h1>
 
-            <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p className="clarity-text max-w-3xl mx-auto text-slate-600">
               A CRM should help your team manage relationships, follow up with leads, and understand its sales pipeline without unnecessary complexity. Haxor MTC helps configure Zoho CRM, Odoo, and HubSpot around your business processes and operational needs.
             </p>
 
@@ -124,6 +124,34 @@ export default function CrmImplementationPage() {
               </span>
             </div>
 
+            {/* Humanized CRM Architecture Showcase Image */}
+            <div className="pt-10 max-w-5xl mx-auto">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 group">
+                <img 
+                  src="/images/crm-architecture.jpg" 
+                  alt="Senior solutions architect presenting CRM architecture and pipeline mapping" 
+                  className="w-full h-auto max-h-[480px] object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-6 sm:p-10 text-left">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider">
+                      Solutions Architecture
+                    </span>
+                    <span className="px-3 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md text-emerald-300 text-xs font-semibold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> Zoho • Odoo • HubSpot
+                    </span>
+                  </div>
+                  <h3 className="clarity-h3 !text-2xl !text-white text-white">
+                    End-to-End Pipeline &amp; Relational Architecture
+                  </h3>
+                  <p className="clarity-text-dark text-slate-300 mt-1 max-w-2xl hidden sm:block">
+                    From schema design and stage gating to automated multi-channel lead assignment and executive analytics.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -132,13 +160,13 @@ export default function CrmImplementationPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mb-16">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
                 Capabilities
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] tracking-tight mt-3">
+              <h2 className="clarity-h2 text-black mt-3">
                 CRM Implementation Deliverables
               </h2>
-              <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
+              <p className="clarity-text text-slate-600 mt-3">
                 We handle the end-to-end technical configuration, custom module architecture, and data pipelines so your sales team can focus on closing deals.
               </p>
             </div>
@@ -147,11 +175,11 @@ export default function CrmImplementationPage() {
               {services.map((item, idx) => (
                 <div key={idx} className="p-8 rounded-3xl bg-white border border-slate-200 hover:border-black shadow-xs transition-all flex flex-col justify-between">
                   <div>
-                    <div className="w-10 h-10 rounded-2xl bg-slate-100 text-black flex items-center justify-center mb-6 font-mono font-bold text-xs">
+                    <div className="w-10 h-10 rounded-2xl bg-slate-100 text-black flex items-center justify-center mb-6 font-semibold text-xs">
                       0{idx + 1}
                     </div>
-                    <h3 className="font-bold text-lg text-[#111111] mb-2">{item.title}</h3>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+                    <h3 className="clarity-h3 text-black mb-2">{item.title}</h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -165,13 +193,13 @@ export default function CrmImplementationPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
                 Disciplined Rollout
               </span>
-              <h2 className="text-3xl sm:text-4xl font-black text-[#111111] tracking-tight mt-3">
+              <h2 className="clarity-h2 text-black mt-3">
                 Our Implementation Process
               </h2>
-              <p className="text-sm sm:text-base text-slate-600 mt-2">
+              <p className="clarity-text text-slate-600 mt-2">
                 Structured steps to ensure clean data, reliable automations, and immediate team adoption.
               </p>
             </div>

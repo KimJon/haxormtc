@@ -46,11 +46,11 @@ export default function ServicesPage() {
               <span>Full Service Catalog &amp; Transparent Rates</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#111111] tracking-tight leading-[1.12] max-w-4xl mx-auto">
+            <h1 className="clarity-h1 max-w-4xl mx-auto">
               Services Engineered to Win Clients &amp; Scale Delivery
             </h1>
 
-            <p className="max-w-2xl mx-auto text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p className="clarity-text max-w-2xl mx-auto text-slate-600">
               Transparent wholesale sprint pricing and milestone contracts with zero hidden fees. Partner with Haxor MTC for CRM configuration, process automation, and full-stack software integrations.
             </p>
 
@@ -60,7 +60,7 @@ export default function ServicesPage() {
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                  className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                     activeCategory === cat.id
                       ? 'bg-[#111111] text-white shadow-sm'
                       : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
@@ -70,6 +70,35 @@ export default function ServicesPage() {
                 </button>
               ))}
             </div>
+
+            {/* Humanized Services Delivery Showcase Image */}
+            <div className="pt-10 max-w-5xl mx-auto">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 group">
+                <img 
+                  src="/images/services-delivery.jpg" 
+                  alt="Haxor MTC technical managers and engineers coordinating software delivery metrics" 
+                  className="w-full h-auto max-h-[480px] object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-6 sm:p-10 text-left">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider">
+                      Technical Sprint Management
+                    </span>
+                    <span className="px-3 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md text-emerald-300 text-xs font-semibold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> Transparent Sprint Deliverables
+                    </span>
+                  </div>
+                  <h3 className="clarity-h3 !text-2xl !text-white text-white">
+                    Senior Engineering Sprints Built Around Client Deadlines
+                  </h3>
+                  <p className="clarity-text-dark text-slate-300 mt-1 max-w-2xl hidden sm:block">
+                    Every service engagement includes structured sprint backlogs, daily standups, and clear deployment staging milestones.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -78,16 +107,16 @@ export default function ServicesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-10">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
+                <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
                   Core Implementation Pillars
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-black text-[#111111] tracking-tight mt-2">
+                <h2 className="clarity-h2 text-black mt-2">
                   Specialist Technical Capabilities
                 </h2>
               </div>
               <Link
                 to="/agency-partners"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#111111] hover:bg-black transition-all shadow-sm shrink-0"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold text-white bg-[#111111] hover:bg-black transition-all shadow-sm shrink-0"
               >
                 <span>Agency White-Label Hub</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -182,7 +211,7 @@ export default function ServicesPage() {
                         </span>
 
                         <div className="text-right">
-                          <span className="text-2xl sm:text-3xl font-black text-[#111111] font-mono">
+                          <span className="text-2xl sm:text-3xl font-semibold text-[#111111]">
                             {formatPrice(service.price)}
                           </span>
                           <span className="text-xs text-slate-500 font-medium ml-1">
@@ -191,11 +220,11 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <h2 className="text-2xl sm:text-3xl font-black text-[#111111] tracking-tight">
+                      <h3 className="clarity-h2 !text-2xl text-[#111111]">
                         {service.name}
-                      </h2>
+                      </h3>
 
-                      <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                      <p className="text-sm text-slate-600 mt-2 leading-relaxed">
                         {service.tagline}
                       </p>
 

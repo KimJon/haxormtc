@@ -24,25 +24,25 @@ export default function ContactPage() {
   );
 
   return (
-    <div className="min-h-screen bg-white text-primaryText font-sans antialiased flex flex-col">
+    <div className="min-h-screen bg-white text-[#111111] font-sans antialiased flex flex-col selection:bg-black selection:text-white">
       <TopTicker />
       <Navbar />
 
       <main className="flex-grow">
         
         {/* Page Header */}
-        <section className="pt-12 pb-14 md:pt-18 md:pb-20 bg-gradient-to-b from-slate-50 via-white to-white border-b border-slate-200">
+        <section className="pt-20 pb-16 md:pt-28 md:pb-24 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-brand-cyan/30 text-brand-cyanDeep text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Direct Communication & Support</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-black" />
+              <span>Direct Communication &amp; Support</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#1C1D1D] font-heading tracking-tight leading-tight max-w-4xl mx-auto">
+            <h1 className="clarity-h1 max-w-4xl mx-auto">
               Discuss Your Project or Agency Partnership
             </h1>
 
-            <p className="body-figtree max-w-2xl mx-auto text-slate-600 leading-relaxed">
+            <p className="clarity-text max-w-2xl mx-auto text-slate-600">
               Have a CRM implementation, workflow automation, or agency white-label technical delivery project in mind? Connect directly with our solutions architects and delivery leads.
             </p>
 
@@ -54,14 +54,14 @@ export default function ContactPage() {
                 href={directWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-5 rounded-2xl bg-emerald-50/70 border border-brand-green/30 hover:shadow-card transition flex items-center gap-4 group"
+                className="p-5 rounded-2xl bg-white border border-slate-200 clean-card-hover transition flex items-center gap-4 group"
               >
-                <div className="w-12 h-12 rounded-xl bg-brand-green text-white flex items-center justify-center shrink-0 shadow-sm">
+                <div className="w-12 h-12 rounded-xl bg-[#111111] text-white flex items-center justify-center shrink-0 shadow-sm">
                   <MessageSquare className="w-6 h-6 fill-white" />
                 </div>
                 <div>
-                  <div className="text-[11px] font-extrabold text-emerald-800 uppercase tracking-wider">Direct Channel</div>
-                  <div className="text-sm font-extrabold text-slate-900 group-hover:text-brand-green transition">
+                  <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">Direct Channel</div>
+                  <div className="text-sm font-semibold text-slate-900 group-hover:text-black transition">
                     WhatsApp
                   </div>
                   <div className="text-[11px] text-slate-500">Typical reply in &lt;15 mins</div>
@@ -71,17 +71,17 @@ export default function ContactPage() {
               {/* Business Email Card */}
               <a
                 href={`mailto:${CONTACT_INFO.emailPrimary}`}
-                className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-card transition flex items-center gap-4 group"
+                className="p-5 rounded-2xl bg-white border border-slate-200 clean-card-hover transition flex items-center gap-4 group"
               >
-                <div className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center shrink-0 shadow-sm">
+                <div className="w-12 h-12 rounded-xl bg-slate-100 text-black flex items-center justify-center shrink-0 shadow-sm">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-[11px] font-extrabold text-slate-700 uppercase tracking-wider">Official Email</div>
-                  <div className="text-xs font-bold text-slate-900 group-hover:text-brand-cyanDeep transition truncate max-w-[220px]">
+                  <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">Official Email</div>
+                  <div className="text-xs font-semibold text-slate-900 group-hover:text-black transition truncate max-w-[220px]">
                     {CONTACT_INFO.emailOfficial}
                   </div>
-                  <div className="text-[11px] text-slate-500">Quotes & Proposals</div>
+                  <div className="text-[11px] text-slate-500">Quotes &amp; Proposals</div>
                 </div>
               </a>
 

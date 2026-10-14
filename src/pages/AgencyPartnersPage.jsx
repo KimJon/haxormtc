@@ -399,27 +399,36 @@ export default function AgencyPartnersPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               
-              {/* Left Side: Real Senior Architects Photo with Floating Badges */}
+              {/* Left Side: Agency SLA & Delivery Protocol Console */}
               <div className="lg:col-span-6">
-                <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 group">
-                  <img
-                    src="/images/hero-collaboration.jpg"
-                    alt="Haxor MTC Senior Systems Architects and Technical Delivery Team"
-                    className="w-full h-80 sm:h-[420px] object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                      <span className="text-xs font-bold uppercase tracking-wider text-slate-200">
+                <div className="rounded-3xl p-8 sm:p-10 bg-[#111111] text-white border border-neutral-800 shadow-xl space-y-6">
+                  <div className="flex items-center justify-between pb-4 border-b border-neutral-800">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                      <span className="text-xs font-semibold uppercase tracking-wider text-slate-300">
                         Senior Engineering Squad
                       </span>
                     </div>
-                    <div className="font-bold text-lg sm:text-xl text-white">
-                      Direct Communication With Technical Architects
+                    <span className="text-xs text-slate-400 font-medium">Bilateral NDA Verified</span>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="p-4 rounded-2xl bg-neutral-900 border border-neutral-800">
+                      <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">Team Composition</div>
+                      <div className="clarity-h3 !text-lg !text-white text-white">Direct Senior Architect Access</div>
+                      <div className="text-xs text-slate-300 mt-1">No junior handoffs &bull; Direct access to lead developers &bull; Daily git logs</div>
                     </div>
-                    <div className="text-xs text-slate-300 mt-1 font-normal">
-                      No junior handoffs • Async Slack/Teams channels • Daily progress git logs
+
+                    <div className="p-4 rounded-2xl bg-neutral-900 border border-neutral-800">
+                      <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">Collaboration Protocol</div>
+                      <div className="clarity-h3 !text-lg !text-white text-white">Dedicated Slack / Teams Channels</div>
+                      <div className="text-xs text-slate-300 mt-1">Async video walkthroughs &bull; Milestone staging servers &bull; Recorded staff training</div>
+                    </div>
+
+                    <div className="p-4 rounded-2xl bg-neutral-900 border border-neutral-800">
+                      <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">Wholesale Pricing Structure</div>
+                      <div className="clarity-h3 !text-lg !text-white text-white">Guaranteed Fixed Sprint Wholesale Rates</div>
+                      <div className="text-xs text-slate-300 mt-1">Protect your 40&ndash;60% gross agency profit margins on technical implementation</div>
                     </div>
                   </div>
                 </div>

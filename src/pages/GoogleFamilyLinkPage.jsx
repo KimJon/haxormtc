@@ -224,17 +224,17 @@ export default function GoogleFamilyLinkPage() {
               {/* Left Column: Value Proposition */}
               <div className="lg:col-span-7 space-y-6 text-left">
                 
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-brand-cyan/30 text-brand-cyanDeep text-xs font-bold uppercase tracking-wider shadow-2xs">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                  <span>Educational Institution & Parent Child Safety</span>
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold uppercase tracking-wider">
+                  <ShieldCheck className="w-4 h-4 text-black" />
+                  <span>Educational Institution &amp; Parent Child Safety</span>
                 </div>
 
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#373656] font-heading tracking-tight leading-[1.12]">
-                  Google Family Link Integration for <span className="text-brand-cyanDeep">Schools & Parents</span>
+                <h1 className="clarity-h1 !text-left max-w-4xl">
+                  Google Family Link Integration for Schools &amp; Parents
                 </h1>
 
-                <p className="text-base sm:text-lg text-slate-600 leading-relaxed body-figtree max-w-2xl">
-                  Eliminate classroom distractions, block inappropriate internet content, enforce study & bedtime screen hours, and empower parents with complete digital child protection for schools worldwide.
+                <p className="clarity-text max-w-2xl text-slate-600">
+                  Eliminate classroom distractions, block inappropriate internet content, enforce study &amp; bedtime screen hours, and empower parents with complete digital child protection for schools worldwide.
                 </p>
 
                 {/* Key Metric Badges */}

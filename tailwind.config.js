@@ -40,6 +40,7 @@ export default {
         sans: ['"Work Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
         heading: ['"Work Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
         'work-sans': ['"Work Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+        mono: ['"Work Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
       },
       backgroundImage: {
         'clarity-spectrum': 'linear-gradient(135deg, #18D2FA 0%, #FE4775 50%, #FED147 100%)',

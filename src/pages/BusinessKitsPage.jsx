@@ -44,26 +44,26 @@ export default function BusinessKitsPage() {
   );
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans antialiased flex flex-col">
+    <div className="min-h-screen bg-white text-[#111111] font-sans antialiased flex flex-col selection:bg-black selection:text-white">
       <TopTicker />
       <Navbar />
 
       <main className="flex-grow">
         
         {/* Hero Section */}
-        <section className="pt-12 pb-14 md:pt-18 md:pb-20 bg-gradient-to-b from-slate-50 via-white to-white border-b border-slate-200">
+        <section className="pt-20 pb-16 md:pt-28 md:pb-24 bg-white border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-brand-cyan/30 text-brand-cyanDeep text-xs font-bold uppercase tracking-wider shadow-2xs">
-              <Layers className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold uppercase tracking-wider">
+              <Layers className="w-4 h-4 text-black" />
               <span>40 Turnkey Industry Architectures • Global Deployment</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 font-recoleta tracking-tight leading-tight max-w-4xl mx-auto">
+            <h1 className="clarity-h1 max-w-4xl mx-auto">
               Haxor Digital Business Kits
             </h1>
 
-            <p className="body-figtree max-w-3xl mx-auto text-slate-600 text-base sm:text-lg leading-relaxed font-sans">
+            <p className="clarity-text max-w-3xl mx-auto text-slate-600">
               Stop piecing together disconnected web designers, POS vendors, and social media contractors. Every Haxor Business Kit delivers a synchronized 4-pillar operating system engineered specifically for your trade.
             </p>
 

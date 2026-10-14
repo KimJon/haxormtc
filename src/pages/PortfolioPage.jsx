@@ -32,23 +32,52 @@ export default function PortfolioPage() {
               <span>Verified Delivery Proof</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#111111] tracking-tight leading-tight max-w-4xl mx-auto">
+            <h1 className="clarity-h1 max-w-4xl mx-auto">
               Our Proven Work &amp; Technical Deployments
             </h1>
 
-            <p className="max-w-2xl mx-auto text-slate-600 text-base sm:text-lg leading-relaxed">
+            <p className="clarity-text max-w-2xl mx-auto text-slate-600">
               From white-label agency delivery sprints to enterprise CRM architectures, custom webhook topologies, and automated operations engines.
             </p>
 
             <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
               <Link
                 to="/contact"
-                className="px-8 py-3.5 rounded-xl text-sm font-bold text-white bg-[#111111] hover:bg-black transition shadow-sm"
+                className="px-8 py-3.5 rounded-xl text-sm font-semibold text-white bg-[#111111] hover:bg-black transition shadow-sm"
               >
                 <span>Discuss Your Project Requirements</span>
                 <span className="ml-1.5">&rarr;</span>
               </Link>
             </div>
+
+            {/* Humanized Live Deployed Proof Showcase Image */}
+            <div className="pt-10 max-w-5xl mx-auto">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 group">
+                <img 
+                  src="/images/hotel-booking.jpg" 
+                  alt="Custom web application and multi-tenant booking engine deployment" 
+                  className="w-full h-auto max-h-[480px] object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-6 sm:p-10 text-left">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider">
+                      Live Production Architecture
+                    </span>
+                    <span className="px-3 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md text-emerald-300 text-xs font-semibold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> 100% Milestone Completion
+                    </span>
+                  </div>
+                  <h3 className="clarity-h3 !text-2xl !text-white text-white">
+                    Mission-Critical Systems Running 24/7 in Production
+                  </h3>
+                  <p className="clarity-text-dark text-slate-300 mt-1 max-w-2xl hidden sm:block">
+                    Full-stack portals, custom webhook processors, and enterprise CRM implementations handling daily transactions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 

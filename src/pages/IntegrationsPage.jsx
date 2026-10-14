@@ -78,12 +78,12 @@ export default function IntegrationsPage() {
               <span>Software &amp; API Integrations</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#111111] tracking-tight leading-[1.12] max-w-4xl mx-auto">
+            <h1 className="clarity-h1 max-w-4xl mx-auto">
               Connect Your Business Tools. <br className="hidden sm:inline" />
               Reduce Manual Work.
             </h1>
 
-            <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p className="clarity-text max-w-3xl mx-auto text-slate-600">
               When business applications operate separately, staff are forced to duplicate records, manually re-enter data, and resolve inconsistent numbers. We help connect systems so information moves between them reliably, securely, and in real time.
             </p>
 
@@ -92,7 +92,7 @@ export default function IntegrationsPage() {
                 href={integrationsWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-[#111111] hover:bg-black transition-all shadow-sm flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-semibold text-white bg-[#111111] hover:bg-black transition-all shadow-sm flex items-center justify-center gap-2"
               >
                 <MessageSquare className="w-4 h-4 fill-white" />
                 <span>Discuss an Integration</span>
@@ -100,7 +100,7 @@ export default function IntegrationsPage() {
 
               <Link
                 to="/contact"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-[#111111] bg-white hover:bg-slate-50 border border-slate-300 hover:border-black transition-all flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-semibold text-[#111111] bg-white hover:bg-slate-50 border border-slate-300 hover:border-black transition-all flex items-center justify-center gap-2"
               >
                 <span>Submit Integration Scope</span>
                 <ArrowRight className="w-4 h-4 text-black" />
@@ -126,6 +126,34 @@ export default function IntegrationsPage() {
               </span>
             </div>
 
+            {/* Humanized API Integrations Showcase Image */}
+            <div className="pt-10 max-w-5xl mx-auto">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 group">
+                <img 
+                  src="/images/api-integrations.jpg" 
+                  alt="Senior software engineers reviewing cloud architecture blueprints and API data connectors" 
+                  className="w-full h-auto max-h-[480px] object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-6 sm:p-10 text-left">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider">
+                      Cloud &amp; API Middleware
+                    </span>
+                    <span className="px-3 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md text-emerald-300 text-xs font-semibold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> Bi-Directional Synchronization
+                    </span>
+                  </div>
+                  <h3 className="clarity-h3 !text-2xl !text-white text-white">
+                    Bulletproof Data Pipelines Between Your Core Tools
+                  </h3>
+                  <p className="clarity-text-dark text-slate-300 mt-1 max-w-2xl hidden sm:block">
+                    REST, GraphQL, webhook handlers, and custom database sync with automated deduplication and failover logging.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -134,13 +162,13 @@ export default function IntegrationsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mb-16">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
                 Technical Scope
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] tracking-tight mt-3">
+              <h2 className="clarity-h2 text-black mt-3">
                 Integration Services &amp; Middleware
               </h2>
-              <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
+              <p className="clarity-text text-slate-600 mt-3">
                 We design clean, documented data pipelines between your web frontends, databases, and commercial software.
               </p>
             </div>
@@ -149,11 +177,11 @@ export default function IntegrationsPage() {
               {services.map((item, idx) => (
                 <div key={idx} className="p-8 rounded-3xl bg-white border border-slate-200 hover:border-black shadow-xs transition-all flex flex-col justify-between">
                   <div>
-                    <div className="w-10 h-10 rounded-2xl bg-slate-100 text-black flex items-center justify-center mb-6 font-mono font-bold text-xs">
+                    <div className="w-10 h-10 rounded-2xl bg-slate-100 text-black flex items-center justify-center mb-6 font-semibold text-xs">
                       0{idx + 1}
                     </div>
-                    <h3 className="font-bold text-lg text-[#111111] mb-2">{item.title}</h3>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+                    <h3 className="clarity-h3 text-black mb-2">{item.title}</h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -167,13 +195,13 @@ export default function IntegrationsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
                 Systems &amp; Stacks
               </span>
-              <h2 className="text-3xl sm:text-4xl font-black text-[#111111] tracking-tight mt-3">
+              <h2 className="clarity-h2 text-black mt-3">
                 Common Integration Architectures
               </h2>
-              <p className="text-sm sm:text-base text-slate-600 mt-2">
+              <p className="clarity-text text-slate-600 mt-2">
                 Examples of systems we connect seamlessly to keep business operations synchronized.
               </p>
             </div>
