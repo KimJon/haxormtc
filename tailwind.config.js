@@ -37,8 +37,15 @@ export default {
         }
       },
       fontFamily: {
-        heading: ['Recoleta', 'Fraunces', 'Arial', 'serif'],
-        sans: ['Figtree', 'Plus Jakarta Sans', 'Inter', 'sans-serif'],
+        sans: ['"Work Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+        heading: ['"Work Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+        'work-sans': ['"Work Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+      },
+      backgroundImage: {
+        'clarity-spectrum': 'linear-gradient(135deg, #18D2FA 0%, #FE4775 50%, #FED147 100%)',
+        'clarity-cyan-pink': 'linear-gradient(135deg, #18D2FA 0%, #FE4775 100%)',
+        'clarity-pink-gold': 'linear-gradient(135deg, #FE4775 0%, #FED147 100%)',
+        'clarity-dark-radial': 'radial-gradient(circle at 50% 0%, rgba(24, 210, 250, 0.15) 0%, rgba(254, 71, 117, 0.08) 50%, transparent 80%)',
       },
       boxShadow: {
         'card': '0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04)',

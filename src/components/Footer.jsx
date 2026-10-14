@@ -38,11 +38,32 @@ export default function Footer() {
 
           {/* Quick Links: Marketing & Web */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-white font-bold text-sm">Services & Growth</h4>
+            <h4 className="text-white font-bold text-sm">Services &amp; Growth</h4>
             <ul className="space-y-2 text-slate-400">
               <li>
-                <Link to="/services" className="hover:text-white transition text-brand-cyan font-semibold">
-                  All Services & Pricing Catalog →
+                <Link to="/agency-partners" className="hover:text-white transition text-[#FE4775] font-bold flex items-center gap-1.5">
+                  <span>Agency White-Label Hub</span>
+                  <span className="text-[9px] bg-[#FE4775] text-white px-1.5 py-0.2 rounded uppercase">Partner</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/crm-implementation" className="hover:text-white transition text-[#18D2FA] font-medium">
+                  CRM Implementation (Zoho, Odoo)
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/business-automation" className="hover:text-white transition text-[#18D2FA] font-medium">
+                  Business Workflow Automation
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/integrations" className="hover:text-white transition text-[#18D2FA] font-medium">
+                  Software &amp; API Integrations
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-white transition text-slate-300 font-semibold">
+                  All Services &amp; Pricing Catalog →
                 </Link>
               </li>
               <li>
