@@ -397,12 +397,12 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
               
               <div className="lg:col-span-4">
-                <h2 className="text-3xl sm:text-4xl font-black text-[#111111] tracking-tight pl-4 border-l-4 border-black">
+                <h2 className="clarity-h2 text-black pl-4 border-l-4 border-black">
                   About Haxor MTC
                 </h2>
               </div>
 
-              <div className="lg:col-span-8 space-y-4 text-base sm:text-lg text-slate-700 leading-relaxed">
+              <div className="lg:col-span-8 space-y-4 clarity-text text-slate-700">
                 <p>
                   Modern business systems are complicated. Journeys can be lengthy, considered, and complex. CRM implementation, business automation, and data synchronization need to be approached with architectural rigor.
                 </p>
@@ -412,9 +412,9 @@ export default function Home() {
                 <div className="pt-2">
                   <Link 
                     to="/about" 
-                    className="inline-flex items-center gap-2 text-sm font-bold text-black hover:underline pb-1"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-black hover:underline pb-1"
                   >
-                    <span>About Us</span>
+                    <span>Read Our Full Story &amp; Philosophy</span>
                     <span>→</span>
                   </Link>
                 </div>

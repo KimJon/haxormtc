@@ -39,7 +39,7 @@ export default function WhyUsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-black" />
-              <span>Global Technology Standards • Regional Execution</span>
+              <span>Global Technology Standards • Enterprise Delivery</span>
             </div>
 
             <h1 className="clarity-h1 max-w-4xl mx-auto">
@@ -120,7 +120,7 @@ export default function WhyUsPage() {
 
               <div className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-white border border-slate-300 text-slate-900 text-xs sm:text-sm font-medium shadow-xs">
                 <ShieldCheck className="w-4 h-4 text-black shrink-0" />
-                <span>Zero Risk: 30% Start → 40% Design Approval → 30% Final Launch</span>
+                <span>Milestone Approval Gates • Comprehensive Staging &amp; QA Verification</span>
               </div>
             </div>
 

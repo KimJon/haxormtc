@@ -233,7 +233,7 @@ export default function Navbar() {
             <Link 
               to="/about" 
               className={`transition-colors py-1 ${
-                location.pathname === '/about' || location.pathname === '/why-us'
+                location.pathname === '/about' || location.pathname === '/about-us' || location.pathname === '/why-us'
                   ? 'text-black font-bold border-b-2 border-black'
                   : 'hover:text-black text-slate-700'
               }`}
@@ -392,7 +392,7 @@ export default function Navbar() {
                 to="/about"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`py-3 px-3 rounded-xl transition ${
-                  location.pathname === '/about' || location.pathname === '/why-us'
+                  location.pathname === '/about' || location.pathname === '/about-us' || location.pathname === '/why-us'
                     ? 'bg-slate-100 text-black font-bold'
                     : 'hover:bg-slate-50 text-slate-800'
                 }`}

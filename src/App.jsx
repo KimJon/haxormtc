@@ -7,6 +7,7 @@ import SoftwarePage from './pages/SoftwarePage';
 import PortfolioPage from './pages/PortfolioPage';
 import CalculatorPage from './pages/CalculatorPage';
 import WhyUsPage from './pages/WhyUsPage';
+import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import GoogleFamilyLinkPage from './pages/GoogleFamilyLinkPage';
 import BusinessKitsPage from './pages/BusinessKitsPage';
@@ -102,7 +103,8 @@ function App() {
         <Route path="/work" element={<PortfolioPage />} />
         <Route path="/calculator" element={<CalculatorPage />} />
         <Route path="/why-us" element={<WhyUsPage />} />
-        <Route path="/about" element={<WhyUsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/about-us" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
 
         {/* Dedicated Ad-Conversion Landing Page for Google Family Link */}

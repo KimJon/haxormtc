@@ -48,6 +48,7 @@ const routes = new Set([
   'services/integrations',
   'work',
   'about',
+  'about-us',
   'services',
   'software',
   'kits',
