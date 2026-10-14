@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "postbuild": "node scripts/prepare-gh-pages.cjs",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist --dotfiles",
     "lint": "oxlint",
     "preview": "vite preview"
   },
@@ -22,6 +24,7 @@
     "@vitejs/plugin-react": "^6.1.0",
     "archiver": "^8.0.0",
     "autoprefixer": "^10.5.5",
+    "gh-pages": "^6.3.0",
     "jsdom": "^30.0.1",
     "oxlint": "^1.79.0",
     "postcss": "^8.5.28",
