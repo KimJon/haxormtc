@@ -179,16 +179,12 @@
 
 /* =========================================================================
    TEXT VISIBILITY & CONTRAST ENGINE
-   Prevents white text on white backgrounds and dark text on dark backgrounds.
    ========================================================================= */
 
-/* Default base typography colors */
-h1, h2, h3, h4, h5, h6 {
-  color: #111111;
-}
-
-p {
-  color: #334155;
+/* Headings and body elements naturally inherit color so that any text-white,
+   text-slate-200, text-black, or parent container text color flows cleanly without conflicts */
+h1, h2, h3, h4, h5, h6, p, span {
+  color: inherit;
 }
 
 /* Explicit Dark Containers & Sections */
@@ -203,54 +199,14 @@ footer,
   color: #FFFFFF;
 }
 
-.dark-section h1, .dark-section h2, .dark-section h3, .dark-section h4,
-footer h1, footer h2, footer h3, footer h4,
-.bg-black h1, .bg-black h2, .bg-black h3,
-.bg-\[\#111111\] h1, .bg-\[\#111111\] h2, .bg-\[\#111111\] h3,
-.bg-neutral-900 h1, .bg-neutral-900 h2, .bg-neutral-900 h3,
-.bg-slate-900 h1, .bg-slate-900 h2, .bg-slate-900 h3,
-.clarity-h1-dark {
-  color: #FFFFFF !important;
-}
-
-.dark-section p,
-footer p,
-.bg-black p,
-.bg-\[\#111111\] p,
-.bg-neutral-900 p,
-.bg-slate-900 p {
-  color: rgba(255, 255, 255, 0.88);
-}
-
-/* Light Containers & Cards ALWAYS Enforce Dark Legible Text (Even inside dark parents) */
-.light-section,
-.clean-card,
+/* Explicit Light Containers */
 .bg-white,
-.bg-slate-50,
-.bg-slate-100,
-.bg-\[\#F4F5F7\] {
+.clean-card,
+.light-section {
   color: #111111;
 }
 
-.light-section h1, .light-section h2, .light-section h3, .light-section h4, .light-section h5, .light-section h6,
-.clean-card h1, .clean-card h2, .clean-card h3, .clean-card h4, .clean-card h5, .clean-card h6,
-.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
-.bg-slate-50 h1, .bg-slate-50 h2, .bg-slate-50 h3, .bg-slate-50 h4,
-.bg-slate-100 h1, .bg-slate-100 h2, .bg-slate-100 h3, .bg-slate-100 h4,
-.bg-\[\#F4F5F7\] h1, .bg-\[\#F4F5F7\] h2, .bg-\[\#F4F5F7\] h3, .bg-\[\#F4F5F7\] h4 {
-  color: #111111 !important;
-}
-
-.light-section p,
-.clean-card p,
-.bg-white p,
-.bg-slate-50 p,
-.bg-slate-100 p,
-.bg-\[\#F4F5F7\] p {
-  color: #334155 !important;
-}
-
-/* Explicit Tailwind color utility classes must always retain absolute priority */
+/* Explicit Tailwind color utility classes always have absolute priority */
 .text-white { color: #FFFFFF !important; }
 .text-slate-100 { color: #F1F5F9 !important; }
 .text-slate-200 { color: #E2E8F0 !important; }

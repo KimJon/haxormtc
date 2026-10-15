@@ -600,7 +600,7 @@ export default function Home() {
                   Briefing Template &amp; Scoping Playbook
                 </h2>
 
-                <p className="text-base text-slate-300 leading-relaxed">
+                <p className="text-base text-slate-200 leading-relaxed font-normal">
                   If you’re unsure about the type of technical information you’ll need to provide an implementation partner like ourselves to deliver successful CRM &amp; automation projects, we’ve produced a comprehensive briefing template you can use as a starting point.
                 </p>
 
@@ -635,11 +635,11 @@ export default function Home() {
                 </h3>
               </div>
 
-              <div className="lg:col-span-8 space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
-                <p>
+              <div className="lg:col-span-8 space-y-4 text-sm sm:text-base leading-relaxed">
+                <p className="text-slate-200 font-normal">
                   Our services, including CRM implementation, workflow automation, and custom API integrations, are widely used capabilities that we weave together for our clients to build a comprehensive operations engine that supports sustainable and predictable growth.
                 </p>
-                <p>
+                <p className="text-slate-200 font-normal">
                   We use our combined software engineering and agency delivery experience of working in and for B2B technology companies with often long, considered &amp; complex sales cycles to deliver results for marketers and business operators like you.
                 </p>
               </div>
