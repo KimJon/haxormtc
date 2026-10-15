@@ -63,7 +63,7 @@ export default function IntegrationsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-[#111111] font-sans antialiased flex flex-col selection:bg-black selection:text-white">
+    <div className="min-h-screen bg-white text-[#111111] font-sans antialiased flex flex-col selection:bg-slate-200 selection:text-black">
       <TopTicker />
       <Navbar />
 

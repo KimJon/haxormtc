@@ -177,43 +177,91 @@
   background-color: #111111 !important;
 }
 
-/* Dark Container Text Color Inversion for Universal Visibility */
+/* =========================================================================
+   TEXT VISIBILITY & CONTRAST ENGINE
+   Prevents white text on white backgrounds and dark text on dark backgrounds.
+   ========================================================================= */
+
+/* Default base typography colors */
+h1, h2, h3, h4, h5, h6 {
+  color: #111111;
+}
+
+p {
+  color: #334155;
+}
+
+/* Explicit Dark Containers & Sections */
 .dark-section,
-[class*="bg-black"],
-[class*="bg-[#111111]"],
-[class*="bg-[#0B0F19]"],
-[class*="bg-neutral-900"],
-[class*="bg-slate-900"],
-[class*="bg-slate-950"],
-[class*="from-black"] {
+footer,
+.bg-black,
+.bg-\[\#111111\],
+.bg-\[\#0B0F19\],
+.bg-neutral-900,
+.bg-slate-900,
+.bg-slate-950 {
   color: #FFFFFF;
 }
 
-.dark-section h1, .dark-section h2, .dark-section h3, .dark-section h4, .dark-section .clarity-h1, .dark-section .clarity-h2, .dark-section .clarity-h3,
-[class*="bg-black"] h1, [class*="bg-black"] h2, [class*="bg-black"] h3, [class*="bg-black"] h4, [class*="bg-black"] .clarity-h1, [class*="bg-black"] .clarity-h2, [class*="bg-black"] .clarity-h3,
-[class*="bg-[#111111]"] h1, [class*="bg-[#111111]"] h2, [class*="bg-[#111111]"] h3, [class*="bg-[#111111]"] h4, [class*="bg-[#111111]"] .clarity-h1, [class*="bg-[#111111]"] .clarity-h2, [class*="bg-[#111111]"] .clarity-h3,
-[class*="bg-[#0B0F19]"] h1, [class*="bg-[#0B0F19]"] h2, [class*="bg-[#0B0F19]"] h3, [class*="bg-[#0B0F19]"] h4, [class*="bg-[#0B0F19]"] .clarity-h1, [class*="bg-[#0B0F19]"] .clarity-h2, [class*="bg-[#0B0F19]"] .clarity-h3,
-[class*="bg-neutral-900"] h1, [class*="bg-neutral-900"] h2, [class*="bg-neutral-900"] h3, [class*="bg-neutral-900"] h4, [class*="bg-neutral-900"] .clarity-h1, [class*="bg-neutral-900"] .clarity-h2, [class*="bg-neutral-900"] .clarity-h3,
-[class*="bg-slate-900"] h1, [class*="bg-slate-900"] h2, [class*="bg-slate-900"] h3, [class*="bg-slate-900"] h4, [class*="bg-slate-900"] .clarity-h1, [class*="bg-slate-900"] .clarity-h2, [class*="bg-slate-900"] .clarity-h3,
-[class*="from-black"] h1, [class*="from-black"] h2, [class*="from-black"] h3, [class*="from-black"] h4, [class*="from-black"] .clarity-h1, [class*="from-black"] .clarity-h2, [class*="from-black"] .clarity-h3,
+.dark-section h1, .dark-section h2, .dark-section h3, .dark-section h4,
+footer h1, footer h2, footer h3, footer h4,
+.bg-black h1, .bg-black h2, .bg-black h3,
+.bg-\[\#111111\] h1, .bg-\[\#111111\] h2, .bg-\[\#111111\] h3,
+.bg-neutral-900 h1, .bg-neutral-900 h2, .bg-neutral-900 h3,
+.bg-slate-900 h1, .bg-slate-900 h2, .bg-slate-900 h3,
 .clarity-h1-dark {
   color: #FFFFFF !important;
 }
 
 .dark-section p,
-[class*="bg-black"] p,
-[class*="bg-[#111111]"] p,
-[class*="bg-neutral-900"] p,
-[class*="bg-slate-900"] p,
-[class*="from-black"] p {
+footer p,
+.bg-black p,
+.bg-\[\#111111\] p,
+.bg-neutral-900 p,
+.bg-slate-900 p {
   color: rgba(255, 255, 255, 0.88);
 }
 
-[class*="bg-black"] textarea, [class*="bg-[#111111]"] textarea {
-  color: #FFFFFF !important;
-  background-color: #1a1a1a !important;
-  border-color: #333333 !important;
+/* Light Containers & Cards ALWAYS Enforce Dark Legible Text (Even inside dark parents) */
+.light-section,
+.clean-card,
+.bg-white,
+.bg-slate-50,
+.bg-slate-100,
+.bg-\[\#F4F5F7\] {
+  color: #111111;
 }
+
+.light-section h1, .light-section h2, .light-section h3, .light-section h4, .light-section h5, .light-section h6,
+.clean-card h1, .clean-card h2, .clean-card h3, .clean-card h4, .clean-card h5, .clean-card h6,
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
+.bg-slate-50 h1, .bg-slate-50 h2, .bg-slate-50 h3, .bg-slate-50 h4,
+.bg-slate-100 h1, .bg-slate-100 h2, .bg-slate-100 h3, .bg-slate-100 h4,
+.bg-\[\#F4F5F7\] h1, .bg-\[\#F4F5F7\] h2, .bg-\[\#F4F5F7\] h3, .bg-\[\#F4F5F7\] h4 {
+  color: #111111 !important;
+}
+
+.light-section p,
+.clean-card p,
+.bg-white p,
+.bg-slate-50 p,
+.bg-slate-100 p,
+.bg-\[\#F4F5F7\] p {
+  color: #334155 !important;
+}
+
+/* Explicit Tailwind color utility classes must always retain absolute priority */
+.text-white { color: #FFFFFF !important; }
+.text-slate-100 { color: #F1F5F9 !important; }
+.text-slate-200 { color: #E2E8F0 !important; }
+.text-slate-300 { color: #CBD5E1 !important; }
+.text-slate-400 { color: #94A3B8 !important; }
+.text-slate-500 { color: #64748B !important; }
+.text-slate-600 { color: #475569 !important; }
+.text-slate-700 { color: #334155 !important; }
+.text-slate-800 { color: #1E293B !important; }
+.text-slate-900 { color: #0F172A !important; }
+.text-black { color: #000000 !important; }
 
 /* Crisp, high-end white card styling */
 .clean-card {
