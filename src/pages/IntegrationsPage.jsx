@@ -107,22 +107,44 @@ export default function IntegrationsPage() {
               </Link>
             </div>
 
+            {/* Protocols & Connectors Chips */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-2">
+              <span className="text-[11px] uppercase tracking-wider text-slate-600 font-semibold mr-1">
+                Supported Protocols:
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                REST APIs &amp; Webhooks
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                GraphQL Endpoints
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                OAuth 2.0 &amp; HMAC Auth
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Stripe &amp; Payment Hooks
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                PostgreSQL &amp; MySQL Sync
+              </span>
+            </div>
+
             {/* Clean Monochrome Trust Indicators */}
-            <div className="pt-8 flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-500">
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs font-medium text-slate-600">
               <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> REST APIs &amp; Webhooks
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> Sub-200ms Latency
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> Website-to-CRM Sync
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> Automated Dead-Letter Queue
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> Payment Gateway Hooks
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> End-to-End Encryption
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> Automated Retry &amp; Dead-Letter Queue
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> Swagger / Postman Specs
               </span>
             </div>
 

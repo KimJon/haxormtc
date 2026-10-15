@@ -239,28 +239,28 @@ export default function GoogleFamilyLinkPage() {
 
                 {/* Key Metric Badges */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 max-w-xl">
-                  <div className="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Per-Device Rate</div>
-                    <div className="text-xl font-extrabold text-brand-cyanDeep font-mono mt-0.5">
+                  <div className="p-3.5 rounded-2xl bg-white border border-slate-200 clean-card-hover transition">
+                    <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Per-Device Rate</div>
+                    <div className="text-xl font-light text-black font-work-sans mt-0.5">
                       {fmt(convertPrice(1000))}
                     </div>
-                    <div className="text-[11px] text-slate-500">Custom volume discounts</div>
+                    <div className="text-[11px] text-slate-500">Volume school discounts</div>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Safe Content</div>
-                    <div className="text-xl font-extrabold text-emerald-700 font-mono mt-0.5">
+                  <div className="p-3.5 rounded-2xl bg-white border border-slate-200 clean-card-hover transition">
+                    <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Content Security</div>
+                    <div className="text-xl font-light text-black font-work-sans mt-0.5">
                       100% SafeSearch
                     </div>
-                    <div className="text-[11px] text-slate-500">Adult & betting sites blocked</div>
+                    <div className="text-[11px] text-slate-500">Adult &amp; gaming blocked</div>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xs col-span-2 sm:col-span-1">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Deployment</div>
-                    <div className="text-xl font-extrabold text-slate-900 font-mono mt-0.5">
-                      Nationwide
+                  <div className="p-3.5 rounded-2xl bg-white border border-slate-200 clean-card-hover transition col-span-2 sm:col-span-1">
+                    <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Deployment</div>
+                    <div className="text-xl font-light text-black font-work-sans mt-0.5">
+                      Turnkey Setup
                     </div>
-                    <div className="text-[11px] text-slate-500">Remote & on-site PTA sessions</div>
+                    <div className="text-[11px] text-slate-500">Remote &amp; on-site sessions</div>
                   </div>
                 </div>
 

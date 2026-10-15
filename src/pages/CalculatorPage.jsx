@@ -46,19 +46,46 @@ export default function CalculatorPage() {
               Select any combination of services to configure your package. Select 3 or more services to automatically unlock an instant <strong>10% Bundle Discount</strong>.
             </p>
 
+            {/* Quick Actions */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="#calculator"
+                className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-[#111111] hover:bg-black transition flex items-center gap-2 shadow-sm"
+              >
+                <Calculator className="w-4 h-4 text-white" />
+                <span>Configure Your Bundle Below</span>
+              </a>
+
+              <a
+                href={customConsultUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-800 hover:text-black bg-white hover:bg-slate-50 border border-slate-300 transition flex items-center gap-2"
+              >
+                <MessageSquare className="w-4 h-4 fill-slate-800 shrink-0" />
+                <span>Custom Scoping Desk</span>
+              </a>
+            </div>
+
             {/* Value Guarantees Banner */}
-            <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs font-semibold text-slate-700">
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs font-semibold text-slate-700">
               <div className="flex items-center gap-1.5">
                 <Percent className="w-4 h-4 text-black" />
                 <span>10% Off 3+ Bundles</span>
               </div>
+              <span className="text-slate-300 hidden sm:inline">•</span>
               <div className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-black" />
                 <span>Zero Hidden Fees</span>
               </div>
+              <span className="text-slate-300 hidden sm:inline">•</span>
               <div className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4 text-black" />
                 <span>30% Start → 40% Design → 30% Launch</span>
+              </div>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <div className="flex items-center gap-1.5 text-slate-600 font-normal">
+                <span>Real-time currency exchange rates</span>
               </div>
             </div>
           </div>

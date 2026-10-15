@@ -69,36 +69,36 @@ export default function BusinessKitsPage() {
 
             {/* 4 Pillars Highlight Pills */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto pt-2 text-left">
-              <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs">
-                <div className="w-8 h-8 rounded-xl bg-cyan-50 text-brand-cyanDeep flex items-center justify-center mb-2">
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 clean-card-hover transition">
+                <div className="w-8 h-8 rounded-xl bg-slate-100 text-black flex items-center justify-center mb-2">
                   <Globe className="w-4 h-4" />
                 </div>
                 <div className="text-xs font-bold text-slate-900">1. Digital Presence</div>
-                <p className="text-[11px] text-slate-500 mt-1">Web, Google Maps 3-Pack, Verified GMB & WhatsApp routing.</p>
+                <p className="text-[11px] text-slate-500 mt-1">Web, Google Maps 3-Pack, Verified GMB &amp; WhatsApp routing.</p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs">
-                <div className="w-8 h-8 rounded-xl bg-green-50 text-brand-green flex items-center justify-center mb-2">
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 clean-card-hover transition">
+                <div className="w-8 h-8 rounded-xl bg-slate-100 text-black flex items-center justify-center mb-2">
                   <CreditCard className="w-4 h-4" />
                 </div>
-                <div className="text-xs font-bold text-slate-900">2. Sales & Checkout</div>
-                <p className="text-[11px] text-slate-500 mt-1">POS, E-Commerce, 0% commission booking & Stripe/Card gateways.</p>
+                <div className="text-xs font-bold text-slate-900">2. Sales &amp; Checkout</div>
+                <p className="text-[11px] text-slate-500 mt-1">POS, E-Commerce, 0% commission booking &amp; Stripe/Card gateways.</p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs">
-                <div className="w-8 h-8 rounded-xl bg-purple-50 text-brand-purple flex items-center justify-center mb-2">
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 clean-card-hover transition">
+                <div className="w-8 h-8 rounded-xl bg-slate-100 text-black flex items-center justify-center mb-2">
                   <Settings className="w-4 h-4" />
                 </div>
                 <div className="text-xs font-bold text-slate-900">3. Operations</div>
-                <p className="text-[11px] text-slate-500 mt-1">Industry-specific PMS, ERP, inventory, staff & guest management.</p>
+                <p className="text-[11px] text-slate-500 mt-1">Industry-specific PMS, ERP, inventory, staff &amp; guest management.</p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs">
-                <div className="w-8 h-8 rounded-xl bg-coral-50 text-brand-coral flex items-center justify-center mb-2">
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 clean-card-hover transition">
+                <div className="w-8 h-8 rounded-xl bg-slate-100 text-black flex items-center justify-center mb-2">
                   <TrendingUp className="w-4 h-4" />
                 </div>
                 <div className="text-xs font-bold text-slate-900">4. Growth Engine</div>
-                <p className="text-[11px] text-slate-500 mt-1">Local SEO, Google Ads search intent, reviews & re-engagement.</p>
+                <p className="text-[11px] text-slate-500 mt-1">Local SEO, Google Ads search intent, reviews &amp; re-engagement.</p>
               </div>
             </div>
 
@@ -106,7 +106,7 @@ export default function BusinessKitsPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <a
                 href="#business-kits"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-slate-900 hover:bg-slate-800 transition flex items-center justify-center gap-2 shadow-xs"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-sm font-semibold text-white bg-black hover:bg-neutral-800 transition flex items-center justify-center gap-2 shadow-sm"
               >
                 <Search className="w-4 h-4" />
                 <span>Search All 40 Industry Kits</span>
@@ -116,10 +116,10 @@ export default function BusinessKitsPage() {
                 href={generalWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-brand-green hover:bg-[#20ba5a] transition flex items-center justify-center gap-2 shadow-glow-whatsapp"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-sm font-semibold text-slate-800 hover:text-black bg-white hover:bg-slate-50 border border-slate-300 transition flex items-center justify-center gap-2"
               >
-                <MessageSquare className="w-4 h-4 fill-white shrink-0" />
-                <span>WhatsApp</span>
+                <MessageSquare className="w-4 h-4 fill-slate-800 shrink-0" />
+                <span>Inquire on WhatsApp</span>
               </a>
             </div>
 

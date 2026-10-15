@@ -34,8 +34,8 @@ export default function ContactPage() {
         <section className="pt-20 pb-16 md:pt-28 md:pb-24 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-black" />
-              <span>Direct Communication &amp; Support</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>Solutions Architects Online • GMT, CET &amp; AEST Overlap</span>
             </div>
 
             <h1 className="clarity-h1 max-w-4xl mx-auto">
@@ -45,6 +45,21 @@ export default function ContactPage() {
             <p className="clarity-text max-w-2xl mx-auto text-slate-600">
               Have a CRM implementation, workflow automation, or agency white-label technical delivery project in mind? Connect directly with our solutions architects and delivery leads.
             </p>
+
+            {/* Reassurance Strip */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-600 font-medium">
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                ⚡ Typical reply under 15 minutes
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                🛡️ Strict bilateral NDA guaranteed
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                📄 Free initial technical scoping
+              </span>
+            </div>
 
             {/* Quick Contact Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto pt-6 text-left">

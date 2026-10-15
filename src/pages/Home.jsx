@@ -114,23 +114,49 @@ export default function Home() {
                 to="/services"
                 className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-black bg-white hover:bg-slate-50 border border-slate-300 hover:border-black transition-all flex items-center justify-center gap-2"
               >
-                <span>Our Services</span>
+                <span>Explore Services</span>
                 <span>→</span>
               </Link>
             </div>
 
-            {/* Clean Monochrome Trust Indicators */}
-            <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-500">
-              <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> Practical implementation
+            {/* Quick Proof Metrics Strip */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-700 font-medium">
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                <Clock className="w-3.5 h-3.5 text-black" /> 24–48h Kickoff
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
-              <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> Clear communication
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> 99.8% System SLA
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
-              <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> Documented delivery
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> Strict Bilateral NDA
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> 100% Code Ownership
+              </span>
+            </div>
+
+            {/* Supported Platforms Micro-Pill Bar */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+              <span className="text-[11px] uppercase tracking-wider text-slate-600 font-semibold mr-1">
+                Certified Delivery:
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+                <ZohoLogo className="h-3.5 w-auto" /> Zoho One &amp; CRM
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+                <OdooLogo className="h-3.5 w-auto" /> Odoo ERP
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+                <HubSpotLogo className="h-3.5 w-3.5" /> HubSpot
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+                <GoogleAdsLogo className="h-3.5 w-3.5" /> Google Cloud
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+                <StripeLogo className="h-3 w-auto" /> Stripe Billing
               </span>
             </div>
 

@@ -55,7 +55,7 @@
     font-weight: 300 !important;
     line-height: 55px;
     letter-spacing: -1.82px;
-    color: #000000;
+    color: currentColor;
   }
 
   @media (max-width: 768px) {
@@ -72,7 +72,7 @@
     font-weight: 300 !important;
     line-height: 44px;
     letter-spacing: -1.4px;
-    color: #000000;
+    color: currentColor;
   }
 
   @media (max-width: 768px) {
@@ -89,13 +89,13 @@
     font-weight: 400 !important;
     line-height: 28px;
     letter-spacing: -0.6px;
-    color: #000000;
+    color: currentColor;
   }
 
   h4, h5, h6 {
     font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
     letter-spacing: -0.5px;
-    color: #000000;
+    color: currentColor;
   }
 
   /* Text Areas & User Defined Body Text Specification */
@@ -119,7 +119,6 @@
   font-weight: 300 !important;
   line-height: 55px !important;
   letter-spacing: -1.82px !important;
-  color: #000000;
 }
 
 @media (max-width: 768px) {
@@ -136,7 +135,6 @@
   font-weight: 300 !important;
   line-height: 44px !important;
   letter-spacing: -1.4px !important;
-  color: #000000;
 }
 
 @media (max-width: 768px) {
@@ -147,12 +145,19 @@
   }
 }
 
+.clarity-h3 {
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+  letter-spacing: -0.6px !important;
+}
+
 .clarity-text, .body-figtree {
   font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
-  color: #111111;
 }
 
 .clarity-text-dark {
@@ -172,14 +177,36 @@
   background-color: #111111 !important;
 }
 
-/* Dark Section Inversion for Clarity */
-.dark-section h1, .dark-section h2, .dark-section h3,
-[class*="bg-black"] h1, [class*="bg-black"] h2, [class*="bg-black"] h3,
-[class*="bg-[#111111]"] h1, [class*="bg-[#111111]"] h2, [class*="bg-[#111111]"] h3,
-[class*="bg-[#0B0F19]"] h1, [class*="bg-[#0B0F19]"] h2, [class*="bg-[#0B0F19]"] h3,
-[class*="bg-neutral-900"] h1, [class*="bg-neutral-900"] h2, [class*="bg-neutral-900"] h3,
+/* Dark Container Text Color Inversion for Universal Visibility */
+.dark-section,
+[class*="bg-black"],
+[class*="bg-[#111111]"],
+[class*="bg-[#0B0F19]"],
+[class*="bg-neutral-900"],
+[class*="bg-slate-900"],
+[class*="bg-slate-950"],
+[class*="from-black"] {
+  color: #FFFFFF;
+}
+
+.dark-section h1, .dark-section h2, .dark-section h3, .dark-section h4, .dark-section .clarity-h1, .dark-section .clarity-h2, .dark-section .clarity-h3,
+[class*="bg-black"] h1, [class*="bg-black"] h2, [class*="bg-black"] h3, [class*="bg-black"] h4, [class*="bg-black"] .clarity-h1, [class*="bg-black"] .clarity-h2, [class*="bg-black"] .clarity-h3,
+[class*="bg-[#111111]"] h1, [class*="bg-[#111111]"] h2, [class*="bg-[#111111]"] h3, [class*="bg-[#111111]"] h4, [class*="bg-[#111111]"] .clarity-h1, [class*="bg-[#111111]"] .clarity-h2, [class*="bg-[#111111]"] .clarity-h3,
+[class*="bg-[#0B0F19]"] h1, [class*="bg-[#0B0F19]"] h2, [class*="bg-[#0B0F19]"] h3, [class*="bg-[#0B0F19]"] h4, [class*="bg-[#0B0F19]"] .clarity-h1, [class*="bg-[#0B0F19]"] .clarity-h2, [class*="bg-[#0B0F19]"] .clarity-h3,
+[class*="bg-neutral-900"] h1, [class*="bg-neutral-900"] h2, [class*="bg-neutral-900"] h3, [class*="bg-neutral-900"] h4, [class*="bg-neutral-900"] .clarity-h1, [class*="bg-neutral-900"] .clarity-h2, [class*="bg-neutral-900"] .clarity-h3,
+[class*="bg-slate-900"] h1, [class*="bg-slate-900"] h2, [class*="bg-slate-900"] h3, [class*="bg-slate-900"] h4, [class*="bg-slate-900"] .clarity-h1, [class*="bg-slate-900"] .clarity-h2, [class*="bg-slate-900"] .clarity-h3,
+[class*="from-black"] h1, [class*="from-black"] h2, [class*="from-black"] h3, [class*="from-black"] h4, [class*="from-black"] .clarity-h1, [class*="from-black"] .clarity-h2, [class*="from-black"] .clarity-h3,
 .clarity-h1-dark {
   color: #FFFFFF !important;
+}
+
+.dark-section p,
+[class*="bg-black"] p,
+[class*="bg-[#111111]"] p,
+[class*="bg-neutral-900"] p,
+[class*="bg-slate-900"] p,
+[class*="from-black"] p {
+  color: rgba(255, 255, 255, 0.88);
 }
 
 [class*="bg-black"] textarea, [class*="bg-[#111111]"] textarea {

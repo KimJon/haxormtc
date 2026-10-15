@@ -17,19 +17,28 @@ import {
   ArrowRight, 
   MessageSquare, 
   Sparkles, 
-  QrCode 
+  QrCode,
+  ShieldCheck,
+  Clock,
+  Layers,
+  Lock,
+  Zap
 } from 'lucide-react';
 
 export default function SoftwarePage() {
+  const whatsAppSoftwareUrl = createWhatsAppUrl(
+    "Hello Haxor MTC, I am looking for enterprise software solutions and would like to request a demo or architecture consultation."
+  );
+
   const getIcon = (id) => {
     switch (id) {
-      case 'haxpos': return <Store className="w-6 h-6 text-brand-cyanDeep" />;
-      case 'elittego': return <Truck className="w-6 h-6 text-brand-coral" />;
-      case 'haxone': return <Hotel className="w-6 h-6 text-brand-goldDeep" />;
-      case 'hospital-system': return <Activity className="w-6 h-6 text-brand-green" />;
-      case 'odoo-expert': return <Database className="w-6 h-6 text-purple-600" />;
-      case 'zoho-expert': return <Cpu className="w-6 h-6 text-amber-600" />;
-      default: return <Store className="w-6 h-6 text-brand-cyanDeep" />;
+      case 'haxpos': return <Store className="w-6 h-6 text-black" />;
+      case 'elittego': return <Truck className="w-6 h-6 text-black" />;
+      case 'haxone': return <Hotel className="w-6 h-6 text-black" />;
+      case 'hospital-system': return <Activity className="w-6 h-6 text-black" />;
+      case 'odoo-expert': return <Database className="w-6 h-6 text-black" />;
+      case 'zoho-expert': return <Cpu className="w-6 h-6 text-black" />;
+      default: return <Store className="w-6 h-6 text-black" />;
     }
   };
 
@@ -42,7 +51,8 @@ export default function SoftwarePage() {
         
         {/* Page Header */}
         <section className="pt-20 pb-16 md:pt-28 md:pb-24 bg-white border-b border-slate-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-black" />
               <span>Enterprise &amp; SME Business Platforms</span>
@@ -55,6 +65,68 @@ export default function SoftwarePage() {
             <p className="clarity-text max-w-2xl mx-auto text-slate-600">
               Engineered for high-traffic retail, hospitality, clinics, and multi-branch operations worldwide, with specialized localized regional platforms like ElitteGo.
             </p>
+
+            {/* Action Buttons */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href={whatsAppSoftwareUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-[#111111] hover:bg-black transition flex items-center gap-2 shadow-sm"
+              >
+                <MessageSquare className="w-4 h-4 fill-white shrink-0" />
+                <span>Request Platform Demo</span>
+              </a>
+
+              <Link
+                to="/contact"
+                className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-800 hover:text-black bg-white hover:bg-slate-50 border border-slate-300 transition flex items-center gap-2"
+              >
+                <span>Custom Architecture Scoping</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Trust Reassurance Indicators */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-600 font-medium">
+              <span className="flex items-center gap-1.5">
+                <Zap className="w-3.5 h-3.5 text-black" /> Offline-First POS Engine
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5">
+                <Layers className="w-3.5 h-3.5 text-black" /> Multi-Branch Inventory Sync
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5">
+                <Lock className="w-3.5 h-3.5 text-black" /> 100% Data &amp; Source Code Ownership
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> White-Label Reseller Rights
+              </span>
+            </div>
+
+            {/* Platform Feature Chips */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Cloud POS (HaxPOS)
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Hospitality PMS (HaxOne)
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Regional Logistics (ElitteGo)
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Hospital EHR System
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Odoo ERP Deployments
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Zoho Creator Custom Apps
+              </span>
+            </div>
 
             {/* Humanized POS & Cloud Software Showcase Image */}
             <div className="pt-10 max-w-5xl mx-auto">

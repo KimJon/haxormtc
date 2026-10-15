@@ -163,7 +163,14 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} <strong>Haxor MTC</strong> ({CONTACT_INFO.domain}). All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+            <button
+              onClick={() => window.dispatchEvent(new Event('open-cookie-preferences'))}
+              className="text-slate-400 hover:text-white transition underline cursor-pointer"
+            >
+              Cookie Preferences
+            </button>
+            <span>•</span>
             <span className="text-slate-400 font-medium">{CONTACT_INFO.domain}</span>
             <span>•</span>
             <span className="text-slate-400">White-Label Technical Delivery Partner</span>

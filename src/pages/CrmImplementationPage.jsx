@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { createWhatsAppUrl } from '../data/servicesData';
 import { useCurrency } from '../context/CurrencyContext';
+import { ZohoLogo, OdooLogo, HubSpotLogo } from '../components/OfficialLogos';
 
 export default function CrmImplementationPage() {
   const { formatPrice } = useCurrency();
@@ -105,22 +106,38 @@ export default function CrmImplementationPage() {
               </Link>
             </div>
 
+            {/* Supported Platforms Micro-Pill Bar */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+              <span className="text-[11px] uppercase tracking-wider text-slate-600 font-semibold mr-1">
+                Supported Platforms:
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+                <ZohoLogo className="h-3.5 w-auto" /> Zoho One &amp; CRM
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+                <OdooLogo className="h-3.5 w-auto" /> Odoo Community &amp; Enterprise
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+                <HubSpotLogo className="h-3.5 w-3.5" /> HubSpot Sales Hub
+              </span>
+            </div>
+
             {/* Clean Monochrome Trust Indicators */}
-            <div className="pt-8 flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-500">
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs font-medium text-slate-600">
               <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> Zoho One &amp; CRM Certified
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> Zero Data Loss Migration
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> Odoo Community &amp; Enterprise
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> Custom Field &amp; Entity Schemas
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> HubSpot Sales Hub
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> Real-Time Executive Dashboards
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> Zero Data Loss Guarantee
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> Complete Staff Training &amp; Video SOPs
               </span>
             </div>
 

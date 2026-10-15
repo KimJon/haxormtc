@@ -16,7 +16,7 @@ import CrmImplementationPage from './pages/CrmImplementationPage';
 import BusinessAutomationPage from './pages/BusinessAutomationPage';
 import IntegrationsPage from './pages/IntegrationsPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
-import ServiceDiscoveryToast from './components/ServiceDiscoveryToast';
+import CookieConsentBanner from './components/CookieConsentBanner';
 
 import { CurrencyProvider } from './context/CurrencyContext';
 
@@ -83,7 +83,7 @@ function App() {
       <CurrencyProvider>
       <ScrollToTop />
       <ScrollToTopButton />
-      <ServiceDiscoveryToast />
+      <CookieConsentBanner />
       <Routes>
         {/* Main Universal Landing Page */}
         <Route path="/" element={<Home />} />

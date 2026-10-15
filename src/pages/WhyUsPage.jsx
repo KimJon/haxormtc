@@ -70,6 +70,41 @@ export default function WhyUsPage() {
               </Link>
             </div>
 
+            {/* Value Pillars & Reassurance Strip */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-600 font-medium">
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                ⚡ Fast 24–48h Turnaround
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                🛡️ 100% White-Label NDA Protected
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                🔒 Zero Vendor Lock-In
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                📄 40–60% Agency Margins
+              </span>
+            </div>
+
+            {/* Delivery Reassurance Micro-Chips */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Milestone-Driven Sprints
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Direct Lead Engineer Access
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Daily Async Standups
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Staging Server QA Approvals
+              </span>
+            </div>
+
             {/* Humanized Architecture & Dashboard Showcase Image */}
             <div className="pt-10 max-w-5xl mx-auto">
               <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 group">

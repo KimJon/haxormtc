@@ -134,6 +134,44 @@ export default function AboutPage() {
               </Link>
             </div>
 
+            {/* Global Operational Coverage & Standards Strip */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-600 font-medium">
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                🌐 Timezones: London (GMT) • Berlin (CET) • Sydney (AEST)
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                🛡️ 100% White-Label Protected
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                🔒 Strict Bilateral NDAs
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                📄 Zero Vendor Lock-In
+              </span>
+            </div>
+
+            {/* Core Competencies Micro-Chips */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Enterprise CRM Architectures
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                ERP Implementations (Odoo)
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Event-Driven Webhook Pipelines
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Agency White-Label Retainers
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Custom Microservices &amp; APIs
+              </span>
+            </div>
+
             {/* Dedicated Showcase Image - Zero Duplication */}
             <div className="pt-10 max-w-5xl mx-auto">
               <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 group">

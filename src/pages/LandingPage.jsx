@@ -147,10 +147,10 @@ export default function LandingPage() {
                   href={primaryWhatsAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3.5 px-5 rounded-xl text-sm font-semibold text-white bg-brand-green hover:bg-[#20ba5a] shadow-glow-whatsapp flex items-center justify-center gap-2 transition transform hover:-translate-y-0.5"
+                  className="w-full py-3.5 px-5 rounded-xl text-sm font-semibold text-white bg-[#111111] hover:bg-black flex items-center justify-center gap-2 transition"
                 >
                   <MessageSquare className="w-4 h-4 fill-white" />
-                  <span>Order via <strong className="font-extrabold underline decoration-white/40">WhatsApp</strong></span>
+                  <span>Order via <strong>WhatsApp</strong></span>
                 </a>
 
                 <a
@@ -165,25 +165,25 @@ export default function LandingPage() {
 
           {/* Milestone Payment Assurance Banner if applicable */}
           {page.milestonePayment && (
-            <div className="max-w-2xl mx-auto p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200/80 text-emerald-900 flex items-center justify-center gap-2 text-xs sm:text-sm font-bold shadow-xs">
-              <ShieldCheck className="w-4 h-4 text-brand-green shrink-0" />
+            <div className="max-w-2xl mx-auto p-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-800 flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold">
+              <ShieldCheck className="w-4 h-4 text-slate-900 shrink-0" />
               <span>Risk-Free Milestone Payments: <strong>{page.milestonePayment}</strong></span>
             </div>
           )}
 
           {/* Trust points */}
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-600">
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-6 text-xs font-semibold text-slate-700">
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-brand-green" />
-              Stripe, PayPal & Bank Transfer
+              <CheckCircle2 className="w-4 h-4 text-slate-900" />
+              Stripe, PayPal & Bank Wire
             </span>
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-brand-cyanDeep" />
+              <CheckCircle2 className="w-4 h-4 text-slate-900" />
               Transparent Milestone Billing
             </span>
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-brand-coral" />
-              Global Remote Delivery
+              <CheckCircle2 className="w-4 h-4 text-slate-900" />
+              Global Remote Delivery (GMT, CET, AEST)
             </span>
           </div>
 

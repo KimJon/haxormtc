@@ -20,12 +20,21 @@ import {
   Sparkles, 
   Layers,
   Cpu,
-  Workflow
+  Workflow,
+  ShieldCheck,
+  Clock,
+  Lock,
+  GitBranch
 } from 'lucide-react';
+import { ZohoLogo, OdooLogo, GoogleAdsLogo, MetaPixelLogo, StripeLogo } from '../components/OfficialLogos';
 
 export default function ServicesPage() {
   const [activeCategory, setActiveCategory] = useState('all');
   const { formatPrice } = useCurrency();
+
+  const whatsAppServicesUrl = createWhatsAppUrl(
+    "Hello Haxor MTC, I am reviewing your services catalog and would like to scope a project."
+  );
 
   const filteredServices = activeCategory === 'all' 
     ? SERVICES 
@@ -38,9 +47,10 @@ export default function ServicesPage() {
 
       <main className="flex-grow">
         
-        {/* Page Header - Clarity Monochrome Minimalist */}
+        {/* Page Header - Rich Clarity Monochrome Hero */}
         <section className="pt-20 pb-16 md:pt-28 md:pb-24 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-black" />
               <span>Full Service Catalog &amp; Transparent Rates</span>
@@ -54,8 +64,70 @@ export default function ServicesPage() {
               Transparent wholesale sprint pricing and milestone contracts with zero hidden fees. Partner with Haxor MTC for CRM configuration, process automation, and full-stack software integrations.
             </p>
 
+            {/* Action Buttons */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href={whatsAppServicesUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-[#111111] hover:bg-black transition flex items-center gap-2 shadow-sm"
+              >
+                <MessageSquare className="w-4 h-4 fill-white shrink-0" />
+                <span>Scope on WhatsApp</span>
+              </a>
+
+              <Link
+                to="/contact"
+                className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-800 hover:text-black bg-white hover:bg-slate-50 border border-slate-300 transition flex items-center gap-2"
+              >
+                <span>Book Scoping Consultation</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Reassurance Trust Strip */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-600 font-medium">
+              <span className="flex items-center gap-1.5">
+                <Clock className="w-3.5 h-3.5 text-black" /> 24–48h Sprint Kickoff
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> 100% Milestone Approvals
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5">
+                <Lock className="w-3.5 h-3.5 text-black" /> Bilateral NDA Protected
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5">
+                <GitBranch className="w-3.5 h-3.5 text-black" /> Full Code &amp; Schema Handover
+              </span>
+            </div>
+
+            {/* Supported Platforms Micro-Pill Bar */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+              <span className="text-[11px] uppercase tracking-wider text-slate-600 font-semibold mr-1">
+                Supported Ecosystems:
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+                <ZohoLogo className="h-3.5 w-auto" /> Zoho One &amp; CRM
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+                <OdooLogo className="h-3.5 w-auto" /> Odoo ERP
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+                <GoogleAdsLogo className="h-3.5 w-3.5" /> Google Cloud
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+                <MetaPixelLogo className="h-3.5 w-3.5" /> Meta CAPI
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+                <StripeLogo className="h-3 w-auto" /> Stripe Billing
+              </span>
+            </div>
+
             {/* Category Filter Pills */}
-            <div className="flex flex-wrap items-center justify-center gap-2 pt-6">
+            <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat.id}

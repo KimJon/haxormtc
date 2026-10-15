@@ -93,18 +93,41 @@ export default function AgencyPartnersPage() {
               </Link>
             </div>
 
-            {/* Clean Monochrome Trust Indicators */}
-            <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-500">
-              <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> 100% White-Label &amp; NDA Protected
+            {/* Agency Value Metrics Strip */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-700 font-medium">
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> 40–60% Wholesale Agency Margins
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
-              <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> Zero Client Poaching Guarantee
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                <Lock className="w-3.5 h-3.5 text-black" /> 100% White-Label &amp; Bilateral NDA
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
-              <span className="flex items-center gap-1.5">
-                <span className="text-black font-bold">✓</span> Fixed Wholesale Sprint Rates
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                <Clock className="w-3.5 h-3.5 text-black" /> Overlap: GMT, CET, AEST &amp; EST
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5 font-semibold text-slate-900">
+                <ShieldCheck className="w-3.5 h-3.5 text-black" /> Zero Client Poaching Guarantee
+              </span>
+            </div>
+
+            {/* Agency Capability Tags */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-2">
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Zoho &amp; Odoo White-Label
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Turnkey Technical Sprints
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Dedicated Monthly Engineering Blocks
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Staging Servers &amp; Video SOPs
+              </span>
+              <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
+                Direct Engineer Slack / Teams Channels
               </span>
             </div>
 
