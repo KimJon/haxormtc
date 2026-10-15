@@ -66,13 +66,32 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-// Helper component that scrolls window to top upon route transition
-function ScrollToTop() {
-  const { pathname } = useLocation();
+// Helper component that scrolls window to top and notifies GA4/GTM upon route transition
+function RouteTracker() {
+  const { pathname, search } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+
+    // Virtual pageview dispatch to Google Analytics 4 (G-W8BMMVLVXE)
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', {
+        page_path: pathname + search,
+        page_location: window.location.href,
+        page_title: document.title,
+      });
+    }
+
+    // Push virtual pageview to Google Tag Manager dataLayer (GTM-5DP5FWDD)
+    if (Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: 'virtual_page_view',
+        page_path: pathname + search,
+        page_location: window.location.href,
+        page_title: document.title,
+      });
+    }
+  }, [pathname, search]);
 
   return null;
 }
@@ -81,7 +100,7 @@ function App() {
   return (
     <ErrorBoundary>
       <CurrencyProvider>
-      <ScrollToTop />
+      <RouteTracker />
       <ScrollToTopButton />
       <CookieConsentBanner />
       <Routes>

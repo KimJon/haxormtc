@@ -1,0 +1,36 @@
+# Haxor Management & Technology Consultants (Haxor MTC)
+> White-Label CRM Implementation & Business Automation Partner for Digital Agencies and Growing Enterprises Worldwide.
+
+## About Haxor MTC
+Haxor MTC (https://haxormtc.com) is an engineering delivery partner specializing in Zoho CRM, Zoho One, Odoo ERP, HubSpot, workflow automations, and custom software integrations. We operate primarily as a dedicated white-label technical partner for digital marketing agencies, technology consultancies, and growth enterprises across the United Kingdom, Europe, Australia, and worldwide.
+
+## Key Facts & Operational Standards
+- **Core Specialization**: Zoho CRM consulting, Zoho One implementation, Odoo ERP deployment, HubSpot pipeline design, REST API integrations, webhook automation.
+- **Engagement Models**:
+  - Fixed-Scope Technical Sprints (1 to 3 week turnaround, milestone billing).
+  - Dedicated Monthly Retainers (reserved engineering capacity at wholesale partner rates).
+- **White-Label Guarantees**: 100% bilateral Non-Disclosure Agreement (NDA), zero client poaching guarantee, complete intellectual property transfer upon handover.
+- **Timezone Coverage**: Coordinated overlap with London (GMT), Berlin (CET), and Sydney (AEST).
+- **Communication Channels**: Slack (@haxorconsults), WhatsApp Desk, and direct solution architect calls.
+- **Official Contact**: haxorconsults@gmail.com | https://haxormtc.com/contact/
+- **Social Channels**:
+  - Facebook: https://www.facebook.com/haxorconsults/
+  - X (Twitter): https://x.com/haxorconsults (@haxorconsults)
+  - Slack Handle: @haxorconsults
+
+## Core Services & URLs
+- [Agency White-Label Hub](https://haxormtc.com/agency-partners/): Invisible technical delivery under your agency's brand. Preserves 40% to 60% gross margins.
+- [CRM Implementation Services](https://haxormtc.com/services/crm-implementation/): Architecture, custom module creation, pipeline validation gates, deduplicated data migration for Zoho CRM, Odoo, and HubSpot.
+- [Zoho Consulting & Zoho One](https://haxormtc.com/software/zoho/): Professional Zoho consulting services, Zoho CRM consulting, Zoho Creator apps, Zoho Books, Zoho Commerce, Zoho Campaigns, and Zoho workforce management.
+- [Odoo ERP Implementation](https://haxormtc.com/software/odoo/): Community and Enterprise ERP deployment, manufacturing, inventory, invoicing, and POS modules.
+- [Business Process Automation](https://haxormtc.com/services/business-automation/): Event-driven workflows, multi-app connectors, lead qualification, accounting synchronization.
+- [Software & API Integrations](https://haxormtc.com/services/integrations/): Custom REST API connectors, webhook listeners, Stripe payments, Google Cloud, Meta Conversion API (CAPI).
+- [Interactive Scope Calculator](https://haxormtc.com/calculator/): Estimate project scope, timelines, and implementation costs.
+- [Architecture & SLA Standards](https://haxormtc.com/why-us/): Code quality, security, NDA terms, and deployment verification.
+- [Case Studies & Outcomes](https://haxormtc.com/portfolio/): Production delivery results and client benchmarks.
+
+## Regional Delivery Coverage
+- **United Kingdom**: London, Reading (Berkshire), Watford (Hertfordshire), Surrey, and nationwide.
+- **Europe**: Germany, Netherlands, Italy (consulenza Zoho), France, Scandinavia, and EU-wide.
+- **Australia**: Sydney, Melbourne, Brisbane (AEST overlap).
+- **North America**: US and Canada remote delivery.
