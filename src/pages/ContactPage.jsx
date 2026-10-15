@@ -15,8 +15,9 @@ import {
   MapPin, 
   Clock, 
   ShieldCheck, 
-  ArrowRight 
+  ArrowRight
 } from 'lucide-react';
+import { FacebookLogo, XLogo, SlackLogo } from '../components/OfficialLogos';
 
 export default function ContactPage() {
   const directWhatsAppUrl = createWhatsAppUrl(
@@ -62,7 +63,7 @@ export default function ContactPage() {
             </div>
 
             {/* Quick Contact Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto pt-6 text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto pt-6 text-left">
               
               {/* WhatsApp Card */}
               <a
@@ -97,6 +98,44 @@ export default function ContactPage() {
                     {CONTACT_INFO.emailOfficial}
                   </div>
                   <div className="text-[11px] text-slate-500">Quotes &amp; Proposals</div>
+                </div>
+              </a>
+
+              {/* Facebook Card */}
+              <a
+                href="https://www.facebook.com/haxorconsults/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-5 rounded-2xl bg-white border border-slate-200 clean-card-hover transition flex items-center gap-4 group"
+              >
+                <div className="w-12 h-12 rounded-xl bg-slate-100 text-black flex items-center justify-center shrink-0 shadow-sm">
+                  <FacebookLogo className="w-5 h-5 fill-black" />
+                </div>
+                <div>
+                  <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">Facebook</div>
+                  <div className="text-sm font-semibold text-slate-900 group-hover:text-black transition">
+                    haxorconsults
+                  </div>
+                  <div className="text-[11px] text-slate-500">Official Channel</div>
+                </div>
+              </a>
+
+              {/* X (Twitter) Card */}
+              <a
+                href="https://x.com/haxorconsults"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-5 rounded-2xl bg-white border border-slate-200 clean-card-hover transition flex items-center gap-4 group"
+              >
+                <div className="w-12 h-12 rounded-xl bg-slate-100 text-black flex items-center justify-center shrink-0 shadow-sm">
+                  <XLogo className="w-4 h-4 fill-black" />
+                </div>
+                <div>
+                  <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">X (Twitter)</div>
+                  <div className="text-sm font-semibold text-slate-900 group-hover:text-black transition">
+                    @haxorconsults
+                  </div>
+                  <div className="text-[11px] text-slate-500">Official Handle</div>
                 </div>
               </a>
 

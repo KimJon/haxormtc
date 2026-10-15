@@ -8,6 +8,10 @@ export const CONTACT_INFO = {
   domain: "haxormtc.com",
   companyName: "Haxor MTC",
   address: "International Technical Delivery • UK, Europe, Australia & Worldwide",
+  facebook: "https://www.facebook.com/haxorconsults/",
+  twitter: "https://x.com/haxorconsults",
+  twitterHandle: "@haxorconsults",
+  slackHandle: "@haxorconsults",
 };
 
 export const createWhatsAppUrl = (message) => {

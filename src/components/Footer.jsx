@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, ArrowUp, MessageSquare } from 'lucide-react';
+import { FacebookLogo, XLogo } from './OfficialLogos';
 import { CONTACT_INFO, createWhatsAppUrl } from '../data/servicesData';
 import BrandLogo from './BrandLogo';
 import CurrencySelector from './CurrencySelector';
@@ -149,6 +150,29 @@ export default function Footer() {
                 Back to Top
               </button>
             </div>
+
+            {/* Social Channels */}
+            <div className="pt-3 flex items-center gap-3">
+              <a
+                href="https://www.facebook.com/haxorconsults/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-400 hover:text-white transition"
+                aria-label="Haxor MTC on Facebook"
+              >
+                <FacebookLogo className="w-4 h-4 fill-current" />
+              </a>
+              <a
+                href="https://x.com/haxorconsults"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-400 hover:text-white transition"
+                aria-label="Haxor MTC on X"
+              >
+                <XLogo className="w-3.5 h-3.5 fill-current" />
+              </a>
+              <span className="text-[11px] text-slate-500 ml-1">Slack: @haxorconsults</span>
+            </div>
           </div>
 
         </div>
@@ -170,6 +194,24 @@ export default function Footer() {
             >
               Cookie Preferences
             </button>
+            <span>•</span>
+            <a
+              href="https://www.facebook.com/haxorconsults/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-white transition"
+            >
+              Facebook
+            </a>
+            <span>•</span>
+            <a
+              href="https://x.com/haxorconsults"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-white transition"
+            >
+              X
+            </a>
             <span>•</span>
             <span className="text-slate-400 font-medium">{CONTACT_INFO.domain}</span>
             <span>•</span>
