@@ -1,268 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Website & Conversion Hubs -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Core Conversion & Brand Homepage -->
   <url>
     <loc>https://haxormtc.com/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
     <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/agency-partners</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/crm-implementation</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/business-automation</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/integrations</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/software</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/kits</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/solutions/kits</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/portfolio</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/work</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/calculator</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/why-us</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/about</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/about-us</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/contact</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0000</priority>
   </url>
 
-  <!-- Google Family Link Specialization -->
+  <!-- High-Intent B2B Agency Partnership Hub -->
   <url>
-    <loc>https://haxormtc.com/services/google-family-link</loc>
-    <lastmod>2026-10-15</lastmod>
+    <loc>https://haxormtc.com/agency-partners/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/education/family-link</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/education/google-family-link</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.9500</priority>
   </url>
 
-  <!-- High-Converting Service Capabilities -->
+  <!-- Technical Delivery Services Catalog -->
   <url>
-    <loc>https://haxormtc.com/services/website-development</loc>
-    <lastmod>2026-10-15</lastmod>
+    <loc>https://haxormtc.com/services/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/social-media</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/meta-ads</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/google-ads</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/google-my-business</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/email-management</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/seo</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/ict-consulting</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/digital-literacy</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/technology-consulting</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/digital-transformation</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/ai-automation</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/enterprise-seo</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://haxormtc.com/services/virtual-assistance</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.9500</priority>
   </url>
 
-  <!-- Software Systems & Platforms -->
+  <!-- Core Strategic Delivery Pages -->
   <url>
-    <loc>https://haxormtc.com/software/haxpos</loc>
-    <lastmod>2026-10-15</lastmod>
+    <loc>https://haxormtc.com/services/crm-implementation/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9000</priority>
   </url>
   <url>
-    <loc>https://haxormtc.com/software/elittego</loc>
-    <lastmod>2026-10-15</lastmod>
+    <loc>https://haxormtc.com/services/business-automation/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9000</priority>
   </url>
   <url>
-    <loc>https://haxormtc.com/software/haxone</loc>
-    <lastmod>2026-10-15</lastmod>
+    <loc>https://haxormtc.com/services/integrations/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9000</priority>
+  </url>
+
+  <!-- Software Ecosystems -->
+  <url>
+    <loc>https://haxormtc.com/software/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9000</priority>
   </url>
   <url>
-    <loc>https://haxormtc.com/software/hospital-system</loc>
-    <lastmod>2026-10-15</lastmod>
+    <loc>https://haxormtc.com/software/zoho/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9000</priority>
   </url>
   <url>
-    <loc>https://haxormtc.com/software/odoo</loc>
-    <lastmod>2026-10-15</lastmod>
+    <loc>https://haxormtc.com/software/odoo/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9000</priority>
   </url>
+
+  <!-- Productized Solutions & Business Kits -->
   <url>
-    <loc>https://haxormtc.com/software/zoho</loc>
-    <lastmod>2026-10-15</lastmod>
+    <loc>https://haxormtc.com/kits/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8500</priority>
   </url>
+
+  <!-- Case Studies & Proven Client Outcomes -->
   <url>
-    <loc>https://haxormtc.com/software/custom-software-development</loc>
-    <lastmod>2026-10-15</lastmod>
+    <loc>https://haxormtc.com/portfolio/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8500</priority>
   </url>
+
+  <!-- Scoping & Interactive Pricing Calculator -->
   <url>
-    <loc>https://haxormtc.com/software/cloud-pos-systems</loc>
-    <lastmod>2026-10-15</lastmod>
+    <loc>https://haxormtc.com/calculator/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.8500</priority>
   </url>
+
+  <!-- Architecture Standards & Trust -->
   <url>
-    <loc>https://haxormtc.com/software/hotel-management-system</loc>
-    <lastmod>2026-10-15</lastmod>
+    <loc>https://haxormtc.com/why-us/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.8500</priority>
   </url>
+
+  <!-- Company & Engineering Leadership -->
   <url>
-    <loc>https://haxormtc.com/software/erp-crm-consulting</loc>
-    <lastmod>2026-10-15</lastmod>
+    <loc>https://haxormtc.com/about/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.8500</priority>
   </url>
+
+  <!-- Direct Technical Contact Desk -->
+  <url>
+    <loc>https://haxormtc.com/contact/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9000</priority>
+  </url>
+
+  <!-- Specialized Education & Family Link Support -->
+  <url>
+    <loc>https://haxormtc.com/services/google-family-link/</loc>
+    <lastmod>2026-10-15T06:58:47+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8000</priority>
+  </url>
+
 </urlset>
