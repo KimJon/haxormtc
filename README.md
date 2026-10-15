@@ -45,3 +45,7 @@ This script generates:
 - `haxormtc-cpanel-upload.tar.gz`
 
 Both packages are POSIX-compliant, contain Apache `.htaccess` rewrite rules, and extract directly into `public_html`.
+
+## License & Copyright
+© 2018 - 2026 Haxor MTC. All rights reserved.
+

@@ -185,7 +185,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <p>
-            © {new Date().getFullYear()} <strong>Haxor MTC</strong> ({CONTACT_INFO.domain}). All rights reserved.
+            © 2018 - {new Date().getFullYear()} <strong>Haxor MTC</strong>. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center gap-3 sm:gap-4">
             <button
